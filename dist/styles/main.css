@@ -514,6 +514,15 @@ body:not(.active) {
   height: 100vh;
 }
 
+.first {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
 .s1__container {
   position: relative;
   width: 100vw;

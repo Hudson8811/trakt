@@ -33,10 +33,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap/MotionPathPlugin */ "./node_modules/gsap/MotionPathPlugin.js");
+
 
 
 
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"]);
+gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__["default"]);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
     onComplete: function onComplete() {
@@ -160,6 +163,24 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     duration: 2,
     ease: "none"
   }, "<");
+  tl1.to(".first", {
+    motionPath: {
+      path: [{
+        left: '-50vw',
+        top: '-10vw'
+      }, {
+        left: '-60vw',
+        top: '-50vw'
+      }, {
+        left: '-70vw',
+        top: '-100vw'
+      }],
+      curviness: 1 //type: "cubic"
+
+    },
+    duration: 3,
+    ease: "none"
+  }, ">");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
     trigger: ".home-page",
     pin: true,

@@ -1,7 +1,9 @@
 import $ from "jquery";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import MotionPathPlugin from "gsap/MotionPathPlugin";
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(MotionPathPlugin);
 
 $(document).ready(function (){
 	let tl = gsap.timeline({
@@ -137,6 +139,22 @@ $(document).ready(function (){
 		duration: 2,
 		ease: "none",
 	}, "<");
+
+
+	tl1.to(".first", {
+		motionPath: {
+			path: [
+				{left:'-50vw', top:'-10vw'},
+				{left:'-60vw', top:'-50vw'},
+				{left:'-70vw', top:'-100vw'}
+				],
+			curviness: 1
+			//type: "cubic"
+		},
+		duration: 3,
+		ease: "none",
+	}, ">");
+
 
 	st1 = ScrollTrigger.create({
 		trigger: ".home-page",
