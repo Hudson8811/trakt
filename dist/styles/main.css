@@ -619,7 +619,7 @@ body:not(.active) {
 
 .s1__text-inner {
   width: 100%;
-  font-family: "Ruda", sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 2.8125vw;
   line-height: 145%;
   color: #FDFDFD;
@@ -702,7 +702,7 @@ body:not(.active) {
 
 .about__block-title {
   margin-bottom: 0.390625vw;
-  font-family: "Ruda", sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 600;
   font-size: 1.875vw;
   line-height: 140%;
@@ -711,10 +711,256 @@ body:not(.active) {
 }
 
 .about__block-text {
-  font-family: "Ruda", sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 400;
   font-size: 1.25vw;
   line-height: 130%;
   color: #6F6F6F;
+}
+
+.second {
+  position: relative;
+}
+
+.s2 {
+  position: absolute;
+  left: 40vw;
+  top: 100vh;
+  width: 100vw;
+  height: 100vh;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.s2__img {
+  position: absolute;
+  width: 62.421875vw;
+  height: 31.25vw;
+  left: 10.9375vw;
+  top: 50%;
+  transform: translateY(-65%);
+  overflow: hidden;
+}
+
+.s2__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.s3 {
+  position: absolute;
+  left: 100vw;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.s3__left {
+  width: 30vw;
+  will-change: transform;
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 10.625vw;
+  top: 50%;
+  transform: translateY(-60%);
+}
+
+.s3__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.875vw;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #1E713F;
+  width: 21.875vw;
+}
+
+.s3__text {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.40625vw;
+  line-height: 145%;
+  color: #6F6F6F;
+  margin-top: 1.25vw;
+}
+
+.s3__link {
+  margin-top: 3.4375vw;
+}
+
+.s3__link a {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25vw;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #041C13;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.s3__link a::after {
+  content: "";
+  display: block;
+  width: 1.875vw;
+  height: 1.875vw;
+  border: 1px solid #041C13;
+  margin-left: 0.9375vw;
+  border-radius: 50%;
+  background: url("../img/svg/arrow.svg") center center no-repeat;
+  background-size: 0.9375vw 0.78125vw;
+}
+
+.s3__right {
+  width: 38.125vw;
+  height: 54.6875vw;
+  overflow: hidden;
+  will-change: transform;
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 43.125vw;
+  top: 7.8125vw;
+}
+
+.s3__right img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.s4 {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 100vw;
+  top: 100vh;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.s4 video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.assorti {
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.assorti__intro {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.assorti__intro-title {
+  font-weight: 600;
+  font-size: 4.6875vw;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #041C13;
+  width: 38.125vw;
+  position: absolute;
+  left: 18.75vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.assorti__intro-title::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #6F6F6F;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.assorti__intro-title.active {
+  width: 13.75vw;
+}
+
+.assorti__intro-text {
+  will-change: transform;
+  transform-style: preserve-3d;
+  width: 38.125vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.8125vw;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #041C13;
+}
+
+.assorti__items {
+  display: none;
+}
+
+.assorti-item {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.assorti-item__img {
+  overflow: hidden;
+  width: 38.125vw;
+  height: 45.3125vw;
+}
+
+.assorti-item__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.assorti-item__content {
+  width: 46.25vw;
+}
+
+.assorti-item__title {
+  width: 100%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4.6875vw;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #041C13;
+}
+
+.assorti-item__text {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25vw;
+  line-height: 130%;
+  color: #6F6F6F;
+  margin-top: 2.5vw;
+  width: 21.875vw;
+}
+
+.portfolio {
+  display: none;
 }
 /*# sourceMappingURL=maps/main.css.map */

@@ -41,6 +41,7 @@ __webpack_require__.r(__webpack_exports__);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"]);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__["default"]);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
   var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
     onComplete: function onComplete() {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
@@ -178,15 +179,89 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       curviness: 1 //type: "cubic"
 
     },
+    duration: 3.5,
+    ease: "none"
+  }, ">");
+  tl1.to(".s2", {
+    motionPath: {
+      path: [{
+        left: '40vw',
+        top: '100vh'
+      }, {
+        left: '40vw',
+        top: '30vh'
+      }, {
+        left: '10vw',
+        top: '0'
+      }, {
+        left: '0',
+        top: '0'
+      }],
+      curviness: 1 //type: "cubic"
+
+    },
+    duration: 2.3,
+    ease: "none"
+  }, "<0.1");
+  tl1.to(".s2", {
+    left: "-100vw",
     duration: 3,
     ease: "none"
   }, ">");
+  tl1.fromTo(".s3", {
+    left: "100vw"
+  }, {
+    left: "0vw",
+    duration: 2.5,
+    ease: "none"
+  }, ">-3");
+  tl1.from(".s3__right", {
+    y: '-100%',
+    duration: 2.3,
+    ease: "none"
+  }, "<");
+  tl1.fromTo(".s3", {
+    left: 0,
+    top: 0
+  }, {
+    motionPath: {
+      path: [{
+        left: '-10vw',
+        top: '0vh'
+      }, {
+        left: '-20vw',
+        top: '-50vh'
+      }, {
+        left: '-30vw',
+        top: '-100vh'
+      }],
+      curviness: 1
+    },
+    duration: 3,
+    ease: "none"
+  }, ">0.5");
+  tl1.to(".s3__right", {
+    y: '-50%',
+    duration: 1.5,
+    ease: "none"
+  }, "<");
+  tl1.to(".s4", {
+    top: 0,
+    left: 0,
+    duration: 3,
+    ease: "none"
+  }, "<");
+  tl1.to(".second", {
+    top: "-100vh",
+    duration: 3,
+    ease: "none"
+  }, ">1");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
     trigger: ".home-page",
     pin: true,
     start: "top top",
     end: function end() {
-      return "+=250%";
+      return "+=1000%";
     },
     scrub: 1,
     animation: tl1
