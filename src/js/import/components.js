@@ -8,6 +8,7 @@ gsap.registerPlugin(MotionPathPlugin);
 $(document).ready(function (){
 	let addTime = 0;
 	let addTimeAssorti = 200;
+	let addTimePoortfol = 200;
 
 	//$('body').addClass('active');
 

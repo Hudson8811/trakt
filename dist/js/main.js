@@ -42,7 +42,8 @@ gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollTrigger__
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__["default"]);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   var addTime = 0;
-  var addTimeAssorti = 200; //$('body').addClass('active');
+  var addTimeAssorti = 200;
+  var addTimePoortfol = 200; //$('body').addClass('active');
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.assorti__intro-title').each(function () {
     var words = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).text().split(' ');
