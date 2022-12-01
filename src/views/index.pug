@@ -6,7 +6,6 @@ block variables
 
 block content
 	include ../blocks/modules/header/header
-	include ../blocks/modules/footer/footer
 
 	//.loader
 		.loader__center
@@ -146,7 +145,84 @@ block content
 
 
 		.portfolio
-			.portfolio
+			.portfolio__anotation
+				.portfolio__title
+					span П
+					span о
+					span р
+					span т
+					span ф
+					span о
+					span л
+					span и
+					span о
+			.portfolio__items
+				- for (var i=0; i<3; i++)
+					.portfolio-item
+						.portfolio-item__first
+							.portfolio-item__first-img
+								img(src="img/s5-1.jpg" alt="")
+							.portfolio-item__first-content
+								.portfolio-item__first-title Административно-деловой центр в Москве
+								.portfolio-item__first-text
+									p Благоустройство зоны отдыха вокруг торгового центра «Аллея». Адресная инвестиционная программа г. Москвы.
+									p В рамках проекта деревья высаживаются массово – 500 и более саженцев за раз. Посадку организует и координирует лидер регионального отделения организации или ее региональный представитель, которые договариваются с местными лесничествами о выделении участка, нуждающегося в лесовосстановлении.
+						.portfolio-item__second
+							.portfolio-item__second-img
+								img(src="img/s5-2.jpg" alt="")
+							.portfolio-item__second-content
+								.portfolio-item__second-block
+									.portfolio-item__second-title Местоположение
+									.portfolio-item__second-text Московская область, г. Москва
+								.portfolio-item__second-block
+									.portfolio-item__second-title Площадь
+									.portfolio-item__second-text 2000 кв.м.
+								.portfolio-item__second-block
+									.portfolio-item__second-title Сроки
+									.portfolio-item__second-text 3 месяца
+								.portfolio-item__second-block
+									.portfolio-item__second-title Обьем
+									.portfolio-item__second-text 54 дерева, 215 кустариников, 1000 кв.м газона
+								.portfolio-item__second-block
+									.portfolio-item__second-title Состав
+									.portfolio-item__second-text Сосны, туи, можжевельник, кизильник, газон рулонный
+
+
+		.partners
+			.partners__intro
+				.partners__intro-title С кем мы работаем
+				.partners__intro-text Сотрудничаем с садовыми центрами, другими питомниками, предоставляя высококачественный посадочный материал, выращенный профессиональными агрономами.
+			.partners__items
+				.partners__item
+					img(src="img/partner-1.png")
+				.partners__item
+					img(src="img/partner-2.png")
+				.partners__item
+					img(src="img/partner-3.png")
+				.partners__item
+					img(src="img/partner-4.png")
+
+		.connect
+			.connect__first Регистрируйтесь и получайте бонусы от сотрудничества с нами!
+			.connect__second
+				.connect__images
+					.connect__img
+						img(src='img/s6-1.jpg')
+					.connect__img
+						img(src='img/s6-1.jpg')
+				.connect__content
+					.connect__content-title Покупка растений и посадочного материала на выгодных условиях.
+					.connect__content-blocks
+						.connect__content-block оптовые цены
+						.connect__content-block предзаказ продукции
+						.connect__content-block персональный менеджер
+						.connect__content-block персональный менеджер
+			.connect__link
+				a(href="") присоединиться
+
+
+
+	include ../blocks/modules/footer/footer
 
 
 block scripts
