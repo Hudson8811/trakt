@@ -9,7 +9,7 @@ $(document).ready(function (){
 	let addTime = 0;
 	let addTimeAssorti = 200;
 
-	$('body').addClass('active');
+	//$('body').addClass('active');
 
 
 	$('.assorti__intro-title').each(function() {
@@ -288,6 +288,13 @@ $(document).ready(function (){
 		ease: "none",
 	}, "<");
 
+	tl1.from(".s3__right img", {
+		width: '200%',
+		height: '200%',
+		duration: 2.3,
+		ease: "none",
+	}, "<");
+
 
 	tl1.fromTo(".s3",
 		{
@@ -411,6 +418,7 @@ $(document).ready(function (){
 
 		let elem = $(this);
 		let img = elem.find('.assorti-item__img');
+		let img2 = elem.find('.assorti-item__img img');
 		let text = elem.find('.assorti-item__text');
 
 		tl1.from(elem, {
@@ -424,6 +432,12 @@ $(document).ready(function (){
 			duration: 3,
 			ease: "none",
 		} , ">-1");
+		tl1.from(img2, {
+			width: "200%",
+			height: "200%",
+			duration: 3,
+			ease: "none",
+		} , "<");
 		tl1.to(text, {
 			y: 0,
 			duration: 2,
@@ -434,13 +448,13 @@ $(document).ready(function (){
 				top: "-100%",
 				duration: 3,
 				ease: "none",
-			} , ">1.5");
+			} , ">0.5");
 		} else {
 			tl1.to('.assorti', {
 				left: "-100%",
 				duration: 3,
 				ease: "none",
-			} , ">1.5");
+			} , ">0.5");
 		}
 
 	});
@@ -473,6 +487,7 @@ $(document).ready(function (){
 		let first = elem.find('.portfolio-item__first');
 		let title = elem.find('.portfolio-item__first-content');
 		let second = elem.find('.portfolio-item__second');
+		let img = elem.find('.portfolio-item__second img');
 		let block = elem.find('.portfolio-item__second-content');
 
 		tl1.from(elem, {
@@ -500,6 +515,14 @@ $(document).ready(function (){
 			duration: 2,
 			ease: "none",
 		} , "<-0.8");
+
+
+		tl1.from(img, {
+			width: "200%",
+			height: "200%",
+			duration: 2,
+			ease: "none",
+		} , "<");
 
 		tl1.to(second, {
 			left: "0",
@@ -605,7 +628,7 @@ $(document).ready(function (){
 
 	tl1.to(".partners__items", {
 		autoAlpha: 1,
-		duration: 2,
+		duration: 1,
 		ease: "none",
 	} , ">");
 
