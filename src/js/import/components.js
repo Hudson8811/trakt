@@ -486,6 +486,7 @@ $(document).ready(function (){
 
 		let elem = $(this);
 		let first = elem.find('.portfolio-item__first');
+		let img1 = elem.find('.portfolio-item__first-img img');
 		let title = elem.find('.portfolio-item__first-content');
 		let second = elem.find('.portfolio-item__second');
 		let img = elem.find('.portfolio-item__second img');
@@ -496,6 +497,13 @@ $(document).ready(function (){
 			duration: 3,
 			ease: "none",
 		} , ">" + firstDelay);
+
+		tl1.from(img1, {
+			width: "200%",
+			height: "200%",
+			duration: 3,
+			ease: "none",
+		} , "<");
 
 		tl1.from(title, {
 			x: "100%",

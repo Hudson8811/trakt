@@ -484,6 +484,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     p++;
     var elem = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
     var first = elem.find('.portfolio-item__first');
+    var img1 = elem.find('.portfolio-item__first-img img');
     var title = elem.find('.portfolio-item__first-content');
     var second = elem.find('.portfolio-item__second');
     var img = elem.find('.portfolio-item__second img');
@@ -493,6 +494,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       duration: 3,
       ease: "none"
     }, ">" + firstDelay);
+    tl1.from(img1, {
+      width: "200%",
+      height: "200%",
+      duration: 3,
+      ease: "none"
+    }, "<");
     tl1.from(title, {
       x: "100%",
       duration: 2,
