@@ -1,5 +1,6 @@
 @import "header/header";
 @import "footer/footer";
+@import "loader/loader";
 
 
 *::-webkit-scrollbar {
@@ -17,43 +18,14 @@ body{
 	}
 }
 
-.loader{
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: #ffffff;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	&__center{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		opacity: 0;
-	}
-	&__logo{
-		margin-right: vw(12);
-		width: vw(65);
-		img{
-			width: 100%;
-			margin-top: 6px;
-		}
-	}
-	&__title{
-		width: vw(181);
-		svg{
-			width: 100%;
-		}
-	}
-}
-
 .home-page{
 	background: #0D0D0D;
 	width: 100vw;
 	height: 100vh;
+	@include max(md){
+		height: auto;
+		background: #FDFDFD;
+	}
 }
 
 
@@ -64,6 +36,10 @@ body{
 	left: 0;
 	top: 0;
 	overflow: hidden;
+	@include max(md){
+		position: relative;
+		height: auto;
+	}
 }
 
 .s1{
@@ -72,6 +48,18 @@ body{
 		width: 100vw;
 		height: 100vh;
 		perspective: 1500px;
+		@include max(md){
+			background: #0D0D0D;
+		}
+		@include max(sm){
+			height: auto;
+			padding: vw3(130) 0 0;
+			perspective: initial;
+			box-sizing: border-box;
+		}
+		@include max(xs){
+			padding: vw4(101) 0 0;
+		}
 	}
 	&__title{
 		will-change: transform, opacity;
@@ -91,6 +79,26 @@ body{
 		transition:  opacity .75s ease;
 		opacity: 1;
 		pointer-events: none;
+		@include max(md){
+			width: vw2(704);
+			font-size: vw2(42);
+		}
+		@include max(sm){
+			will-change: auto;
+			transform-style: initial;
+			width: 100%;
+			font-size: vw3(42);
+			position: static;
+			left: 0;
+			top: 0;
+			transform: none;
+			box-sizing: border-box;
+			padding: 0 vw3(12);
+		}
+		@include max(xs){
+			font-size: vw4(30);
+			padding: 0 vw4(12);
+		}
 	}
 	&__left{
 		will-change: transform, opacity;
@@ -104,10 +112,38 @@ body{
 		transition:  opacity .75s ease;
 		opacity: 1;
 		pointer-events: none;
+		@include max(md){
+			right: vw2(394);
+			width: vw2(250);
+		}
+		@include max(sm){
+			will-change: auto;
+			transform-style: initial;
+			position: relative;
+			top: 0;
+			left: 0;
+			transform: none;
+			width: 100%;
+			margin-top: vw3(28);
+			box-sizing: border-box;
+			padding: 0 vw3(12);
+		}
+		@include max(xs){
+			margin-top: vw4(40);
+			padding: 0 vw4(12);
+		}
 		&-inner{
 			width: 100%;
 			padding-bottom: 130.2%;
 			overflow: hidden;
+			@include max(sm){
+				height: 100%;
+				padding-bottom: 0;
+				height: vw3(668);
+			}
+			@include max(xs){
+				height: vw4(384);
+			}
 			img{
 				position: absolute;
 				left: 0;
@@ -116,6 +152,9 @@ body{
 				height: 100%;
 				object-fit: cover;
 			  	object-position: center center;
+				@include max(sm){
+					position: static;
+				}
 			}
 		}
 	}
@@ -129,9 +168,32 @@ body{
 		transform: translateY(-50%);
 		width: vw(384);
 		overflow: hidden;
+		@include max(md){
+			left: vw2(394);
+			width: vw2(250);
+			height: 100vh;
+		}
+		@include max(sm){
+			will-change: auto;
+			transform-style: initial;
+			position: relative;
+			left: 0;
+			top: 0;
+			width: 100%;
+			margin-top: vw3(40);
+			box-sizing: border-box;
+			transform: none;
+		}
+		@include max(xs){
+			margin-top: vw4(40);
+		}
 		&-inner{
 			width: 100%;
 			padding-bottom: 62.23%;
+			@include max(sm){
+				height: 100%;
+				padding-bottom: 0;
+			}
 			video{
 				position: absolute;
 				left: 0;
@@ -141,6 +203,9 @@ body{
 				object-fit: cover;
 			  	object-position: center center;
 				pointer-events: none;
+				@include max(sm){
+					position: static;
+				}
 			}
 		}
 	}
@@ -153,12 +218,42 @@ body{
 		transform: translateY(-50%)  translate3d(0px, 0px, -1200px);
 		width: vw(387);
 		opacity: 0;
+		@include max(md){
+			width: vw2(336);
+			left: vw2(32);
+		}
+		@include max(sm){
+			will-change: auto;
+			transform-style: initial;
+			position: static;
+			left: 0;
+			top: 0;
+			width: 100%;
+			margin-top: vw3(120);
+			box-sizing: border-box;
+			padding: 0 vw3(12);
+			transform: none;
+			opacity: 1;
+		}
+		@include max(xs){
+			margin-top: vw4(80);
+			padding: 0 vw4(12);
+		}
 		&-inner{
 			width: 100%;
 			font-family: $textFont;
 			font-size: vw(36);
 			line-height: 145%;
 			color: #FDFDFD;
+			@include max(md){
+				font-size: vw2(36);
+			}
+			@include max(sm){
+				font-size: vw3(36);
+			}
+			@include max(xs){
+				font-size: vw4(24);
+			}
 		}
 	}
 	&__link{
@@ -184,6 +279,23 @@ body{
 		justify-content: center;
 		opacity: 0;
 		transition: color 0.3s, background-color 0.3s;
+		text-decoration: none;
+		@include max(md){
+			width: vw2(176);
+			height: vw2(176);
+			font-size: vw2(16);
+		}
+		@include max(sm){
+			width: vw3(176);
+			height: vw3(176);
+			font-size: vw3(16);
+			opacity: 1;
+		}
+		@include max(xs){
+			width: vw4(128);
+			height: vw4(128);
+			font-size: vw4(12);
+		}
 		&::before{
 			content: "";
 			display: block;
@@ -196,6 +308,19 @@ body{
 			transform: translate(-50%, -50%);
 			z-index: -1;
 			border: 1px solid #FFFFFF;
+			box-sizing: border-box;
+			@include max(md){
+				width: vw2(220);
+				height: vw2(220);
+			}
+			@include max(sm){
+				width: vw3(220);
+				height: vw3(220);
+			}
+			@include max(xs){
+				width: vw4(160);
+				height: vw4(160);
+			}
 		}
 		&:hover{
 			background: #1E713F;
@@ -212,22 +337,85 @@ body{
 	transform: translateY(-50%);
 	width: vw(384);
 	left: 120%;
+	@include max(md){
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: none;
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		padding: vw2(130) vw2(32) vw2(40);
+		box-sizing: border-box;
+	}
+	@include max(sm){
+		padding: vw3(120) vw3(12) vw3(40);
+		display: block;
+	}
+	@include max(xs){
+		padding: vw4(80) vw4(12) vw4(20);
+	}
 	&__title{
 		font-weight: 600;
 		font-size: vw(42);
 		line-height: 140%;
 		text-transform: uppercase;
 		color: #041C13;
+		@include max(md){
+			font-size: vw2(42);
+			width: vw2(336);
+		}
+		@include max(sm){
+			font-size: vw3(42);
+			width: vw3(336);
+		}
+		@include max(xs){
+			font-size: vw4(28);
+			width: 100%;
+		}
 	}
 	&__info{
 		margin-top: vw(80);
 		width: vw(280);
+		@include max(md){
+			margin-top: 0;
+			margin-left: vw2(32);
+			width: vw2(244);
+		}
+		@include max(sm){
+			margin-top: vw3(40);
+			margin-left: vw3(90);
+			width: vw3(244);
+		}
+		@include max(xs){
+			margin-top: vw4(40);
+			margin-left: 0;
+			width: 100%;
+		}
 	}
 	&__block{
 		border-bottom: 1px solid #1E713F;
 		padding-bottom: vw(24);
+		@include max(md){
+			padding-bottom: vw2(24);
+		}
+		@include max(sm){
+			padding-bottom: vw3(24);
+		}
+		@include max(xs){
+			padding-bottom: vw4(24);
+		}
 		+.about__block{
 			margin-top: vw(24);
+			@include max(md){
+				margin-top: vw2(24);
+			}
+			@include max(sm){
+				margin-top: vw3(24);
+			}
+			@include max(xs){
+				margin-top-bottom: vw4(24);
+			}
 		}
 		&-title{
 			margin-bottom: vw(5);
@@ -237,6 +425,18 @@ body{
 			line-height: 140%;
 			text-transform: uppercase;
 			color: #1E713F;
+			@include max(md){
+				margin-bottom: vw2(4);
+				font-size: vw2(24);
+			}
+			@include max(sm){
+				margin-bottom: vw3(4);
+				font-size: vw3(24);
+			}
+			@include max(xs){
+				margin-bottom: vw4(4);
+				font-size: vw4(24);
+			}
 		}
 		&-text{
 			font-family: $textFont;
@@ -244,6 +444,15 @@ body{
 			font-size: vw(16);
 			line-height: 130%;
 			color: #6F6F6F;
+			@include max(md){
+				font-size: vw2(16);
+			}
+			@include max(sm){
+				font-size: vw3(16);
+			}
+			@include max(xs){
+				font-size: vw4(16);
+			}
 		}
 	}
 }
@@ -254,336 +463,640 @@ body{
 }
 
 .s2{
-  position: absolute;
-  left: 40vw;
-  top: 100vh;
-  width: 100vw;
-  height: 100vh;
-  will-change: transform;
-  transform-style: preserve-3d;
-  &__img{
 	position: absolute;
-	width: vw(799);
-	height: vw(400);
-	left: vw(140);
-	top: 50%;
-	transform: translateY(-65%);
+	left: 40vw;
+	top: 100vh;
+	width: 100vw;
+	height: 100vh;
+	will-change: transform;
+	transform-style: preserve-3d;
 	overflow: hidden;
-	img{
-	  display: block;
-	  width: 100%;
-	  height: 100%;
-	  object-fit: cover;
-	  object-position: center center;
+	@include max(md){
+		position: relative;
+		width: 100%;
+		height: auto;
+		top: 0;
+		left: 0;
+		padding: vw2(40) vw2(32);
+		box-sizing: border-box;
+		will-change: auto;
+		transform-style: initial;
 	}
-  }
+	@include max(sm){
+		padding: vw3(24) vw3(12) vw3(40);
+	}
+	@include max(xs){
+		padding: vw4(20) vw4(12) vw4(32);
+	}
+	&__img{
+		position: absolute;
+		width: vw(799);
+		height: vw(400);
+		left: vw(140);
+		top: 50%;
+		transform: translateY(-65%);
+		display: flex;
+		justify-content: space-between;
+		@include max(md){
+			position: relative;
+			height: auto;
+			width: 100%;
+			top: 0;
+			left: 0;
+			transform: none;
+		}
+		@include max(xs){
+			display: block;
+		}
+		&-inner{
+			width: vw(384);
+			height: vw(400);
+			overflow: hidden;
+			@include max(md){
+				width: vw2(336);
+				height: vw2(352);
+			}
+			@include max(sm){
+				width: vw3(246);
+				height: vw3(257);
+			}
+			@include max(xs){
+				width: 100%;
+				height: vw4(309);
+			}
+			&:not(:first-child){
+				@include max(xs){
+					margin-top: vw4(16);
+				}
+			}
+			img{
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center center;
+			}
+		}
+	}
 }
 
 .s3{
-  position: absolute;
-  left: 100vw;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  will-change: transform;
-  transform-style: preserve-3d;
-  overflow: hidden;
-  &__left{
-	width: vw(384);
+	position: absolute;
+	left: 100vw;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
 	will-change: transform;
 	transform-style: preserve-3d;
-	position: absolute;
-	left: vw(136);
-	top: 50%;
-	transform: translateY(-60%);
-  }
-  &__title{
-	font-style: normal;
-	font-weight: 600;
-	font-size: vw(24);
-	line-height: 140%;
-	text-transform: uppercase;
-	color: #1E713F;
-	width: vw(280);
-  }
-  &__text{
-	font-family: $textFont;
-	font-style: normal;
-	font-weight: 400;
-	font-size: vw(18);
-	line-height: 145%;
-	color: #6F6F6F;
-	margin-top: vw(16);
-  }
-  &__link{
-	margin-top: vw(44);
-	a{
-	  font-family: $textFont;
-	  font-style: normal;
-	  font-weight: 600;
-	  font-size: vw(16);
-	  line-height: 130%;
-	  text-transform: uppercase;
-	  color: #041C13;
-	  text-decoration: none;
-	  cursor: pointer;
-	  display: inline-flex;
-	  align-items: center;
-	  &::after{
-		content: "";
-		display: block;
-		width: vw(24);
-		height: vw(24);
-		border: 1px solid #041C13;
-		margin-left: vw(12);
-		border-radius: 50%;
-		background: url("../img/svg/arrow.svg") center center no-repeat;
-		background-size: vw(12) vw(10);
-	  }
-	}
-  }
-  &__right{
-	width: vw(488);
-	height: vw(700);
 	overflow: hidden;
-	will-change: transform;
-	transform-style: preserve-3d;
-	position: absolute;
-	left: vw(552);
-	top: vw(100);
-	img{
-	  width: 100%;
-	  height: 100%;
-	  display: block;
-	  object-fit: cover;
-	  object-position: center center;
+	@include max(md){
+		position: relative;
+		left: 0;
+		height: auto;
+		width: 100%;
+		padding: vw2(40) vw2(32) vw2(130);
+		will-change: auto;
+		transform-style: initial;
+		box-sizing: border-box;
 	}
-  }
+	@include max(sm){
+		padding: vw3(40) vw2(12) vw3(120);
+	}
+	@include max(xs){
+		padding: vw4(32) vw4(12) vw4(80);
+	}
+	&__left{
+		width: vw(384);
+		will-change: transform;
+		transform-style: preserve-3d;
+		position: absolute;
+		left: vw(136);
+		top: 50%;
+		transform: translateY(-60%);
+		@include max(md){
+			position: relative;
+			left: 0;
+			top: 0;
+			transform: none;
+			height: auto;
+			width: 100%;
+			will-change: auto;
+			transform-style: initial;
+		}
+	}
+	&__title{
+		font-style: normal;
+		font-weight: 600;
+		font-size: vw(24);
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #1E713F;
+		width: vw(280);
+		@include max(md){
+			font-size: vw2(24);
+			width: 100%;
+		}
+		@include max(sm){
+			font-size: vw3(24);
+		}
+		@include max(xs){
+			font-size: vw4(24);
+		}
+	}
+	&__text{
+		font-family: $textFont;
+		font-style: normal;
+		font-weight: 400;
+		font-size: vw(18);
+		line-height: 145%;
+		color: #6F6F6F;
+		margin-top: vw(16);
+		@include max(md){
+			font-size: vw2(18);
+			margin-top: vw2(16);
+		}
+		@include max(sm){
+			font-size: vw3(18);
+			margin-top: vw3(16);
+		}
+		@include max(xs){
+			font-size: vw4(18);
+			margin-top: vw4(16);
+		}
+	}
+	&__link{
+		margin-top: vw(44);
+		@include max(md){
+			margin-top: vw2(44);
+		}
+		@include max(sm){
+			margin-top: vw3(44);
+		}
+		@include max(xs){
+			margin-top: vw4(44);
+		}
+		a{
+			font-family: $textFont;
+			font-style: normal;
+			font-weight: 600;
+			font-size: vw(16);
+			line-height: 130%;
+			text-transform: uppercase;
+			color: #041C13;
+			text-decoration: none;
+			cursor: pointer;
+			display: inline-flex;
+			align-items: center;
+			@include max(md){
+				font-size: vw2(16);
+			}
+			@include max(sm){
+				font-size: vw3(16);
+			}
+			@include max(xs){
+				font-size: vw4(16);
+			}
+			&::after{
+				content: "";
+				display: block;
+				width: vw(24);
+				height: vw(24);
+				border: 1px solid #041C13;
+				margin-left: vw(12);
+				border-radius: 50%;
+				background: url("../img/svg/arrow.svg") center center no-repeat;
+				background-size: vw(12) vw(10);
+				@include max(md){
+					width: vw2(24);
+					height: vw2(24);
+					margin-left: vw2(12);
+					background-size: vw2(12) vw2(10);
+				}
+				@include max(sm){
+					width: vw3(24);
+					height: vw3(24);
+					margin-left: vw3(12);
+					background-size: vw3(12) vw3(10);
+				}
+				@include max(xs){
+					width: vw4(24);
+					height: vw4(24);
+					margin-left: vw4(12);
+					background-size: vw4(12) vw4(10);
+				}
+			}
+		}
+	}
+	&__right{
+		width: vw(488);
+		height: vh(700);
+		max-height: vh(750);
+		overflow: hidden;
+		will-change: transform;
+		transform-style: preserve-3d;
+		position: absolute;
+		left: vw(552);
+		top: vh(100);
+		@include max(md){
+			position: relative;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: vw2(1010);
+			max-height: none;
+			margin-top: vw2(64);
+			will-change: auto;
+			transform-style: initial;
+		}
+		@include max(sm){
+			height: vw3(740);
+			margin-top: vw3(64);
+		}
+		@include max(xs){
+			height: vw4(425);
+			margin-top: vw4(44);
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
 }
 
 .s4{
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 100vw;
-  top: 100vh;
-  will-change: transform;
-  transform-style: preserve-3d;
-  overflow: hidden;
-  video{
+	width: 100vw;
+	height: 100vh;
 	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	pointer-events: none;
-  }
+	left: 100vw;
+	top: 100vh;
+	will-change: transform;
+	transform-style: preserve-3d;
+	overflow: hidden;
+	@include max(md){
+		position: relative;
+		left: 0;
+		top: 0;
+		will-change: auto;
+		transform-style: initial;
+	}
+	video{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		pointer-events: none;
+	}
 }
 
 .assorti{
-  position: absolute;
-  top: 100vh;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  will-change: transform;
-  transform-style: preserve-3d;
-  overflow: hidden;
-  &__intro{
-	width: 100%;
-	height: 100%;
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
 	will-change: transform;
 	transform-style: preserve-3d;
-	position: absolute;
-	left: 0;
-	top: 0;
 	overflow: hidden;
-	&-title{
-	  font-weight: 600;
-	  font-size: vw(60);
-	  line-height: 140%;
-	  text-transform: uppercase;
-	  color: #041C13;
-	  width: vw(488);
-	  position: absolute;
-	  left: vw(240);
-	  top: 50%;
-	  transform: translateY(-50%);
-	  i{
-		font-style: inherit;
-		will-change: opacity;
-	  }
-	  &::after{
-		content: "";
-		display: block;
-		width: 0;
-		height: 1px;
-		background: #6F6F6F;
+	@include max(md){
+		position: relative;
+		height: auto;
+		width: 100%;
+		top: 0;
+		will-change: auto;
+		transform-style: initial;
+	}
+	&__intro{
+		width: 100%;
+		height: 100%;
+		will-change: transform;
+		transform-style: preserve-3d;
 		position: absolute;
-		top: 100%;
 		left: 0;
-		transition: width 0.3s ease;
-	  }
-	  &.active{
-		&::after{
-		  width: vw(176);
+		top: 0;
+		overflow: hidden;
+		@include max(md){
+			position: relative;
+			height: 100vh;
+			width: 100%;
+			will-change: auto;
+			transform-style: initial;
 		}
-	  }
+		&-title{
+			font-weight: 600;
+			font-size: vw(60);
+			line-height: 140%;
+			text-transform: uppercase;
+			color: #041C13;
+			width: vw(488);
+			position: absolute;
+			left: vw(240);
+			top: 50%;
+			transform: translateY(-50%);
+			@include max(md){
+				font-size: vw2(60);
+				width: vw2(488);
+				left: vw2(124);
+			}
+			@include max(sm){
+				font-size: vw3(60);
+				width: vw3(516);
+				left: vw3(12);
+			}
+			@include max(xs){
+				font-size: vw4(40);
+				width: vw4(296);
+				left: vw4(12);
+			}
+			i{
+				font-style: inherit;
+				will-change: opacity;
+			}
+			&::after{
+				content: "";
+				display: block;
+				width: 0;
+				height: 1px;
+				background: #6F6F6F;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				transition: width 0.3s ease;
+			}
+			&.active{
+				&::after{
+					width: vw(176);
+					@include max(md){
+						width: vw2(152);
+					}
+					@include max(sm){
+						width: vw3(156);
+					}
+					@include max(xs){
+						width: vw4(136);
+					}
+				}
+			}
+		}
+		&-text{
+			will-change: transform;
+			transform-style: preserve-3d;
+			width: vw(488);
+			font-style: normal;
+			font-weight: 600;
+			font-size: vw(36);
+			line-height: 140%;
+			text-transform: uppercase;
+			color: #041C13;
+			position: absolute;
+			left: vw(240);
+			top: 50%;
+			transform: translateY(-50%);
+			@include max(md){
+				width: vw2(520);
+				font-size: vw2(36);
+				left: vw2(124);
+			}
+			@include max(sm){
+				width: vw3(516);
+				font-size: vw3(36);
+				left: vw3(12);
+			}
+			@include max(xs){
+				width: vw4(296);
+				font-size: vw4(24);
+				left: vw4(12);
+			}
+			i{
+				font-style: inherit;
+				will-change: opacity;
+			}
+		}
 	}
-	&-text{
-	  will-change: transform;
-	  transform-style: preserve-3d;
-	  width: vw(488);
-	  font-style: normal;
-	  font-weight: 600;
-	  font-size: vw(36);
-	  line-height: 140%;
-	  text-transform: uppercase;
-	  color: #041C13;
-	  position: absolute;
-	  left: vw(240);
-	  top: 50%;
-	  transform: translateY(-50%);
-
-	  i{
-		font-style: inherit;
-		will-change: opacity;
-	  }
+	&__items{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		@include max(md){
+			position: relative;
+			height: auto;
+		}
 	}
-  }
-  &__items{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-  }
 }
 .assorti-item{
-  will-change: transform;
-  transform-style: preserve-3d;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  &__img{
-	overflow: hidden;
-	width: vw(488);
-	height: vw(580);
-	position: absolute;
-	left: vw(136);
-	top: vw(140);
 	will-change: transform;
 	transform-style: preserve-3d;
-	transform: translateX(-100vw) translateY(100vw);
-	img{
-	  display: block;
-	  width: 100%;
-	  height: 100%;
-	  object-fit: cover;
-	  object-position: center center;
-	}
-  }
-  &__content{
-	width: vw(592);
 	position: absolute;
-	left: vw(656);
-	top: vw(340);
-  }
-  &__title{
 	width: 100%;
-	font-style: normal;
-	font-weight: 600;
-	font-size: vw(60);
-	line-height: 140%;
-	text-transform: uppercase;
-	color: #041C13;
-  }
-  &__text{
-	will-change: transform;
-	transform-style: preserve-3d;
-	font-family: $textFont;
-	font-style: normal;
-	font-weight: 400;
-	font-size: vw(16);
-	line-height: 130%;
-	color: #6F6F6F;
-	margin-top: vw(32);
-	width: vw(280);
-	transform: translateY(100vh);
-  }
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	@include max(md){
+		will-change: auto;
+		transform-style: initial;
+		position: static;
+		height: auto;
+		width: 100%;
+		box-sizing: border-box;
+		height: auto;
+		padding: vw2(130) vw2(124) 0;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	@include max(sm){
+		padding: vw3(120) vw3(12) 0;
+	}
+	@include max(xs){
+		padding: vw4(80) vw4(12) 0;
+	}
+	&__img{
+		overflow: hidden;
+		width: vw(488);
+		height: vh(580);
+		position: absolute;
+		left: vw(136);
+		top: vh(140);
+		will-change: transform;
+		transform-style: preserve-3d;
+		transform: translateX(-100vw) translateY(100vw);
+		@include max(md){
+			width: 100%;
+			height: vw2(618);
+			position: static;
+			left: 0;
+			top: 0;
+			will-change: auto;
+			transform-style: initial;
+			transform: none;
+			margin-top: vw2(64);
+		}
+		@include max(sm){
+			height: vw3(618);
+			margin-top: vw3(64);
+		}
+		@include max(xs){
+			height: vw4(400);
+			margin-top: vw4(40);
+		}
+		img{
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+	&__content{
+		width: vw(592);
+		position: absolute;
+		left: vw(656);
+		top: 40%;
+		@include max(md){
+			position: static;
+			left: 0;
+			top: 0;
+			width: 100%;
+		}
+	}
+	&__title{
+		width: 100%;
+		font-style: normal;
+		font-weight: 600;
+		font-size: vw(60);
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #041C13;
+		@include max(md){
+			font-size: vw2(60);
+		}
+		@include max(sm){
+			font-size: vw3(60);
+		}
+		@include max(xs){
+			font-size: vw4(34);
+		}
+	}
+	&__text{
+		will-change: transform;
+		transform-style: preserve-3d;
+		font-family: $textFont;
+		font-style: normal;
+		font-weight: 400;
+		font-size: vw(16);
+		line-height: 130%;
+		color: #6F6F6F;
+		margin-top: vw(32);
+		width: vw(280);
+		transform: translateY(100vh);
+		@include max(md){
+			will-change: auto;
+			transform-style: initial;
+			font-size: vw2(16);
+			margin-top: vw2(24);
+			width: 100%;
+			transform: none;
+		}
+		@include max(sm){
+			font-size: vw3(16);
+			margin-top: vw3(24);
+		}
+		@include max(xs){
+			font-size: vw4(16);
+			margin-top: vw4(16);
+		}
+	}
 }
 
 
 .portfolio{
-  position: absolute;
-  left: 0;
-  top: 0;
-  will-change: transform;
-  transform-style: preserve-3d;
-  width: 100vw;
-  height: 100vh;
-  &__anotation{
-	width: 100%;
-	height: 100%;
 	position: absolute;
 	left: 0;
 	top: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	will-change: transform;
 	transform-style: preserve-3d;
-  }
-  &__title{
-	font-family: 'Ruda';
-	font-style: normal;
-	font-weight: 600;
-	font-size: vw(80);
-	line-height: 140%;
-	text-align: center;
-	text-transform: uppercase;
-	color: #041C13;
-	span{
-	  transition: color 3s;
-	  transition-delay: 1s;
-	  color: #041C13;
-	  will-change: color;
-	  cursor: cell;
-	  &:hover{
-		color: #1E713F;
-		transition: color 0s;
-	  }
+	width: 100vw;
+	height: 100vh;
+	@include max(md){
+		position: relative;
+		width: 100%;
+		height: auto;
 	}
-  }
+	&__anotation{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		will-change: transform;
+		transform-style: preserve-3d;
+		@include max(md){
+			position: relative;
+			will-change: auto;
+			transform-style: initial;
+			width: 100vw;
+			height: 100vh;
+		}
+	}
+	&__title{
+		font-style: normal;
+		font-weight: 600;
+		font-size: vw(80);
+		line-height: 140%;
+		text-align: center;
+		text-transform: uppercase;
+		color: #041C13;
+		@include max(md){
+			font-size: vw2(80);
+		}
+		@include max(sm){
+			font-size: vw3(80);
+		}
+		@include max(xs){
+			font-size: vw4(50);
+		}
+		span{
+			transition: color 3s;
+			transition-delay: 1s;
+			color: #041C13;
+			will-change: color;
+			cursor: cell;
+			&:hover{
+				color: #1E713F;
+				transition: color 0s;
+			}
+		}
+	}
 
 
-  &__items{
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	position: absolute;
-	left: 0;
-	top: 0;
-	pointer-events: none;
-  }
+	&__items{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		top: 0;
+		pointer-events: none;
+		@include max(md){
+			position: static;
+			height: auto;
+			pointer-events: auto;
+		}
+	}
 }
 
 
 .portfolio-item{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  will-change: transform;
-  transform-style: preserve-3d;
-  &__first{
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -592,362 +1105,842 @@ body{
 	overflow: hidden;
 	will-change: transform;
 	transform-style: preserve-3d;
-	&-img{
-	  width: vw(800);
-	  height: vw(430);
-	  overflow: hidden;
-	  position: absolute;
-	  left: vw(32);
-	  top: vw(220);
-	  img{
+	@include max(md){
+		position: static;
+		will-change: auto;
+		transform-style: initial;
+		height: auto;
+		padding: vw2(50) vw2(32) vw2(80);
+		box-sizing: border-box;
+	}
+	@include max(sm){
+		padding: vw3(50) vw2(12) vw2(70);
+	}
+	@include max(xs){
+		padding: vw4(20) vw4(12) vw4(60);
+	}
+	&__first{
+		position: absolute;
+		left: 0;
+		top: 0;
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
-		object-position: center center;
-		display: block;
-	  }
+		overflow: hidden;
+		will-change: transform;
+		transform-style: preserve-3d;
+		@include max(md){
+			position: static;
+			height: auto;
+		}
+		&-img{
+			width: vw(800);
+			height: vw(430);
+			max-height: vh(470);
+			overflow: hidden;
+			position: absolute;
+			left: vw(32);
+			top: 50%;
+			transform: translateY(-22.5vh);
+			@include max(md){
+				width: 100%;
+				height: vw2(372);
+				max-height: none;
+				position: static;
+				left: 0;
+				top: 0;
+				transform: none;
+			}
+			@include max(sm){
+				height: vw3(278);
+			}
+			@include max(xs){
+				height: vw4(300);
+			}
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center center;
+				display: block;
+			}
+		}
+		&-content{
+			position: absolute;
+			width: vw(384);
+			left: vw(864);
+			will-change: transform;
+			transform-style: preserve-3d;
+			top: 50%;
+			transform: translateY(-20vh);
+			@include max(md){
+				will-change: auto;
+				transform-style: initial;
+				position: static;
+				width: vw2(428);
+				left: 0;
+				top: 0;
+				transform: none;
+				padding-left: vw2(92);
+				margin-top: vw2(80);
+			}
+			@include max(sm){
+				width: 100%;
+				padding-left: 0;
+				margin-top: vw3(64);
+			}
+			@include max(xs){
+				margin-top: vw4(40);
+			}
+		}
+		&-title{
+			font-weight: 600;
+			font-size: vw(24);
+			line-height: 140%;
+			text-transform: uppercase;
+			color: #041C13;
+			margin-bottom: vw(24);
+			@include max(md){
+				font-size: vw2(24);
+				margin-bottom: vw2(24);
+			}
+			@include max(sm){
+				font-size: vw3(24);
+				margin-bottom: vw3(24);
+			}
+			@include max(xs){
+				font-size: vw4(24);
+				margin-bottom: vw4(16);
+			}
+		}
+		&-text{
+			font-family: $textFont;
+			font-style: normal;
+			font-weight: 400;
+			font-size: vw(16);
+			line-height: 130%;
+			color: #6F6F6F;
+			@include max(md){
+				font-size: vw2(16);
+			}
+			@include max(sm){
+				font-size: vw3(16);
+			}
+			@include max(xs){
+				font-size: vw4(16);
+			}
+			> p + p{
+				margin-top: 1.3em;
+			}
+		}
 	}
-	&-content{
-	  position: absolute;
-	  width: vw(384);
-	  left: vw(864);
-	  top: vw(248);
-	  will-change: transform;
-	  transform-style: preserve-3d;
-	}
-	&-title{
-	  font-weight: 600;
-	  font-size: vw(24);
-	  line-height: 140%;
-	  text-transform: uppercase;
-	  color: #041C13;
-	  margin-bottom: vw(24);
-	}
-	&-text{
-	  font-family: $textFont;
-	  font-style: normal;
-	  font-weight: 400;
-	  font-size: vw(16);
-	  line-height: 130%;
-	  color: #6F6F6F;
-	  > p + p{
-		margin-top: 1.3em;
-	  }
-	}
-  }
-  &__second{
-	position: absolute;
-	left: 100%;
-	top: -100%;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	will-change: transform;
-	transform-style: preserve-3d;
-	&-img{
-	  position: absolute;
-	  width: vw(280);
-	  height: vw(400);
-	  left: vw(240);
-	  top: vw(233);
-	  overflow: hidden;
-	  img{
+	&__second{
+		position: absolute;
+		left: 100%;
+		top: -100%;
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
-		object-position: center center;
-		display: block;
-	  }
+		overflow: hidden;
+		will-change: transform;
+		transform-style: preserve-3d;
+		@include max(md){
+			will-change: auto;
+			transform-style: initial;
+			position: static;
+			left: 0;
+			top: 0;
+			height: auto;
+			display: flex;
+			justify-content: space-between;
+			margin-top: vw2(80);
+		}
+		@include max(sm){
+			margin-top: vw3(64);
+			display: block;
+		}
+		@include max(xs){
+			margin-top: vw4(80);
+		}
+		&-img{
+			position: absolute;
+			width: vw(280);
+			height: vw(400);
+			max-height: vh(460);
+			left: vw(240);
+			overflow: hidden;
+			top: 40%;
+			transform: translateY(-16vh);
+			@include max(md){
+				position: relative;
+				width: vw2(336);
+				height: vw2(480);
+				max-height: none;
+				left: 0;
+				top: 0;
+				transform: none;
+			}
+			@include max(sm){
+				width: 100%;
+				height: vw3(738);
+			}
+			@include max(xs){
+				height: vw4(460);
+			}
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center center;
+				display: block;
+			}
+		}
+		&-content{
+			position: absolute;
+			width: vw(280);
+			left: vw(552);
+			will-change: transform;
+			transform-style: preserve-3d;
+			top: 40%;
+			transform: translateY(-16vh);
+			@include max(md){
+				will-change: auto;
+				transform-style: initial;
+				position: relative;
+				width: vw2(336);
+				left: 0;
+				top: 0;
+				transform: none;
+			}
+			@include max(sm){
+				width: 100%;
+				margin-top: vw3(64);
+			}
+			@include max(xs){
+				margin-top: vw4(40);
+			}
+		}
+		&-block{
+			border-bottom: 1px solid #1E713F;
+			padding-bottom: vw(24);
+			@include max(md){
+				padding-bottom: vw2(24);
+			}
+			@include max(sm){
+				padding-bottom: vw3(24);
+			}
+			@include max(xs){
+				padding-bottom: vw4(24);
+			}
+			+.portfolio-item__second-block{
+				margin-top: vw(24);
+				@include max(md){
+					margin-top: vw2(24);
+				}
+				@include max(sm){
+					margin-top: vw3(24);
+				}
+				@include max(xs){
+					margin-top: vw4(24);
+				}
+			}
+		}
+		&-title{
+			margin-bottom: vw(4);
+			font-family: $textFont;
+			font-weight: 600;
+			font-size: vw(12);
+			line-height: 140%;
+			text-transform: uppercase;
+			color: #1E713F;
+			@include max(md){
+				margin-bottom: vw2(4);
+				font-size: vw2(12);
+			}
+			@include max(sm){
+				margin-bottom: vw3(4);
+				font-size: vw3(13);
+			}
+			@include max(xs){
+				margin-bottom: vw4(4);
+				font-size: vw4(13);
+			}
+		}
+		&-text{
+			font-family: $textFont;
+			font-weight: 400;
+			font-size: vw(16);
+			line-height: 130%;
+			color: #6F6F6F;
+			@include max(md){
+				font-size: vw2(16);
+			}
+			@include max(sm){
+				font-size: vw3(16);
+			}
+			@include max(xs){
+				font-size: vw4(16);
+			}
+		}
 	}
-	&-content{
-	  position: absolute;
-	  width: vw(280);
-	  left: vw(552);
-	  top: vw(233);
-	  will-change: transform;
-	  transform-style: preserve-3d;
-	}
-	&-block{
-	  border-bottom: 1px solid #1E713F;
-	  padding-bottom: vw(24);
-	  +.portfolio-item__second-block{
-		margin-top: vw(24);
-	  }
-	}
-	&-title{
-	  margin-bottom: vw(4);
-	  font-family: $textFont;
-	  font-weight: 600;
-	  font-size: vw(12);
-	  line-height: 140%;
-	  text-transform: uppercase;
-	  color: #1E713F;
-	}
-	&-text{
-	  font-family: $textFont;
-	  font-weight: 400;
-	  font-size: vw(16);
-	  line-height: 130%;
-	  color: #6F6F6F;
-	}
-  }
 }
 
 
 .partners{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  will-change: transform;
-  transform-style: preserve-3d;
-  &__intro{
-	width: 100%;
-	height: 100%;
-	will-change: transform;
-	transform-style: preserve-3d;
 	position: absolute;
 	left: 0;
 	top: 0;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
-	&-title{
-	  font-weight: 600;
-	  font-size: vw(60);
-	  line-height: 140%;
-	  text-transform: uppercase;
-	  color: #041C13;
-	  width: vw(488);
-	  position: absolute;
-	  left: vw(240);
-	  top: 50%;
-	  transform: translateY(-50%);
-	  i{
-		font-style: inherit;
-		will-change: opacity;
-	  }
-	  &::after{
-		content: "";
-		display: block;
-		width: 0;
-		height: 1px;
-		background: #6F6F6F;
+	will-change: transform;
+	transform-style: preserve-3d;
+	@include max(md){
+		position: relative;
+		will-change: auto;
+		transform-style: initial;
+		height: auto;
+	}
+	&__intro{
+		width: 100%;
+		height: 100%;
+		will-change: transform;
+		transform-style: preserve-3d;
 		position: absolute;
-		top: 100%;
 		left: 0;
-		transition: width 0.3s ease;
-	  }
-	  &.active{
-		&::after{
-		  width: vw(176);
+		top: 0;
+		overflow: hidden;
+		@include max(md){
+			position: relative;
+			height: 100vh;
+			width: 100%;
+			will-change: auto;
+			transform-style: initial;
 		}
-	  }
+		&-title{
+			font-weight: 600;
+			font-size: vw(60);
+			line-height: 140%;
+			text-transform: uppercase;
+			color: #041C13;
+			width: vw(488);
+			position: absolute;
+			left: vw(240);
+			top: 50%;
+			transform: translateY(-50%);
+			@include max(md){
+				font-size: vw2(60);
+				width: vw2(488);
+				left: vw2(124);
+			}
+			@include max(sm){
+				font-size: vw3(60);
+				width: vw3(336);
+				left: vw3(102);
+			}
+			@include max(xs){
+				font-size: vw4(40);
+				width: vw4(296);
+				left: vw4(12);
+			}
+			i{
+				font-style: inherit;
+				will-change: opacity;
+			}
+			&::after{
+				content: "";
+				display: block;
+				width: 0;
+				height: 1px;
+				background: #6F6F6F;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				transition: width 0.3s ease;
+			}
+			&.active{
+				&::after{
+					width: vw(176);
+					@include max(md){
+						width: vw2(152);
+					}
+					@include max(sm){
+						width: vw3(156);
+					}
+					@include max(xs){
+						width: vw4(136);
+					}
+				}
+			}
+		}
+		&-text{
+			will-change: transform;
+			transform-style: preserve-3d;
+			width: vw(488);
+			font-style: normal;
+			font-weight: 600;
+			font-size: vw(36);
+			line-height: 140%;
+			text-transform: uppercase;
+			color: #041C13;
+			position: absolute;
+			left: vw(240);
+			top: 50%;
+			transform: translateY(-50%);
+			@include max(md){
+				width: vw2(520);
+				font-size: vw2(36);
+				left: vw2(124);
+			}
+			@include max(sm){
+				width: vw3(336);
+				font-size: vw3(30);
+				left: vw3(102);
+			}
+			@include max(xs){
+				width: vw4(296);
+				font-size: vw4(24);
+				left: vw4(12);
+			}
+			i{
+				font-style: inherit;
+				will-change: opacity;
+			}
+		}
 	}
-	&-text{
-	  will-change: transform;
-	  transform-style: preserve-3d;
-	  width: vw(488);
-	  font-style: normal;
-	  font-weight: 600;
-	  font-size: vw(36);
-	  line-height: 140%;
-	  text-transform: uppercase;
-	  color: #041C13;
-	  position: absolute;
-	  left: vw(240);
-	  top: 50%;
-	  transform: translateY(-50%);
 
-	  i{
-		font-style: inherit;
-		will-change: opacity;
-	  }
+	&__items{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		will-change: transform;
+		transform-style: preserve-3d;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		pointer-events: none;
+		@include max(md){
+			position: relative;
+			height: auto;
+			will-change: auto;
+			transform-style: initial;
+			opacity: 1;
+			padding: 0 vw2(16) vw2(118);
+			width: 100%;
+			box-sizing: border-box;
+		}
+		@include max(sm){
+			padding: 0 0 vw3(108);
+		}
+		@include max(xs){
+			padding: 0 0 vw4(80);
+		}
 	}
-  }
-
-  &__items{
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	will-change: transform;
-	transform-style: preserve-3d;
-	position: absolute;
-	left: 0;
-	top: 0;
-	opacity: 0;
-	pointer-events: none;
-  }
-  &__item{
-	border: 1px solid #1E713F;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: vw(280);
-	height: vw(280);
-	overflow: hidden;
-	margin: vw(16);
-	img{
-	  max-width: vw(242);
-	  max-height: vw(242);
-	  object-fit: contain;
-	  display: block;
+	&__item{
+		border: 1px solid #1E713F;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: vw(280);
+		height: vw(280);
+		overflow: hidden;
+		margin: vw(16);
+		box-sizing: border-box;
+		@include max(md){
+			width: vw2(336);
+			height: vw2(336);
+			margin: vw2(16);
+		}
+		@include max(sm){
+			width: vw3(246);
+			height: vw3(246);
+			margin: vw3(12);
+		}
+		@include max(xs){
+			width: vw4(136);
+			height: vw4(136);
+			margin: vw4(12);
+		}
+		img{
+			max-width: vw(242);
+			max-height: vw(242);
+			object-fit: contain;
+			display: block;
+			@include max(md){
+				max-width: vw2(291);
+				max-height: vw2(291);
+			}
+			@include max(sm){
+				max-width: vw3(213);
+				max-height: vw3(213);
+			}
+			@include max(xs){
+				max-width: vw4(117);
+				max-height: vw4(117);
+			}
+		}
 	}
-  }
+}
+.partner-img{
+	&-1{
+		width: vw(236);
+		@include max(md){
+			width: vw2(283);
+		}
+		@include max(sm){
+			width: vw3(207);
+		}
+		@include max(xs){
+			width: vw4(207);
+		}
+	}
+	&-2{
+		width: vw(228);
+		@include max(md){
+			width: vw2(273);
+		}
+		@include max(sm){
+			width: vw3(200);
+		}
+		@include max(xs){
+			width: vw4(110);
+		}
+	}
+	&-3{
+		width: vw(242);
+		@include max(md){
+			width: vw2(290);
+		}
+		@include max(sm){
+			width: vw3(212);
+		}
+		@include max(xs){
+			width: vw4(117);
+		}
+	}
+	&-4{
+		width: vw(140);
+		@include max(md){
+			width: vw2(168);
+		}
+		@include max(sm){
+			width: vw3(123);
+		}
+		@include max(xs){
+			width: vw4(68);
+		}
+	}
 }
 
 
 
 
 .connect{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  will-change: transform, background;
-  transform-style: preserve-3d;
-  background: #041C13;
-  &__first{
-	font-style: normal;
-	font-weight: 600;
-	font-size: vw(42);
-	line-height: 140%;
-	text-transform: uppercase;
-	color: #FDFDFD;
-	position: absolute;
-	top: 50%;
-	left: vw(136);
-	transform: translateY(-50%);
-	will-change: transform;
-	transform-style: preserve-3d;
-	width: vw(800);
-	&::after{
-	  content: "";
-	  display: block;
-	  width: vw(176);
-	  height: 1px;
-	  background: #C6C6C6;
-	  position: absolute;
-	  left: 0;
-	  bottom: vw(-24);
-	}
-  }
-
-  &__second{
-	position: absolute;
-	left: vw(137);
-	top: vw(185);
-	will-change: transform;
-	transform-style: preserve-3d;
-	display: flex;
-	align-items: flex-start;
-  }
-  &__images{
-	display: flex;
-	justify-content: space-between;
-	width: vw(592);
-  }
-  &__img{
-	width: vw(280);
-	height: vw(400);
-	overflow: hidden;
-	img{
-	  width: 100%;
-	  height: 100%;
-	  object-fit: cover;
-	  object-position: center center;
-	  display: block;
-	}
-  }
-  &__content{
-	width: vw(488);
-	margin-left: vw(31);
-	&-title{
-	  font-weight: 600;
-	  font-size: vw(36);
-	  line-height: 140%;
-	  text-transform: uppercase;
-	  color: #FDFDFD;
-	}
-	&-blocks{}
-	&-block{
-	  font-style: normal;
-	  font-weight: 600;
-	  font-size: vw(24);
-	  line-height: 140%;
-	  text-transform: uppercase;
-	  color: #FDFDFD;
-	  margin-top: vw(24);
-	  &::after{
-		content: "";
-		display: block;
-		width: vw(72);
-		height: 1px;
-		background: #FDFDFD;
-		margin-top: vw(8);
-	  }
-	}
-  }
-  &__link{
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	a{
-	  z-index: 4;
-	  position: absolute;
-	  left: 50%;
-	  top: 50%;
-	  transform: translate(-50%, -50%);
-	  width: vw(176);
-	  height: vw(176);
-	  border-radius: 50%;
-	  background: #FDFDFD;
-	  cursor: pointer;
-	  font-weight: 700;
-	  font-size: vw(16);
-	  line-height: 145%;
-	  text-align: center;
-	  letter-spacing: 0.04em;
-	  text-transform: uppercase;
-	  color: #1E713F;
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  opacity: 0;
-	  transition: color 0.3s, background-color 0.3s;
-	  pointer-events: none;
-	  text-decoration: none;
-	  &::before{
-		content: "";
-		display: block;
-		width: vw(220);
-		height: vw(220);
-		border-radius: 50%;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		z-index: -1;
-		border: 1px solid #FFFFFF;
-	  }
-	  &:hover{
-		background: #1E713F;
+	will-change: transform, background;
+	transform-style: preserve-3d;
+	background: #041C13;
+	@include max(md){
+		position: relative;
+		height: auto;
+		will-change: auto;
+		transform-style: initial;
+		background: #0D0D0D;
+		box-sizing: border-box;
+	}
+	&__first{
+		font-style: normal;
+		font-weight: 600;
+		font-size: vw(42);
+		line-height: 140%;
+		text-transform: uppercase;
 		color: #FDFDFD;
-	  }
+		position: absolute;
+		top: 50%;
+		left: vw(136);
+		transform: translateY(-50%);
+		will-change: transform;
+		transform-style: preserve-3d;
+		width: vw(800);
+		@include max(md){
+			will-change: auto;
+			transform-style: initial;
+			font-size: vw2(42);
+			position: static;
+			top: 0;
+			left: 0;
+			transform: none;
+			width: vw2(636);
+			box-sizing: border-box;
+			padding: vw2(130) vw2(32) 0;
+		}
+		@include max(sm){
+			font-size: vw3(42);
+			width: 100%;
+			padding: vw3(120) vw3(12) 0;
+		}
+		@include max(xs){
+			font-size: vw4(28);
+			padding: vw4(80) vw4(12) 0;
+		}
+		&::after{
+			content: "";
+			display: block;
+			width: vw(176);
+			height: 1px;
+			background: #C6C6C6;
+			position: absolute;
+			left: 0;
+			bottom: vw(-24);
+			@include max(md){
+				display: none;
+			}
+		}
 	}
-	&.active{
-	  a{
-		pointer-events: auto;
-	  }
+
+	&__second{
+		position: absolute;
+		left: vw(137);
+		top: vh(185);
+		will-change: transform;
+		transform-style: preserve-3d;
+		display: flex;
+		align-items: flex-start;
+		@include max(md){
+			will-change: auto;
+			transform-style: initial;
+			position: static;
+			left: 0;
+			top: 0;
+			display: block;
+			margin-top: vw2(64);
+			box-sizing: border-box;
+			padding: 0 vw2(32) vw2(130);
+		}
+		@include max(sm){
+			margin-top: vw3(64);
+			padding: 0 vw3(12) vw3(120);
+		}
+		@include max(xs){
+			margin-top: vw4(40);
+			padding: 0 vw4(12) vw4(80);
+		}
 	}
-  }
+	&__images{
+		display: flex;
+		justify-content: space-between;
+		width: vw(592);
+		@include max(md){
+			width: 100%;
+		}
+		@include max(sm){
+			display: block;
+		}
+	}
+	&__img{
+		width: vw(280);
+		height: vw(400);
+		overflow: hidden;
+		@include max(md){
+			width: vw2(336);
+			height: vw2(476);
+		}
+		@include max(sm){
+			width: 100%;
+			height: vw3(731);
+		}
+		@include max(xs){
+			height: vw4(360);
+		}
+		&:not(:first-child){
+			@include max(sm){
+				margin-top: vw3(24);
+			}
+			@include max(xs){
+				margin-top: vw4(16);
+			}
+		}
+		video,
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+			display: block;
+		}
+	}
+	&__content{
+		width: vw(488);
+		margin-left: vw(31);
+		@include max(md){
+			width: vw2(520);
+			margin-left: 0;
+			margin-top: vw2(64);
+		}
+		@include max(sm){
+			width: 100%;
+			margin-top: vw3(64);
+		}
+		@include max(xs){
+			margin-top: vw4(40);
+		}
+		&-title{
+			font-weight: 600;
+			font-size: vw(36);
+			line-height: 140%;
+			text-transform: uppercase;
+			color: #FDFDFD;
+			@include max(md){
+				font-size: vw2(36);
+			}
+			@include max(sm){
+				font-size: vw3(36);
+			}
+			@include max(xs){
+				font-size: vw4(24);
+			}
+		}
+		&-blocks{}
+		&-block{
+			font-style: normal;
+			font-weight: 600;
+			font-size: vw(24);
+			line-height: 140%;
+			text-transform: uppercase;
+			color: #FDFDFD;
+			margin-top: vw(24);
+			@include max(md){
+				font-size: vw2(24);
+				margin-top: vw2(24);
+			}
+			@include max(sm){
+				font-size: vw3(24);
+				margin-top: vw3(24);
+			}
+			@include max(xs){
+				font-size: vw4(18);
+				margin-top: vw4(24);
+			}
+			&::after{
+				content: "";
+				display: block;
+				width: vw(72);
+				height: 1px;
+				background: #FDFDFD;
+				margin-top: vw(8);
+				@include max(md){
+					width: vw2(72);
+					margin-top: vw2(8);
+				}
+				@include max(sm){
+					width: vw3(72);
+					margin-top: vw3(8);
+				}
+				@include max(xs){
+					width: vw4(72);
+					margin-top: vw4(8);
+				}
+			}
+		}
+	}
+	&__link{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		@include max(md){
+			background: #1E713F;
+			height: 100vh;
+			width: 100vw;
+			position: relative;
+		}
+		a{
+			z-index: 4;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: vw(176);
+			height: vw(176);
+			border-radius: 50%;
+			background: #FDFDFD;
+			cursor: pointer;
+			font-weight: 700;
+			font-size: vw(16);
+			line-height: 145%;
+			text-align: center;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			color: #1E713F;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			transition: color 0.3s, background-color 0.3s;
+			pointer-events: none;
+			text-decoration: none;
+			box-sizing: border-box;
+			@include max(md){
+				width: vw2(176);
+				height: vw2(176);
+				font-size: vw2(16);
+				pointer-events: auto;
+				opacity: 1;
+			}
+			@include max(sm){
+				width: vw3(176);
+				height: vw3(176);
+				font-size: vw3(16);
+			}
+			@include max(xs){
+				width: vw4(128);
+				height: vw4(128);
+				font-size: vw4(12);
+			}
+			&::before{
+				content: "";
+				display: block;
+				width: vw(220);
+				height: vw(220);
+				border-radius: 50%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				z-index: -1;
+				border: 1px solid #FFFFFF;
+				@include max(md){
+					width: vw2(220);
+					height: vw2(220);
+				}
+				@include max(sm){
+					width: vw3(220);
+					height: vw3(220);
+				}
+				@include max(xs){
+					width: vw4(160);
+					height: vw4(160);
+				}
+			}
+			&:hover{
+				background: #1E713F;
+				color: #FDFDFD;
+			}
+		}
+		&.active{
+			a{
+				pointer-events: auto;
+			}
+		}
+	}
 }

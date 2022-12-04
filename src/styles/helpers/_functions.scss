@@ -9,3 +9,24 @@
 	$temp: #{math.div($px, $resolutiond) * 100};
 	@return $temp +'vw';
 }
+
+@function vh($px, $resolutiond: 800) {
+	$temp: #{math.div($px, $resolutiond) * 100};
+	@return $temp +'vh';
+}
+
+
+@function vw2($px, $resolutiond: 768) {
+  $temp: #{math.div($px, $resolutiond) * 100};
+  @return $temp +'vw';
+}
+
+@function vw3($px, $resolutiond: 540) {
+  $temp: #{math.div($px, $resolutiond) * 100};
+  @return $temp +'vw';
+}
+
+@function vw4($px, $resolutiond: 320) {
+  $temp: #{math.div($px, $resolutiond) * 100};
+  @return $temp +'vw';
+}
