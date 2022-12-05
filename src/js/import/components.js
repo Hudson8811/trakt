@@ -153,11 +153,13 @@ $(document).ready(function (){
 	}
 
 	initAnimation();
-
+	var dwidth = $(window).width();
 	$(window).on('resize',function (){
 		/*if ( (window.innerWidth > 999 && initMode != 'desk') ||
 			(window.innerWidth > 699 && window.innerWidth <= 999 && initMode != 'tablet') ||
 			(window.innerWidth <= 699 && initMode != 'mobile') ){*/
+		var wwidth = $(window).width();
+		if(dwidth!==wwidth){
 			setMaskHeader(0);
 			lightHead = true;
 			if (typeof st1 !== "undefined") st1.kill();
@@ -181,7 +183,7 @@ $(document).ready(function (){
 			});
 			$('body').removeClass('active');
 			initAnimation();
-		//}
+		}
 	});
 
 

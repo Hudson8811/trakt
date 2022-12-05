@@ -167,28 +167,33 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   }
 
   initAnimation();
+  var dwidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     /*if ( (window.innerWidth > 999 && initMode != 'desk') ||
     	(window.innerWidth > 699 && window.innerWidth <= 999 && initMode != 'tablet') ||
     	(window.innerWidth <= 699 && initMode != 'mobile') ){*/
-    setMaskHeader(0);
-    lightHead = true;
-    if (typeof st1 !== "undefined") st1.kill();
-    if (typeof st2 !== "undefined") st2.kill();
-    if (typeof st3 !== "undefined") st3.kill();
-    tl.clear();
-    tl1.clear();
-    tl2.clear();
-    tl3.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__logo, .loader__title, .loader .l1, .loader .l2, .loader .l3, .loader .l4,.loader," + ".s1__title, .s1__left, .s1__text,  .s1__right,  .s1__link, .about, .first, .s2, .s2__img img, .s3, .s3__right, .s3__right img," + ".s4, .second, .assorti, .at1, .at2, .at3, .at4, .assorti__intro-text, .as1, .as2, .as3, .as4, .assorti-item, .assorti-item__img," + ".assorti-item__img img, .assorti-item__text, .portfolio, .portfolio__anotation, .portfolio-item, .portfolio-item__first," + ".portfolio-item__first-img img, .portfolio-item__first-content, .portfolio-item__second, .portfolio-item__second img," + ".portfolio-item__second-content, .partners, .pt1, .pt2, .pt3, .pt4, .partners__intro-text, .ps1, .ps2, .ps3, .ps4," + ".partners__items, .connect, .connect__first, .connect__second, .connect__content, .connect__content-blocks, .connect__link a," + ".home-page", {
-      clearProps: "all"
-    });
-    window.scrollTo({
-      top: 0,
-      behavior: "instant"
-    });
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('active');
-    initAnimation(); //}
+    var wwidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
+
+    if (dwidth !== wwidth) {
+      setMaskHeader(0);
+      lightHead = true;
+      if (typeof st1 !== "undefined") st1.kill();
+      if (typeof st2 !== "undefined") st2.kill();
+      if (typeof st3 !== "undefined") st3.kill();
+      tl.clear();
+      tl1.clear();
+      tl2.clear();
+      tl3.clear();
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__logo, .loader__title, .loader .l1, .loader .l2, .loader .l3, .loader .l4,.loader," + ".s1__title, .s1__left, .s1__text,  .s1__right,  .s1__link, .about, .first, .s2, .s2__img img, .s3, .s3__right, .s3__right img," + ".s4, .second, .assorti, .at1, .at2, .at3, .at4, .assorti__intro-text, .as1, .as2, .as3, .as4, .assorti-item, .assorti-item__img," + ".assorti-item__img img, .assorti-item__text, .portfolio, .portfolio__anotation, .portfolio-item, .portfolio-item__first," + ".portfolio-item__first-img img, .portfolio-item__first-content, .portfolio-item__second, .portfolio-item__second img," + ".portfolio-item__second-content, .partners, .pt1, .pt2, .pt3, .pt4, .partners__intro-text, .ps1, .ps2, .ps3, .ps4," + ".partners__items, .connect, .connect__first, .connect__second, .connect__content, .connect__content-blocks, .connect__link a," + ".home-page", {
+        clearProps: "all"
+      });
+      window.scrollTo({
+        top: 0,
+        behavior: "instant"
+      });
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('active');
+      initAnimation();
+    }
   });
 
   function initScrollAnimationDesktop() {

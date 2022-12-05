@@ -171,7 +171,6 @@ body{
 		@include max(md){
 			left: vw2(394);
 			width: vw2(250);
-			height: 100vh;
 		}
 		@include max(sm){
 			will-change: auto;
@@ -183,6 +182,7 @@ body{
 			margin-top: vw3(40);
 			box-sizing: border-box;
 			transform: none;
+			height: 100vh;
 		}
 		@include max(xs){
 			margin-top: vw4(40);

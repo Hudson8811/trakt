@@ -1850,7 +1850,6 @@ body:not(.active) {
   .s1__right {
     left: 51.3020833333vw;
     width: 32.5520833333vw;
-    height: 100vh;
   }
 
   .s1__text {
@@ -2513,6 +2512,7 @@ body:not(.active) {
     margin-top: 7.4074074074vw;
     box-sizing: border-box;
     transform: none;
+    height: 100vh;
   }
 
   .s1__right-inner {
