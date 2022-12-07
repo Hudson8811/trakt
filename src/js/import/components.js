@@ -183,6 +183,7 @@ $(document).ready(function (){
 				top: 0,
 				behavior: "instant"
 			});
+			$('.assorti__intro-text, .assorti__intro-title, .partners__intro-text, .partners__intro-title').addClass('active');
 			$('body').removeClass('active');
 			initAnimation();
 		}
@@ -1004,17 +1005,27 @@ $(document).ready(function (){
 			autoAlpha: 0,
 			duration: 0.7,
 			ease: "none",
+			onComplete: function (){
+				$('.assorti__intro-text').removeClass('active');
+			}
 		} , ">-0.3");
 		tl2.to(".as4", {
 			autoAlpha: 0,
 			duration: 0.7,
 			ease: "none",
+			onReverseComplete: function (){
+				$('.assorti__intro-text').addClass('active');
+			}
 		} , ">-0.3");
 		tl2.to(".assorti__intro", {
 			autoAlpha: 1,
 			duration: 0.5,
 			ease: "none",
 		} , ">");
+
+
+
+
 
 		st2 = ScrollTrigger.create({
 			trigger: ".assorti__intro",
@@ -1121,11 +1132,17 @@ $(document).ready(function (){
 			autoAlpha: 0,
 			duration: 0.7,
 			ease: "none",
+			onComplete: function (){
+				$('.partners__intro-text').removeClass('active');
+			}
 		} , ">-0.3");
 		tl3.to(".ps4", {
 			autoAlpha: 0,
 			duration: 0.7,
 			ease: "none",
+			onReverseComplete: function (){
+				$('.partners__intro-text').addClass('active');
+			}
 		} , ">-0.3");
 		tl3.to(".partners__intro", {
 			autoAlpha: 1,
@@ -1268,11 +1285,17 @@ $(document).ready(function (){
 			autoAlpha: 0,
 			duration: 0.7,
 			ease: "none",
+			onComplete: function (){
+				$('.assorti__intro-text').removeClass('active');
+			}
 		} , ">-0.3");
 		tl2.to(".as4", {
 			autoAlpha: 0,
 			duration: 0.7,
 			ease: "none",
+			onReverseComplete: function (){
+				$('.assorti__intro-text').addClass('active');
+			}
 		} , ">-0.3");
 		tl2.to(".assorti__intro", {
 			autoAlpha: 1,
@@ -1387,11 +1410,17 @@ $(document).ready(function (){
 			autoAlpha: 0,
 			duration: 0.7,
 			ease: "none",
+			onComplete: function (){
+				$('.partners__intro-text').removeClass('active');
+			}
 		} , ">-0.3");
 		tl3.to(".ps4", {
 			autoAlpha: 0,
 			duration: 0.7,
 			ease: "none",
+			onReverseComplete: function (){
+				$('.partners__intro-text').addClass('active');
+			}
 		} , ">-0.3");
 		tl3.to(".partners__intro", {
 			autoAlpha: 1,
