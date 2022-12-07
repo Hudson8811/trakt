@@ -375,8 +375,11 @@ body{
 		}
 	}
 	&__info{
-		margin-top: vw(80);
+		margin-top: vh(80);
 		width: vw(280);
+		@include min(xl){
+			margin-top: vh(30);
+		}
 		@include max(md){
 			margin-top: 0;
 			margin-left: vw2(32);
@@ -396,6 +399,9 @@ body{
 	&__block{
 		border-bottom: 1px solid #1E713F;
 		padding-bottom: vw(24);
+		@include min(xl){
+			padding-bottom: vh(20);
+		}
 		@include max(md){
 			padding-bottom: vw2(24);
 		}
@@ -407,6 +413,9 @@ body{
 		}
 		+.about__block{
 			margin-top: vw(24);
+			@include min(xl){
+				margin-top: vh(20);
+			}
 			@include max(md){
 				margin-top: vw2(24);
 			}
@@ -460,6 +469,7 @@ body{
 
 .second{
 	position: relative;
+	z-index: 3;
 }
 
 .s2{
@@ -497,6 +507,12 @@ body{
 		transform: translateY(-65%);
 		display: flex;
 		justify-content: space-between;
+		@include min(xl){
+			transform: translateY(-50%);
+			height: vh(400);
+			width: vh(799);
+			max-width: vw(799);
+		}
 		@include max(md){
 			position: relative;
 			height: auto;
@@ -512,6 +528,11 @@ body{
 			width: vw(384);
 			height: vw(400);
 			overflow: hidden;
+			@include min(xl){
+				height: vh(400);
+				width: vh(384);
+				max-width: vw(384);
+			}
 			@include max(md){
 				width: vw2(336);
 				height: vw2(352);
@@ -647,6 +668,8 @@ body{
 			cursor: pointer;
 			display: inline-flex;
 			align-items: center;
+			transition: color 0.3s;
+			position: relative;
 			@include max(md){
 				font-size: vw2(16);
 			}
@@ -656,6 +679,7 @@ body{
 			@include max(xs){
 				font-size: vw4(16);
 			}
+			&::before,
 			&::after{
 				content: "";
 				display: block;
@@ -666,6 +690,9 @@ body{
 				border-radius: 50%;
 				background: url("../img/svg/arrow.svg") center center no-repeat;
 				background-size: vw(12) vw(10);
+				transition: border 0.3s;
+				position: relative;
+				z-index: 1;
 				@include max(md){
 					width: vw2(24);
 					height: vw2(24);
@@ -683,6 +710,27 @@ body{
 					height: vw4(24);
 					margin-left: vw4(12);
 					background-size: vw4(12) vw4(10);
+				}
+			}
+			&::before{
+				border-color: transparent;
+				pointer-events: none;
+				background-image: url("../img/svg/arrow-green.svg");
+				opacity: 0;
+				transition: opacity 0.3s;
+				position: absolute;
+				z-index: 2;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&:hover{
+				color: #1E713F;
+				&::after{
+					border-color: #1E713F;
+				}
+				&::before{
+					opacity: 1;
 				}
 			}
 		}
@@ -762,6 +810,7 @@ body{
 	will-change: transform;
 	transform-style: preserve-3d;
 	overflow: hidden;
+	z-index: 1;
 	@include max(md){
 		position: relative;
 		height: auto;
@@ -856,6 +905,17 @@ body{
 			left: vw(240);
 			top: 50%;
 			transform: translateY(-50%);
+			&::after{
+				content: "";
+				display: block;
+				width: 0;
+				height: 1px;
+				background: #6F6F6F;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				transition: width 0.3s ease;
+			}
 			@include max(md){
 				width: vw2(520);
 				font-size: vw2(36);
@@ -874,6 +934,20 @@ body{
 			i{
 				font-style: inherit;
 				will-change: opacity;
+			}
+			&.active{
+				&::after{
+					width: vw(176);
+					@include max(md){
+						width: vw2(152);
+					}
+					@include max(sm){
+						width: vw3(156);
+					}
+					@include max(xs){
+						width: vw4(136);
+					}
+				}
 			}
 		}
 	}
@@ -981,7 +1055,7 @@ body{
 			font-size: vw3(60);
 		}
 		@include max(xs){
-			font-size: vw4(34);
+			font-size: vw4(24);
 		}
 	}
 	&__text{
@@ -1028,6 +1102,8 @@ body{
 		position: relative;
 		width: 100%;
 		height: auto;
+		will-change: auto;
+		transform-style: initial;
 	}
 	&__anotation{
 		width: 100%;
@@ -1066,14 +1142,18 @@ body{
 			font-size: vw4(50);
 		}
 		span{
-			transition: color 3s;
-			transition-delay: 1s;
-			color: #041C13;
-			will-change: color;
-			cursor: cell;
+			@include min(md){
+				transition: color 3s;
+				transition-delay: 1s;
+				color: #041C13;
+				will-change: color;
+				cursor: cell;
+			}
 			&:hover{
-				color: #1E713F;
-				transition: color 0s;
+				@include min(md){
+					color: #1E713F;
+					transition: color 0s;
+				}
 			}
 		}
 	}
@@ -1485,6 +1565,17 @@ body{
 			left: vw(240);
 			top: 50%;
 			transform: translateY(-50%);
+			&::after{
+				content: "";
+				display: block;
+				width: 0;
+				height: 1px;
+				background: #6F6F6F;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				transition: width 0.3s ease;
+			}
 			@include max(md){
 				width: vw2(520);
 				font-size: vw2(36);
@@ -1503,6 +1594,20 @@ body{
 			i{
 				font-style: inherit;
 				will-change: opacity;
+			}
+			&.active{
+				&::after{
+					width: vw(176);
+					@include max(md){
+						width: vw2(152);
+					}
+					@include max(sm){
+						width: vw3(156);
+					}
+					@include max(xs){
+						width: vw4(136);
+					}
+				}
 			}
 		}
 	}

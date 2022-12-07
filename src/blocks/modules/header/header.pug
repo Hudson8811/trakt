@@ -6,7 +6,7 @@ header.header.header--main
         .header__right
             a.header__phone(href="+79848885154") +7 (984) 888-51-54
             .header__btns
-                a.header__link.header__link--burger(href="javascript:;")
+                a.header__link.header__link--burger.js-show-menu(href="javascript:;")
                 a.header__link.header__link--profile(href="")
 
 .header.header--dark
@@ -17,5 +17,49 @@ header.header.header--main
         .header__right
             a.header__phone(href="+79848885154") +7 (984) 888-51-54
             .header__btns
-                a.header__link.header__link--burger(href="javascript:;")
+                a.header__link.header__link--burger.js-show-menu(href="javascript:;")
                 a.header__link.header__link--profile(href="")
+
+
+
+.menu
+    .menu__overlay
+    .menu__inner
+        a.menu__close.js-hide-menu(href="javascript:;")
+        .menu__scroll
+            .menu__content
+                .menu__top
+                    .menu__left
+                        ul.menu__list
+                            li
+                                a(href="") Услуги
+                            li
+                                a(href="") Выращивание
+                            li
+                                a(href="") О питомнике
+                            li
+                                a(href="") Портфолио
+                            li
+                                a(href="") FAQ
+
+
+                    .menu__right
+                        .menu__contacts
+                            .menu__contact
+                                .menu__contact-title Адрес:
+                                .menu__contact-text Калужская область, Жуковский район, д. Дадровка
+                            .menu__contact
+                                .menu__contact-title Телефон/WhatsApp:
+                                .menu__contact-text
+                                    a(href="tel:+79208868924") +7 (920) 886–89–24
+                            .menu__contact
+                                .menu__contact-title E-mail:
+                                .menu__contact-text
+                                    a(href="mailto:Nracheeva@mail.ru") Nracheeva@mail.ru
+
+                .menu__bottom
+                    .menu__left
+                        .menu__walk Прогуляться по питомнику
+                    .menu__right
+                        a.menu__3d(href="") 3D-прогулка <br>по питомнику
+

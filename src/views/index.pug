@@ -18,11 +18,11 @@ block content
 							img(src="img/s1-1.webp" alt="")
 					.s1__text
 						.s1__text-inner
-							| Выращивание, доращивание и оптовая продажа хвойных растений напрямую от производителя.
+							| Выращивание, доращивание и&nbsp;оптовая продажа хвойных растений напрямую от&nbsp;производителя.
 					.s1__right
 						.s1__right-inner
 							video(src="video/video.mp4" autoplay loop muted)
-							a.s1__link 3D-прогулка <br>по питомнику
+							a.s1__link(href="") 3D-прогулка <br>по питомнику
 
 				.about
 					.about__title О питомнике
@@ -60,8 +60,8 @@ block content
 
 		.assorti
 			.assorti__intro
-				.assorti__intro-title Ассортимент питомника
-				.assorti__intro-text Выращиваем более 200 тыс. растений в контейнерах и более 50 тыс. — на открытом грунте в год. Закупаем саженцы из ведущих питомников Европы (Бельгия, Нидерланды, Польша) и России.
+				.assorti__intro-title.active Ассортимент питомника
+				.assorti__intro-text.active Выращиваем более 200 тыс. растений в контейнерах и более 50 тыс. — на открытом грунте в год. Закупаем саженцы из ведущих питомников Европы (Бельгия, Нидерланды, Польша) и России.
 			.assorti__items
 				.assorti-item
 					.assorti-item__img
@@ -111,15 +111,15 @@ block content
 		.portfolio
 			.portfolio__anotation
 				.portfolio__title
-					span П
-					span о
-					span р
-					span т
-					span ф
-					span о
-					span л
-					span и
-					span о
+					span.st3 П
+					span.st1 о
+					span.st1 р
+					span.st4 т
+					span.st3 ф
+					span.st2 о
+					span.st1 л
+					span.st2 и
+					span.st4 о
 			.portfolio__items
 				- for (var i=0; i<3; i++)
 					.portfolio-item
@@ -154,8 +154,8 @@ block content
 
 		.partners
 			.partners__intro
-				.partners__intro-title С кем мы работаем
-				.partners__intro-text Сотрудничаем с садовыми центрами, другими питомниками, предоставляя высококачественный посадочный материал, выращенный профессиональными агрономами.
+				.partners__intro-title.active С кем мы работаем
+				.partners__intro-text.active Сотрудничаем с садовыми центрами, другими питомниками, предоставляя высококачественный посадочный материал, выращенный профессиональными агрономами.
 			.partners__items
 				.partners__item
 					img.partner-img-1(src="img/partner-1.webp")
@@ -173,7 +173,7 @@ block content
 					.connect__img
 						img(src='img/s6-1.webp')
 					.connect__img
-						img(src='img/s6-2.webp')
+						video(src="video/video.mp4" autoplay loop muted)
 				.connect__content
 					.connect__content-title Покупка растений и посадочного материала на выгодных условиях.
 					.connect__content-blocks
