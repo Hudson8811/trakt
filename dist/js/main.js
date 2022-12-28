@@ -483,7 +483,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       top: "200%",
       duration: 3,
       ease: "none"
-    }, ">");
+    }, ">-1.7");
     tl1.to(".as1", {
       autoAlpha: 0,
       duration: 0.7,
@@ -682,7 +682,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       top: "200%",
       duration: 3,
       ease: "none"
-    }, ">");
+    }, ">-1.7");
     tl1.to(".ps1", {
       autoAlpha: 0,
       duration: 0.7,
@@ -946,7 +946,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       top: "200%",
       duration: 3,
       ease: "none"
-    }, ">");
+    }, ">-1.7");
     tl2.to(".as1", {
       autoAlpha: 0,
       duration: 0.7,
@@ -1065,7 +1065,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       top: "200%",
       duration: 3,
       ease: "none"
-    }, ">");
+    }, ">-1.7");
     tl3.to(".ps1", {
       autoAlpha: 0,
       duration: 0.7,
@@ -1215,7 +1215,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       top: "200%",
       duration: 3,
       ease: "none"
-    }, ">");
+    }, ">-1.7");
     tl2.to(".as1", {
       autoAlpha: 0,
       duration: 0.7,
@@ -1334,7 +1334,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       top: "200%",
       duration: 3,
       ease: "none"
-    }, ">");
+    }, ">-1.7");
     tl3.to(".ps1", {
       autoAlpha: 0,
       duration: 0.7,
@@ -1425,6 +1425,21 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     event.preventDefault();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu').addClass('active');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '.to-top', function () {
+    event.preventDefault();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('html,body').animate({
+      scrollTop: 0
+    }, 'fast');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('scroll', function () {
+    var scrollTop = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop();
+
+    if (scrollTop > 300) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.to-top').addClass('active');
+    } else {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.to-top').removeClass('active');
+    }
   });
 });
 

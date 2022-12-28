@@ -642,6 +642,28 @@ body {
   background-image: url("../img/svg/header-close-2.svg");
 }
 
+.menu__profile {
+  width: 4.375vw;
+  height: 4.375vw;
+  border: 1px solid #FDFDFD;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s background;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  background-image: url("../img/svg/header-profile.svg");
+  background-size: 1.640625vw;
+  position: absolute;
+  top: 1.875vw;
+  right: 7.65625vw;
+}
+
+.menu__profile:hover {
+  background-color: #FDFDFD;
+  background-image: url("../img/svg/header-profile-2.svg");
+}
+
 .menu__content {
   padding: 12.5vh 0 2.5vh;
 }
@@ -873,6 +895,29 @@ body {
   margin-top: 5vw;
   padding-top: 1.875vw;
   border-top: 1px solid #1E713F;
+}
+
+.to-top {
+  position: fixed;
+  right: 3.90625vw;
+  bottom: 3.90625vw;
+  z-index: 15;
+  width: 4.6875vw;
+  height: 4.6875vw;
+  background: #1E713F url(../img/svg/to-top.svg) center center no-repeat;
+  background-size: 1.5625vw auto;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.to-top:hover {
+  background-color: #16532e;
+}
+
+.to-top:not(.active) {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .loader {
@@ -1345,6 +1390,7 @@ body:not(.active) {
   left: 0;
   top: 0;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .assorti__intro-title {
@@ -1363,6 +1409,7 @@ body:not(.active) {
 .assorti__intro-title i {
   font-style: inherit;
   will-change: opacity;
+  pointer-events: auto;
 }
 
 .assorti__intro-title::after {
@@ -1412,6 +1459,7 @@ body:not(.active) {
 .assorti__intro-text i {
   font-style: inherit;
   will-change: opacity;
+  pointer-events: auto;
 }
 
 .assorti__intro-text.active::after {
@@ -1425,6 +1473,7 @@ body:not(.active) {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .assorti-item {
@@ -1436,6 +1485,7 @@ body:not(.active) {
   top: 0;
   left: 0;
   overflow: hidden;
+  pointer-events: auto;
 }
 
 .assorti-item__img {
@@ -1692,6 +1742,7 @@ body:not(.active) {
   left: 0;
   top: 0;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .partners__intro-title {
@@ -1710,6 +1761,7 @@ body:not(.active) {
 .partners__intro-title i {
   font-style: inherit;
   will-change: opacity;
+  pointer-events: auto;
 }
 
 .partners__intro-title::after {
@@ -1759,6 +1811,7 @@ body:not(.active) {
 .partners__intro-text i {
   font-style: inherit;
   will-change: opacity;
+  pointer-events: auto;
 }
 
 .partners__intro-text.active::after {
@@ -1980,6 +2033,32 @@ body:not(.active) {
 }
 
 @media only screen and (min-width: 1000px) {
+  .assorti__intro-title i {
+    transition: color 3s;
+    transition-delay: 1s;
+    color: #041C13;
+    will-change: color;
+    cursor: cell;
+  }
+
+  .assorti__intro-title i:hover {
+    color: #1E713F;
+    transition: color 0s;
+  }
+
+  .assorti__intro-text i {
+    transition: color 3s;
+    transition-delay: 1s;
+    color: #041C13;
+    will-change: color;
+    cursor: cell;
+  }
+
+  .assorti__intro-text i:hover {
+    color: #1E713F;
+    transition: color 0s;
+  }
+
   .portfolio__title span {
     transition: color 3s;
     transition-delay: 1s;
@@ -1992,9 +2071,75 @@ body:not(.active) {
     color: #1E713F;
     transition: color 0s;
   }
+
+  .partners__intro-title i {
+    transition: color 3s;
+    transition-delay: 1s;
+    color: #041C13;
+    will-change: color;
+    cursor: cell;
+  }
+
+  .partners__intro-title i:hover {
+    color: #1E713F;
+    transition: color 0s;
+  }
+
+  .partners__intro-text i {
+    transition: color 3s;
+    transition-delay: 1s;
+    color: #041C13;
+    will-change: color;
+    cursor: cell;
+  }
+
+  .partners__intro-text i:hover {
+    color: #1E713F;
+    transition: color 0s;
+  }
 }
 
 @media only screen and (min-width: 1301px) {
+  .header__logo {
+    width: 14.84375vw;
+  }
+
+  .header__phone {
+    font-size: 1.25vw;
+    line-height: 1.40625vw;
+    border-radius: 6.25vw;
+    padding: 0.9375vw 1.484375vw;
+    margin-right: 10.15625vw;
+  }
+
+  .header__link {
+    width: 3.4375vw;
+    height: 3.4375vw;
+  }
+
+  .header__link--burger {
+    background-size: 1.40625vw;
+  }
+
+  .header__link--profile {
+    background-size: 1.40625vw;
+  }
+
+  .menu__close {
+    width: 3.4375vw;
+    height: 3.4375vw;
+    background-size: 1.40625vw;
+    top: 1.40625vw;
+  }
+
+  .menu__profile {
+    width: 3.4375vw;
+    height: 3.4375vw;
+    background-size: 1.40625vw;
+    top: 1.40625vw;
+    right: 6.71875vw;
+  }
+
   .menu__bottom {
     padding-top: 22px;
   }
@@ -2044,6 +2189,14 @@ body:not(.active) {
     font-size: 36px;
   }
 
+  .to-top {
+    right: 50px;
+    bottom: 50px;
+    width: 60px;
+    height: 60px;
+    background-size: 20px auto;
+  }
+
   .about__info {
     margin-top: 3.75vh;
   }
@@ -2067,6 +2220,10 @@ body:not(.active) {
     height: 50vh;
     width: 48vh;
     max-width: 30vw;
+  }
+
+  .portfolio-item__second-content {
+    width: 25vw;
   }
 }
 
@@ -2111,6 +2268,14 @@ body:not(.active) {
     background-size: 2.734375vw;
     top: 3.125vw;
     right: 4.1666666667vw;
+  }
+
+  .menu__profile {
+    width: 7.2916666667vw;
+    height: 7.2916666667vw;
+    background-size: 2.734375vw;
+    top: 3.125vw;
+    right: 12.7604166667vw;
   }
 
   .menu__content {
@@ -2230,6 +2395,12 @@ body:not(.active) {
   .footer__bottom {
     margin-top: 5.2083333333vw;
     padding-top: 3.125vw;
+  }
+
+  .to-top {
+    margin-left: 0;
+    margin-top: 3.125vw;
+    width: 43.75vw;
   }
 
   .loader__logo {
@@ -2834,6 +3005,14 @@ body:not(.active) {
     right: 2.2222222222vw;
   }
 
+  .menu__profile {
+    width: 10.3703703704vw;
+    height: 10.3703703704vw;
+    background-size: 3.8888888889vw;
+    top: 2.2222222222vw;
+    right: 18.1481481481vw;
+  }
+
   .menu__content {
     padding: 18.5185185185vw 0 16.6666666667vw;
   }
@@ -2941,6 +3120,14 @@ body:not(.active) {
 
   .footer__bottom-item:not(:first-child) {
     margin-top: 1.4814814815vw;
+  }
+
+  .to-top {
+    right: 2.7777777778vw;
+    bottom: 2.7777777778vw;
+    width: 7.4074074074vw;
+    height: 7.4074074074vw;
+    background-size: 3.7037037037vw auto;
   }
 
   .loader__logo {
@@ -3365,6 +3552,14 @@ body:not(.active) {
     background-size: 6.5625vw;
     top: 3.75vw;
     right: 3.75vw;
+  }
+
+  .menu__profile {
+    width: 15vw;
+    height: 15vw;
+    background-size: 6.5625vw;
+    top: 3.75vw;
+    right: 21.875vw;
   }
 
   .menu__content {

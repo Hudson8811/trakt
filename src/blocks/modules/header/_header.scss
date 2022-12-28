@@ -25,6 +25,9 @@
 	&__left{}
 	&__logo{
 		width: vw(256);
+		@include min(xl){
+			width: vw(190);
+		}
 		@include max(md){
 			width: vw2(256);
 		}
@@ -56,6 +59,13 @@
 		margin-right: vw(155);
 		transition: 0.3s color, 0.3s background;
 		box-sizing: border-box;
+		@include min(xl){
+			font-size: vw(16);
+			line-height: vw(18);
+			border-radius: vw(80);
+			padding: vw(12) vw(19);
+			margin-right: vw(130);
+		}
 		@include max(md){
 			display: none;
 		}
@@ -78,6 +88,10 @@
 		background-position: center center;
 		background-repeat: no-repeat;
 		box-sizing: border-box;
+		@include min(xl){
+			width: vw(44);
+			height: vw(44);
+		}
 		@include max(md){
 			width: vw2(56);
 			height: vw2(56);
@@ -105,6 +119,9 @@
 		&--burger{
 			background-image: url('../img/svg/header-burger.svg');
 			background-size: vw(24);
+			@include min(xl){
+				background-size: vw(18);
+			}
 			@include max(md){
 				background-size: vw2(24);
 			}
@@ -121,6 +138,9 @@
 		&--profile{
 			background-image: url('../img/svg/header-profile.svg');
 			background-size: vw(24);
+			@include min(xl){
+				background-size: vw(18);
+			}
 			@include max(md){
 				background-size: vw2(24);
 			}
@@ -229,6 +249,12 @@
 		position: absolute;
 		top: vw(24);
 		right: vw(32);
+		@include min(xl){
+			width: vw(44);
+			height: vw(44);
+			background-size: vw(18);
+			top: vw(18);
+		}
 		@include max(md){
 			width: vw2(56);
 			height: vw2(56);
@@ -253,6 +279,54 @@
 		&:hover{
 			background-color: #FDFDFD;
 			background-image: url('../img/svg/header-close-2.svg');
+		}
+	}
+	&__profile{
+		width: vw(56);
+		height: vw(56);
+		border: 1px solid #FDFDFD;
+		border-radius: 50%;
+		display: inline-block;
+		transition: 0.3s background;
+		background-position: center center;
+		background-repeat: no-repeat;
+		box-sizing: border-box;
+		background-image: url('../img/svg/header-profile.svg');
+		background-size: vw(21);
+		position: absolute;
+		top: vw(24);
+		right: vw(98);
+		@include min(xl){
+			width: vw(44);
+			height: vw(44);
+			background-size: vw(18);
+			top: vw(18);
+			right: vw(86);
+		}
+		@include max(md){
+			width: vw2(56);
+			height: vw2(56);
+			background-size: vw2(21);
+			top: vw2(24);
+			right: vw2(98);
+		}
+		@include max(sm){
+			width: vw3(56);
+			height: vw3(56);
+			background-size: vw3(21);
+			top: vw3(12);
+			right: vw3(98);
+		}
+		@include max(xs){
+			width: vw4(48);
+			height: vw4(48);
+			background-size: vw4(21);
+			top: vw4(12);
+			right: vw4(70);
+		}
+		&:hover{
+			background-color: #FDFDFD;
+			background-image: url('../img/svg/header-profile-2.svg');
 		}
 	}
 	&__content{
