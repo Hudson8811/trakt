@@ -26,7 +26,7 @@
 	&__logo{
 		width: vw(256);
 		@include min(xl){
-			width: vw(190);
+			width: 256px;
 		}
 		@include max(md){
 			width: vw2(256);
@@ -47,24 +47,23 @@
 	}
 	&__phone{
 		font-weight: 500;
-		font-size: vw(20);
-		line-height: vw(24);
+		font-size: vw(16);
+		line-height: 130%;
 		color: #FDFDFD;
 		text-decoration: none;
 		cursor: pointer;
 		border: 1px solid #FDFDFD;
 		border-radius: vw(100);
 		display: inline-block;
-		padding: vw(16) vw(24);
-		margin-right: vw(155);
+		padding: vw(12) vw(24);
+		margin-right: vw(251);
 		transition: 0.3s color, 0.3s background;
 		box-sizing: border-box;
 		@include min(xl){
-			font-size: vw(16);
-			line-height: vw(18);
-			border-radius: vw(80);
-			padding: vw(12) vw(19);
-			margin-right: vw(130);
+			font-size: 16px;
+			border-radius: 100px;
+			padding: 12px 24px;
+			margin-right: 251px;
 		}
 		@include max(md){
 			display: none;
@@ -79,8 +78,8 @@
 		align-items: center;
 	}
 	&__link{
-		width: vw(56);
-		height: vw(56);
+		width: vw(48);
+		height: vw(48);
 		border: 1px solid #FDFDFD;
 		border-radius: 50%;
 		display: inline-block;
@@ -89,16 +88,16 @@
 		background-repeat: no-repeat;
 		box-sizing: border-box;
 		@include min(xl){
-			width: vw(44);
-			height: vw(44);
+			width: 48px;
+			height: 48px;
 		}
 		@include max(md){
-			width: vw2(56);
-			height: vw2(56);
+			width: vw2(48);
+			height: vw2(48);
 		}
 		@include max(sm){
-			width: vw3(56);
-			height: vw3(56);
+			width: vw3(48);
+			height: vw3(48);
 		}
 		@include max(xs){
 			width: vw4(48);
@@ -120,7 +119,7 @@
 			background-image: url('../img/svg/header-burger.svg');
 			background-size: vw(24);
 			@include min(xl){
-				background-size: vw(18);
+				background-size: 24px;
 			}
 			@include max(md){
 				background-size: vw2(24);
@@ -235,8 +234,8 @@
 		overflow: auto;
 	}
 	&__close{
-		width: vw(56);
-		height: vw(56);
+		width: vw(48);
+		height: vw(48);
 		border: 1px solid #FDFDFD;
 		border-radius: 50%;
 		display: inline-block;
@@ -245,90 +244,43 @@
 		background-repeat: no-repeat;
 		box-sizing: border-box;
 		background-image: url('../img/svg/header-close.svg');
-		background-size: vw(21);
+		background-size: vw(18);
 		position: absolute;
 		top: vw(24);
-		right: vw(32);
+		right: vw(40);
 		@include min(xl){
-			width: vw(44);
-			height: vw(44);
-			background-size: vw(18);
-			top: vw(18);
+			width: 48px;
+			height: 48px;
+			background-size: 18px;
+			top: 24px;
 		}
 		@include max(md){
-			width: vw2(56);
-			height: vw2(56);
-			background-size: vw2(21);
-			top: vw2(24);
-			right: vw2(32);
+			width: vw2(48);
+			height: vw2(48);
+			background-size: vw2(18);
+			top: vw2(22);
+			right: vw2(40);
 		}
 		@include max(sm){
-			width: vw3(56);
-			height: vw3(56);
-			background-size: vw3(21);
+			width: vw3(48);
+			height: vw3(48);
+			background-size: vw3(18);
 			top: vw3(12);
-			right: vw3(12);
+			right: vw3(20);
 		}
 		@include max(xs){
 			width: vw4(48);
 			height: vw4(48);
-			background-size: vw4(21);
+			background-size: vw4(18);
 			top: vw4(12);
-			right: vw4(12);
+			right: vw4(20);
 		}
 		&:hover{
 			background-color: #FDFDFD;
 			background-image: url('../img/svg/header-close-2.svg');
 		}
 	}
-	&__profile{
-		width: vw(56);
-		height: vw(56);
-		border: 1px solid #FDFDFD;
-		border-radius: 50%;
-		display: inline-block;
-		transition: 0.3s background;
-		background-position: center center;
-		background-repeat: no-repeat;
-		box-sizing: border-box;
-		background-image: url('../img/svg/header-profile.svg');
-		background-size: vw(21);
-		position: absolute;
-		top: vw(24);
-		right: vw(98);
-		@include min(xl){
-			width: vw(44);
-			height: vw(44);
-			background-size: vw(18);
-			top: vw(18);
-			right: vw(86);
-		}
-		@include max(md){
-			width: vw2(56);
-			height: vw2(56);
-			background-size: vw2(21);
-			top: vw2(24);
-			right: vw2(98);
-		}
-		@include max(sm){
-			width: vw3(56);
-			height: vw3(56);
-			background-size: vw3(21);
-			top: vw3(12);
-			right: vw3(98);
-		}
-		@include max(xs){
-			width: vw4(48);
-			height: vw4(48);
-			background-size: vw4(21);
-			top: vw4(12);
-			right: vw4(70);
-		}
-		&:hover{
-			background-color: #FDFDFD;
-			background-image: url('../img/svg/header-profile-2.svg');
-		}
-	}
+
 	&__content{
 		padding: vh(100) 0 vh(20);
 		@include max(md){
@@ -350,9 +302,9 @@
 	&__bottom{
 		display: flex;
 		align-items: center;
-		padding-top: vw(22);
+		padding-top: vw(20);
 		@include min(xl){
-			padding-top: 22px;
+			padding-top: 20px;
 		}
 		@include max(md){
 			display: block;
@@ -611,6 +563,55 @@
 				&:hover{
 					color: #041C13;
 				}
+			}
+		}
+	}
+	&__profile{
+		margin-top: vw(16);
+		font-style: normal;
+		font-weight: 600;
+		font-size: vw(24);
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #FDFDFD;
+		flex: none;
+		order: 0;
+		flex-grow: 0;
+		transition: color 0.3s;
+		display: inline-block;
+		text-decoration: none;
+		position: relative;
+		@include min(xl){
+			font-size: 24px;
+			margin-top: 16px;
+		}
+		@include max(md){
+			font-size: vw2(24);
+			margin-top: vw2(16);
+		}
+		@include max(sm){
+			font-size: vw3(24);
+			margin-top: vw3(16);
+		}
+		@include max(xs){
+			font-size: vw4(18);
+			margin-top: vw4(16);
+		}
+		&::after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			background: #FDFDFD;
+			transition: background 0.3s;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+		&:hover{
+			color: #041C13;
+			&::after{
+				background: #041C13;
 			}
 		}
 	}

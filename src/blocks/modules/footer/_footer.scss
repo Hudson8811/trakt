@@ -217,37 +217,41 @@
 
 .to-top{
 	position: fixed;
-	right: vw(50);
-	bottom: vw(50);
+	right: vw(32);
+	bottom: vw(54);
 	z-index: 15;
-	width: vw(60);
-	height: vw(60);
+	width: vw(80);
+	height: vw(80);
 	background: #1E713F url(../img/svg/to-top.svg) center center no-repeat;
-	background-size: vw(20) auto;
+	background-size: vw(80) auto;
 	cursor: pointer;
 	border-radius: 50%;
-	transition: 0.3s;
+	transition: 0.2s;
+	border: 1px solid #1E713F;
+	box-sizing: border-box;
 	@include min(xl){
-		right: 50px;
-		bottom: 50px;
-		width: 60px;
-		height: 60px;
-		background-size: 20px auto;
-	}
-	@include max(md){
-		margin-left: 0;
-		margin-top: vw2(24);
-		width: vw2(336);
+		bottom: 54px;
+		width: 80px;
+		height: 80px;
+		background-size: 80px auto;
 	}
 	@include max(sm){
-		right: vw3(15);
-		bottom: vw3(15);
-		width: vw3(40);
-		height: vw3(40);
-		background-size: vw3(20) auto;
+		right: vw3(12);
+		bottom: vw3(20);
+		width: vw3(60);
+		height: vw3(60);
+		background-size: vw3(60) auto;
+	}
+	@include max(xs){
+		right: vw4(12);
+		bottom: vw4(20);
+		width: vw4(60);
+		height: vw4(60);
+		background-size: vw4(60) auto;
 	}
 	&:hover{
-		background-color: #16532e;
+		background-image: url(../img/svg/to-top-2.svg);
+		background-color: #FDFDFD;
 	}
 	&:not(.active){
 		opacity: 0;
