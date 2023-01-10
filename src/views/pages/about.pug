@@ -1,0 +1,62 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	include ../../blocks/modules/header/header
+	.about-page
+		.activity
+			.activity__intro
+				.activity__intro-title.active Питомник хвойных растений «Калужский тракт»
+				.activity__intro-text.active Специализируемся на выращивании хвойных растений и кустарников под контролем профессиональных агрономов.
+			.activity-item.activity__item
+				.activity-item__img
+					img(src="img/about-1.webp" alt="")
+				.activity-item__content
+					.assorti-item__title Наша деятельность и ценности
+					.assorti-item__text Питомник «Калужский тракт», основанный в 2015 году, расположен рядом с одноименной дорогой — Калужским (Екатерининским) трактом. Основная специализация — хвойные растения, которые украсят ландшафт и зимой, и летом. Мы стремимся создавать и поддерживать гармонию между природой и человеком, а партнерские взаимоотношения строим на доверии и профессиональном подходе к любимому делу. Крепкий, здоровый, устойчивый к болезням и вредителям посадочный материал приспособлен к климатическим условиям конкретной местности. Территория питомника постоянно расширяется: строятся площадки, теплицы, осваиваются новые земли, поэтому каждому растению достаточно места для нормального роста и развития.
+
+
+		.green-logo
+			img(src="img/svg/header-logo.svg")
+
+		.achivments
+			.achivments__intro
+				.achivments__intro-title.active Наши достижения
+			.achivments__items
+				.achivments-item
+					.achivments-item__img
+						img(src="img/about-2.webp" alt="")
+					.achivments-item__content
+						.achivments-item__title 50 Га
+						.achivments-item__text территории
+				.achivments-item
+					.achivments-item__img
+						img(src="img/about-3.webp" alt="")
+					.achivments-item__content
+						.achivments-item__title 200+ тыс
+						.achivments-item__text растений в контейнерах выращиваем в год
+				.achivments-item
+					.achivments-item__img
+						img(src="img/about-4.webp" alt="")
+					.achivments-item__content
+						.achivments-item__title 50+ тыс
+						.achivments-item__text растений на открытом грунте выращиваем в год
+
+		.automation
+			.automation__intro
+				.automation__intro-text.active автоматизация процессов посадки и ухода
+			.automation__content
+				video(src="video/video2.mp4" autoplay loop muted)
+
+
+	include ../../blocks/modules/footer/footer
+
+
+
+
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

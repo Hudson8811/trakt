@@ -5,4 +5,16 @@ h1, h2, h3, h4, h5, h6, ul {
 
 body{
 	font-family: $mainFont;
+	&:not(.active){
+		overflow: hidden !important;
+	}
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+* {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }

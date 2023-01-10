@@ -13,3 +13,8 @@
 
 // БЭМ-блоки
 @import "../blocks/modules/modules";
+
+
+// Стили целых страниц без разбития на модули
+@import "pages/home_page";
+@import "pages/about";
