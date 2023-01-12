@@ -1422,7 +1422,829 @@ $(document).ready(function (){
 
         setMaskHeader(100);
     }
+    if ($('.contacts-page').length > 0){
+        //главная страница
+        splitLetterSpan('.assorti__intro-title','at');
+        splitLetterSpan('.assorti__intro-text','as');
+        splitLetterSpan('.partners__intro-title','pt');
+        splitLetterSpan('.partners__intro-text','ps');
 
+        var initMode;
+        let addTime = 2300;
+        let addTimeAssorti = 200;
+        let addTimePoortfol = 350;
+
+        let lightHead = true, lastProgress, targetProgress;
+        let i = 0;
+        let assortiCount = $('.assorti-item').length;
+        let p = 0;
+        let portfolioCount = $('.portfolio-item').length;
+
+        let tl = gsap.timeline({
+            onComplete: function (){
+                $('body').addClass('active');
+            }
+        });
+        let st1, st2, st3, st4;
+        let tl1 = gsap.timeline({});
+        let tl2 = gsap.timeline({});
+        let tl3 = gsap.timeline({});
+        let tl4 = gsap.timeline({});
+
+        let resizeFunction;
+        $(window).on('scroll',function (){
+            resizeFunction();
+        });
+
+        function initAnimation(){
+            if (window.innerWidth > 999){
+                initScrollAnimationDesktop();
+                initMode = 'desk';
+            } else if(window.innerWidth > 699){
+                initScrollAnimationTablet();
+                initMode = 'tablet';
+            } else {
+                initScrollAnimationMobile();
+                initMode = 'mobile';
+            }
+        }
+
+        initAnimation();
+        var dwidth = $(window).width();
+        $(window).on('resize',function (){
+            /*if ( (window.innerWidth > 999 && initMode != 'desk') ||
+                (window.innerWidth > 699 && window.innerWidth <= 999 && initMode != 'tablet') ||
+                (window.innerWidth <= 699 && initMode != 'mobile') ){*/
+            var wwidth = $(window).width();
+            if(dwidth!==wwidth){
+                addTime = 2300;
+                setMaskHeader(0);
+                lightHead = true;
+                if (typeof st1 !== "undefined") st1.kill();
+                if (typeof st2 !== "undefined") st2.kill();
+                if (typeof st3 !== "undefined") st3.kill();
+                tl.clear();
+                tl1.clear();
+                tl2.clear();
+                tl3.clear();
+                gsap.set(".loader__center, .loader__logo, .loader__title, .loader .l1, .loader .l2, .loader .l3, .loader .l4,.loader," +
+                    ".s1__title, .s1__left, .s1__text,  .s1__right,  .s1__link, .about, .first, .s2, .s2__img img, .s3, .s3__right, .s3__right img," +
+                    ".s4, .second, .assorti, .at1, .at2, .at3, .at4, .assorti__intro-text, .as1, .as2, .as3, .as4, .assorti-item, .assorti-item__img," +
+                    ".assorti-item__img img, .assorti-item__text, .portfolio, .portfolio__anotation, .portfolio-item, .portfolio-item__first," +
+                    ".portfolio-item__first-img img, .portfolio-item__first-content, .portfolio-item__second, .portfolio-item__second img," +
+                    ".portfolio-item__second-content, .partners, .pt1, .pt2, .pt3, .pt4, .partners__intro-text, .ps1, .ps2, .ps3, .ps4," +
+                    ".partners__items, .connect, .connect__first, .connect__second, .connect__content, .connect__content-blocks, .connect__link a," +
+                    ".home-page", {clearProps:"all"});
+                window.scrollTo({
+                    top: 0,
+                    behavior: "instant"
+                });
+                $('.assorti__intro-text, .assorti__intro-title, .partners__intro-text, .partners__intro-title').addClass('active');
+                $('body').removeClass('active');
+                initAnimation();
+            }
+        });
+
+				function initScrollAnimationDesktop(){
+					resizeFunction = function (){}
+			
+					tl.to(".loader__center", {
+						autoAlpha: 1,
+						duration: 1.5,
+						delay: 1,
+						ease: "none",
+					});
+					tl.to(".loader__logo", {
+						width: 0,
+						margin: 0,
+						autoAlpha: 0,
+						duration: 0.5,
+						ease: "power1.out",
+					} , ">");
+					tl.to(".loader__title", {
+						width: "74.6875vw",
+						ease: "power1.out",
+						duration: 1.5,
+					} , "<");
+					tl.to(".loader .l1", {
+						autoAlpha: 0,
+						duration: 0.4,
+						ease: "none",
+					} , ">0.2");
+					tl.to(".loader .l2", {
+						autoAlpha: 0,
+						duration: 0.4,
+						ease: "none",
+					} , ">-0.1");
+					tl.to(".loader .l3", {
+						autoAlpha: 0,
+						duration: 0.4,
+						ease: "none",
+					} , ">-0.1");
+					tl.to(".loader .l4", {
+						autoAlpha: 0,
+						duration: 0.3,
+						ease: "none",
+					} , ">-0.1");
+					tl.to(".loader", {
+						autoAlpha: 0,
+						duration: 0.5,
+						ease: "none",
+						onStart: function (){
+							setMaskHeader(100);
+							lightHead = false;
+						},
+						onReverseComplete: function (){
+							setMaskHeader(0);
+							lightHead = true;
+						}
+					} , ">0.2");
+			
+			
+			
+					tl1.to(".s1__title", {
+						z: 1500,
+						duration: 1,
+						ease: "none",
+			
+					});
+					tl1.set(".s1__title", {
+						opacity: 0,
+					}, ">-0.7");
+			
+					tl1.to(".s1__contacts", {
+						autoAlpha: 1,
+						top: "100vh",
+			
+					}, ">-0.7");
+					tl1.fromTo(".s1__contacts", {
+						top: "100vh",
+			
+					},
+					{
+						top: "50vh",
+						repeat: 1,
+						duration: 1,
+					}, ">-0.7");
+			
+			
+			
+			
+			
+					st1 = ScrollTrigger.create({
+						trigger: ".contacts-page",
+						pin: true,
+						start: "top top",
+						end: () =>   "+="+addTime+"%",
+						scrub: 1.5,
+						animation: tl1,
+					});
+				}
+
+        // function initScrollAnimationTablet(){
+        //     tl.to(".loader__center", {
+        //         autoAlpha: 1,
+        //         duration: 1.5,
+        //         delay: 1,
+        //         ease: "none",
+        //     });
+        //     tl.to(".loader__logo", {
+        //         width: 0,
+        //         margin: 0,
+        //         autoAlpha: 0,
+        //         duration: 0.5,
+        //         ease: "power1.out",
+        //     } , ">");
+        //     tl.to(".loader__title", {
+        //         width: "91.66vw",
+        //         ease: "power1.out",
+        //         duration: 1.5,
+        //     } , "<");
+        //     tl.to(".loader .l1", {
+        //         autoAlpha: 0,
+        //         duration: 0.4,
+        //         ease: "none",
+        //     } , ">0.2");
+        //     tl.to(".loader .l2", {
+        //         autoAlpha: 0,
+        //         duration: 0.4,
+        //         ease: "none",
+        //     } , ">-0.1");
+        //     tl.to(".loader .l3", {
+        //         autoAlpha: 0,
+        //         duration: 0.4,
+        //         ease: "none",
+        //     } , ">-0.1");
+        //     tl.to(".loader .l4", {
+        //         autoAlpha: 0,
+        //         duration: 0.3,
+        //         ease: "none",
+        //     } , ">-0.1");
+        //     tl.to(".loader", {
+        //         autoAlpha: 0,
+        //         duration: 0.5,
+        //         ease: "none",
+        //     } , ">0.2");
+
+        //     tl1.to(".s1__title", {
+        //         z: 1500,
+        //         duration: 1,
+        //         ease: "none",
+        //     });
+        //     tl1.set(".s1__title", {
+        //         opacity: 0,
+        //     }, ">-0.7");
+        //     tl1.to(".s1__left", {
+        //         z: 1500,
+        //         duration: 2,
+        //         ease: "none",
+        //     }, 0);
+        //     tl1.set(".s1__left", {
+        //         opacity: 0,
+        //     }, ">-0.7");
+        //     tl1.to(".s1__text", {
+        //         autoAlpha: 1,
+        //         duration: 0.4,
+        //         ease: "none",
+        //     }, ">0.3");
+        //     tl1.to(".s1__text", {
+        //         duration: 2,
+        //         z: 100,
+        //         ease: "none",
+        //     }, "<");
+        //     tl1.to(".s1__text", {
+        //         autoAlpha: 0,
+        //         duration: 0.4,
+        //         ease: "none",
+        //     }, ">-0.4");
+        //     tl1.to(".s1__right", {
+        //         width: "100vw",
+        //         height: "100vh",
+        //         left: "52.08vw",
+        //         duration: 4,
+        //         ease: "none",
+        //     }, 0);
+        //     tl1.to(".s1__right", {
+        //         left: 0,
+        //         duration: 2,
+        //         onComplete: function (){
+        //             setMaskHeader(100);
+        //             lightHead = false;
+        //         },
+        //     }, ">");
+        //     tl1.to(".s1__link", {
+        //         autoAlpha: 1,
+        //         duration: 0.5,
+        //     }, ">-0.4");
+        //     tl1.to(".s1__right-inner video", {
+        //         autoAlpha: 1,
+        //         duration: 0.5,
+        //         onReverseComplete: function (){
+        //             setMaskHeader(0);
+        //             lightHead = true;
+        //         },
+        //     }, ">");
+
+
+        //     st1 = ScrollTrigger.create({
+        //         trigger: ".s1__container",
+        //         pin: true,
+        //         start: "top top",
+        //         end: () => "+=300%",
+        //         scrub: 1,
+        //         animation: tl1,
+        //     });
+
+
+
+        //     tl2.to(".at1", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.assorti__intro-title').removeClass('active');
+        //         }
+        //     } , 0);
+        //     tl2.to(".at2", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">-0.3");
+        //     tl2.to(".at3", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onComplete: function (){
+        //             $('.assorti__intro-title').removeClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl2.to(".at4", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.assorti__intro-title').addClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl2.from(".assorti__intro-text", {
+        //         top: "200%",
+        //         duration: 3,
+        //         ease: "none",
+        //     }, ">-1.7");
+        //     tl2.to(".as1", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">1");
+        //     tl2.to(".as2", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">-0.3");
+        //     tl2.to(".as3", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onComplete: function (){
+        //             $('.assorti__intro-text').removeClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl2.to(".as4", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.assorti__intro-text').addClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl2.to(".assorti__intro", {
+        //         autoAlpha: 1,
+        //         duration: 0.5,
+        //         ease: "none",
+        //     } , ">");
+
+
+
+
+
+        //     st2 = ScrollTrigger.create({
+        //         trigger: ".assorti__intro",
+        //         pin: true,
+        //         start: "top top",
+        //         end: () => "+=300%",
+        //         scrub: 1,
+        //         animation: tl2,
+        //     });
+
+
+        //     tl4.to(".st1", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.assorti__intro-title').removeClass('active');
+        //         }
+        //     } , 0);
+        //     tl4.to(".st2", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">-0.3");
+        //     tl4.to(".st3", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onComplete: function (){
+        //             $('.assorti__intro-title').removeClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl4.to(".st4", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.assorti__intro-title').addClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl4.to(".portfolio__anotation", {
+        //         autoAlpha: 1,
+        //         duration: 0.5,
+        //         ease: "none",
+        //     } , ">");
+
+        //     st4 = ScrollTrigger.create({
+        //         trigger: ".portfolio__anotation",
+        //         pin: true,
+        //         start: "top top",
+        //         end: () => "+=100%",
+        //         scrub: 1,
+        //         animation: tl4,
+        //     });
+
+
+
+
+        //     tl3.to(".pt1", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.partners__intro-title').removeClass('active');
+        //         }
+        //     } , 0);
+        //     tl3.to(".pt2", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">-0.3");
+        //     tl3.to(".pt3", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onComplete: function (){
+        //             $('.partners__intro-title').removeClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl3.to(".pt4", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.partners__intro-title').addClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl3.from(".partners__intro-text", {
+        //         top: "200%",
+        //         duration: 3,
+        //         ease: "none",
+        //     }, ">-1.7");
+        //     tl3.to(".ps1", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">1");
+        //     tl3.to(".ps2", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">-0.3");
+        //     tl3.to(".ps3", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onComplete: function (){
+        //             $('.partners__intro-text').removeClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl3.to(".ps4", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.partners__intro-text').addClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl3.to(".partners__intro", {
+        //         autoAlpha: 1,
+        //         duration: 0.5,
+        //         ease: "none",
+        //     } , ">");
+
+        //     st3 = ScrollTrigger.create({
+        //         trigger: ".partners__intro",
+        //         pin: true,
+        //         start: "top top",
+        //         end: () => "+=300%",
+        //         scrub: 1,
+        //         animation: tl3,
+        //     });
+
+
+
+
+        //     resizeFunction = function () {
+        //         let listElems = $('.s2__img img, .s3__right img, .assorti-item__img img, ' +
+        //             '.portfolio-item__first-img img, .portfolio-item__second-img img');
+
+        //         let windowHalf = $(window).height()*0.5;
+        //         let viewportBottom = $(window).scrollTop() + $(window).height();
+        //         let viewportCenter = $(window).scrollTop() + $(window).height()*0.35;
+        //         listElems.each(function (){
+        //             let elem = $(this);
+        //             let elementTop = elem.offset().top;
+        //             if (elementTop <= viewportBottom && elementTop >= viewportCenter){
+        //                 let procent = (elementTop - viewportCenter) / windowHalf;
+        //                 let size = procent*100 + 100;
+        //                 elem.css({'width':size+'%', 'height':size+'%'});
+        //             }
+        //         });
+
+        //         let lastBlockTop = $('.connect').offset().top;
+        //         if ($(window).scrollTop() >= lastBlockTop && !lightHead){
+        //             setMaskHeader(0);
+        //             lightHead = true;
+        //         } else if (lastBlockTop >= $(window).scrollTop() && lastBlockTop  <= viewportBottom && lightHead){
+        //             setMaskHeader(100);
+        //             lightHead = false;
+        //         }
+        //     }
+        // }
+
+        // function initScrollAnimationMobile(){
+        //     tl.to(".loader__center", {
+        //         autoAlpha: 1,
+        //         duration: 1.5,
+        //         delay: 1,
+        //         ease: "none",
+        //     });
+        //     tl.to(".loader__logo", {
+        //         width: 0,
+        //         margin: 0,
+        //         autoAlpha: 0,
+        //         duration: 0.5,
+        //         ease: "power1.out",
+        //     } , ">");
+        //     tl.to(".loader__title", {
+        //         width: "95.55vw",
+        //         ease: "power1.out",
+        //         duration: 1.5,
+        //     } , "<");
+        //     tl.to(".loader .l1", {
+        //         autoAlpha: 0,
+        //         duration: 0.4,
+        //         ease: "none",
+        //     } , ">0.2");
+        //     tl.to(".loader .l2", {
+        //         autoAlpha: 0,
+        //         duration: 0.4,
+        //         ease: "none",
+        //     } , ">-0.1");
+        //     tl.to(".loader .l3", {
+        //         autoAlpha: 0,
+        //         duration: 0.4,
+        //         ease: "none",
+        //     } , ">-0.1");
+        //     tl.to(".loader .l4", {
+        //         autoAlpha: 0,
+        //         duration: 0.3,
+        //         ease: "none",
+        //     } , ">-0.1");
+        //     tl.to(".loader", {
+        //         autoAlpha: 0,
+        //         duration: 0.5,
+        //         ease: "none",
+        //     } , ">0.2");
+
+
+
+        //     tl2.to(".at1", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.assorti__intro-title').removeClass('active');
+        //         }
+        //     } , 0);
+        //     tl2.to(".at2", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">-0.3");
+        //     tl2.to(".at3", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onComplete: function (){
+        //             $('.assorti__intro-title').removeClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl2.to(".at4", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.assorti__intro-title').addClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl2.from(".assorti__intro-text", {
+        //         top: "200%",
+        //         duration: 3,
+        //         ease: "none",
+        //     }, ">-1.7");
+        //     tl2.to(".as1", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">1");
+        //     tl2.to(".as2", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">-0.3");
+        //     tl2.to(".as3", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onComplete: function (){
+        //             $('.assorti__intro-text').removeClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl2.to(".as4", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.assorti__intro-text').addClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl2.to(".assorti__intro", {
+        //         autoAlpha: 1,
+        //         duration: 0.5,
+        //         ease: "none",
+        //     } , ">");
+
+        //     st2 = ScrollTrigger.create({
+        //         trigger: ".assorti__intro",
+        //         pin: true,
+        //         start: "top top",
+        //         end: () => "+=300%",
+        //         scrub: 1,
+        //         animation: tl2,
+        //     });
+
+
+
+
+
+        //     tl4.to(".st1", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.assorti__intro-title').removeClass('active');
+        //         }
+        //     } , 0);
+        //     tl4.to(".st2", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">-0.3");
+        //     tl4.to(".st3", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onComplete: function (){
+        //             $('.assorti__intro-title').removeClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl4.to(".st4", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.assorti__intro-title').addClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl4.to(".portfolio__anotation", {
+        //         autoAlpha: 1,
+        //         duration: 0.5,
+        //         ease: "none",
+        //     } , ">");
+
+        //     st4 = ScrollTrigger.create({
+        //         trigger: ".portfolio__anotation",
+        //         pin: true,
+        //         start: "top top",
+        //         end: () => "+=100%",
+        //         scrub: 1,
+        //         animation: tl4,
+        //     });
+
+
+
+        //     tl3.to(".pt1", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.partners__intro-title').removeClass('active');
+        //         }
+        //     } , 0);
+        //     tl3.to(".pt2", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">-0.3");
+        //     tl3.to(".pt3", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onComplete: function (){
+        //             $('.partners__intro-title').removeClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl3.to(".pt4", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.partners__intro-title').addClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl3.from(".partners__intro-text", {
+        //         top: "200%",
+        //         duration: 3,
+        //         ease: "none",
+        //     }, ">-1.7");
+        //     tl3.to(".ps1", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">1");
+        //     tl3.to(".ps2", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //     } , ">-0.3");
+        //     tl3.to(".ps3", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onComplete: function (){
+        //             $('.partners__intro-text').removeClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl3.to(".ps4", {
+        //         autoAlpha: 0,
+        //         duration: 0.7,
+        //         ease: "none",
+        //         onReverseComplete: function (){
+        //             $('.partners__intro-text').addClass('active');
+        //         }
+        //     } , ">-0.3");
+        //     tl3.to(".partners__intro", {
+        //         autoAlpha: 1,
+        //         duration: 0.5,
+        //         ease: "none",
+        //     } , ">");
+
+        //     st3 = ScrollTrigger.create({
+        //         trigger: ".partners__intro",
+        //         pin: true,
+        //         start: "top top",
+        //         end: () => "+=300%",
+        //         scrub: 1,
+        //         animation: tl3,
+        //     });
+
+
+        //     resizeFunction = function () {
+        //         let listElems = $('.s2__img img, .s3__right img, .assorti-item__img img, ' +
+        //             '.portfolio-item__first-img img, .portfolio-item__second-img img');
+
+        //         let windowHalf = $(window).height()*0.5;
+        //         let viewportBottom = $(window).scrollTop() + $(window).height();
+        //         let viewportCenter = $(window).scrollTop() + $(window).height()*0.35;
+        //         listElems.each(function (){
+        //             let elem = $(this);
+        //             let elementTop = elem.offset().top;
+        //             if (elementTop <= viewportBottom && elementTop >= viewportCenter){
+        //                 let procent = (elementTop - viewportCenter) / windowHalf;
+        //                 let size = procent*100 + 100;
+        //                 elem.css({'width':size+'%', 'height':size+'%'});
+        //             }
+        //         });
+
+        //         let lastBlockTop = $('.connect').offset().top;
+        //         let firstBlockTop = $('.about').offset().top;
+
+
+        //         if ($(window).scrollTop() >= lastBlockTop && !lightHead){
+        //             setMaskHeader(0);
+        //             lightHead = true;
+        //         } else if (lastBlockTop >= $(window).scrollTop() && lastBlockTop  <= viewportBottom && lightHead){
+        //             setMaskHeader(100);
+        //             lightHead = false;
+        //         }
+
+
+        //         if ($(window).scrollTop() >= firstBlockTop && $(window).scrollTop() < lastBlockTop && lightHead){
+        //             setMaskHeader(100);
+        //             lightHead = false;
+        //         } else if (firstBlockTop >= $(window).scrollTop() && firstBlockTop  <= viewportBottom && !lightHead){
+        //             setMaskHeader(0);
+        //             lightHead = true;
+        //         }
+
+        //     }
+        // }
+    } else {
+        //остальные страницы
+        $('body').addClass('active');
+
+        setMaskHeader(100);
+    }
+		
 
 
 

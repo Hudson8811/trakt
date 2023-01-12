@@ -1,0 +1,61 @@
+.contacts-page {
+	.s1{
+		&__title {
+			font-family: 'Ruda';
+			font-weight: 700;
+			font-size: 48px;
+			line-height: 140%;
+			text-transform: uppercase;	
+			color: #041C13;
+			left: 34vw;
+			top: 45%;
+		}
+		&__contacts {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 100%;
+			max-width: vw(278);
+			will-change: transform, opacity;
+			transform-style: preserve-3d;
+			position: absolute;
+			z-index: 2;
+			bottom: 200vh;
+			left: 34vw;
+			transition:  opacity .75s ease;
+			opacity: 1;
+			pointer-events: none;
+			&--item {
+				position: relative;
+				width: 100%;
+				display: flex;
+				flex-flow: column nowrap;
+				font-family: 'Manrope';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 145%;
+				color: #041C13;				
+			}
+			&--title {
+				font-family: 'Manrope';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 130%;
+				color: #6F6F6F;				
+			}
+			&--link {
+				flex-flow: column nowrap;
+				font-family: 'Manrope';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 145%;
+				color: #041C13;					
+			}
+		}
+	}
+}

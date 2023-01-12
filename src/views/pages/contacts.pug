@@ -1,0 +1,32 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Contacts"
+
+block content
+	include ../../blocks/modules/loader-contacts/loader-contacts
+	include ../../blocks/modules/header/header
+	.contacts-page
+		.first
+			.s1
+				.s1__container
+					h1.s1__title Способы связи
+					.s1__contacts
+						.s1__contacts--item
+							.s1__contacts--title Адрес:
+							.s1__contacts--text Калужская область, Жуковский район, д. Дадровка
+						.s1__contacts--item
+							.s1__contacts--title Телефон/WhatsApp:
+							a(href="tel:+7 (920) 886–89–24").s1__contacts--link +7 (920) 886–89–24
+						.s1__contacts--item
+							.s1__contacts--title E-mail:
+							a(href="mailto:Nracheeva@mail.ru").s1__contacts--link Nracheeva@mail.ru
+
+	
+	//- include ../../blocks/modules/footer/footer
+
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")
