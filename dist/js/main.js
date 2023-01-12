@@ -1407,26 +1407,51 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
           _lightHead = true;
         }
       }, ">0.2");
-      _tl2.to(".s1__title", {
-        z: 1500,
-        duration: 1,
-        ease: "none"
-      });
-      _tl2.set(".s1__title", {
-        opacity: 0
-      }, ">-0.7");
-      _tl2.to(".s1__contacts", {
-        autoAlpha: 1,
-        top: "100vh"
-      }, ">-0.7");
-      _tl2.fromTo(".s1__contacts", {
-        top: "100vh"
-      }, {
+      _tl2.to(".c1__title", {
+        top: "32vh",
+        opacity: 1,
+        delay: 4,
+        duration: 3
+      }, ">");
+      _tl2.to(".c1__contacts", {
         top: "50vh",
-        repeat: 1,
-        duration: 1
-      }, ">-0.7");
-      _st = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
+        opacity: 1,
+        duration: 2,
+        onComplete: function onComplete() {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+        }
+      }, "-=1");
+      _tl3.to(".c1__container", {
+        motionPath: {
+          path: [
+          // {left:'-80vw', top:'-40vw'},
+          {
+            left: '-800vw',
+            top: '-800vw'
+          }],
+          curviness: 1
+          //type: "cubic"
+        },
+
+        duration: 3.5,
+        ease: "none"
+      }, "<");
+      _tl3.to(".map", {
+        motionPath: {
+          path: [{
+            left: '-400vw',
+            top: '-100vw'
+          }, {
+            left: '-100vw',
+            top: '0vw'
+          }],
+          curviness: 1
+          //type: "cubic"
+        },
+
+        duration: 3.5,
+        ease: "none"
+      }, "<"), _st2 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
         trigger: ".contacts-page",
         pin: true,
         start: "top top",
@@ -1434,7 +1459,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
           return "+=" + _addTime + "%";
         },
         scrub: 1.5,
-        animation: _tl2
+        animation: _tl3
       });
     }; // function initScrollAnimationTablet(){
     //     tl.to(".loader__center", {
@@ -2042,7 +2067,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     var _portfolioCount = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.portfolio-item').length;
     var _tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
       onComplete: function onComplete() {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('active');
       }
     });
     var _st, _st2, _st3, _st4;
@@ -2063,7 +2088,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       var wwidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
       if (dwidth !== wwidth) {
         _addTime = 2300;
-        setMaskHeader(0);
+        setMaskHeader(100);
         _lightHead = true;
         if (typeof _st !== "undefined") _st.kill();
         if (typeof _st2 !== "undefined") _st2.kill();
@@ -2072,7 +2097,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         _tl2.clear();
         _tl3.clear();
         _tl4.clear();
-        gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__logo, .loader__title, .loader .l1, .loader .l2, .loader .l3, .loader .l4,.loader," + ".s1__title, .s1__left, .s1__text,  .s1__right,  .s1__link, .about, .first, .s2, .s2__img img, .s3, .s3__right, .s3__right img," + ".s4, .second, .assorti, .at1, .at2, .at3, .at4, .assorti__intro-text, .as1, .as2, .as3, .as4, .assorti-item, .assorti-item__img," + ".assorti-item__img img, .assorti-item__text, .portfolio, .portfolio__anotation, .portfolio-item, .portfolio-item__first," + ".portfolio-item__first-img img, .portfolio-item__first-content, .portfolio-item__second, .portfolio-item__second img," + ".portfolio-item__second-content, .partners, .pt1, .pt2, .pt3, .pt4, .partners__intro-text, .ps1, .ps2, .ps3, .ps4," + ".partners__items, .connect, .connect__first, .connect__second, .connect__content, .connect__content-blocks, .connect__link a," + ".home-page", {
+        gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__logo, .loader__title, .loader .l1, .loader .l2, .loader .l3, .loader .l4,.loader," + ".s1__title, .s1__left, .s1__text,  .s1__right,  .s1__link, .about, .first, .s2, .s2__img img, .s3, .s3__right, .s3__right img," + ".map" + ".contacts-page", {
           clearProps: "all"
         });
         window.scrollTo({

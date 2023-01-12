@@ -1,14 +1,44 @@
 .contacts-page {
-	.s1{
+	.c1{
+		&__container{
+			position: relative;
+			width: 100vw;
+			height: 100vh;
+			perspective: 1500px;
+			@include max(md){
+				background: #0D0D0D;
+			}
+			@include max(sm){
+				height: auto;
+				padding: vw3(130) 0 0;
+				perspective: initial;
+				box-sizing: border-box;
+			}
+			@include max(xs){
+				padding: vw4(101) 0 0;
+			}
+		}
 		&__title {
+			will-change: transform, opacity;
+			transform-style: preserve-3d;
+			z-index: 3;
+			position: absolute;
+			font-weight: 700;
+			font-size: vw(48);
+			line-height: 140%;
+			text-align: center;
+			text-transform: uppercase;
+			color: #FDFDFD;
+			transition:  opacity .75s ease;
+			opacity: 0;
+			pointer-events: none;
 			font-family: 'Ruda';
 			font-weight: 700;
-			font-size: 48px;
 			line-height: 140%;
 			text-transform: uppercase;	
 			color: #041C13;
-			left: 34vw;
-			top: 45%;
+			left: vw(200);
+			top: 100vh;
 		}
 		&__contacts {
 			position: relative;
@@ -22,10 +52,9 @@
 			transform-style: preserve-3d;
 			position: absolute;
 			z-index: 2;
-			bottom: 200vh;
-			left: 34vw;
-			transition:  opacity .75s ease;
-			opacity: 1;
+			top: 100vh;
+			left: vw(200);
+			opacity: 0;
 			pointer-events: none;
 			&--item {
 				position: relative;
@@ -35,27 +64,58 @@
 				font-family: 'Manrope';
 				font-style: normal;
 				font-weight: 400;
-				font-size: 18px;
+				font-size: vw(18);
 				line-height: 145%;
+				margin-bottom: vw(32);
 				color: #041C13;				
 			}
 			&--title {
 				font-family: 'Manrope';
 				font-style: normal;
-				font-weight: 400;
-				font-size: 16px;
+				font-weight: 500;
+				font-size: vw(16);
 				line-height: 130%;
-				color: #6F6F6F;				
+				color: #6F6F6F;	
+				margin-bottom: vw(10);			
 			}
 			&--link {
 				flex-flow: column nowrap;
 				font-family: 'Manrope';
 				font-style: normal;
 				font-weight: 400;
-				font-size: 18px;
+				font-size: vw(18);
 				line-height: 145%;
-				color: #041C13;					
+				color: #041C13;
+				text-decoration: none;					
 			}
 		}
+	}
+	.map {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		right: -100vw;
+		bottom:  -100vh;
+		overflow: hidden;
+		@include max(md){
+			position: relative;
+			height: auto;
+		}
+	&__container{
+		position: relative;
+		width: vw(800);
+		height: vw(500);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				object-fit: cover;
+				object-position: 50% 50%;
+		}
+	}
 	}
 }
