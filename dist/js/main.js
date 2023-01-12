@@ -1436,22 +1436,59 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         duration: 3.5,
         ease: "none"
       }, "<");
-      _tl3.to(".map", {
+      _tl3.to(".contacts-page__map ", {
         motionPath: {
           path: [{
-            left: '-400vw',
-            top: '-100vw'
+            left: '100vw',
+            top: '100vh'
+          }, {
+            left: '18vw',
+            top: '21vh'
           }, {
             left: '-100vw',
-            top: '0vw'
+            top: '21vh'
           }],
           curviness: 1
           //type: "cubic"
         },
 
-        duration: 3.5,
+        duration: 0.4,
         ease: "none"
-      }, "<"), _st2 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
+      }, "<"), _tl3.to(".contacts-page__walk", {
+        motionPath: {
+          path: [{
+            left: '200vw',
+            top: '200vh'
+          }, {
+            left: '75vw',
+            top: '90vh'
+          }, {
+            left: '65vw',
+            top: '40vh'
+          }, {
+            left: '-100vw',
+            top: '18vh'
+          }],
+          curviness: 1
+          //type: "cubic"
+        },
+
+        duration: 0.6,
+        ease: "none"
+      }, "<"), _tl3.to(".contacts-page__startWalk", {
+        left: 0,
+        top: 0,
+        duration: 0.6,
+        ease: "none"
+      }, "<"),
+      // tl2.to(".contacts-page__startWalk", {
+      // 	top: "-30vh",
+      // 	left: 0,
+      // 	delay: 0.5,	
+      // 	duration: 0.3,
+      // 	ease: "none",
+      // }, "<"),
+      _st2 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
         trigger: ".contacts-page",
         pin: true,
         start: "top top",
@@ -2097,7 +2134,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         _tl2.clear();
         _tl3.clear();
         _tl4.clear();
-        gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__logo, .loader__title, .loader .l1, .loader .l2, .loader .l3, .loader .l4,.loader," + ".s1__title, .s1__left, .s1__text,  .s1__right,  .s1__link, .about, .first, .s2, .s2__img img, .s3, .s3__right, .s3__right img," + ".map" + ".contacts-page", {
+        gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__logo, .loader__title, .loader .l1, .loader .l2, .loader .l3, .loader .l4,.loader," + ".s1__title, .s1__left, .s1__text,  .s1__right,  .s1__link, .about, .first, .s2, .s2__img img, .s3, .s3__right, .s3__right img," + ".contacts-page__map" + ".contacts-page", {
           clearProps: "all"
         });
         window.scrollTo({

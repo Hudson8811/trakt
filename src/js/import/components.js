@@ -1490,7 +1490,7 @@ $(document).ready(function (){
                 tl3.clear();
                 gsap.set(".loader__center, .loader__logo, .loader__title, .loader .l1, .loader .l2, .loader .l3, .loader .l4,.loader," +
                     ".s1__title, .s1__left, .s1__text,  .s1__right,  .s1__link, .about, .first, .s2, .s2__img img, .s3, .s3__right, .s3__right img," +
-										".map" +
+										".contacts-page__map" +
                     ".contacts-page", {clearProps:"all"});
                 window.scrollTo({
                     top: 0,
@@ -1577,7 +1577,7 @@ $(document).ready(function (){
 						motionPath: {
 							path: [
 									// {left:'-80vw', top:'-40vw'},
-									{left:'-800vw', top:'-800vw'}
+									{left:'-800vw', top:'-800vw'},
 							],
 							curviness: 1
 							//type: "cubic"
@@ -1585,18 +1585,46 @@ $(document).ready(function (){
 					duration: 3.5,
 					ease: "none",
 					},"<")
-					tl2.to(".map", {
+					tl2.to(".contacts-page__map ", {
 						motionPath: {
 							path: [
-									{left:'-400vw', top:'-100vw'},
-									{left:'-100vw', top:'0vw'},
+								{left:'100vw', top:'100vh'},
+								{left:'18vw', top:'21vh'},
+								{left:'-100vw', top:'21vh'},
 							],
 							curviness: 1
 							//type: "cubic"
 					},
-					duration: 3.5,
+					duration: 0.4,
 					ease: "none",
 					}, "<"),
+					tl2.to(".contacts-page__walk", {
+						motionPath: {
+							path: [
+								{left:'200vw', top:'200vh'},
+								{left:'75vw', top:'90vh'},
+								{left:'65vw', top:'40vh'},
+								{left:'-100vw', top:'18vh'},
+							],
+							curviness: 1
+							//type: "cubic"
+					},
+					duration: 0.6,
+					ease: "none",
+					}, "<"),
+					tl2.to(".contacts-page__startWalk", {
+						left: 0,
+						top: 0,	
+						duration: 0.6,
+						ease: "none",
+					}, "<"),
+					// tl2.to(".contacts-page__startWalk", {
+					// 	top: "-30vh",
+					// 	left: 0,
+					// 	delay: 0.5,	
+					// 	duration: 0.3,
+					// 	ease: "none",
+					// }, "<"),
 					st2 = ScrollTrigger.create({
 						trigger: ".contacts-page",
 						pin: true,

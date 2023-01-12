@@ -2309,16 +2309,19 @@ body:not(.active) {
   text-decoration: none;
 }
 
-.contacts-page .map {
+.contacts-page__map {
   position: absolute;
+  left: 100vw;
+  top: 100vh;
   width: 100vw;
   height: 100vh;
-  right: -100vw;
-  bottom: -100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   overflow: hidden;
 }
 
-.contacts-page .map__container {
+.contacts-page__map__container {
   position: relative;
   width: 62.5vw;
   height: 39.0625vw;
@@ -2327,13 +2330,68 @@ body:not(.active) {
   align-items: center;
 }
 
-.contacts-page .map__container img {
+.contacts-page__map__container img {
   position: absolute;
   display: block;
   top: 0;
   left: 0;
   object-fit: cover;
   object-position: 50% 50%;
+}
+
+.contacts-page__walk {
+  position: absolute;
+  left: 200vw;
+  top: 200vh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+  flex-flow: column nowrap;
+}
+
+.contacts-page__walk--title {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.8125vw;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #041C13;
+  margin-bottom: 6.25vw;
+  width: 38.125vw;
+}
+
+.contacts-page__walk--text {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.40625vw;
+  line-height: 145%;
+  color: #6F6F6F;
+  width: 38.125vw;
+}
+
+.contacts-page__startWalk {
+  position: absolute;
+  left: 300vw;
+  top: 0vh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+  background-image: url(../img/contacts-page__startWalk.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.contacts-page__startWalk .s1__link {
+  opacity: 1;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -3374,11 +3432,6 @@ body:not(.active) {
 
   .contacts-page .c1__container {
     background: #0D0D0D;
-  }
-
-  .contacts-page .map {
-    position: relative;
-    height: auto;
   }
 }
 
