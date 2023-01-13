@@ -30,8 +30,11 @@ block content
 			.contacts-page__walk--text
 				| Хотите увидеть территорию питомника и условия для выращивания, но не можете приехать? Проводим реальные и виртуальные экскурсии, показываем все интересующие позиции в режиме онлайн, отвечаем на вопросы, высылаем фото и видео по запросу.
 		.contacts-page__startWalk
-			a(href="").s1__link Начать прогулку
-	//- include ../../blocks/modules/footer/footer
+			.s1__right-inner
+				video(src="video/video1.mp4" autoplay loop muted)
+				a.s1__link(href="") Начать прогулку
+
+	include ../../blocks/modules/footer/footer
 
 
 block scripts

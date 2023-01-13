@@ -2316,8 +2316,8 @@ body:not(.active) {
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -3429,10 +3429,6 @@ body:not(.active) {
     width: 100%;
     transform: none;
   }
-
-  .contacts-page .c1__container {
-    background: #0D0D0D;
-  }
 }
 
 @media only screen and (max-width: 699px) {
@@ -4018,13 +4014,6 @@ body:not(.active) {
     font-size: 2.962962963vw;
     margin-top: 4.4444444444vw;
   }
-
-  .contacts-page .c1__container {
-    height: auto;
-    padding: 24.0740740741vw 0 0;
-    perspective: initial;
-    box-sizing: border-box;
-  }
 }
 
 @media only screen and (max-width: 499px) {
@@ -4547,10 +4536,6 @@ body:not(.active) {
   .activity-item__text {
     font-size: 5vw;
     margin-top: 5vw;
-  }
-
-  .contacts-page .c1__container {
-    padding: 31.5625vw 0 0;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
