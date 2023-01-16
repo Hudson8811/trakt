@@ -1559,7 +1559,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       }, ">-0.5");
 
       _tl.set('.ap-green-logo', {
-        autoAlpha: 0,
+        autoAlpha: 100,
         onComplete: function onComplete() {
           setMaskHeader(100);
         },
@@ -1646,7 +1646,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         },
         duration: 3,
         ease: "none"
-      }, ">");
+      }, ">1");
 
       _tl.fromTo(".ap-achivments-item--2", {
         left: "100vw",
@@ -1675,12 +1675,14 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         left: "-100%",
         ease: "none",
         duration: 3
-      }, ">");
+      }, ">1");
 
-      _tl.to(".ap-achivments-item--2 .ap-achivments-item__content ", {
+      _tl.fromTo(".ap-achivments-item--2 .ap-achivments-item__content", {
+        left: "75.625vw"
+      }, {
         left: "10.625vw",
-        ease: "none",
-        duration: 3
+        duration: 3,
+        ease: "none"
       }, "<");
 
       _tl.from(".ap-achivments-item--3", {
@@ -1712,7 +1714,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         y: "-100%",
         ease: "none",
         duration: 3.5
-      }, ">");
+      }, ">1");
 
       _tl.to(".ap-achivments-item--3", {
         y: "-100%",
@@ -1955,7 +1957,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     splitLetterSpan('.ap-achivments__intro-title', 'pt');
     splitLetterSpan('.ap-automation__intro-text', 'vt');
     var initMode;
-    var _addTime = 1700;
+    var _addTime = 1750;
 
     var _lightHead = true,
         _lastProgress,

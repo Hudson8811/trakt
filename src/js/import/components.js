@@ -1426,7 +1426,7 @@ $(document).ready(function (){
         splitLetterSpan('.ap-automation__intro-text','vt');
 
         var initMode;
-        let addTime = 1700;
+        let addTime = 1750;
 
         let lightHead = true, lastProgress, targetProgress;
 
@@ -1655,7 +1655,7 @@ $(document).ready(function (){
             }, ">-0.5");
 
             tl1.set('.ap-green-logo', {
-                autoAlpha: 0,
+                autoAlpha: 100,
                 onComplete: function (){
                     setMaskHeader(100);
                 },
@@ -1739,7 +1739,7 @@ $(document).ready(function (){
                     },
                     duration: 3,
                     ease: "none",
-                }, ">");
+                }, ">1");
 
 
             tl1.fromTo(".ap-achivments-item--2", {
@@ -1769,13 +1769,16 @@ $(document).ready(function (){
                 left: "-100%",
                 ease: "none",
                 duration: 3,
-            } , ">");
+            } , ">1");
 
-            tl1.to(".ap-achivments-item--2 .ap-achivments-item__content ", {
+
+            tl1.fromTo(".ap-achivments-item--2 .ap-achivments-item__content", {
+                left: "75.625vw",
+            }, {
                 left: "10.625vw",
-                ease: "none",
                 duration: 3,
-            } , "<");
+                ease: "none",
+            }, "<");
 
 
             tl1.from(".ap-achivments-item--3", {
@@ -1807,7 +1810,7 @@ $(document).ready(function (){
                 y: "-100%",
                 ease: "none",
                 duration: 3.5,
-            } , ">");
+            } , ">1");
 
             tl1.to(".ap-achivments-item--3", {
                 y: "-100%",
