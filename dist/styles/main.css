@@ -2468,6 +2468,174 @@ body:not(.active) {
   pointer-events: none;
 }
 
+.contacts-page .c1__container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1500px;
+}
+
+.contacts-page .c1__title {
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+  z-index: 3;
+  position: absolute;
+  font-weight: 700;
+  font-size: 3.75vw;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FDFDFD;
+  transition: opacity 0.75s ease;
+  opacity: 0;
+  pointer-events: none;
+  font-family: "Ruda";
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #041C13;
+  left: 15.625vw;
+  top: 100vh;
+}
+
+.contacts-page .c1__contacts {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 21.71875vw;
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+  position: absolute;
+  z-index: 2;
+  top: 100vh;
+  left: 15.625vw;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contacts-page .c1__contacts--item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.40625vw;
+  line-height: 145%;
+  margin-bottom: 2.5vw;
+  color: #041C13;
+}
+
+.contacts-page .c1__contacts--title {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 130%;
+  color: #6F6F6F;
+  margin-bottom: 0.78125vw;
+}
+
+.contacts-page .c1__contacts--link {
+  flex-flow: column nowrap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.40625vw;
+  line-height: 145%;
+  color: #041C13;
+  text-decoration: none;
+}
+
+.contacts-page__map {
+  position: absolute;
+  left: 100vw;
+  top: 100vh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contacts-page__map__container {
+  position: relative;
+  width: 62.5vw;
+  height: 39.0625vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-page__map__container img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.contacts-page__walk {
+  position: absolute;
+  left: 200vw;
+  top: 200vh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+  flex-flow: column nowrap;
+}
+
+.contacts-page__walk--title {
+  font-family: "Ruda";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.8125vw;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #041C13;
+  margin-bottom: 6.25vw;
+  width: 38.125vw;
+}
+
+.contacts-page__walk--text {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.40625vw;
+  line-height: 145%;
+  color: #6F6F6F;
+  width: 38.125vw;
+}
+
+.contacts-page__startWalk {
+  position: absolute;
+  left: 300vw;
+  top: 0vh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+  background-image: url(../img/contacts-page__startWalk.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.contacts-page__startWalk .s1__link {
+  opacity: 1;
+}
+
 @media only screen and (min-width: 1000px) {
   .assorti__intro-title i {
     transition: color 3s;

@@ -1,0 +1,42 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Contacts"
+
+block content
+	include ../../blocks/modules/loader-contacts/loader-contacts
+	include ../../blocks/modules/header/header
+	.contacts-page
+		.first
+			.c1
+				.c1__container
+					h1.c1__title Способы связи
+					.c1__contacts
+						.c1__contacts--item
+							.c1__contacts--title Адрес:
+							.c1__contacts--text Калужская область, Жуковский район, д. Дадровка
+						.c1__contacts--item
+							.c1__contacts--title Телефон/WhatsApp:
+							a(href="tel:+7 (920) 886–89–24").c1__contacts--link +7 (920) 886–89–24
+						.c1__contacts--item
+							.c1__contacts--title E-mail:
+							a(href="mailto:Nracheeva@mail.ru").c1__contacts--link Nracheeva@mail.ru
+		.contacts-page__map 
+			.contacts-page__map__container
+				img(src="img/map.png", alt="")
+		.contacts-page__walk
+			.contacts-page__walk--title 3D-прогулка по питомнику
+			.contacts-page__walk--text
+				| Хотите увидеть территорию питомника и условия для выращивания, но не можете приехать? Проводим реальные и виртуальные экскурсии, показываем все интересующие позиции в режиме онлайн, отвечаем на вопросы, высылаем фото и видео по запросу.
+		.contacts-page__startWalk
+			.s1__right-inner
+				video(src="video/video1.mp4" autoplay loop muted)
+				a.s1__link(href="") Начать прогулку
+
+	include ../../blocks/modules/footer/footer
+
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")
