@@ -2054,11 +2054,17 @@ body:not(.active) {
   width: 100vw;
   height: 100vh;
   background: #FDFDFD;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
-.activity {
+.about-page.active {
+  opacity: 1;
+}
+
+.ap-activity {
   position: absolute;
-  top: 100vh;
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -2068,7 +2074,7 @@ body:not(.active) {
   z-index: 1;
 }
 
-.activity__intro {
+.ap-activity__intro {
   width: 100%;
   height: 100%;
   will-change: transform;
@@ -2080,26 +2086,26 @@ body:not(.active) {
   pointer-events: none;
 }
 
-.activity__intro-title {
+.ap-activity__intro-title {
   font-weight: 600;
   font-size: 4.6875vw;
   line-height: 140%;
   text-transform: uppercase;
   color: #041C13;
-  width: 38.125vw;
+  width: 46.875vw;
   position: absolute;
   left: 18.75vw;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.activity__intro-title i {
+.ap-activity__intro-title i {
   font-style: inherit;
   will-change: opacity;
   pointer-events: auto;
 }
 
-.activity__intro-title::after {
+.ap-activity__intro-title::after {
   content: "";
   display: block;
   width: 0;
@@ -2111,11 +2117,11 @@ body:not(.active) {
   transition: width 0.3s ease;
 }
 
-.activity__intro-title.active::after {
+.ap-activity__intro-title.active::after {
   width: 13.75vw;
 }
 
-.activity__intro-text {
+.ap-activity__intro-text {
   will-change: transform;
   transform-style: preserve-3d;
   width: 38.125vw;
@@ -2131,7 +2137,7 @@ body:not(.active) {
   transform: translateY(-50%);
 }
 
-.activity__intro-text::after {
+.ap-activity__intro-text::after {
   content: "";
   display: block;
   width: 0;
@@ -2143,17 +2149,17 @@ body:not(.active) {
   transition: width 0.3s ease;
 }
 
-.activity__intro-text i {
+.ap-activity__intro-text i {
   font-style: inherit;
   will-change: opacity;
   pointer-events: auto;
 }
 
-.activity__intro-text.active::after {
+.ap-activity__intro-text.active::after {
   width: 13.75vw;
 }
 
-.activity__items {
+.ap-activity__items {
   position: absolute;
   top: 0;
   left: 0;
@@ -2163,7 +2169,7 @@ body:not(.active) {
   pointer-events: none;
 }
 
-.activity-item {
+.ap-activity-item {
   will-change: transform;
   transform-style: preserve-3d;
   position: absolute;
@@ -2173,9 +2179,10 @@ body:not(.active) {
   left: 0;
   overflow: hidden;
   pointer-events: auto;
+  z-index: 1;
 }
 
-.activity-item__img {
+.ap-activity-item__img {
   overflow: hidden;
   width: 38.125vw;
   height: 72.5vh;
@@ -2187,7 +2194,7 @@ body:not(.active) {
   transform: translateX(-100vw) translateY(100vw);
 }
 
-.activity-item__img img {
+.ap-activity-item__img img {
   display: block;
   width: 100%;
   height: 100%;
@@ -2195,35 +2202,270 @@ body:not(.active) {
   object-position: center center;
 }
 
-.activity-item__content {
+.ap-activity-item__content {
   width: 46.25vw;
   position: absolute;
   left: 51.25vw;
   top: 40%;
 }
 
-.activity-item__title {
+.ap-activity-item__title {
   width: 100%;
   font-style: normal;
   font-weight: 600;
-  font-size: 4.6875vw;
+  font-size: 3.75vw;
   line-height: 140%;
   text-transform: uppercase;
   color: #041C13;
 }
 
-.activity-item__text {
+.ap-activity-item__text {
   will-change: transform;
   transform-style: preserve-3d;
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.25vw;
+  font-size: 1.40625vw;
   line-height: 130%;
   color: #6F6F6F;
   margin-top: 2.5vw;
-  width: 21.875vw;
+  width: 38.28125vw;
   transform: translateY(100vh);
+}
+
+.ap-green-logo {
+  background: #1E713F;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ap-green-logo__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.ap-green-logo__logo {
+  margin-right: 0.9375vw;
+  width: 5.078125vw;
+}
+
+.ap-green-logo__logo img {
+  width: 100%;
+  margin-top: 0.46875vw;
+}
+
+.ap-green-logo__title {
+  width: 14.140625vw;
+}
+
+.ap-green-logo__title svg {
+  width: 100%;
+}
+
+.ap-achivments {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  will-change: transform;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.ap-achivments__intro {
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ap-achivments__intro-title {
+  font-weight: 600;
+  font-size: 4.6875vw;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #041C13;
+  width: 38.125vw;
+  position: absolute;
+  left: 18.75vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ap-achivments__intro-title i {
+  font-style: inherit;
+  will-change: opacity;
+  pointer-events: auto;
+}
+
+.ap-achivments__intro-title::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #6F6F6F;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.ap-achivments__intro-title.active::after {
+  width: 13.75vw;
+}
+
+.ap-achivments__items {
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ap-achivments-item {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.ap-achivments-item__img {
+  overflow: hidden;
+  will-change: transform;
+  transform-style: preserve-3d;
+  position: absolute;
+}
+
+.ap-achivments-item__img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.ap-achivments-item__content {
+  width: 21.875vw;
+  position: absolute;
+  will-change: transform;
+  transform-style: preserve-3d;
+  border-bottom: 1px solid #1E713F;
+  padding-bottom: 1.875vw;
+}
+
+.ap-achivments-item__title {
+  font-weight: 600;
+  font-size: 4.6875vw;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #1E713F;
+}
+
+.ap-achivments-item__text {
+  font-weight: 600;
+  font-size: 1.875vw;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #6F6F6F;
+  margin-top: 0.3125vw;
+}
+
+.ap-automation {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  will-change: transform;
+  transform-style: preserve-3d;
+  z-index: 5;
+}
+
+.ap-automation__intro-text {
+  will-change: transform;
+  transform-style: preserve-3d;
+  width: 38.125vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.8125vw;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #041C13;
+  position: absolute;
+  left: 18.75vw;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.ap-automation__intro-text::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #6F6F6F;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.ap-automation__intro-text i {
+  font-style: inherit;
+  will-change: opacity;
+  pointer-events: auto;
+}
+
+.ap-automation__intro-text.active::after {
+  width: 13.75vw;
+}
+
+.ap-automation__content {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.ap-automation__content video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -2292,7 +2534,7 @@ body:not(.active) {
     transition: color 0s;
   }
 
-  .activity__intro-title i {
+  .ap-activity__intro-title i {
     transition: color 3s;
     transition-delay: 1s;
     color: #041C13;
@@ -2300,12 +2542,12 @@ body:not(.active) {
     cursor: cell;
   }
 
-  .activity__intro-title i:hover {
+  .ap-activity__intro-title i:hover {
     color: #1E713F;
     transition: color 0s;
   }
 
-  .activity__intro-text i {
+  .ap-activity__intro-text i {
     transition: color 3s;
     transition-delay: 1s;
     color: #041C13;
@@ -2313,7 +2555,84 @@ body:not(.active) {
     cursor: cell;
   }
 
-  .activity__intro-text i:hover {
+  .ap-activity__intro-text i:hover {
+    color: #1E713F;
+    transition: color 0s;
+  }
+
+  .ap-achivments__intro-title i {
+    transition: color 3s;
+    transition-delay: 1s;
+    color: #041C13;
+    will-change: color;
+    cursor: cell;
+  }
+
+  .ap-achivments__intro-title i:hover {
+    color: #1E713F;
+    transition: color 0s;
+  }
+
+  .ap-achivments-item--1 .ap-achivments-item__img {
+    width: 62.5vw;
+    height: 60vh;
+    max-height: 81.25vh;
+    left: 2.5vw;
+    top: 50%;
+    transform: translateY(-49%);
+  }
+
+  .ap-achivments-item--1 .ap-achivments-item__content {
+    left: 67.5vw;
+    top: 50%;
+    transform: translateY(-61%);
+  }
+
+  .ap-achivments-item--2 .ap-achivments-item__img {
+    width: 62.5vw;
+    height: 60vh;
+    max-height: 81.25vh;
+    left: 10.703125vw;
+    top: 50%;
+    transform: translateY(-49%);
+  }
+
+  .ap-achivments-item--2 .ap-achivments-item__content {
+    left: 75.625vw;
+    top: 45%;
+    transform: translateY(-61%);
+  }
+
+  .ap-achivments-item--3 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 12.5vh;
+    left: 43.125vw;
+  }
+
+  .ap-achivments-item--3 .ap-achivments-item__img {
+    width: 38.125vw;
+    height: 87.5vh;
+    max-height: 112.5vh;
+    position: relative;
+  }
+
+  .ap-achivments-item--3 .ap-achivments-item__content {
+    position: relative;
+    margin-top: 6.25vw;
+  }
+
+  .ap-automation__intro-text i {
+    transition: color 3s;
+    transition-delay: 1s;
+    color: #041C13;
+    will-change: color;
+    cursor: cell;
+  }
+
+  .ap-automation__intro-text i:hover {
     color: #1E713F;
     transition: color 0s;
   }
@@ -3175,7 +3494,15 @@ body:not(.active) {
     height: auto;
   }
 
-  .activity {
+  .ap-activity {
+    position: relative;
+    left: 0;
+    top: 0;
+    will-change: auto;
+    transform-style: initial;
+  }
+
+  .ap-activity {
     position: relative;
     height: auto;
     width: 100%;
@@ -3184,7 +3511,7 @@ body:not(.active) {
     transform-style: initial;
   }
 
-  .activity__intro {
+  .ap-activity__intro {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -3192,32 +3519,32 @@ body:not(.active) {
     transform-style: initial;
   }
 
-  .activity__intro-title {
+  .ap-activity__intro-title {
     font-size: 7.8125vw;
-    width: 63.5416666667vw;
+    width: 78.125vw;
     left: 16.1458333333vw;
   }
 
-  .activity__intro-title.active::after {
+  .ap-activity__intro-title.active::after {
     width: 19.7916666667vw;
   }
 
-  .activity__intro-text {
+  .ap-activity__intro-text {
     width: 67.7083333333vw;
     font-size: 4.6875vw;
     left: 16.1458333333vw;
   }
 
-  .activity__intro-text.active::after {
+  .ap-activity__intro-text.active::after {
     width: 19.7916666667vw;
   }
 
-  .activity__items {
+  .ap-activity__items {
     position: relative;
     height: auto;
   }
 
-  .activity-item {
+  .ap-activity-item {
     will-change: auto;
     transform-style: initial;
     position: static;
@@ -3230,7 +3557,7 @@ body:not(.active) {
     flex-direction: column-reverse;
   }
 
-  .activity-item__img {
+  .ap-activity-item__img {
     width: 100%;
     height: 80.46875vw;
     position: static;
@@ -3242,24 +3569,165 @@ body:not(.active) {
     margin-top: 8.3333333333vw;
   }
 
-  .activity-item__content {
+  .ap-activity-item__content {
     position: static;
     left: 0;
     top: 0;
     width: 100%;
   }
 
-  .activity-item__title {
-    font-size: 7.8125vw;
+  .ap-activity-item__title {
+    font-size: 5.46875vw;
   }
 
-  .activity-item__text {
+  .ap-activity-item__text {
     will-change: auto;
     transform-style: initial;
-    font-size: 2.0833333333vw;
+    font-size: 2.34375vw;
     margin-top: 3.125vw;
     width: 100%;
     transform: none;
+  }
+
+  .ap-green-logo {
+    position: relative;
+    left: 0;
+    top: 0;
+    will-change: auto;
+    transform-style: initial;
+    pointer-events: auto;
+    height: 104.1666666667vw;
+    opacity: 1;
+    margin-top: 16.9270833333vw;
+  }
+
+  .ap-green-logo__img {
+    opacity: 1;
+  }
+
+  .ap-green-logo__logo {
+    width: 15.1041666667vw;
+    margin-right: 2.734375vw;
+  }
+
+  .ap-green-logo__logo img {
+    margin-top: 0.78125vw;
+  }
+
+  .ap-green-logo__title {
+    width: 42.3177083333vw;
+  }
+
+  .ap-achivments {
+    position: relative;
+    left: 0;
+    top: 0;
+    will-change: auto;
+    transform-style: initial;
+    margin-top: 15.625vw;
+    padding: 0 4.1666666667vw;
+    height: auto;
+  }
+
+  .ap-achivments__intro {
+    position: relative;
+    height: auto;
+    width: 100%;
+    will-change: auto;
+    transform-style: initial;
+  }
+
+  .ap-achivments__intro-title {
+    font-size: 7.8125vw;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .ap-achivments__intro-title::after {
+    display: none;
+  }
+
+  .ap-achivments__items {
+    position: relative;
+    will-change: auto;
+    transform-style: initial;
+    margin-top: 8.3333333333vw;
+  }
+
+  .ap-achivments-item {
+    position: relative;
+    will-change: auto;
+    transform-style: initial;
+    margin-bottom: 10.4166666667vw;
+    width: 100%;
+    height: auto;
+  }
+
+  .ap-achivments-item__img {
+    position: relative;
+    will-change: auto;
+    transform-style: initial;
+    width: 100%;
+    height: 54.9479166667vw;
+  }
+
+  .ap-achivments-item__content {
+    width: 100%;
+    padding-bottom: 3.125vw;
+    margin-top: 5.2083333333vw;
+    position: relative;
+  }
+
+  .ap-achivments-item__title {
+    font-size: 7.8125vw;
+  }
+
+  .ap-achivments-item__text {
+    margin-top: 0.5208333333vw;
+    font-size: 3.125vw;
+  }
+
+  .ap-automation {
+    position: relative;
+    left: 0;
+    top: 0;
+    will-change: auto;
+    transform-style: initial;
+    height: auto;
+  }
+
+  .ap-automation__intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+
+  .ap-automation__intro-text {
+    width: 67.7083333333vw;
+    box-sizing: border-box;
+    font-size: 4.6875vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .ap-automation__intro-text.active::after {
+    width: 19.7916666667vw;
+  }
+
+  .ap-automation__content {
+    position: relative;
+    left: 0;
+    top: 0;
+    will-change: auto;
+    transform-style: initial;
   }
 }
 
@@ -3809,42 +4277,103 @@ body:not(.active) {
     height: 40.7407407407vw;
   }
 
-  .activity__intro-title {
+  .ap-activity__intro-title {
     font-size: 11.1111111111vw;
     width: 95.5555555556vw;
     left: 2.2222222222vw;
   }
 
-  .activity__intro-title.active::after {
+  .ap-activity__intro-title.active::after {
     width: 28.8888888889vw;
   }
 
-  .activity__intro-text {
+  .ap-activity__intro-text {
     width: 95.5555555556vw;
     font-size: 6.6666666667vw;
     left: 2.2222222222vw;
   }
 
-  .activity__intro-text.active::after {
+  .ap-activity__intro-text.active::after {
     width: 28.8888888889vw;
   }
 
-  .activity-item {
+  .ap-activity-item {
     padding: 22.2222222222vw 2.2222222222vw 0;
   }
 
-  .activity-item__img {
+  .ap-activity-item__img {
     height: 114.4444444444vw;
     margin-top: 11.8518518519vw;
   }
 
-  .activity-item__title {
+  .ap-activity-item__title {
+    font-size: 7.7777777778vw;
+  }
+
+  .ap-activity-item__text {
+    font-size: 3.3333333333vw;
+    margin-top: 4.4444444444vw;
+  }
+
+  .ap-green-logo {
+    height: 100vh;
+  }
+
+  .ap-green-logo__logo {
+    width: 16.1111111111vw;
+    margin-right: 2.962962963vw;
+  }
+
+  .ap-green-logo__logo img {
+    margin-top: 1.1111111111vw;
+  }
+
+  .ap-green-logo__title {
+    width: 44.4444444444vw;
+  }
+
+  .ap-achivments {
+    margin-top: 22.2222222222vw;
+    padding: 0 2.2222222222vw;
+  }
+
+  .ap-achivments__intro-title {
     font-size: 11.1111111111vw;
   }
 
-  .activity-item__text {
-    font-size: 2.962962963vw;
-    margin-top: 4.4444444444vw;
+  .ap-achivments__items {
+    margin-top: 11.8518518519vw;
+  }
+
+  .ap-achivments-item {
+    margin-bottom: 14.8148148148vw;
+  }
+
+  .ap-achivments-item__img {
+    height: 78.1481481481vw;
+  }
+
+  .ap-achivments-item__content {
+    padding-bottom: 4.4444444444vw;
+    margin-top: 7.4074074074vw;
+  }
+
+  .ap-achivments-item__title {
+    font-size: 11.1111111111vw;
+  }
+
+  .ap-achivments-item__text {
+    margin-top: 0.7407407407vw;
+    font-size: 4.4444444444vw;
+  }
+
+  .ap-automation__intro-text {
+    width: 62.2222222222vw;
+    font-size: 5.5555555556vw;
+  }
+
+  .ap-automation__intro-text.active::after {
+    width: 28.8888888889vw;
   }
 }
 
@@ -4332,42 +4861,99 @@ body:not(.active) {
     height: 50vw;
   }
 
-  .activity__intro-title {
+  .ap-activity__intro-title {
     font-size: 12.5vw;
     width: 92.5vw;
     left: 3.75vw;
   }
 
-  .activity__intro-title.active::after {
+  .ap-activity__intro-title.active::after {
     width: 42.5vw;
   }
 
-  .activity__intro-text {
+  .ap-activity__intro-text {
     width: 92.5vw;
     font-size: 7.5vw;
     left: 3.75vw;
   }
 
-  .activity__intro-text.active::after {
+  .ap-activity__intro-text.active::after {
     width: 42.5vw;
   }
 
-  .activity-item {
+  .ap-activity-item {
     padding: 25vw 3.75vw 0;
   }
 
-  .activity-item__img {
+  .ap-activity-item__img {
     height: 125vw;
     margin-top: 12.5vw;
   }
 
-  .activity-item__title {
+  .ap-activity-item__title {
+    font-size: 9.375vw;
+  }
+
+  .ap-activity-item__text {
+    font-size: 5.625vw;
+    margin-top: 7.5vw;
+  }
+
+  .ap-green-logo__logo {
+    width: 15.625vw;
+    margin-right: 1.6666666667vw;
+  }
+
+  .ap-green-logo__logo img {
+    margin-top: 1.875vw;
+  }
+
+  .ap-green-logo__title {
+    width: 42.8125vw;
+  }
+
+  .ap-achivments {
+    margin-top: 25vw;
+    padding: 0 3.75vw;
+  }
+
+  .ap-achivments__intro-title {
+    font-size: 12.5vw;
+  }
+
+  .ap-achivments__items {
+    margin-top: 12.5vw;
+  }
+
+  .ap-achivments-item {
+    margin-bottom: 12.5vw;
+  }
+
+  .ap-achivments-item__img {
+    height: 100vw;
+  }
+
+  .ap-achivments-item__content {
+    padding-bottom: 7.5vw;
+    margin-top: 7.5vw;
+  }
+
+  .ap-achivments-item__title {
+    font-size: 12.5vw;
+  }
+
+  .ap-achivments-item__text {
+    margin-top: 1.25vw;
     font-size: 7.5vw;
   }
 
-  .activity-item__text {
-    font-size: 5vw;
-    margin-top: 5vw;
+  .ap-automation__intro-text {
+    width: 92.5vw;
+    font-size: 7.5vw;
+  }
+
+  .ap-automation__intro-text.active::after {
+    width: 42.5vw;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
