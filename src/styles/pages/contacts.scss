@@ -1,4 +1,7 @@
 .contacts-page {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
 	.c1{
 		&__container{
 			position: relative;
@@ -139,7 +142,7 @@
 	}
 	&__startWalk {
 		position: absolute;
-		left: 300vw;
+		left: 200vw;
 		top: 0vh;
 		width: 100vw;
 		height: 100vh;

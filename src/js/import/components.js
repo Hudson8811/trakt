@@ -1561,7 +1561,7 @@ $(document).ready(function (){
 						left:'-100vw', 
 						top:'-100vh',
 						ease: "none",
-					},">-1")
+					},">-2")
 					tl2.to(".contacts-page__map ", {
 						motionPath: {
 							path: [
@@ -1861,7 +1861,7 @@ $(document).ready(function (){
 						motionPath: {
 							path: [
 									// {left:'-80vw', top:'-40vw'},
-									{left:'-800vw', top:'-800vw'},
+									{left:'-800vw', top:'-800vh'},
 							],
 							curviness: 1
 							//type: "cubic"
@@ -1888,7 +1888,7 @@ $(document).ready(function (){
 								{left:'200vw', top:'200vh'},
 								{left:'75vw', top:'90vh'},
 								{left:'65vw', top:'40vh'},
-								{left:'-100vw', top:'18vh'},
+								{left:'100vw', top:'18vh'},
 							],
 							curviness: 1
 							//type: "cubic"
@@ -1910,13 +1910,6 @@ $(document).ready(function (){
 							lightHead = true;
 						}
 					}, "<"),
-					// tl2.to(".contacts-page__startWalk", {
-					// 	top: "-30vh",
-					// 	left: 0,
-					// 	delay: 0.5,	
-					// 	duration: 0.3,
-					// 	ease: "none",
-					// }, "<"),
 					st2 = ScrollTrigger.create({
 						trigger: ".contacts-page",
 						pin: true,

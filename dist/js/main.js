@@ -1423,7 +1423,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         left: '-100vw',
         top: '-100vh',
         ease: "none"
-      }, ">-1");
+      }, ">-2");
       _tl3.to(".contacts-page__map ", {
         motionPath: {
           path: [{
@@ -1743,7 +1743,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
           // {left:'-80vw', top:'-40vw'},
           {
             left: '-800vw',
-            top: '-800vw'
+            top: '-800vh'
           }],
           curviness: 1
           //type: "cubic"
@@ -1782,7 +1782,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
             left: '65vw',
             top: '40vh'
           }, {
-            left: '-100vw',
+            left: '100vw',
             top: '18vh'
           }],
           curviness: 1
@@ -1804,15 +1804,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
           setMaskHeader(0);
           _lightHead = true;
         }
-      }, "<"),
-      // tl2.to(".contacts-page__startWalk", {
-      // 	top: "-30vh",
-      // 	left: 0,
-      // 	delay: 0.5,	
-      // 	duration: 0.3,
-      // 	ease: "none",
-      // }, "<"),
-      _st2 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
+      }, "<"), _st2 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
         trigger: ".contacts-page",
         pin: true,
         start: "top top",
