@@ -1,0 +1,40 @@
+.pagination-list{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  max-width: 320px;
+  list-style: none;
+  box-sizing: border-box;
+  &__unit{
+    a{
+      position: relative;
+      z-index: 1;
+      color: $black-3d;
+      font-family: 'ruda', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    &.active{
+      position: relative;
+      margin: 0 0 0 16px;
+      a{
+        color: $white-fd;
+      }
+      &:before{
+        z-index: 0;
+        content: '';
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: $green-1e;
+        @include absolute-center;
+      }
+    }
+    &:last-child{
+      &.active{
+        margin: 0 16px 0 0;
+      }
+    }
+  }
+}

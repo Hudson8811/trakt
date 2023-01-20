@@ -10,10 +10,13 @@
 // Основное
 @import "base/fonts";
 @import "base/general";
+@import "base/ui-kit";
 
 // БЭМ-блоки
 @import "../blocks/modules/modules";
 
+// Компоненты
+@import "../blocks/components/components";
 
 // Стили целых страниц без разбития на модули
 @import "pages/home_page";
