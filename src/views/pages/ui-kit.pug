@@ -1,0 +1,61 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Project title"
+
+block content
+
+
+    .title-0 Ruda semibold 60/140
+    .title-1 Ruda bold 48/140
+    .title-2 Ruda semibold 42/140
+    .title-3 Ruda semibold 24/140
+    .title-4-uppercase Ruda semibold 24/130
+    .title-4 Ruda semibold 24/130
+    .title-5 Ruda semibold 16/140
+    .title-6 Ruda semibold 16/140
+    .lead-text-uppercase Ruda semibold 36/140
+    .lead-text Manrope Regular 36/145
+    .text-1 Manrope Regular 24/145
+    .text-2 Manrope Regular 18/145
+    .small-text-1 Manrope Regular 16/130
+    .small-text-2 Manrope Regular 14/130
+    .small-text-3 Manrope Regular 12/130
+    a(href="#").link-button
+        | Познакомиться
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 25C19.6274 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13C1 19.6274 6.37258 25 13 25Z" stroke="#041C13" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.7578 17.2426L18.0004 12.9999L13.7578 8.75732" stroke="#041C13" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 13H18" stroke="#041C13" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+
+
+    a.circle-button
+        p
+            |3D-прогулка
+            |по питомнику
+    a.colored-button.disabled
+        p задать вопрос
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 25C19.6274 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13C1 19.6274 6.37258 25 13 25Z" stroke="#FDFDFD" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.7578 17.2426L18.0004 12.9999L13.7578 8.75732" stroke="#FDFDFD" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 13H18" stroke="#FDFDFD" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    a.colored-button-small.disabled
+        p задать вопрос
+    a.transparent-button.disabled
+        p Отменить
+    include ../../blocks/components/pagination
+    include ../../blocks/modules/footer/footer
+
+
+
+
+
+
+
+block scripts
+    script(src="js/vendor.js")
+    script(src="js/main.js")
