@@ -9,6 +9,8 @@
 .env
 .yarn/cache
 .yarn/install-state.gz
+.yarn
+.history
 ehthumbs.db
 Thumbs.db
 _config.yml

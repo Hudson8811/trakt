@@ -1,0 +1,28 @@
+extends ../layouts/default-page
+
+block variables
+	- const title = "Login-lk";
+
+block content
+	include ../../blocks/modules/header/header
+
+	.login-lk-page
+		form.form-lk(action="")
+			.form-lk__wrap
+				h1.title-3 Вход в личный кабинет
+
+				input.input-text(type="text" placeholder="Ваше имя")
+				input.input-text(type="password" placeholder="Пароль")
+
+				.form-lk__row
+					button.colored-button-small(type="submit")
+						p Войти
+					
+					.form-lk__row-block
+						a.small-text-2(href="") Забыли пароль?
+						a.small-text-2(href="") Зарегистрироваться
+
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/vendor.js")

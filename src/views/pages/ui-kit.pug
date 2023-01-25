@@ -47,14 +47,21 @@ block content
         p задать вопрос
     a.transparent-button.disabled
         p Отменить
+    
+    input.checkbox-input(type="checkbox" id="checkbox" name="checkbox")
+    label.checkbox-label(for="checkbox")
+
+    input.input-text.error(type="text" placeholder="Ваше имя")
+    span.text-error Данное поле должно быть заполнено
+
+    input.input-text.input-tel.error(type="tel" placeholder="Введите ваш номер телефона")
+    span.text-error Данное поле должно быть заполнено
+    
+    textarea.textarea.error(type="text" placeholder="Ваше имя")
+    span.text-error Данное поле должно быть заполнено
+
     include ../../blocks/components/pagination
     include ../../blocks/modules/footer/footer
-
-
-
-
-
-
 
 block scripts
     script(src="js/vendor.js")

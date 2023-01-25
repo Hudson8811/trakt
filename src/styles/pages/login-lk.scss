@@ -1,0 +1,52 @@
+.login-lk-page {
+    background-color: $white-fd;
+    padding-top: 140px;
+    padding-bottom: 130px;
+    @include max(xs) {
+        padding-top: 84px;
+        padding-bottom: 80px;
+    }
+}
+.form-lk {
+    max-width: 800px;
+    margin: 0 auto;
+    @include max(md) {
+        max-width: 400px;
+    }
+    
+    &__wrap {
+        max-width: 592px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-3 {
+        margin-bottom: 24px;
+    }
+
+    .input-text {
+        margin-bottom: 12px;
+        &:nth-last-of-type(1) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .small-text-2 {
+        text-decoration: none;
+        color: $grey-6f;
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+}
