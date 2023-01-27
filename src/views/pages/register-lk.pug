@@ -1,0 +1,109 @@
+extends ../layouts/default-page
+
+block variables
+	- const title = "Register-lk";
+
+block content
+
+	.register-lk-page
+		.register-lk-page__top
+			.register-lk-page__top-wrap
+
+				h1.register-lk-page__title.title-3 регистрация
+				p.register-lk-page__subtitle.text-2 Если вы уже зарегистрированы на сайте, воспользуйтесь своими логином и паролем, чтобы войти в личный кабинет
+
+		
+		.register-lk-page__wrap
+			include ../../blocks/components/breadcrumbs
+			
+			ul.register-lk-page__tabs
+				li.register-lk-page__tab
+					button.register-lk-page__tab-btn.title-3.js-register-lk-tab-entity.active юридическое лицо
+				li.register-lk-page__tab
+					button.register-lk-page__tab-btn.title-3.js-register-lk-tab-individual физическое лицо
+			
+			form.register-lk-page__form.js-register-lk-form-entity.active(action="")
+				label.register-lk-page__label
+					p.register-lk-page__label-name.small-text-2 Фамилия*
+					input.register-lk-page__input.input-text(type="text" placeholder="Иванов")
+					span.text-error Данное поле должно быть заполнено
+
+				label.register-lk-page__label
+					p.register-lk-page__label-name.small-text-2 Имя*
+					input.register-lk-page__input.input-text(type="text" placeholder="Иван")
+					span.text-error Данное поле должно быть заполнено
+
+				label.register-lk-page__label
+					p.register-lk-page__label-name.small-text-2 Отчество*
+					input.register-lk-page__input.input-text(type="text" placeholder="Иванович")
+					span.text-error Данное поле должно быть заполнено
+
+				label.register-lk-page__label
+					p.register-lk-page__label-name.small-text-2 ИНН*
+					input.register-lk-page__input.input-text(type="text" placeholder="101111010011")
+					span.text-error Данное поле должно быть заполнено
+
+				label.register-lk-page__label
+					p.register-lk-page__label-name.small-text-2 Название компании (ООО, ИП, физическое лицо)*
+					input.register-lk-page__input.input-text(type="text" placeholder="ООО «Ландшафт»")
+					span.text-error Данное поле должно быть заполнено
+
+				label.register-lk-page__label
+					p.register-lk-page__label-name.small-text-2 Телефон*
+					input.register-lk-page__input.input-text.input-tel(type="tel" placeholder="+7 (------) ------ - ---- - ----")
+					span.text-error Данное поле должно быть заполнено
+
+				label.register-lk-page__label
+					p.register-lk-page__label-name.small-text-2 Почта*
+					input.register-lk-page__input.input-text(type="text" placeholder="ivanov@ya.ru")
+					span.text-error Данное поле должно быть заполнено
+
+
+				input.register-lk-page__checkbox-input.checkbox-input.small-text-2(type="checkbox" id="checkbox-entity" name="checkbox-entity")
+				label.register-lk-page__checkbox-label.checkbox-label.small-text-2(for="checkbox-entity") Согласен с политикой конфиденциальности*
+
+				p.register-lk-page__prompt.small-text-2 Поля, отмеченные (*), обязательны к заполнению
+
+				button.register-lk-page__submit.colored-button-small(type="submit")
+					p Зарегистрироваться
+
+			form.register-lk-page__form.js-register-lk-form-individual(action="")
+				label.register-lk-page__label
+					p.register-lk-page__label-name.small-text-2 Фамилия*
+					input.register-lk-page__input.input-text(type="text" placeholder="Иванов")
+					span.text-error Данное поле должно быть заполнено
+
+				label.register-lk-page__label
+					p.register-lk-page__label-name.small-text-2 Имя*
+					input.register-lk-page__input.input-text(type="text" placeholder="Иван")
+					span.text-error Данное поле должно быть заполнено
+
+				label.register-lk-page__label
+					p.register-lk-page__label-name.small-text-2 Отчество*
+					input.register-lk-page__input.input-text(type="text" placeholder="Иванович")
+					span.text-error Данное поле должно быть заполнено
+
+				label.register-lk-page__label
+					p.register-lk-page__label-name.small-text-2 Телефон*
+					input.register-lk-page__input.input-text.input-tel(type="tel" placeholder="+7 (------) ------ - ---- - ----")
+					span.text-error Данное поле должно быть заполнено
+
+				label.register-lk-page__label
+					p.register-lk-page__label-name.small-text-2 Почта*
+					input.register-lk-page__input.input-text(type="text" placeholder="ivanov@ya.ru")
+					span.text-error Данное поле должно быть заполнено
+
+
+				input.register-lk-page__checkbox-input.checkbox-input.small-text-2(type="checkbox" id="checkbox-individual" name="checkbox-individual")
+				label.register-lk-page__checkbox-label.checkbox-label.small-text-2(for="checkbox-individual") Согласен с политикой конфиденциальности*
+
+				p.register-lk-page__prompt.small-text-2 Поля, отмеченные (*), обязательны к заполнению
+
+				button.register-lk-page__submit.colored-button-small(type="submit")
+					p Зарегистрироваться
+
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

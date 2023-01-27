@@ -2603,17 +2603,17 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   }
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-hide-menu,.menu__overlay').on('click', function () {
-    event.preventDefault();
+    jquery__WEBPACK_IMPORTED_MODULE_0__.event.preventDefault();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu').removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-show-menu').on('click', function () {
-    event.preventDefault();
+    jquery__WEBPACK_IMPORTED_MODULE_0__.event.preventDefault();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu').addClass('active');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '.to-top', function () {
-    event.preventDefault();
+    jquery__WEBPACK_IMPORTED_MODULE_0__.event.preventDefault();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('html,body').animate({
       scrollTop: 0
     }, 'fast');
@@ -2626,6 +2626,19 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     } else {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.to-top').removeClass('active');
     }
+  }); // табы на странице регистрации
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-register-lk-tab-entity').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-register-lk-tab-entity').addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-register-lk-tab-individual').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-register-lk-form-entity').addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-register-lk-form-individual').removeClass('active');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-register-lk-tab-individual').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-register-lk-tab-individual').addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-register-lk-tab-entity').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-register-lk-form-individual').addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-register-lk-form-entity').removeClass('active');
   }); // маска для инпута телефона
 
   function maskPhone(selector) {
@@ -2680,7 +2693,17 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
 
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[type="tel"]').length > 0) {
     maskPhone('input[type="tel"]');
-  }
+  } // popup
+
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-popup-active').on('click', function (e) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-popup').addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('no-scroll');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-popup-close').on('click', function (e) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-popup').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('no-scroll');
+  });
 });
 
 /***/ }),

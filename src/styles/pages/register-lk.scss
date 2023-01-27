@@ -1,0 +1,145 @@
+.register-lk-page {
+    &__top {
+        background-color: $white-fd;
+
+        &-wrap {
+            max-width: 1216px;
+            padding: 80px 32px 80px;
+            margin: 0 auto;
+            @include max(md) {
+                padding: 64px 32px 64px;
+            }
+            @include max(sm) {
+                padding: 64px 12px 64px;
+            }
+            @include max(xs) {
+                padding: 40px 12px;
+            }
+        }
+    }
+
+    &__title {
+        color: $black-3d;
+        margin-bottom: 24px;
+        @include max(md) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__subtitle{
+        color: $grey-6f;
+    }
+
+    &__wrap {
+        background-color: $white-f7;
+        padding-top: 40px;
+        padding-bottom: 120px;
+        @include max(xs) {
+            padding-bottom: 80px;
+        }
+    }
+
+    &__tabs {
+        list-style: none;
+        max-width: 1216px;
+        padding: 0 32px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding-top: 80px;
+        @include max(sm) {
+            padding: 16px 12px 0;
+        }
+        @include max(xs) {
+            flex-direction: column;
+        }
+    }
+
+    &__tab {
+        max-width: 504px;
+        width: 100%;
+
+        &-btn {
+            outline: none;
+            width: 100%;
+            background-color: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid $grey-ca;
+            padding: 8px;
+            color: $grey-3d;
+            cursor: pointer;
+            @include max(sm) {
+                text-align: left;
+            }
+        }
+        &-btn.active {
+            border-bottom: 1px solid $green-1e;
+        }
+
+        @include max(xs) {
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__form {
+        display: none;
+        padding-top: 80px;
+        padding-left: 32px;
+        padding-right: 32px;
+        max-width: 864px;
+        margin: 0 auto;
+        @include max(sm) {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        @include max(xs) {
+            padding-top: 40px;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 32px;
+        }
+
+        &-name {
+            color: $grey-6f;
+            margin-bottom: 4px;
+        }
+    }
+
+    &__input {
+        background: url('../img/svg/pencil.svg') right 16px center no-repeat;
+        padding-right: 48px;
+    }
+
+    &__checkbox-label,
+    &__prompt {
+        color: $grey-6f;
+    }
+    &__checkbox-label {
+        margin: 16px 0;
+    }
+    &__prompt {
+        margin-bottom: 56px;
+        @include max(xs) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__submit {
+        margin: 0 auto;
+    }
+}
