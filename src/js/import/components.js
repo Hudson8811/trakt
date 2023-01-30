@@ -1,4 +1,4 @@
-import $ from "jquery";
+import $, { event } from "jquery";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
@@ -2778,9 +2778,6 @@ $(document).ready(function (){
         setMaskHeader(100);
     }
 
-
-
-
 	$('.js-hide-menu,.menu__overlay').on('click',function (){
 		event.preventDefault();
 		$('.menu').removeClass('active');
@@ -2804,6 +2801,24 @@ $(document).ready(function (){
         } else {
             $('.to-top').removeClass('active');
         }
+    });
+
+    // табы на странице регистрации
+
+    $('.js-register-lk-tab-entity').on('click',function() {
+        $('.js-register-lk-tab-entity').addClass('active');
+        $('.js-register-lk-tab-individual').removeClass('active');
+
+        $('.js-register-lk-form-entity').addClass('active');
+        $('.js-register-lk-form-individual').removeClass('active');
+    });
+
+    $('.js-register-lk-tab-individual').on('click',function() {
+        $('.js-register-lk-tab-individual').addClass('active');
+        $('.js-register-lk-tab-entity').removeClass('active');
+
+        $('.js-register-lk-form-individual').addClass('active');
+        $('.js-register-lk-form-entity').removeClass('active');
     });
 
     // маска для инпута телефона
@@ -2848,4 +2863,15 @@ $(document).ready(function (){
     if ($('input[type="tel"]').length > 0) {
         maskPhone('input[type="tel"]');
     }
+
+    // popup
+
+    $('.js-popup-active').on('click',function (e) {
+        $('.js-popup').addClass('active');
+        $('body').addClass('no-scroll');
+    });
+    $('.js-popup-close').on('click',function (e) {
+        $('.js-popup').removeClass('active');
+        $('body').removeClass('no-scroll');
+    });
 });

@@ -38,3 +38,164 @@
     }
   }
 }
+
+.breadcrumbs {
+  max-width: 1216px;
+  padding: 0 32px;
+  margin: 0 auto;
+  @include max(sm) {
+    padding: 0 12px;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__link {
+    text-decoration: none;
+    color: $grey-a6;
+  }
+  &__item:not(:last-child) &__link::after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 8px;
+    background: url("../../img/svg/arrow-long-gray.svg") center center no-repeat;
+    margin: 0 11px;
+  }
+  &__item.active &__link {
+    color: $grey-3d;
+
+    &::after {
+      background: url("../../img/svg/arrow-long-black.svg") center center no-repeat;
+    }
+  } 
+}
+
+.form-lk {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 40px;
+  @include max(md) {
+    max-width: 336px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  &__wrap {
+    max-width: 592px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: $black-3d;
+    margin-bottom: 24px;
+    }
+    
+    &__subtitle {
+    color: $grey-6f;
+    margin-bottom: 24px;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+
+    &:first-of-type {
+      margin-top: 32px;
+      @include max(xs) {
+        margin-top: 16px;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 32px;
+    }
+
+    &-name {
+      color: $grey-6f;
+      margin-bottom: 4px;
+    }
+  }
+
+  .input-text {
+    margin-bottom: 12px;
+  }
+  &__label .input-text {
+    margin-bottom: 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .small-text-3 {
+    text-decoration: none;
+    color: $grey-6f;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(30, 113, 63, .5);
+
+  &.active {
+    display: block; 
+  }
+
+  &__wrap {
+    max-width: 384px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white-fd;
+    border: 1px solid $green-1e;
+    border-radius: 8px;
+    padding: 68px 40px 80px;
+  }
+
+  &__btn-close {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .title-3 {
+    color: $grey-3d;
+    margin-bottom: 16px;
+  }
+
+  .text-2 {
+    color: $grey-6f;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}

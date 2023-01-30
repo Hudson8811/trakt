@@ -4,12 +4,13 @@ block variables
 	- const title = "Login-lk";
 
 block content
-	include ../../blocks/modules/header/header
 
 	.login-lk-page
+		include ../../blocks/components/breadcrumbs
+
 		form.form-lk(action="")
 			.form-lk__wrap
-				h1.title-3 Вход в личный кабинет
+				h1.form-lk__title.title-3 Вход в личный кабинет
 
 				input.input-text(type="text" placeholder="Ваше имя")
 				input.input-text(type="password" placeholder="Пароль")
@@ -19,10 +20,11 @@ block content
 						p Войти
 					
 					.form-lk__row-block
-						a.small-text-2(href="") Забыли пароль?
-						a.small-text-2(href="") Зарегистрироваться
+						a.small-text-3(href="") Забыли пароль?
+						a.small-text-3(href="") Зарегистрироваться
 
 	include ../../blocks/modules/footer/footer
 
 block scripts
 	script(src="js/vendor.js")
+	script(src="js/main.js")

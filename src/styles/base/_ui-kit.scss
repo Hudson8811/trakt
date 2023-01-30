@@ -95,6 +95,14 @@ p {
   font-weight: normal;
 }
 
+.lead-text, .text-1, .text-2 {
+  line-height: 145%;
+}
+
+.small-text-1, .small-text-2, .small-text-3 {
+  line-height: 130%;
+}
+
 .text-1 {
   font-size: 24px;
 }
@@ -211,6 +219,7 @@ p {
   width: fit-content;
   background: $green-1e;
   text-transform: uppercase;
+  text-decoration: none;
   padding: 20px 40px;
   border-radius: 50px;
   cursor: pointer;
@@ -303,6 +312,7 @@ p {
       user-select: none;
       &::before {
         content: '';
+        flex-shrink: 0;
         display: inline-block;
         width: 16px;
         height: 16px;
@@ -310,6 +320,7 @@ p {
         border: 1px solid $grey-a4;
         border-radius: 2px;
         transition: $animation;
+        margin-right: 8px;
         cursor: pointer;
       }
       &:hover::before {
