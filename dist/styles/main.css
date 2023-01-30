@@ -3017,8 +3017,8 @@ textarea.error + .text-error {
 
 .contacts-page__map {
   position: absolute;
-  left: 83vw;
-  top: 83vh;
+  left: 82vw;
+  top: 80vh;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -5075,6 +5075,95 @@ textarea.error + .text-error {
   .ap-automation__intro-text.active::after {
     width: 28.8888888889vw;
   }
+
+  .contacts-page {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+  }
+
+  .contacts-page .c1__container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 564px;
+  }
+
+  .contacts-page .c1__title {
+    font-size: 42px;
+  }
+
+  .contacts-page .c1__contacts {
+    font-size: 18px;
+    max-width: 243px;
+  }
+
+  .contacts-page .c1__contacts--item {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .contacts-page .c1__contacts--title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .contacts-page .c1__contacts--link {
+    font-size: 16px;
+  }
+
+  .contacts-page .footer {
+    position: relative;
+    display: block;
+  }
+
+  .contacts-page__map {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 95vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contacts-page__map__container {
+    width: 100%;
+    height: 400px;
+  }
+
+  .contacts-page__walk {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 95vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .contacts-page__walk--title {
+    font-size: 36px;
+    width: 100%;
+  }
+
+  .contacts-page__walk--text {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .contacts-page__startWalk {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media only screen and (max-width: 499px) {
@@ -5711,6 +5800,16 @@ textarea.error + .text-error {
   .login-lk-page {
     padding-top: 84px;
     padding-bottom: 80px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .contacts-page .c1__title {
+    font-size: 28px;
+  }
+
+  .contacts-page__walk--title {
+    font-size: 24px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

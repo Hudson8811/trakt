@@ -71,10 +71,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         initScrollAnimationDesktop();
         initMode = 'desk';
       } else if (window.innerWidth > 699) {
-        _initScrollAnimationTablet();
+        initScrollAnimationTablet();
         initMode = 'tablet';
       } else {
-        _initScrollAnimationMobile();
+        initScrollAnimationMobile();
         initMode = 'mobile';
       }
     };
@@ -673,7 +673,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         animation: tl1
       });
     };
-    var _initScrollAnimationTablet = function _initScrollAnimationTablet() {
+    var initScrollAnimationTablet = function initScrollAnimationTablet() {
       tl.to(".loader__center", {
         autoAlpha: 1,
         duration: 1.5,
@@ -1006,7 +1006,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         }
       };
     };
-    var _initScrollAnimationMobile = function _initScrollAnimationMobile() {
+    var initScrollAnimationMobile = function initScrollAnimationMobile() {
       tl.to(".loader__center", {
         autoAlpha: 1,
         duration: 1.5,
@@ -1346,10 +1346,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         _initScrollAnimationDesktop();
         initMode = 'desk';
       } else if (window.innerWidth > 699) {
-        _initScrollAnimationTablet2();
+        _initScrollAnimationTablet();
         initMode = 'tablet';
       } else {
-        _initScrollAnimationTablet2();
+        _initScrollAnimationTablet();
         initMode = 'mobile';
       }
     };
@@ -1703,7 +1703,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         animation: _tl
       });
     };
-    var _initScrollAnimationTablet2 = function _initScrollAnimationTablet2() {
+    var _initScrollAnimationTablet = function _initScrollAnimationTablet() {
       _resizeFunction = function _resizeFunction() {
         var listElems = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ap-activity-item__img img, .ap-achivments-item__img img');
         var windowHalf = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height() * 0.5;
@@ -1897,10 +1897,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         _initScrollAnimationDesktop2();
         initMode = 'desk';
       } else if (window.innerWidth > 699) {
-        initScrollAnimationTablet();
+        _initScrollAnimationTablet2();
         initMode = 'tablet';
       } else {
-        initScrollAnimationMobile();
+        _initScrollAnimationMobile();
         initMode = 'mobile';
       }
     };
@@ -1978,13 +1978,13 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         left: '-100vw',
         top: '-100vh',
         ease: "none",
-        duration: 0.2
+        duration: 0.12
       }, ">-1");
       _tl6.to(".contacts-page__map ", {
         motionPath: {
           path: [{
-            left: '83vw',
-            top: '83vh'
+            left: '82vw',
+            top: '80vh'
           }, {
             left: '00vw',
             top: '5vh'
@@ -1993,7 +1993,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
           //type: "cubic"
         },
 
-        duration: 0.2,
+        duration: 0.16,
         ease: "none"
       }, "<-0.1"), _tl6.to(".contacts-page__map ", {
         motionPath: {
@@ -2064,6 +2064,238 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         scrub: 1.5,
         animation: _tl6
       });
+    };
+    var _initScrollAnimationTablet2 = function _initScrollAnimationTablet2() {
+      _resizeFunction2 = function _resizeFunction2() {};
+      _tl4.to(".loader__center", {
+        autoAlpha: 1,
+        duration: 1.5,
+        delay: 1,
+        ease: "none",
+        onComplete: function onComplete() {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('active');
+        }
+      });
+      _tl4.to(".loader__logo", {
+        width: 0,
+        margin: 0,
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "power1.out"
+      }, ">");
+      _tl4.to(".loader__title", {
+        width: "74.6875vw",
+        ease: "power1.out",
+        duration: 1.5
+      }, "<");
+      _tl4.to(".loader .l1", {
+        autoAlpha: 0,
+        duration: 0.4,
+        ease: "none"
+      }, ">0.2");
+      _tl4.to(".loader .l2", {
+        autoAlpha: 0,
+        duration: 0.4,
+        ease: "none"
+      }, ">-0.1");
+      _tl4.to(".loader .l3", {
+        autoAlpha: 0,
+        duration: 0.4,
+        ease: "none"
+      }, ">-0.1");
+      _tl4.to(".loader .l4", {
+        autoAlpha: 0,
+        duration: 0.3,
+        ease: "none"
+      }, ">-0.1");
+      _tl4.to(".loader", {
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "none",
+        onStart: function onStart() {
+          setMaskHeader(100);
+          _lightHead2 = false;
+        },
+        onReverseComplete: function onReverseComplete() {
+          setMaskHeader(0);
+          _lightHead2 = true;
+        }
+      }, ">0.2");
+      _tl5.to(".c1__title", {
+        top: "32vh",
+        opacity: 1,
+        delay: 4,
+        duration: 3
+      }, ">");
+      _tl5.to(".c1__contacts", {
+        top: "50vh",
+        opacity: 1,
+        duration: 2,
+        onComplete: function onComplete() {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+        }
+      }, ">-1");
+      _tl6.to(".first", {
+        left: '-100vw',
+        top: '-100vh',
+        ease: "none",
+        duration: 0.12
+      }, ">-1");
+      _tl6.to(".contacts-page__map ", {
+        motionPath: {
+          path: [{
+            left: '82vw',
+            top: '80vh'
+          }, {
+            left: '00vw',
+            top: '5vh'
+          }],
+          curviness: 1
+          //type: "cubic"
+        },
+
+        duration: 0.16,
+        ease: "none"
+      }, "<-0.1"), _tl6.to(".contacts-page__map ", {
+        motionPath: {
+          path: [{
+            left: '0vw',
+            top: '5vh'
+          }, {
+            left: '-100vw',
+            top: '5vh'
+          }],
+          curviness: 1
+          //type: "cubic"
+        },
+
+        duration: 0.1,
+        delay: 0.005,
+        ease: "none"
+      }, ">"), _tl6.to(".contacts-page__walk", {
+        motionPath: {
+          path: [{
+            left: '100vw',
+            top: '100vh'
+          }, {
+            left: '75vw',
+            top: '90vh'
+          }, {
+            left: '50vw',
+            top: '40vh'
+          }],
+          curviness: 1
+          //type: "cubic"
+        },
+
+        duration: 0.1,
+        ease: "none"
+      }, ">-0.1"), _tl6.to(".contacts-page__walk", {
+        motionPath: {
+          path: [{
+            left: '50vw',
+            top: '40vh'
+          }, {
+            left: '-100vw',
+            top: '40vh'
+          }],
+          curviness: 1
+          //type: "cubic"
+        },
+
+        delay: 0.005,
+        duration: 0.1,
+        ease: "none"
+      }, ">"), _tl6.to(".contacts-page__startWalk", {
+        left: 0,
+        top: 0,
+        duration: 0.1,
+        ease: "none"
+      }, ">-0.1"), _tl6.to(".contacts-page__startWalk", {
+        duration: 0.01,
+        delay: 0.005,
+        ease: "none"
+      }, ">"), _st4 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
+        trigger: ".contacts-page",
+        pin: true,
+        start: "top top",
+        end: function end() {
+          return "+=" + _addTime2 + "%";
+        },
+        scrub: 1.5,
+        animation: _tl6
+      });
+    };
+    var _initScrollAnimationMobile = function _initScrollAnimationMobile() {
+      _resizeFunction2 = function _resizeFunction2() {};
+      _tl4.to(".loader__center", {
+        autoAlpha: 1,
+        duration: 1.5,
+        delay: 1,
+        ease: "none",
+        onComplete: function onComplete() {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('active');
+        }
+      });
+      _tl4.to(".loader__logo", {
+        width: 0,
+        margin: 0,
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "power1.out"
+      }, ">");
+      _tl4.to(".loader__title", {
+        width: "74.6875vw",
+        ease: "power1.out",
+        duration: 1.5
+      }, "<");
+      _tl4.to(".loader .l1", {
+        autoAlpha: 0,
+        duration: 0.4,
+        ease: "none"
+      }, ">0.2");
+      _tl4.to(".loader .l2", {
+        autoAlpha: 0,
+        duration: 0.4,
+        ease: "none"
+      }, ">-0.1");
+      _tl4.to(".loader .l3", {
+        autoAlpha: 0,
+        duration: 0.4,
+        ease: "none"
+      }, ">-0.1");
+      _tl4.to(".loader .l4", {
+        autoAlpha: 0,
+        duration: 0.3,
+        ease: "none"
+      }, ">-0.1");
+      _tl4.to(".loader", {
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "none",
+        onStart: function onStart() {
+          setMaskHeader(100);
+          _lightHead2 = false;
+        },
+        onReverseComplete: function onReverseComplete() {
+          setMaskHeader(0);
+          _lightHead2 = true;
+        }
+      }, ">0.2");
+      _tl5.to(".c1__title", {
+        top: "120px",
+        opacity: 1,
+        delay: 4,
+        duration: 3
+      }, ">");
+      _tl5.to(".c1__contacts", {
+        top: "219px",
+        opacity: 1,
+        duration: 2,
+        onComplete: function onComplete() {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+        }
+      }, ">-1");
     }; // function initScrollAnimationTablet(){
     //     resizeFunction = function (){}
     //     tl.to(".loader__center", {
