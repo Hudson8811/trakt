@@ -85,6 +85,7 @@
   
   &__wrap {
     max-width: 592px;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -117,7 +118,7 @@
 
     &-name {
       color: $grey-6f;
-      margin-bottom: 4px;
+      margin-bottom: 4px !important;
     }
   }
 
@@ -139,6 +140,7 @@
     }
   }
 
+  .small-text-2,
   .small-text-3 {
     text-decoration: none;
     color: $grey-6f;
@@ -163,7 +165,9 @@
   }
 
   &__wrap {
+    box-sizing: border-box;
     max-width: 384px;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -172,6 +176,10 @@
     border: 1px solid $green-1e;
     border-radius: 8px;
     padding: 68px 40px 80px;
+
+    @include max(xs) {
+      max-width: 296px;
+    }
   }
 
   &__btn-close {
@@ -198,4 +206,262 @@
 .no-scroll {
   overflow: hidden;
   height: 100%;
+}
+
+.container-menu {
+  display: flex;
+  align-items: flex-start;
+
+  &__content {
+    width: 100%;
+    padding-top: 40px;
+
+    @include max(sm) {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+
+  &__top {
+    padding-top: 80px;
+    padding-left: 56px;
+    padding-bottom: 60px;
+    margin-top: -40px;
+    margin-left: -56px;
+    background-color: $white-fd;
+      
+    @include max(md) {
+      padding-top: 64px;
+      padding-bottom: 40px;
+    }
+    @include max(sm) {
+      margin-left: -12px;
+      margin-right: -12px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    @include max(xxs) {
+      padding-top: 40px;
+    }
+    
+    &-title {
+      color: $black-3d;
+      margin-bottom: 24px;
+      
+      @include max(md) {
+        margin-bottom: 16px;
+      }
+    }
+    &-text {
+      max-width: 592px;
+      color: $grey-6f;
+    }
+  }
+
+  .breadcrumbs {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.menu-lk {
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  max-width: 104px;
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 32px;
+  
+  @include max(md) {
+    padding-right: 20px;
+  }
+  @include max(sm) {
+    position: fixed;
+    max-width: 100%;
+    top: auto;
+    bottom: 0px;
+    padding-right: 0;
+  }
+
+  &__elem {
+    display: block;
+    color: $green-1e;
+    transform: rotate(-90deg);
+    margin-top: 40px;
+    margin-left: 11px;
+    margin-bottom: 60px;
+
+    @include max(sm) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+
+    @include max(sm) {
+      display: none;
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      width: 24px;
+      height: 24px;
+      background: url("../../img/svg/arrow-circle-right.svg") center center no-repeat;
+      transform: rotate(0deg);
+      transition: $animation;
+    }
+  }
+
+  &.active {
+    max-width: 312px;
+    
+    .menu-lk__elem {
+      display: none;
+    }
+
+    .menu-lk__btn::before {
+      transform: rotateY(180deg);
+    }
+
+    .menu-lk__company {
+      display: flex;
+    }
+
+    .menu-lk__link {
+      justify-content: start;
+      padding: 8px 16px;
+    }
+
+    .menu-lk__link-title {
+      font-size: 16px;
+      margin-left: 24px;
+    }
+  }
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+    background-color: $white-fd;
+    padding: 40px 0;
+    transition: $animation;
+
+    @include max(sm) {
+      height: auto;
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  &__company {
+    display: none;
+    align-items: center;
+    padding: 60px 16px 0;
+
+    @include max(sm) {
+      display: none;
+    }
+
+    &-img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-right: 24px;
+    }
+
+    &-name {
+      color: $grey-3d;
+      margin-bottom: 4px;
+    }
+
+    &-edit {
+      text-decoration: none;
+      color: $grey-6f;
+      border-bottom: 1px solid $grey-6f;
+      padding-bottom: 2px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+    align-self: stretch;
+    padding-top: 40px;
+
+    @include max(sm) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 0;
+    }
+  }
+
+  &__item {
+    @include max(sm) {
+      background-color: $white;
+    }
+    
+    &--exit {
+      padding-top: 24px;
+      margin-top: auto;
+
+      @include max(sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__item.active {
+    background-color: $green-1e;
+
+    & .menu-lk__link-svg {
+      fill: $white-fd;
+    }
+
+    & .menu-lk__link-title {
+      color: $white-fd;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 12px 24px;
+
+    &-svg {
+      width: 32px;
+      height: 32px;
+      fill: $green-1e;
+
+      @include max(sm) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &-title {
+      font-size: 0;
+      color: $grey-6f;
+      text-transform: uppercase;
+      margin-left: 0;
+    }
+  }
 }

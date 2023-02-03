@@ -17,6 +17,7 @@
 
 // Компоненты
 @import "../blocks/components/components";
+@import "../blocks/components/catalog";
 
 // Стили целых страниц без разбития на модули
 @import "pages/home_page";
@@ -26,3 +27,5 @@
 @import "pages/register-lk";
 @import "pages/change-password-lk";
 @import "pages/new-password-lk";
+@import "pages/main-lk";
+@import "pages/catalog-lk";

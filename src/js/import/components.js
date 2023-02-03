@@ -2173,19 +2173,19 @@ $(document).ready(function (){
                 left:'-100vw',
                 top:'-100vh',
                 ease: "none",
-								duration: 0.2,
+								duration: 0.12,
             },">-1")
             tl2.to(".contacts-page__map ", {
                 motionPath: {
                     path: [
-                        {left:'83vw', top:'83vh'},
+                        {left:'82vw', top:'80vh'},
                         {left:'00vw', top:'5vh'},
 
                     ],
                     curviness: 1
                     //type: "cubic"
                 },
-                duration: 0.2,
+                duration: 0.16,
                 ease: "none",
             }, "<-0.1"),
 						tl2.to(".contacts-page__map ", {
@@ -2249,6 +2249,239 @@ $(document).ready(function (){
 								animation: tl2,
 						});
         }
+        function initScrollAnimationTablet(){
+            resizeFunction = function (){}
+
+            tl.to(".loader__center", {
+                autoAlpha: 1,
+                duration: 1.5,
+                delay: 1,
+                ease: "none",
+                onComplete: function (){
+                    $('body').removeClass('active');
+                }
+            });
+            tl.to(".loader__logo", {
+                width: 0,
+                margin: 0,
+                autoAlpha: 0,
+                duration: 0.5,
+                ease: "power1.out",
+            } , ">");
+            tl.to(".loader__title", {
+                width: "74.6875vw",
+                ease: "power1.out",
+                duration: 1.5,
+            } , "<");
+            tl.to(".loader .l1", {
+                autoAlpha: 0,
+                duration: 0.4,
+                ease: "none",
+            } , ">0.2");
+            tl.to(".loader .l2", {
+                autoAlpha: 0,
+                duration: 0.4,
+                ease: "none",
+            } , ">-0.1");
+            tl.to(".loader .l3", {
+                autoAlpha: 0,
+                duration: 0.4,
+                ease: "none",
+            } , ">-0.1");
+            tl.to(".loader .l4", {
+                autoAlpha: 0,
+                duration: 0.3,
+                ease: "none",
+            } , ">-0.1");
+            tl.to(".loader", {
+                autoAlpha: 0,
+                duration: 0.5,
+                ease: "none",
+                onStart: function (){
+                    setMaskHeader(100);
+                    lightHead = false;
+                },
+                onReverseComplete: function (){
+                    setMaskHeader(0);
+                    lightHead = true;
+                }
+            } , ">0.2");
+
+
+            tl1.to(".c1__title", {
+                top: "32vh",
+                opacity: 1,
+                delay: 4,
+                duration: 3,
+            }, ">");
+
+            tl1.to(".c1__contacts", {
+                top: "50vh",
+                opacity: 1,
+                duration: 2,
+                onComplete: function (){
+                    $('body').addClass('active');
+                }
+            }, ">-1");
+
+            tl2.to(".first", {
+                left:'-100vw',
+                top:'-100vh',
+                ease: "none",
+								duration: 0.12,
+            },">-1")
+            tl2.to(".contacts-page__map ", {
+                motionPath: {
+                    path: [
+                        {left:'82vw', top:'80vh'},
+                        {left:'00vw', top:'5vh'},
+
+                    ],
+                    curviness: 1
+                    //type: "cubic"
+                },
+                duration: 0.16,
+                ease: "none",
+            }, "<-0.1"),
+						tl2.to(".contacts-page__map ", {
+								motionPath: {
+										path: [
+												{left:'0vw', top:'5vh'},
+												{left:'-100vw', top:'5vh'},
+										],
+										curviness: 1
+										//type: "cubic"
+								},
+								duration: 0.1,
+								delay: 0.005,
+								ease: "none",
+						}, ">"),
+						tl2.to(".contacts-page__walk", {
+								motionPath: {
+										path: [
+												{left:'100vw', top:'100vh'},
+												{left:'75vw', top:'90vh'},
+												{left:'50vw', top:'40vh'},
+										],
+										curviness: 1
+										//type: "cubic"
+								},
+								duration: 0.1,
+								ease: "none",
+						}, ">-0.1"),
+						tl2.to(".contacts-page__walk", {
+								motionPath: {
+										path: [
+												{left:'50vw', top:'40vh'},
+												{left:'-100vw', top:'40vh'},
+										],
+										curviness: 1
+										//type: "cubic"
+								},
+								delay: 0.005,
+								duration: 0.1,
+								ease: "none",
+						}, ">"),
+						tl2.to(".contacts-page__startWalk", {
+								left: 0,
+								top: 0,
+								duration: 0.1,
+								ease: "none",
+
+						}, ">-0.1"),
+						tl2.to(".contacts-page__startWalk", {
+								duration: 0.01,
+								delay: 0.005,
+								ease: "none",
+
+						}, ">"),
+						st2 = ScrollTrigger.create({
+								trigger: ".contacts-page",
+								pin: true,
+								start: "top top",
+								end: () =>   "+="+addTime+"%",
+								scrub: 1.5,
+								animation: tl2,
+						});
+        }
+        function initScrollAnimationMobile(){
+            resizeFunction = function (){}
+
+            tl.to(".loader__center", {
+                autoAlpha: 1,
+                duration: 1.5,
+                delay: 1,
+                ease: "none",
+                onComplete: function (){
+                    $('body').removeClass('active');
+                }
+            });
+            tl.to(".loader__logo", {
+                width: 0,
+                margin: 0,
+                autoAlpha: 0,
+                duration: 0.5,
+                ease: "power1.out",
+            } , ">");
+            tl.to(".loader__title", {
+                width: "74.6875vw",
+                ease: "power1.out",
+                duration: 1.5,
+            } , "<");
+            tl.to(".loader .l1", {
+                autoAlpha: 0,
+                duration: 0.4,
+                ease: "none",
+            } , ">0.2");
+            tl.to(".loader .l2", {
+                autoAlpha: 0,
+                duration: 0.4,
+                ease: "none",
+            } , ">-0.1");
+            tl.to(".loader .l3", {
+                autoAlpha: 0,
+                duration: 0.4,
+                ease: "none",
+            } , ">-0.1");
+            tl.to(".loader .l4", {
+                autoAlpha: 0,
+                duration: 0.3,
+                ease: "none",
+            } , ">-0.1");
+            tl.to(".loader", {
+                autoAlpha: 0,
+                duration: 0.5,
+                ease: "none",
+                onStart: function (){
+                    setMaskHeader(100);
+                    lightHead = false;
+                },
+                onReverseComplete: function (){
+                    setMaskHeader(0);
+                    lightHead = true;
+                }
+            } , ">0.2");
+
+
+            tl1.to(".c1__title", {
+                top: "120px",
+                opacity: 1,
+                delay: 4,
+                duration: 3,
+            }, ">");
+
+            tl1.to(".c1__contacts", {
+                top: "219px",
+                opacity: 1,
+                duration: 2,
+                onComplete: function (){
+                    $('body').addClass('active');
+                }
+            }, ">-1");
+
+
+        }
+
         // function initScrollAnimationTablet(){
         //     resizeFunction = function (){}
 
@@ -2538,6 +2771,60 @@ $(document).ready(function (){
         //         });
         // }
 
+    } else if ($('.main-lk-page').length > 0){
+
+        $('.js-popup-avatar').on('click',function () {
+            $('.js-popup').addClass('active');
+            $('body').addClass('no-scroll');
+        });
+
+        $(document).ready(function() {
+            var disabled = false;
+            $('.js-data-editing').click(function() {
+                if (disabled) {
+                    $('.input-text').prop('disabled', true);
+                    $('.main-lk-page__order').addClass('active');
+                    $('.main-lk-page__save').removeClass('active');
+                }
+                else {
+                    $('.input-text').prop('disabled', false);
+                    $('.main-lk-page__order').removeClass('active');
+                    $('.main-lk-page__save').addClass('active');
+                }
+                disabled = !disabled;
+            })
+        });
+
+    } else if ($('.register-lk-page').length > 0){
+
+    $('.register-lk-page__submit').on('click',function(e) {
+        e.preventDefault();
+        $('.register-lk-page__response').addClass('active');
+
+        $('.register-lk-page__tabs').removeClass('active');
+        $('.js-register-lk-form-entity').removeClass('active');
+        $('.js-register-lk-form-individual').removeClass('active');
+    });
+    
+    
+    // табы
+
+    $('.js-register-lk-tab-entity').on('click',function() {
+        $('.js-register-lk-tab-entity').addClass('active');
+        $('.js-register-lk-tab-individual').removeClass('active');
+
+        $('.js-register-lk-form-entity').addClass('active');
+        $('.js-register-lk-form-individual').removeClass('active');
+    });
+
+    $('.js-register-lk-tab-individual').on('click',function() {
+        $('.js-register-lk-tab-individual').addClass('active');
+        $('.js-register-lk-tab-entity').removeClass('active');
+
+        $('.js-register-lk-form-individual').addClass('active');
+        $('.js-register-lk-form-entity').removeClass('active');
+    });
+
     } else {
         //остальные страницы
         $('body').addClass('active');
@@ -2568,24 +2855,6 @@ $(document).ready(function (){
         } else {
             $('.to-top').removeClass('active');
         }
-    });
-
-    // табы на странице регистрации
-
-    $('.js-register-lk-tab-entity').on('click',function() {
-        $('.js-register-lk-tab-entity').addClass('active');
-        $('.js-register-lk-tab-individual').removeClass('active');
-
-        $('.js-register-lk-form-entity').addClass('active');
-        $('.js-register-lk-form-individual').removeClass('active');
-    });
-
-    $('.js-register-lk-tab-individual').on('click',function() {
-        $('.js-register-lk-tab-individual').addClass('active');
-        $('.js-register-lk-tab-entity').removeClass('active');
-
-        $('.js-register-lk-form-individual').addClass('active');
-        $('.js-register-lk-form-entity').removeClass('active');
     });
 
     // маска для инпута телефона
@@ -2640,5 +2909,12 @@ $(document).ready(function (){
     $('.js-popup-close').on('click',function (e) {
         $('.js-popup').removeClass('active');
         $('body').removeClass('no-scroll');
+    });
+
+    // menu lk
+
+    $('.menu-lk__btn').on('click', function() {
+        $('.menu-lk__btn').toggleClass('active');
+        $('.menu-lk').toggleClass('active');
     });
 });

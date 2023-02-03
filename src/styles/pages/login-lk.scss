@@ -1,9 +1,13 @@
 .login-lk-page {
-    background-color: $white-fd;
+    background-color: $white-f6;
     padding-top: 40px;
     padding-bottom: 130px;
     @include max(xs) {
         padding-top: 24px;
         padding-bottom: 80px;
+    }
+
+    .form-lk .input-text:last-of-type {
+        margin-bottom: 32px;
     }
 }

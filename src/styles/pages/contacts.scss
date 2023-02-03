@@ -1,14 +1,29 @@
+
 .contacts-page {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
 	background: #fff;
+	@include max(sm){
+		position: relative;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: auto;
+	}
 	.c1{
 		&__container{
 			position: relative;
 			width: 100vw;
 			height: 100vh;
 			perspective: 1500px;
+			@include max(sm){
+				position: relative;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 564px;
+			}
 		}
 		&__title {
 			will-change: transform, opacity;
@@ -31,6 +46,13 @@
 			color: #041C13;
 			left: vw(200);
 			top: 100vh;
+			@include max(sm){
+				font-size: 42px;
+	
+			}
+			@include max(xxs){
+				font-size: 28px;
+			}	
 		}
 		&__contacts {
 			position: relative;
@@ -48,6 +70,10 @@
 			left: vw(200);
 			opacity: 0;
 			pointer-events: none;
+			@include max(sm){
+				font-size: 18px;
+				max-width: 243px;
+			}	
 			&--item {
 				position: relative;
 				width: 100%;
@@ -59,7 +85,12 @@
 				font-size: vw(18);
 				line-height: 145%;
 				margin-bottom: vw(32);
-				color: #041C13;				
+				color: #041C13;
+				@include max(sm){
+					font-size: 18px;
+						margin-bottom: 32px;
+		
+				}			
 			}
 			&--title {
 				font-family: 'Manrope';
@@ -68,7 +99,12 @@
 				font-size: vw(16);
 				line-height: 130%;
 				color: #6F6F6F;	
-				margin-bottom: vw(10);			
+				margin-bottom: vw(10);
+				@include max(sm){
+					font-size: 16px;
+					margin-bottom: 10px;												
+		
+				}				
 			}
 			&--link {
 				flex-flow: column nowrap;
@@ -78,20 +114,39 @@
 				font-size: vw(18);
 				line-height: 145%;
 				color: #041C13;
-				text-decoration: none;					
+				text-decoration: none;
+				@include max(sm){
+					font-size: 16px;											
+		
+				}						
 			}
+		}
+	}
+	.footer {
+		@include max(sm){
+			position: relative;
+			display: block;
 		}
 	}
 	&__map {
 		position: absolute;
-		left: 83vw;
-		top: 83vh;
+		left: 82vw;
+		top: 80vh;
 		width: 100vw;
 		height: 100vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
+		@include max(sm){
+			position: relative;
+			left: 0;
+			top: 0;
+			width: 95vw;
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;	
+		}
 	&__container{
 		position: relative;
 		width: vw(800);
@@ -99,6 +154,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@include max(sm){
+			width: 100%;
+			height: 400px;
+
+		}
 		img {
 				position: absolute;
 				display: block;
@@ -122,6 +182,17 @@
 		align-items: flex-start;
 		overflow: hidden;
 		flex-flow: column nowrap;
+		@include max(sm){
+			position: relative;
+			left: 0;
+			top: 0;
+			width: 95vw;
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;	
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
 		&--title {
 			font-family: 'Ruda';
 			font-style: normal;
@@ -131,7 +202,14 @@
 			text-transform: uppercase;
 			color: #041C13;
 			margin-bottom: vw(80);
-			width: vw(488);	
+			width: vw(488);
+			@include max(sm){
+				font-size: 36px;
+				width: 100%;
+			}	
+			@include max(xxs){
+				font-size: 24px;
+			}		
 		}
 		&--text {
 			font-family: 'Manrope';
@@ -140,7 +218,12 @@
 			font-size: vw(18);
 			line-height: 145%;
 			color: #6F6F6F;
-			width: vw(488);			
+			width: vw(488);	
+			@include max(sm){
+				font-size: 18px;
+				width: 100%;
+			}			
+	
 		}	
 	}
 	&__startWalk {
@@ -157,6 +240,13 @@
 		background-size: cover;
 		background-position: top center;
 		background-repeat: no-repeat;
+		@include max(sm){
+			position: relative;
+			left: 0;
+			top: 0;
+			margin-left: auto;
+			margin-right: auto;	
+		}
 		.s1__link {
 			opacity: 1;
 		}
