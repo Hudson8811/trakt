@@ -7093,4 +7093,14 @@ textarea.error + .text-error {
     margin-bottom: 16px;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .contacts-page .c1__title {
+    font-size: 28px;
+  }
+
+  .contacts-page__walk--title {
+    font-size: 24px;
+  }
+}
 /*# sourceMappingURL=maps/main.css.map */
