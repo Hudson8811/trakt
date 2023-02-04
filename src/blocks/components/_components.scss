@@ -274,6 +274,7 @@
   display: flex;
   align-items: center;
   padding-right: 32px;
+  transition: max-width .5s ease-out;
   
   @include max(md) {
     padding-right: 20px;
@@ -338,11 +339,24 @@
     }
 
     .menu-lk__company {
-      display: flex;
+      padding: 60px 16px 0;
+      opacity: 1;
+      width: auto;
+      height: auto;
+      transition: .5s;
+    }
+
+    .menu-lk__company-name {
+      font-size: 16px;
+      transition: .5s ease-out;
+    }
+
+    .menu-lk__company-edit {
+      font-size: 14px;
+      transition: .5s ease-out;
     }
 
     .menu-lk__link {
-      justify-content: start;
       padding: 8px 16px;
     }
 
@@ -369,9 +383,13 @@
   }
 
   &__company {
-    display: none;
+    display: flex;
     align-items: center;
-    padding: 60px 16px 0;
+    padding: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: .5s;
 
     @include max(sm) {
       display: none;
@@ -385,8 +403,10 @@
     }
 
     &-name {
+      font-size: 0;
       color: $grey-3d;
       margin-bottom: 4px;
+      transition: .5s ease-out;
     }
 
     &-edit {
@@ -394,6 +414,8 @@
       color: $grey-6f;
       border-bottom: 1px solid $grey-6f;
       padding-bottom: 2px;
+      font-size: 0;
+      transition: .5s ease-out;
     }
   }
 
@@ -442,9 +464,13 @@
   &__link {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     text-decoration: none;
     padding: 12px 24px;
+
+    @include max(sm) {
+      padding: 8px 16px;
+    }
 
     &-svg {
       width: 32px;
@@ -462,6 +488,7 @@
       color: $grey-6f;
       text-transform: uppercase;
       margin-left: 0;
+      transition: .5s ease-out;
     }
   }
 }

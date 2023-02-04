@@ -1,0 +1,149 @@
+extends ../layouts/default-page
+
+block variables
+	- const title = "Profile-order-list";
+
+block content
+
+	.profile-order-page.container-menu
+		.container-menu__menu-lk.menu-lk
+			include ../../blocks/components/menu-lk
+
+		.container-menu__content
+
+			include ../../blocks/components/breadcrumbs
+			
+			.profile-order-page__wrap
+				h1.profile-order-page__title.title-2 Профиль № 2143
+				
+				.profile-order-page__client
+					.profile-order-page__client-type.text-2 Тип заказчика:
+					.profile-order-page__client-name.text-2 Юридическое лицо
+
+				ul.profile-order-page__list
+					li.profile-order-page__item.item
+						.item__block
+							h2.item__block-title.title-3 личные данные
+							button(type="button").item__block-link.item__btn.small-text-2 Редактировать
+
+						form.form-lk(action="")
+							.form-lk__wrap
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Фамилия*
+									input.profile-order-page__input.input-text(type="text" placeholder="Иванов" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Имя*
+									input.profile-order-page__input.input-text(type="text" placeholder="Иван" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Отчество*
+									input.profile-order-page__input.input-text(type="text" placeholder="Иванович" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Название компании (ООО, ИП, физическое лицо)*
+									input.profile-order-page__input.input-text(type="text" placeholder="ООО «Ландшафт»" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Телефон*
+									input.profile-order-page__input.input-text.input-tel(type="tel" placeholder="+7 (------) ------ - ---- - ----" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Почта*
+									input.profile-order-page__input.input-text(type="text" placeholder="ivanov@ya.ru" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+						.profile-order-page__save
+							button(type="button").profile-order-page__save-btn.colored-button-small 
+								p Изменить
+							button(type="button").profile-order-page__save-btn.transparent-button 
+								p Отменить
+
+					li.profile-order-page__item.item
+						.item__block
+							h2.item__block-title.title-3 реквизиты компании
+							button(type="button").item__block-link.item__btn.small-text-2 Редактировать
+
+						form.form-lk(action="")
+							.form-lk__wrap
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 ОГРН*
+									input.profile-order-page__input.input-text(type="text" placeholder="1010111000000000" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 КПП*
+									input.profile-order-page__input.input-text(type="text" placeholder="1010111000000000" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Расчётный счёт*
+									input.profile-order-page__input.input-text(type="text" placeholder="101111010011" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Корреспондентский счёт
+									input.profile-order-page__input.input-text(type="text" placeholder="1010111000000000" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 БИК*
+									input.profile-order-page__input.input-text(type="text" placeholder="10101110000" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Банк*
+									input.profile-order-page__input.input-text(type="text" placeholder="ПАО «Сбербанк»" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+						.profile-order-page__save
+							button(type="button").profile-order-page__save-btn.colored-button-small 
+								p Изменить
+							button(type="button").profile-order-page__save-btn.transparent-button 
+								p Отменить
+
+					li.profile-order-page__item.item
+						.item__block
+							h2.item__block-title.title-3 адрес доставки
+							button(type="button").item__block-link.item__btn.small-text-2 Редактировать
+
+						form.form-lk(action="")
+							.form-lk__wrap
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Город*
+									input.profile-order-page__input.input-text(type="text" placeholder="Москва" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Улица*
+									input.profile-order-page__input.input-text(type="text" placeholder="Набережная" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Дом*
+									input.profile-order-page__input.input-text(type="text" placeholder="200" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+								label.profile-order-page__label
+									p.profile-order-page__label-name.small-text-2 Офис
+									input.profile-order-page__input.input-text(type="text" placeholder="50" disabled)
+									span.text-error Данное поле должно быть заполнено
+
+						.profile-order-page__save
+							button(type="button").profile-order-page__save-btn.colored-button-small 
+								p Изменить
+							button(type="button").profile-order-page__save-btn.transparent-button 
+								p Отменить
+				
+
+
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

@@ -1,0 +1,426 @@
+.order {
+    &-page,
+    &-list-page,
+    &-null-page {
+        background-color: $white-f6;
+        padding-right: 32px;
+        
+        @include max(sm) {
+            padding-right: 0;
+        }
+    }
+
+    &-page__wrap,
+    &-list-page__wrap,
+    &-null-page__wrap {
+        padding-top: 80px;
+        padding-bottom: 130px;
+        
+        @include max(md) {
+            padding-top: 64px;
+            padding-bottom: 120px;
+        }
+        @include max(xxs) {
+            padding-top: 40px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &-page__title,
+    &-list-page__title,
+    &-null-page__title {
+        color: $black-3d;
+    }
+
+    &-page {
+
+        &__client {
+            display: flex;
+            align-items: center;
+            padding-top: 32px;
+            
+            @include max(md) {
+                padding-top: 24px;
+            }
+            @include max(xs) {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 16px;
+            }
+
+            &-type {
+                width: 176px;
+                color: $grey-a4;
+                margin-right: 32px;
+                
+                @include max(sm) {
+                    width: 181px;
+                    margin-right: 16px;
+                }
+                @include max(xs) {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 4px;
+                }
+            }
+            &-name {
+                color: $black-3d;
+            }
+        }
+
+        &__list {
+            max-width: 904px;
+            width: 100%;
+            list-style: none;
+            padding-top: 40px;
+        }
+
+        .item {
+            background-color: $white-fd;
+            box-shadow: 0px 4px 12px rgba(30, 113, 63, 0.15);
+            padding: 40px;
+
+            @include max(xs) {
+                padding: 20px 12px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+
+                @include max(md) {
+                    margin-bottom: 32px;
+                }
+                @include max(xs) {
+                    margin-bottom: 24px;
+                }
+            }
+
+            &__block {
+                max-width: 904px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid $green-1e;
+                padding-bottom: 6px;
+        
+                @include max(xs) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                @include max(xxs) {
+                    padding-bottom: 7px;
+                }
+        
+                &-title {
+                    color: $black-3d;
+                }
+            }
+    
+            &__btn {
+                text-decoration: none;
+                background-color: transparent;
+                border: none;
+                color: $grey-6f;
+                border-bottom: 1px solid $grey-6f;
+                padding: 0;
+                padding-bottom: 2px;
+                cursor: pointer;
+            }
+        }
+
+        .form-lk {
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+    
+            &__wrap {
+                max-width: 824px;
+            }
+    
+            .input-text {
+                margin-bottom: 0;
+            }
+        }
+
+        &__form {
+            display: none;
+            padding-top: 80px;
+            padding-left: 32px;
+            padding-right: 32px;
+            max-width: 864px;
+            margin: 0 auto;
+            @include max(sm) {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            @include max(xs) {
+                padding-top: 40px;
+            }
+    
+            &.active {
+                display: block;
+            }
+        }
+    
+        &__label {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+    
+            &-name {
+                color: $grey-6f;
+                margin-bottom: 4px;
+            }
+        }
+    
+        &__input {
+            background: url('../img/svg/pencil.svg') right 16px center no-repeat $white-f6;
+            padding-right: 48px;
+        }
+
+        &__save {
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+        
+            @include max(xs) {
+                margin-top: 24px;
+                flex-direction: column;
+            }
+            
+            &-btn {
+                @include max(xs) {
+                    width: 100%;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 24px;
+        
+                    @include max(xs) {
+                        margin-right: 0;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-list-page {
+
+        &__subtitle {
+            color: $black-3d;
+            margin-top: 40px;
+
+            @include max(md) {
+                margin-top: 32px;
+            }
+            @include max(sm) {
+                margin-top: 24px;
+            }
+        }
+        
+        &__list {
+            max-width: 904px;
+            list-style: none;
+            padding-top: 40px;
+        
+            @include max(md) {
+                padding-top: 32px;
+            }
+        }
+
+        .item {
+            background-color: $white-fd;
+            box-shadow: 0px 4px 12px rgba(30, 113, 63, 0.15);
+            padding: 40px;
+
+            @include max(sm) {
+                padding: 40px 20px;
+            }
+            @include max(xs) {
+                padding: 20px 12px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+
+                @include max(md) {
+                    margin-bottom: 32px;
+                }
+                @include max(xs) {
+                    margin-bottom: 24px;
+                }
+            }
+
+            &__block {
+                max-width: 904px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid $green-1e;
+                padding-bottom: 6px;
+                margin-bottom: 16px;
+        
+                @include max(xs) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                @include max(xxs) {
+                    padding-bottom: 7px;
+                }
+                
+                &-title {
+                    color: $grey-6f;
+                    padding-left: 4px;
+
+                    @include max(xxs) {
+                        word-break: break-all;
+                        margin-right: -2px;
+                    }
+                }
+            }
+            
+            &__btns {
+                display: flex;
+                align-items: center;
+                margin-top: -5px;
+            
+                @include max(xs) {
+                    margin-top: 24px;
+                    flex-direction: column;
+                }
+                
+                &-btn {
+                    @include max(xs) {
+                        width: 100%;
+                    }
+    
+                    &:not(:last-child) {
+                        margin-right: 24px;
+            
+                        @include max(xs) {
+                            margin-right: 0;
+                            margin-bottom: 8px;
+                        }
+                    }
+
+                    p {
+                        font-family: 'ruda', sans-serif;
+                        font-size: 14px;
+                        line-height: 140%;
+                    }
+                }
+            }
+
+            &__section:not(:last-child) {
+                margin-bottom: 28px;
+
+                @include max(xs) {
+                    margin-bottom: 12px;
+                }
+            }
+
+            &__row {
+                display: flex;
+                align-items: center;
+
+
+                &-column {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    & .item__value {
+                        padding-left: 0;
+
+                        &.error-pay::after,
+                        &.error-delivery::after,
+                        &.error-processing::after {
+                    
+                            @include max(xs) {
+                                margin-top: 6px;
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__type,
+            &__value {
+                margin-bottom: 12px;
+            }
+
+            &__type {
+                color: $grey-6f;
+            }
+
+            &__value {
+                display: flex;
+                align-items: center;
+                color: $black-3d;
+                padding-left: 8px;
+                
+                @include max(xs) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                p {
+                    padding-right: 8px;
+                    
+                    @include max(xs) {
+                        padding-right: 0;
+                        margin-right: -5px;
+                    }
+                }
+
+                &.error-pay::after,
+                &.error-delivery::after,
+                &.error-processing::after {
+                    font-family: 'Manrope', sans-serif;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 130%;
+                    color: $red;
+                    border: 1px solid $red;
+                    border-radius: 4px;
+                    padding: 4px 8px;
+                    margin-left: 8px;
+                    
+                    @include max(xs) {
+                        margin-left: 0;
+                    }
+                }
+                &.error-pay::after {
+                    content: 'Не оплачено';
+                }
+                &.error-delivery::after {
+                    content: 'Не отгружено';
+                }
+                &.error-processing::after {
+                    content: 'Ожидает обработки';
+                }
+            }
+        }
+    }
+
+    &-null-page {
+    
+        &__title {
+            margin-bottom: 24px;
+        }
+    
+        &__subtitle {
+            color: $grey-6f;
+            max-width: 592px;
+        }
+    
+        &__link {
+            margin-top: 32px;
+        }
+    }
+}

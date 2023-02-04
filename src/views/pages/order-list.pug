@@ -1,0 +1,93 @@
+extends ../layouts/default-page
+
+block variables
+	- const title = "order-list";
+
+block content
+
+	.order-list-page.container-menu
+		.container-menu__menu-lk.menu-lk
+			include ../../blocks/components/menu-lk
+
+		.container-menu__content
+
+			include ../../blocks/components/breadcrumbs
+			
+			.order-list-page__wrap
+				h1.order-list-page__title.title-2 заказы
+				h2.order-list-page__subtitle.title-3 Заказы в статусе «Подтверждён»
+
+				ul.order-list-page__list
+					li.order-list-page__item.item 
+						.item__block
+							h3.item__block-title.title-5 Заказ № 132-000-876 от 27.04.2022, 3 товара на сумму 114 000 ₽
+
+						.item__section
+							.item__row.item__row-column
+								.item__type.small-text-2 Оплата
+								.item__value.small-text-1.error-pay
+									p Счёт №52/1 от 24.04.2022, наличные
+							.item__row
+								.item__type.small-text-2 Сумма к оплате по счёту: 
+								.item__value.small-text-2
+									p 114 000 ₽
+
+						.item__section
+							.item__row.item__row-column 
+								.item__type.small-text-2 Доставка
+								.item__value.small-text-1.error-delivery
+									p Отгрузка №52/1 от 27.04.2022
+							.item__row
+								.item__type.small-text-2 Статус отгрузки:
+								.item__value.small-text-2.error-processing 
+							.item__row
+								.item__type.small-text-2 Служба доставки:
+								.item__value.small-text-2
+									p Грузовые перевозки
+						
+						.item__btns
+							button(type="button").item__btns-btn.colored-button-small 
+								p Пордробнее о заказе
+							button(type="button").item__btns-btn.transparent-button 
+								p Повторить заказ
+
+					li.order-list-page__item.item 
+						.item__block
+							h3.item__block-title.title-5 Заказ № 132-000-876 от 27.04.2022, 3 товара на сумму 114 000 ₽
+
+						.item__section
+							.item__row.item__row-column
+								.item__type.small-text-2 Оплата
+								.item__value.small-text.error-pay
+									p Счёт №52/1 от 24.04.2022, наличные
+							.item__row
+								.item__type.small-text-2 Сумма к оплате по счёту: 
+								.item__value.small-text
+									p 114 000 ₽
+
+						.item__section
+							.item__row.item__row-column 
+								.item__type.small-text-2 Доставка
+								.item__value.small-text.error-delivery
+									p Отгрузка №52/1 от 27.04.2022
+							.item__row
+								.item__type.small-text-2 Статус отгрузки:
+								.item__value.small-text.error-processing 
+							.item__row
+								.item__type.small-text-2 Служба доставки:
+								.item__value.small-text
+									p Грузовые перевозки
+						
+						.item__btns
+							button(type="button").item__btns-btn.colored-button-small 
+								p Пордробнее о заказе
+							button(type="button").item__btns-btn.transparent-button 
+								p Повторить заказ
+
+					
+
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")
