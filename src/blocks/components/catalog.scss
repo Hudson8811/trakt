@@ -108,7 +108,8 @@
             &-text {
                 color: $grey-6f;
                 margin-bottom: 32px;
-
+                word-break: break-word;
+                
                 @include max(xxs) {
                     margin-bottom: 16px;
                 }
@@ -127,6 +128,7 @@
             }
 
             &-link svg {
+                flex-shrink: 0;
                 width: 32px;
                 height: 32px;
                 stroke: $green-04;

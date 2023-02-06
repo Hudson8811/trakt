@@ -281,6 +281,7 @@
   }
   @include max(sm) {
     position: fixed;
+    z-index: 9;
     max-width: 100%;
     top: auto;
     bottom: 0px;
@@ -322,20 +323,24 @@
       width: 24px;
       height: 24px;
       background: url("../../img/svg/arrow-circle-right.svg") center center no-repeat;
-      transform: rotate(0deg);
+      transform: rotateY(180deg);
       transition: $animation;
     }
   }
 
   &.active {
     max-width: 312px;
+
+    @include max(sm) {
+      max-width: 100%;
+    }
     
     .menu-lk__elem {
       display: none;
     }
 
     .menu-lk__btn::before {
-      transform: rotateY(180deg);
+      transform: rotateY(0deg);
     }
 
     .menu-lk__company {
@@ -363,6 +368,11 @@
     .menu-lk__link-title {
       font-size: 16px;
       margin-left: 24px;
+
+      @include max(sm) {
+        font-size: 0;
+        margin-left: 0;
+      }
     }
   }
 

@@ -1,4 +1,4 @@
-import $, { event } from "jquery";
+import $, { event, type } from "jquery";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
@@ -2824,6 +2824,25 @@ $(document).ready(function (){
         $('.js-register-lk-form-individual').addClass('active');
         $('.js-register-lk-form-entity').removeClass('active');
     });
+
+    } else if ($('.order-page').length > 0){
+        
+        $('.content__btn').on('click',function (){
+            $('.content__btn').toggleClass('active');
+            $('.personal').toggleClass('active');
+        });
+        
+    } else if ($('.change-password-page').length > 0){
+
+        $('.form-lk__password-btn').on('click',function (){
+            const prevInput = $('.form-lk__password-btn').prev();
+            
+            if(prevInput.attr('type') === "password") {
+                prevInput.attr('type', 'text');
+            }else{
+                prevInput.attr('type', 'password');
+            }
+        });
 
     } else {
         //остальные страницы

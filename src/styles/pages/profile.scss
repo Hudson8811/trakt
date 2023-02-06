@@ -330,12 +330,10 @@
                 margin-bottom: 2px;
                 margin-right: 8px;
 
-                @include max(sm) {
-                    margin-right: 0;
-                }
                 @include max(xs) {
                     font-size: 12px;
                     line-height: 130%;
+                    margin-right: 0;
                 }
 
                 &:hover {

@@ -2666,6 +2666,20 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-register-lk-form-individual').addClass('active');
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-register-lk-form-entity').removeClass('active');
     });
+  } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.order-page').length > 0) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.content__btn').on('click', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.content__btn').toggleClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.personal').toggleClass('active');
+    });
+  } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.change-password-page').length > 0) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form-lk__password-btn').on('click', function () {
+      var prevInput = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form-lk__password-btn').prev();
+      if (prevInput.attr('type') === "password") {
+        prevInput.attr('type', 'text');
+      } else {
+        prevInput.attr('type', 'password');
+      }
+    });
   } else {
     //остальные страницы
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');

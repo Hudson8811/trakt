@@ -213,6 +213,7 @@ p {
 }
 
 .colored-button, .transparent-button, .colored-button-small {
+  outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
