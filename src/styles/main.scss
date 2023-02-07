@@ -18,6 +18,7 @@
 // Компоненты
 @import "../blocks/components/components";
 @import "../blocks/components/catalog";
+@import "../blocks/components/jquery-ui";
 
 // Стили целых страниц без разбития на модули
 @import "pages/home_page";
@@ -32,3 +33,4 @@
 @import "pages/profile";
 @import "pages/order";
 @import "pages/change-password";
+@import "pages/catalog-inside-lk";

@@ -2844,6 +2844,16 @@ $(document).ready(function (){
             }
         });
 
+    } else if ($('.catalog-inside-lk-page').length > 0){
+
+        // $(document).ready(function() {
+        //     $('select').niceSelect();
+        // });
+
+        $( ".selector" ).selectmenu({
+            
+        });
+
     } else {
         //остальные страницы
         $('body').addClass('active');
