@@ -1,11 +1,20 @@
 .pagination-list{
+  flex-shrink: 0;
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px;
+  padding: 10.5px 0;
   max-width: 320px;
+  width: 100%;
   list-style: none;
   box-sizing: border-box;
-  &__unit{
+  @include max(xs) {
+    max-width: 280px;
+  }
+  &__unit,
+  &__dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     a{
       position: relative;
       z-index: 1;

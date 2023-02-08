@@ -75,7 +75,9 @@
             padding: 8px;
             color: $grey-3d;
             cursor: pointer;
+            
             @include max(sm) {
+                font-size: 18px;
                 text-align: left;
             }
         }

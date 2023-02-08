@@ -3,7 +3,8 @@
 
     .container-menu__top,
     .breadcrumbs,
-    &__list {
+    &__list,
+    &__sorting {
         padding-right: 32px;
         
         @include max(sm) {
@@ -30,22 +31,25 @@
         display: flex;
         align-items: center;
         padding-top: 28px;
-        padding-right: 32px;
         
         @include max(md) {
             padding-top: 16px;
-            padding-right: 0;
         }
         @include max(xs) {
             padding-top: 20px;
         }
 
         p {
-            width: 140px;
+            max-width: 140px;
+            width: 100%;
             color: $black-3d;
             text-transform: uppercase;
             margin-right: 24px;
             margin-left: auto;
+            
+            @include max(xs) {
+                font-size: 14px;
+            }
         }
     }
 
@@ -110,9 +114,10 @@
         &__btn {
             width: 100%;
             padding: 20px 20px;
-
+            
             p {
                 font-family: 'Manrope', sans-serif;
+                text-align: center;
                 
                 @include max(xs) {
                     font-size: 16px;
@@ -129,6 +134,7 @@
         
         @include max(md) {
             display: flex;
+            flex-wrap: wrap;
             padding-top: 66px;
         }
         @include max(xs) {
@@ -150,7 +156,8 @@
         
         &.ui-button {
             outline: none;
-            width: 220px;
+            max-width: 220px;
+            width: 100%;
             display: flex;
             align-items: center;
             flex-direction: row-reverse;
@@ -159,6 +166,7 @@
             border: none;
             padding: 0;
             margin-top: -3px;
+            margin-right: 0;
 
             &.ui-selectmenu-button-open .ui-icon {
                 transform: rotateX(180deg);
@@ -173,6 +181,10 @@
             line-height: 145%;
             color: $black-3d;
             margin-right: 0;
+            
+            @include max(xs) {
+                font-size: 16px;
+            }
 
             .ui-state-active {
                 background-color: transparent;
@@ -187,9 +199,6 @@
             transform: rotateX(0);
             transition: $animation;
         }
-    }
-
-    .ui-selectmenu-menu {
     }
 }
 .ui-widget.ui-widget-content {
@@ -217,5 +226,15 @@
         background-color: transparent;
         color: $green-1e;
         margin: 0;
+    }
+}
+
+.ui-selectmenu-open {
+    @include max(xxs) {
+        left: auto !important;
+        right: auto !important;
+        max-width: calc(100% - 24px);
+        width: 100%;
+        padding: 0 12px;
     }
 }
