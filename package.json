@@ -78,6 +78,7 @@
         "babel-upgrade": "^1.0.1",
         "gsap": "^3.11.3",
         "jquery": "^3.6.1",
+        "slick-carousel": "^1.8.1",
         "vivus": "^0.4.6",
         "webpack": "^5.70.0",
         "webpack-stream": "^7.0.0",

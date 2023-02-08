@@ -2846,13 +2846,41 @@ $(document).ready(function (){
 
     } else if ($('.catalog-inside-lk-page').length > 0){
 
-        // $(document).ready(function() {
-        //     $('select').niceSelect();
-        // });
+        $( ".selector" ).selectmenu();
+    } else if ($('.cart-product-page').length > 0){
 
-        $( ".selector" ).selectmenu({
-            
+        $('.slider-big').slick({
+            lazyLoad: 'ondemand',
+            fade: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            swipe: false,
+            asNavFor: '.slider-small',
         });
+        $('.slider-small').slick({
+            lazyLoad: 'ondemand',
+            speed: 500,
+            adaptiveHeight: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            focusOnSelect: true,
+            asNavFor: '.slider-big',
+            centerPadding: '0',
+        });
+
+        $( ".selector" ).selectmenu();
+        
+        // $( ".js-counter-minus" ).on('click',function (){
+        //     let number = $( ".js-counter-number" ).text();
+        //     let numberNew = parseInt(number) + 1;
+        //     // number = number.replace(number, `${numberNew}`)
+        //     number.html(numberNew.replace(number, `${numberNew}`))
+        //     // text.append(numberNew);
+        //     console.log(number);
+        // });
 
     } else {
         //остальные страницы
