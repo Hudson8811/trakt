@@ -2858,6 +2858,20 @@ $(document).ready(function (){
             arrows: false,
             swipe: false,
             asNavFor: '.slider-small',
+            responsive: [
+                {
+                    breakpoint: 540,
+                    settings: {
+                        centerPadding: '0',
+                    }
+                },
+                {
+                    breakpoint: 320,
+                    settings: {
+                        centerPadding: '12px',
+                    }
+                }
+            ]
         });
         $('.slider-small').slick({
             lazyLoad: 'ondemand',
@@ -2873,14 +2887,23 @@ $(document).ready(function (){
 
         $( ".selector" ).selectmenu();
         
-        // $( ".js-counter-minus" ).on('click',function (){
-        //     let number = $( ".js-counter-number" ).text();
-        //     let numberNew = parseInt(number) + 1;
-        //     // number = number.replace(number, `${numberNew}`)
-        //     number.html(numberNew.replace(number, `${numberNew}`))
-        //     // text.append(numberNew);
-        //     console.log(number);
-        // });
+        
+        $( ".js-counter-minus" ).on('click',function (){
+            let number = $( ".js-counter-number" ).text();
+
+            if (parseInt(number) > 0) {
+                let numberMinus = parseInt(number) - 1;
+                $( ".js-counter-number" ).text(`${numberMinus}`)
+                console.log(parseInt(number));
+            }
+        });
+        $( ".js-counter-plus" ).on('click',function (){
+            let number = $( ".js-counter-number" ).text();
+            let numberPlus = parseInt(number) + 1;
+            
+            $( ".js-counter-number" ).text(`${numberPlus}`)
+            console.log(parseInt(number));
+        });
 
     } else {
         //остальные страницы

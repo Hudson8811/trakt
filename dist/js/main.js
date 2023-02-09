@@ -2691,7 +2691,18 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       slidesToScroll: 1,
       arrows: false,
       swipe: false,
-      asNavFor: '.slider-small'
+      asNavFor: '.slider-small',
+      responsive: [{
+        breakpoint: 540,
+        settings: {
+          centerPadding: '0'
+        }
+      }, {
+        breakpoint: 320,
+        settings: {
+          centerPadding: '12px'
+        }
+      }]
     });
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider-small').slick({
       lazyLoad: 'ondemand',
@@ -2705,15 +2716,20 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       centerPadding: '0'
     });
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(".selector").selectmenu();
-
-    // $( ".js-counter-minus" ).on('click',function (){
-    //     let number = $( ".js-counter-number" ).text();
-    //     let numberNew = parseInt(number) + 1;
-    //     // number = number.replace(number, `${numberNew}`)
-    //     number.html(numberNew.replace(number, `${numberNew}`))
-    //     // text.append(numberNew);
-    //     console.log(number);
-    // });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-minus").on('click', function () {
+      var number = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-number").text();
+      if (parseInt(number) > 0) {
+        var numberMinus = parseInt(number) - 1;
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-number").text("".concat(numberMinus));
+        console.log(parseInt(number));
+      }
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-plus").on('click', function () {
+      var number = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-number").text();
+      var numberPlus = parseInt(number) + 1;
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-number").text("".concat(numberPlus));
+      console.log(parseInt(number));
+    });
   } else {
     //остальные страницы
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
