@@ -73,13 +73,13 @@
     background: url("../../img/svg/arrow-long-gray.svg") center center no-repeat;
     margin: 0 11px;
   }
-  &__item.active &__link {
+  &__item span {
     color: $grey-3d;
 
     &::after {
       background: url("../../img/svg/arrow-long-black.svg") center center no-repeat;
     }
-  } 
+  }
 }
 
 .form-lk {
@@ -91,7 +91,7 @@
     padding-left: 12px;
     padding-right: 12px;
   }
-  
+
   &__wrap {
     max-width: 592px;
     width: 100%;
@@ -103,7 +103,7 @@
     color: $black-3d;
     margin-bottom: 24px;
     }
-    
+
     &__subtitle {
     color: $grey-6f;
     margin-bottom: 24px;
@@ -170,7 +170,7 @@
   background-color: rgba(30, 113, 63, .5);
 
   &.active {
-    display: block; 
+    display: block;
   }
 
   &__wrap {
@@ -224,6 +224,7 @@
   &__content {
     width: 100%;
     padding-top: 40px;
+    box-sizing: border-box;
 
     @include max(sm) {
       padding-left: 12px;
@@ -238,7 +239,7 @@
     margin-top: -40px;
     margin-left: -56px;
     background-color: $white-fd;
-      
+
     @include max(md) {
       padding-top: 64px;
       padding-bottom: 40px;
@@ -252,11 +253,11 @@
     @include max(xxs) {
       padding-top: 40px;
     }
-    
+
     &-title {
       color: $black-3d;
       margin-bottom: 24px;
-      
+
       @include max(md) {
         margin-bottom: 16px;
       }
@@ -284,7 +285,7 @@
   align-items: center;
   padding-right: 32px;
   transition: max-width .5s ease-out;
-  
+
   @include max(md) {
     padding-right: 20px;
   }
@@ -324,7 +325,7 @@
     @include max(sm) {
       display: none;
     }
-    
+
     &::before {
       content: '';
       position: absolute;
@@ -343,7 +344,7 @@
     @include max(sm) {
       max-width: 100%;
     }
-    
+
     .menu-lk__elem {
       display: none;
     }
@@ -457,7 +458,7 @@
     @include max(sm) {
       background-color: $white;
     }
-    
+
     &--exit {
       padding-top: 24px;
       margin-top: auto;

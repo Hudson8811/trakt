@@ -396,6 +396,7 @@
                 }
 
                 &-img {
+                    flex-shrink: 0;
                     width: 40px;
                     height: 40px;
                     
@@ -412,8 +413,8 @@
                     }
                     
                     img {
-                        width: 40px;
-                        height: 40px;
+                        width: 100%;
+                        height: 100%;
                         object-fit: cover;
                     }
                 }
@@ -655,9 +656,7 @@
                     }
                 }
 
-                &.error-pay::after,
-                &.error-delivery::after,
-                &.error-processing::after {
+                &-error {
                     font-family: 'Manrope', sans-serif;
                     font-weight: normal;
                     font-size: 12px;
@@ -667,19 +666,10 @@
                     border-radius: 4px;
                     padding: 4px 8px;
                     margin-left: 8px;
-                    
+
                     @include max(xs) {
                         margin-left: 0;
                     }
-                }
-                &.error-pay::after {
-                    content: 'Не оплачено';
-                }
-                &.error-delivery::after {
-                    content: 'Не отгружено';
-                }
-                &.error-processing::after {
-                    content: 'Ожидает обработки';
                 }
             }
         }

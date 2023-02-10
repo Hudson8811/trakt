@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Profile-order-list</title>
+    <title>Basket</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body class="active">
-    <div class="profile-order-list-page container-menu">
+    <div class="basket-page container-menu">
       <div class="container-menu__menu-lk menu-lk">
         <div class="menu-lk__wrap">
           <div class="menu-lk__elem small-text-2">Меню ЛК</div>
@@ -89,57 +89,50 @@
             <li class="breadcrumbs__item"><span class="breadcrumbs__link small-text-2">Авторизация</span></li>
           </ul>
         </div>
-        <div class="profile-order-list-page__wrap">
-          <h1 class="profile-order-list-page__title title-2">Профили заказов</h1>
-          <ul class="profile-order-list-page__list">
-            <li class="profile-order-list-page__item item">
-              <div class="item__number small-text-2">2143</div>
-              <div class="item__block small-text-2"> 
-                <time class="item__block-item item__time small-text-2">11.04.2022 18:45:42</time>
-                <div class="item__block-item item__company small-text-2">ООО «Ландшафт»</div>
-                <div class="item__block-item item__client small-text-2">Юридическое лицо</div>
+        <h1 class="basket-page__title title-2">корзина</h1><a class="basket-page__back small-text-2" href="">← Вернуться в список заказов</a>
+        <div class="basket-page__products">
+          <div class="basket-page__products-title title-3">товары в корзине</div>
+          <button class="basket-page__products-btn" type="button">
+             Очистить<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4L4 12" stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 4L12 12" stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+        </div>
+        <div class="container-menu__content-main">
+          <ul class="basket-page__list">
+            <li class="basket-page__item item">
+              <div class="item__img"><img src="../img/s4-1.jpg" alt="Ель"></div>
+              <div class="item__block">
+                <div class="item__block-info">
+                  <h2 class="item__title title-4">Ель сербская сизая «KAREL»</h2><span class="item__feature small-text-3">Характеристики:</span>
+                  <div class="item__block-row">
+                    <p class="item__height-title">Высота растения:</p>
+                    <p class="item__height-number">60-90 см</p>
+                  </div>
+                </div>
+                <div class="item__block-counter">
+                  <button class="item__counter-minus js-counter-minus title-6" type="button">-</button><span class="item__counter-number js-counter-number title-6">1</span>
+                  <button class="item__counter-plus js-counter-plus title-6" type="button">+</button>
+                  <p class="item__price">3 800 ₽</p>
+                </div>
               </div>
-              <div class="item__func">
-                <button class="item__change small-text-2" type="button">Изменить</button>
-                <button class="item__del" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button class="item__del" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-                </button>
-              </div>
-            </li>
-            <li class="profile-order-list-page__item item">
-              <div class="item__number small-text-2">2143</div>
-              <div class="item__block small-text-2"> 
-                <time class="item__block-item item__time small-text-2">11.04.2022 18:45:42</time>
-                <div class="item__block-item item__company small-text-2">ООО «Ландшафт»</div>
-                <div class="item__block-item item__client small-text-2">Юридическое лицо</div>
-              </div>
-              <div class="item__func">
-                <button class="item__change small-text-2" type="button">Изменить</button>
-                <button class="item__del" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </button></svg>
-              </div>
-            </li>
-            <li class="profile-order-list-page__item item">
-              <div class="item__number small-text-2">2143</div>
-              <div class="item__block small-text-2"> 
-                <time class="item__block-item item__time small-text-2">11.04.2022 18:45:42</time>
-                <div class="item__block-item item__company small-text-2">ООО «Ландшафт»</div>
-                <div class="item__block-item item__client small-text-2">Юридическое лицо</div>
-              </div>
-              <div class="item__func">
-                <button class="item__change small-text-2" type="button">Изменить</button>
-                <button class="item__del" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-                </button>
-              </div>
+              </button>
             </li>
           </ul>
+        </div>
+        <div class="container-menu__content-total total">
+          <div class="total__top">
+            <h2 class="total__title title-4">ИТОГО:</h2>
+            <div class="total__price text-1">228 000 ₽</div>
+          </div>
+          <button class="total__btn" type="button">
+            <p>Перейти к оформлению</p>
+          </button>
         </div>
       </div>
     </div>
