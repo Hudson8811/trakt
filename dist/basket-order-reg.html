@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Basket</title>
+    <title>Basket-order-reg</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body class="active">
-    <div class="basket-page container-menu">
+    <div class="basket-order-reg-page container-menu">
       <div class="container-menu__menu-lk menu-lk">
         <div class="menu-lk__wrap">
           <div class="menu-lk__elem small-text-2">Меню ЛК</div>
@@ -89,51 +89,173 @@
             <li class="breadcrumbs__item"><span class="breadcrumbs__link small-text-2">Авторизация</span></li>
           </ul>
         </div>
-        <h1 class="basket-page__title title-2">корзина</h1><a class="basket-page__back small-text-2" href="">← Вернуться в список заказов</a>
+        <h1 class="basket-order-reg-page__title title-2">оформление заказа</h1><a class="basket-order-reg-page__back small-text-2" href="">← В корзину</a>
         <div class="container-menu__content-wrap">
           <div class="container-menu__content-main">
-            <div class="basket-page__products">
-              <div class="basket-page__products-title title-3">товары в корзине</div>
-              <button class="basket-page__products-btn small-text-2" type="button">
-                Очистить<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 4L4 12" stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4 4L12 12" stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-              </button>
-            </div>
-            <ul class="basket-page__list">
-              <li class="basket-page__item item">
-                <div class="item__img"><img src="../img/s4-1.jpg" alt="Ель"></div>
+            <ul class="basket-order-reg-page__list">
+              <li class="basket-order-reg-page__item item">
                 <div class="item__block">
-                  <div class="item__block-info">
-                    <h2 class="item__title title-4">Ель сербская сизая «KAREL»</h2><span class="item__feature small-text-3">Характеристики:</span>
-                    <div class="item__block-row">
-                      <p class="item__height-title small-text-2">Высота растения:</p>
-                      <p class="item__height-number small-text-2">60-90 см</p>
-                    </div>
-                  </div>
-                  <div class="item__block-counter">
-                    <button class="item__counter-minus js-counter-minus title-6" type="button">-</button><span class="item__counter-number js-counter-number title-6">1</span>
-                    <button class="item__counter-plus js-counter-plus title-6" type="button">+</button>
-                    <p class="item__price text-2">3 800 ₽</p>
+                  <h2 class="item__block-title title-3">Покупатель</h2>
+                  <div class="item__block-tabs">
+                    <button class="item__tab small-text-2 active" type="button">Юридическое лицо</button>
+                    <button class="item__tab small-text-2" type="button">Физическое лицо</button>
                   </div>
                 </div>
-                <button class="item__del" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-                </button>
+                <form class="form-lk" action="">
+                  <div class="form-lk__wrap">
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Фамилия*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="Иванов"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Имя*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="Иван"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Отчество*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="Иванович"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Инн*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="ООО «Ландшафт»"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Название компании (ООО, ИП, физическое лицо)*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="ООО «Ландшафт»"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Телефон*</p>
+                      <input class="basket-order-reg-page__input input-text input-tel" type="tel" placeholder="+7 (------) ------ - ---- - ----"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Почта*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="ivanov@ya.ru"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                  </div>
+                </form>
+                <div class="basket-order-reg-page__save">
+                  <button class="basket-order-reg-page__save-btn colored-button-small" type="button"> 
+                    <p>Сохранить</p>
+                  </button>
+                </div>
+              </li>
+              <li class="basket-order-reg-page__item item">
+                <div class="item__block">
+                  <h2 class="item__block-title title-3">реквизиты компании</h2>
+                </div>
+                <form class="form-lk" action="">
+                  <div class="form-lk__wrap">
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">ОГРН*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="1010111000000000"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">КПП*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="1010111000000000"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Расчётный счёт*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="101111010011"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Корреспондентский счёт</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="1010111000000000"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">БИК*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="10101110000"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Банк*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="ПАО «Сбербанк»"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                  </div>
+                </form>
+                <div class="basket-order-reg-page__save">
+                  <button class="basket-order-reg-page__save-btn colored-button-small" type="button"> 
+                    <p>Сохранить</p>
+                  </button>
+                </div>
+              </li>
+              <li class="basket-order-reg-page__item item">
+                <div class="item__block">
+                  <h2 class="item__block-title title-3">адрес доставки</h2>
+                </div>
+                <form class="form-lk" action="">
+                  <div class="form-lk__wrap">
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Город*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="Москва"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Улица*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="Набережная"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Дом*</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="200"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                    <label class="basket-order-reg-page__label">
+                      <p class="basket-order-reg-page__label-name small-text-2">Офис</p>
+                      <input class="basket-order-reg-page__input input-text" type="text" placeholder="50"><span class="text-error">Данное поле должно быть заполнено</span>
+                    </label>
+                  </div>
+                </form>
+                <div class="basket-order-reg-page__save">
+                  <button class="basket-order-reg-page__save-btn colored-button-small" type="button"> 
+                    <p>Сохранить</p>
+                  </button>
+                </div>
               </li>
             </ul>
+            <div class="order-page__inside inside">
+              <h2 class="inside__title title-3">Товары в заказе</h2>
+              <ul class="inside__list">
+                <li class="inside__item inside__item-sample">
+                  <div class="inside__item-img"> </div>
+                  <div class="inside__item-block">
+                    <div class="inside__item-name small-text-2">Наименование</div>
+                    <div class="inside__item-price small-text-2">Цена</div>
+                    <div class="inside__item-quantity small-text-2">Количество</div>
+                    <div class="inside__item-sum small-text-2">Сумма</div>
+                  </div>
+                </li>
+                <li class="inside__item">
+                  <div class="inside__item-img"> <img src="./img/s4-1.jpg" alt="Ель сербская сизая «KAREL»"></div>
+                  <div class="inside__item-block">
+                    <div class="inside__item-name small-text-2">Ель сербская сизая «KAREL»</div>
+                    <div class="inside__item-price small-text-2">38 000 ₽</div>
+                    <div class="inside__item-quantity small-text-2">3 шт</div>
+                    <div class="inside__item-sum small-text-2">114 000 ₽</div>
+                  </div>
+                </li>
+                <li class="inside__item">
+                  <div class="inside__item-img"> <img src="./img/s4-1.jpg" alt="Ель сербская сизая «KAREL»"></div>
+                  <div class="inside__item-block">
+                    <div class="inside__item-name small-text-2">Ель сербская сизая «KAREL»</div>
+                    <div class="inside__item-price small-text-2">38 000 ₽</div>
+                    <div class="inside__item-quantity small-text-2">3 шт</div>
+                    <div class="inside__item-sum small-text-2">114 000 ₽</div>
+                  </div>
+                </li>
+                <li class="inside__item inside__item-total">
+                  <div class="inside__item-name small-text-2">ИТОГО:</div>
+                  <div class="inside__item-sum small-text-2">228 000 ₽</div>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="container-menu__content-total total">
-            <div class="total__top">
-              <h2 class="total__title title-4">ИТОГО:</h2>
-              <div class="total__price text-1">228 000 ₽</div>
+            <div class="total__block">
+              <div class="total__top">
+                <h2 class="total__title title-4">ИТОГО:</h2>
+                <div class="total__price text-1">228 000 ₽</div>
+              </div>
+              <button class="colored-button-small total__btn" type="button">
+                <p>Оформить заказ</p>
+              </button>
             </div>
-            <button class="colored-button-small total__btn" type="button">
-              <p>Перейти к оформлению</p>
-            </button>
+            <div class="total__text text-2">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.</div>
           </div>
         </div>
       </div>

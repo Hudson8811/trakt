@@ -1,0 +1,202 @@
+extends ../layouts/default-page
+
+block variables
+	- const title = "Basket-order-options";
+
+block content
+
+	.basket-order-options-page.container-menu
+		.container-menu__menu-lk.menu-lk
+			include ../../blocks/components/menu-lk
+
+		.container-menu__content
+
+			include ../../blocks/components/breadcrumbs
+
+			h1.basket-order-options-page__title.title-2 оформление заказа
+			a(href='').basket-order-options-page__back.small-text-2 ← В корзину
+
+			p.basket-order-options-page__subtitle.text-2 Вы уже заказывали у нас, поэтому мы заполнили все данные автоматически. Если всё заполнено верно, нажмите кнопку «Оформить заказ»
+
+			span.selector__title.title-5 высота растения:
+
+			.container-menu__content-wrap
+				.container-menu__content-main
+					select.selector
+						option(value="Добавить новый профиль") Добавить новый профиль
+						option(value="ООО «Ландщафт»") ООО «Ландщафт»
+						option(value="Иванов Иван") Иванов Иван
+				
+					ul.basket-order-options-page__list
+						li.basket-order-options-page__item.item
+							.item__block
+								h2.item__block-title.title-3 Покупатель
+								button(type="button").item__block-link.item__btn.small-text-2 Редактировать
+
+							form.form-lk(action="")
+								.form-lk__wrap
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Фамилия*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="Иванов" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Имя*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="Иван" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Отчество*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="Иванович" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Название компании (ООО, ИП, физическое лицо)*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="ООО «Ландшафт»" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Телефон*
+										input.basket-order-options-page__input.input-text.input-tel(type="tel" placeholder="+7 (------) ------ - ---- - ----" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Почта*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="ivanov@ya.ru" )
+										span.text-error Данное поле должно быть заполнено
+
+							.basket-order-options-page__save
+								button(type="button").basket-order-options-page__save-btn.colored-button-small 
+									p Изменить
+								button(type="button").basket-order-options-page__save-btn.transparent-button 
+									p Отменить
+
+						li.basket-order-options-page__item.item
+							.item__block
+								h2.item__block-title.title-3 реквизиты компании
+								button(type="button").item__block-link.item__btn.small-text-2 Редактировать
+
+							form.form-lk(action="")
+								.form-lk__wrap
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 ОГРН*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="1010111000000000" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 КПП*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="1010111000000000" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Расчётный счёт*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="101111010011" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Корреспондентский счёт
+										input.basket-order-options-page__input.input-text(type="text" placeholder="1010111000000000" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 БИК*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="10101110000" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Банк*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="ПАО «Сбербанк»" )
+										span.text-error Данное поле должно быть заполнено
+
+							.basket-order-options-page__save
+								button(type="button").basket-order-options-page__save-btn.colored-button-small 
+									p Изменить
+								button(type="button").basket-order-options-page__save-btn.transparent-button 
+									p Отменить
+
+						li.basket-order-options-page__item.item
+							.item__block
+								h2.item__block-title.title-3 адрес доставки
+								button(type="button").item__block-link.item__btn.small-text-2 Редактировать
+
+							form.form-lk(action="")
+								.form-lk__wrap
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Город*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="Москва" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Улица*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="Набережная" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Дом*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="200" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Офис
+										input.basket-order-options-page__input.input-text(type="text" placeholder="50" )
+										span.text-error Данное поле должно быть заполнено
+
+							.basket-order-options-page__save
+								button(type="button").basket-order-options-page__save-btn.colored-button-small 
+									p Изменить
+								button(type="button").basket-order-options-page__save-btn.transparent-button 
+									p Отменить
+					
+					.order-page__inside.inside
+						h2.inside__title.title-3 Товары в заказе
+
+						ul.inside__list
+							li.inside__item.inside__item-sample
+								.inside__item-img 
+								.inside__item-block
+									.inside__item-name.small-text-2 Наименование
+									.inside__item-price.small-text-2 Цена
+									.inside__item-quantity.small-text-2 Количество
+									.inside__item-sum.small-text-2 Сумма
+
+							li.inside__item
+								.inside__item-img 
+									img(src="./img/s4-1.jpg", alt="Ель сербская сизая «KAREL»")
+								.inside__item-block
+									.inside__item-name.small-text-2 Ель сербская сизая «KAREL»
+									.inside__item-price.small-text-2 38 000 ₽
+									.inside__item-quantity.small-text-2 3 шт
+									.inside__item-sum.small-text-2 114 000 ₽
+							li.inside__item
+								.inside__item-img 
+									img(src="./img/s4-1.jpg", alt="Ель сербская сизая «KAREL»")
+								.inside__item-block
+									.inside__item-name.small-text-2 Ель сербская сизая «KAREL»
+									.inside__item-price.small-text-2 38 000 ₽
+									.inside__item-quantity.small-text-2 3 шт
+									.inside__item-sum.small-text-2 114 000 ₽
+
+							li.inside__item.inside__item-total
+								.inside__item-name.small-text-2 ИТОГО:
+								.inside__item-sum.small-text-2 228 000 ₽
+
+				.container-menu__content-total.total
+					.total__block
+						.total__top
+							h2.total__title.title-4 ИТОГО:
+							.total__price.text-1 228 000 ₽
+						button(type="button").colored-button-small.total__btn
+							p Оформить заказ
+					.total__text.text-2
+						| Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.
+
+
+
+
+
+
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

@@ -2730,6 +2730,18 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-number").text("".concat(numberPlus));
       console.log(parseInt(number));
     });
+  } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.basket-order-options-page').length > 0) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".selector").selectmenu({
+      open: function open(event, ui) {
+        var heightMenu = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ui-selectmenu-menu').outerHeight();
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('#ui-id-1-button').css('margin-bottom', "".concat(heightMenu + 'px'));
+      },
+      close: function close(event, ui) {
+        var heightMenu = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ui-selectmenu-menu').outerHeight();
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('#ui-id-1-button').css('margin-bottom', "".concat(heightMenu + 'px'));
+      }
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ui-selectmenu-menu').addClass('basket-order-options-page__select-menu');
   } else {
     //остальные страницы
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
@@ -2825,6 +2837,15 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu-lk__btn').toggleClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu-lk').toggleClass('active');
   });
+
+  // form tabs basket page
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.item__block-tabs')) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.item__block-tabs').on('click', function (e) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.item__tab').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).addClass('active');
+    });
+  }
 });
 
 /***/ }),

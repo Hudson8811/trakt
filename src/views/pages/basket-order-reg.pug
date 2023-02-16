@@ -1,0 +1,192 @@
+extends ../layouts/default-page
+
+block variables
+	- const title = "Basket-order-reg";
+
+block content
+
+	.basket-order-reg-page.container-menu
+		.container-menu__menu-lk.menu-lk
+			include ../../blocks/components/menu-lk
+
+		.container-menu__content
+
+			include ../../blocks/components/breadcrumbs
+
+			h1.basket-order-reg-page__title.title-2 оформление заказа
+			a(href='').basket-order-reg-page__back.small-text-2 ← В корзину
+
+			.container-menu__content-wrap
+				.container-menu__content-main
+					ul.basket-order-reg-page__list
+						li.basket-order-reg-page__item.item
+							.item__block
+								h2.item__block-title.title-3 Покупатель
+								.item__block-tabs
+									button(type="button").item__tab.small-text-2.active Юридическое лицо
+									button(type="button").item__tab.small-text-2 Физическое лицо
+
+							form.form-lk(action="")
+								.form-lk__wrap
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Фамилия*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="Иванов" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Имя*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="Иван" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Отчество*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="Иванович" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Инн*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="ООО «Ландшафт»" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Название компании (ООО, ИП, физическое лицо)*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="ООО «Ландшафт»" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Телефон*
+										input.basket-order-reg-page__input.input-text.input-tel(type="tel" placeholder="+7 (------) ------ - ---- - ----" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Почта*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="ivanov@ya.ru" )
+										span.text-error Данное поле должно быть заполнено
+
+							.basket-order-reg-page__save
+								button(type="button").basket-order-reg-page__save-btn.colored-button-small 
+									p Сохранить
+
+						li.basket-order-reg-page__item.item
+							.item__block
+								h2.item__block-title.title-3 реквизиты компании
+
+							form.form-lk(action="")
+								.form-lk__wrap
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 ОГРН*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="1010111000000000" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 КПП*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="1010111000000000" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Расчётный счёт*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="101111010011" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Корреспондентский счёт
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="1010111000000000" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 БИК*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="10101110000" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Банк*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="ПАО «Сбербанк»" )
+										span.text-error Данное поле должно быть заполнено
+
+							.basket-order-reg-page__save
+								button(type="button").basket-order-reg-page__save-btn.colored-button-small 
+									p Сохранить
+
+						li.basket-order-reg-page__item.item
+							.item__block
+								h2.item__block-title.title-3 адрес доставки
+
+							form.form-lk(action="")
+								.form-lk__wrap
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Город*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="Москва" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Улица*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="Набережная" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Дом*
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="200" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-reg-page__label
+										p.basket-order-reg-page__label-name.small-text-2 Офис
+										input.basket-order-reg-page__input.input-text(type="text" placeholder="50" )
+										span.text-error Данное поле должно быть заполнено
+
+							.basket-order-reg-page__save
+								button(type="button").basket-order-reg-page__save-btn.colored-button-small 
+									p Сохранить
+					
+					.order-page__inside.inside
+						h2.inside__title.title-3 Товары в заказе
+
+						ul.inside__list
+							li.inside__item.inside__item-sample
+								.inside__item-img 
+								.inside__item-block
+									.inside__item-name.small-text-2 Наименование
+									.inside__item-price.small-text-2 Цена
+									.inside__item-quantity.small-text-2 Количество
+									.inside__item-sum.small-text-2 Сумма
+
+							li.inside__item
+								.inside__item-img 
+									img(src="./img/s4-1.jpg", alt="Ель сербская сизая «KAREL»")
+								.inside__item-block
+									.inside__item-name.small-text-2 Ель сербская сизая «KAREL»
+									.inside__item-price.small-text-2 38 000 ₽
+									.inside__item-quantity.small-text-2 3 шт
+									.inside__item-sum.small-text-2 114 000 ₽
+							li.inside__item
+								.inside__item-img 
+									img(src="./img/s4-1.jpg", alt="Ель сербская сизая «KAREL»")
+								.inside__item-block
+									.inside__item-name.small-text-2 Ель сербская сизая «KAREL»
+									.inside__item-price.small-text-2 38 000 ₽
+									.inside__item-quantity.small-text-2 3 шт
+									.inside__item-sum.small-text-2 114 000 ₽
+
+							li.inside__item.inside__item-total
+								.inside__item-name.small-text-2 ИТОГО:
+								.inside__item-sum.small-text-2 228 000 ₽
+
+				.container-menu__content-total.total
+					.total__block
+						.total__top
+							h2.total__title.title-4 ИТОГО:
+							.total__price.text-1 228 000 ₽
+						button(type="button").colored-button-small.total__btn
+							p Оформить заказ
+					.total__text.text-2
+						| Нажимая на кнопку, вы соглашаетесь на обработку персональных данных.
+
+
+
+
+
+
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

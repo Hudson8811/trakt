@@ -16,46 +16,47 @@ block content
 			h1.basket-page__title.title-2 корзина
 			a(href='').basket-page__back.small-text-2 ← Вернуться в список заказов
 
-			.basket-page__products
-				.basket-page__products-title.title-3 товары в корзине
-				button(type="button").basket-page__products-btn 
-					| Очистить
-					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M12 4L4 12" stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						<path d="M4 4L12 12" stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
 
-			.container-menu__content-main
-				ul.basket-page__list
-					li.basket-page__item.item
-						.item__img
-							img(src="../img/s4-1.jpg", alt="Ель")
-						.item__block
-							.item__block-info
-								h2.item__title.title-4 Ель сербская сизая «KAREL»
-								span.item__feature.small-text-3 Характеристики:
-								.item__block-row
-									p.item__height-title Высота растения:
-									p.item__height-number 60-90 см
-							.item__block-counter
-								button(type='button').item__counter-minus.js-counter-minus.title-6 -
-								span.item__counter-number.js-counter-number.title-6 1
-								button(type='button').item__counter-plus.js-counter-plus.title-6 +
-								
-								p.item__price 3 800 ₽
-								
-						button(type='button').item__del
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-								<path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			.container-menu__content-wrap
+				.container-menu__content-main
+					.basket-page__products
+						.basket-page__products-title.title-3 товары в корзине
+						button(type="button").basket-page__products-btn.small-text-2
+							| Очистить
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 4L4 12" stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M4 4L12 12" stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 							</svg>
+					ul.basket-page__list
+						li.basket-page__item.item
+							.item__img
+								img(src="../img/s4-1.jpg", alt="Ель")
+							.item__block
+								.item__block-info
+									h2.item__title.title-4 Ель сербская сизая «KAREL»
+									span.item__feature.small-text-3 Характеристики:
+									.item__block-row
+										p.item__height-title.small-text-2 Высота растения:
+										p.item__height-number.small-text-2 60-90 см
+								.item__block-counter
+									button(type='button').item__counter-minus.js-counter-minus.title-6 -
+									span.item__counter-number.js-counter-number.title-6 1
+									button(type='button').item__counter-plus.js-counter-plus.title-6 +
+									
+									p.item__price.text-2 3 800 ₽
+									
+							button(type='button').item__del
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
 
-			.container-menu__content-total.total
-				.total__top
-					h2.total__title.title-4 ИТОГО:
-					.total__price.text-1 228 000 ₽
-				button(type="button").total__btn
-					p Перейти к оформлению
+				.container-menu__content-total.total
+					.total__top
+						h2.total__title.title-4 ИТОГО:
+						.total__price.text-1 228 000 ₽
+					button(type="button").colored-button-small.total__btn
+						p Перейти к оформлению
 
 
 
