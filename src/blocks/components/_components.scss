@@ -737,7 +737,6 @@
   @include max(md) {
     max-width: 100%;
     display: flex;
-    flex-wrap: wrap;
   }
   @include max(sm) {
     flex-direction: column;

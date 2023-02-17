@@ -476,6 +476,10 @@
                     margin-top: 24px;
                 }
             }
+
+            &__btn {
+                margin-top: 41px;
+            }
         }
 
         .inside {
@@ -536,6 +540,11 @@
             @include max(sm) {
                 padding-top: 40px;
             }
+        }
+
+        &__input {
+            background: url('../img/svg/pencil.svg') right 16px center no-repeat;
+            padding-right: 48px;
         }
 
         &__save {
@@ -622,7 +631,7 @@
 
             .ui-widget.ui-widget-content .ui-menu-item-wrapper.ui-state-active,
             .ui-widget.ui-widget-content .ui-menu-item-wrapper.ui-state-active {
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 130%;
                 color: $black-3d;
             }

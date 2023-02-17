@@ -18,7 +18,7 @@ block content
 
 			p.basket-order-options-page__subtitle.text-2 Вы уже заказывали у нас, поэтому мы заполнили все данные автоматически. Если всё заполнено верно, нажмите кнопку «Оформить заказ»
 
-			span.selector__title.title-5 высота растения:
+			span.selector__title.text-2 Выберите профиль
 
 			.container-menu__content-wrap
 				.container-menu__content-main
@@ -31,7 +31,6 @@ block content
 						li.basket-order-options-page__item.item
 							.item__block
 								h2.item__block-title.title-3 Покупатель
-								button(type="button").item__block-link.item__btn.small-text-2 Редактировать
 
 							form.form-lk(action="")
 								.form-lk__wrap
@@ -48,6 +47,11 @@ block content
 									label.basket-order-options-page__label
 										p.basket-order-options-page__label-name.small-text-2 Отчество*
 										input.basket-order-options-page__input.input-text(type="text" placeholder="Иванович" )
+										span.text-error Данное поле должно быть заполнено
+
+									label.basket-order-options-page__label
+										p.basket-order-options-page__label-name.small-text-2 Инн*
+										input.basket-order-options-page__input.input-text(type="text" placeholder="101111010011" )
 										span.text-error Данное поле должно быть заполнено
 
 									label.basket-order-options-page__label
