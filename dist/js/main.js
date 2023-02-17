@@ -2716,19 +2716,19 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       centerPadding: '0'
     });
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(".selector").selectmenu();
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-minus").on('click', function () {
-      var number = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-number").text();
-      if (parseInt(number) > 0) {
-        var numberMinus = parseInt(number) - 1;
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-number").text("".concat(numberMinus));
-        console.log(parseInt(number));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-minus").on('click', function (e) {
+      var number = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).next();
+      var numberValue = number.text();
+      if (parseInt(numberValue) > 0) {
+        var numberMinus = parseInt(numberValue) - 1;
+        number.text("".concat(numberMinus));
       }
     });
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-plus").on('click', function () {
-      var number = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-number").text();
-      var numberPlus = parseInt(number) + 1;
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-number").text("".concat(numberPlus));
-      console.log(parseInt(number));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-plus").on('click', function (e) {
+      var number = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).prev();
+      var numberValue = number.text();
+      var numberPlus = parseInt(numberValue) + 1;
+      number.text("".concat(numberPlus));
     });
   } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.basket-order-options-page').length > 0) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(".selector").selectmenu({
@@ -2742,7 +2742,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       }
     });
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ui-selectmenu-menu').addClass('basket-order-options-page__select-menu');
-  } else {
+
     //остальные страницы
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
     setMaskHeader(100);

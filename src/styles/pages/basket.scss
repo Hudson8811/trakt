@@ -633,4 +633,36 @@
             margin-top: 16px;
         }
     }
+
+    &-order-formed-page {
+        background-color: $white-f6;
+
+        &__wrap {
+            max-width: 695px;
+            padding-top: 84px;
+            padding-bottom: 130px;
+            
+            @include max(md) {
+                padding-top: 64px;
+                padding-bottom: 120px;
+            }
+            @include max(xs) {
+                padding-top: 40px;
+                padding-bottom: 80px;
+            }
+        }
+
+        &__title,
+        &__subtitle {
+            color: $black-3d;
+        }
+
+        &__title {
+            margin-bottom: 36px;
+            
+            @include max(xs) {
+                margin-bottom: 24px;
+            }
+        }
+    }
 }

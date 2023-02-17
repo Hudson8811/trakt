@@ -46,7 +46,7 @@ block content
 							button(type='button').info__counter-minus.js-counter-minus.title-6 -
 							span.info__counter-number.js-counter-number.title-6 1
 							button(type='button').info__counter-plus.js-counter-plus.title-6 +
-						button(type='button').info__order.colored-button-small
+						button(type='button').info__order.colored-button-small.js-popup-active
 							p Заказать
 					
 					button(type='button').info__design.transparent-button
@@ -60,6 +60,18 @@ block content
 						h2.title-3 Особенности выращивания
 						p.text-2 Нуждается в слабокислых умеренно влажных почвах. Может расти как на солнце так и в полутени. Из-за своего невысокого роста зимует под снегом, поэтому не страдает от солнечных ожогов. Зимостойко.
 
+			.cart-product-page__popup.popup.js-popup.active
+				.popup__wrap
+					button.popup__btn-close.js-popup-close
+						| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+
+					h3.title-3 Ваша корзина пуста
+					p.text-2 Выберите в каталоге интересующий товар и нажмите кнопку «Заказать».
+					a(href="").colored-button-small
+						p Перейти в каталог
 
 	include ../../blocks/modules/footer/footer
 

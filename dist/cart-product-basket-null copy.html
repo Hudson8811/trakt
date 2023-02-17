@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>basket-order-options-page</title>
+    <title>Cart-product</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body class="active">
-    <div class="basket-order-options-page container-menu">
+    <div class="cart-product-page container-menu">
       <div class="container-menu__menu-lk menu-lk">
         <div class="menu-lk__wrap">
           <div class="menu-lk__elem small-text-2">Меню ЛК</div>
@@ -89,141 +89,61 @@
             <li class="breadcrumbs__item"><span class="breadcrumbs__link small-text-2">Авторизация</span></li>
           </ul>
         </div>
-        <h1 class="basket-order-options-page__title title-2">оформление заказа</h1><a class="basket-order-options-page__back small-text-2" href="">← В корзину</a>
-        <div class="container-menu__content-wrap">
-          <div class="container-menu__content-main">
-            <ul class="basket-order-options-page__list">
-              <li class="basket-order-options-page__item item">
-                <div class="item__block">
-                  <h2 class="item__block-title title-3">Покупатель</h2>
-                  <div class="item__block-tabs">
-                    <button class="item__tab small-text-2 active" type="button">Юридическое лицо</button>
-                    <button class="item__tab small-text-2" type="button">Физическое лицо</button>
-                  </div>
-                </div>
-                <form class="form-lk" action="">
-                  <div class="form-lk__wrap">
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Фамилия*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="Иванов"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Имя*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="Иван"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Отчество*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="Иванович"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Название компании (ООО, ИП, физическое лицо)*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="ООО «Ландшафт»"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Телефон*</p>
-                      <input class="basket-order-options-page__input input-text input-tel" type="tel" placeholder="+7 (------) ------ - ---- - ----"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Почта*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="ivanov@ya.ru"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                  </div>
-                </form>
-                <div class="basket-order-options-page__save">
-                  <button class="basket-order-options-page__save-btn colored-button-small" type="button"> 
-                    <p>Изменить</p>
-                  </button>
-                  <button class="basket-order-options-page__save-btn transparent-button" type="button"> 
-                    <p>Отменить</p>
-                  </button>
-                </div>
-              </li>
-              <li class="basket-order-options-page__item item">
-                <div class="item__block">
-                  <h2 class="item__block-title title-3">реквизиты компании</h2>
-                  <button class="item__block-link item__btn small-text-2" type="button">Редактировать</button>
-                </div>
-                <form class="form-lk" action="">
-                  <div class="form-lk__wrap">
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">ОГРН*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="1010111000000000"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">КПП*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="1010111000000000"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Расчётный счёт*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="101111010011"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Корреспондентский счёт</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="1010111000000000"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">БИК*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="10101110000"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Банк*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="ПАО «Сбербанк»"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                  </div>
-                </form>
-                <div class="basket-order-options-page__save">
-                  <button class="basket-order-options-page__save-btn colored-button-small" type="button"> 
-                    <p>Изменить</p>
-                  </button>
-                  <button class="basket-order-options-page__save-btn transparent-button" type="button"> 
-                    <p>Отменить</p>
-                  </button>
-                </div>
-              </li>
-              <li class="basket-order-options-page__item item">
-                <div class="item__block">
-                  <h2 class="item__block-title title-3">адрес доставки</h2>
-                  <button class="item__block-link item__btn small-text-2" type="button">Редактировать</button>
-                </div>
-                <form class="form-lk" action="">
-                  <div class="form-lk__wrap">
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Город*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="Москва"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Улица*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="Набережная"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Дом*</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="200"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                    <label class="basket-order-options-page__label">
-                      <p class="basket-order-options-page__label-name small-text-2">Офис</p>
-                      <input class="basket-order-options-page__input input-text" type="text" placeholder="50"><span class="text-error">Данное поле должно быть заполнено</span>
-                    </label>
-                  </div>
-                </form>
-                <div class="basket-order-options-page__save">
-                  <button class="basket-order-options-page__save-btn colored-button-small" type="button"> 
-                    <p>Изменить</p>
-                  </button>
-                  <button class="basket-order-options-page__save-btn transparent-button" type="button"> 
-                    <p>Отменить</p>
-                  </button>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="container-menu__content-total total">
-            <div class="total__top">
-              <h2 class="total__title title-4">ИТОГО:</h2>
-              <div class="total__price text-1">228 000 ₽</div>
+        <div class="cart-product-page__wrap">
+          <div class="cart-product-page__slider slider">
+            <div class="slider-big">
+              <div class="slider-big__item"><img data-lazy="../img/s4-1.jpg" alt="Ель"></div>
+              <div class="slider-big__item"><img data-lazy="../img/s4-2.jpg" alt="Ель"></div>
+              <div class="slider-big__item"><img data-lazy="../img/s4-3.jpg" alt="Ель"></div>
             </div>
-            <button class="colored-button-small total__btn" type="button">
-              <p>Оформить заказ</p>
+            <div class="slider-small">
+              <div class="slider-small__item"><img data-lazy="../img/s4-1.jpg" alt="Ель"></div>
+              <div class="slider-small__item"><img data-lazy="../img/s4-2.jpg" alt="Ель"></div>
+              <div class="slider-small__item"><img data-lazy="../img/s4-3.jpg" alt="Ель"></div>
+            </div>
+          </div>
+          <div class="cart-product-page__info info">
+            <h1 class="info__title title-3">Ель сербская «Karel»</h1>
+            <p class="info__price title-2">3 800 ₽</p><span class="title-5">высота растения:</span>
+            <select class="selector">
+              <option value="40-60 см">40-60 см</option>
+              <option value="80-90 см">80-90 см</option>
+              <option value="100-110 см">100-110 см</option>
+            </select><span class="title-5">количество:</span>
+            <div class="info__block">
+              <div class="info__counter">
+                <button class="info__counter-minus js-counter-minus title-6" type="button">-</button><span class="info__counter-number js-counter-number title-6">1</span>
+                <button class="info__counter-plus js-counter-plus title-6" type="button">+</button>
+              </div>
+              <button class="info__order colored-button-small js-popup-active" type="button">
+                <p>Заказать</p>
+              </button>
+            </div>
+            <button class="info__design transparent-button" type="button">
+              <p>Оформить сразу</p>
             </button>
+          </div>
+          <div class="cart-product-page__text text">
+            <div class="text__block"> 
+              <h2 class="title-3">ОПИСАНИЕ</h2>
+              <p class="text-2">Новый карликовый сорт сербской ели. Компактное дерево 80 см высотой и 120 см шириной с шаровидной или подушковидной формой кроны. Хвоя плоская, блестящая, густая, сверху темно-зеленая, снизу две заметные белые полоски. Растет очень медленно.</p>
+            </div>
+            <div class="text__block"> 
+              <h2 class="title-3">Особенности выращивания</h2>
+              <p class="text-2">Нуждается в слабокислых умеренно влажных почвах. Может расти как на солнце так и в полутени. Из-за своего невысокого роста зимует под снегом, поэтому не страдает от солнечных ожогов. Зимостойко.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cart-product-page__popup popup js-popup active">
+          <div class="popup__wrap">
+            <button class="popup__btn-close js-popup-close">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </button>
+            <h3 class="title-3">Ваша корзина пуста</h3>
+            <p class="text-2">Выберите в каталоге интересующий товар и нажмите кнопку «Заказать».</p><a class="colored-button-small" href="">
+              <p>Перейти в каталог</p></a>
           </div>
         </div>
       </div>

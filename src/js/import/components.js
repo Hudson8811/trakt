@@ -2887,22 +2887,21 @@ $(document).ready(function (){
 
         $( ".selector" ).selectmenu();
         
-        
-        $( ".js-counter-minus" ).on('click',function (){
-            let number = $( ".js-counter-number" ).text();
+        $( ".js-counter-minus" ).on('click',function (e){
+            const number = $(e.target).next();
+            const numberValue = number.text();
 
-            if (parseInt(number) > 0) {
-                let numberMinus = parseInt(number) - 1;
-                $( ".js-counter-number" ).text(`${numberMinus}`)
-                console.log(parseInt(number));
+            if (parseInt(numberValue) > 0) {
+                const numberMinus = parseInt(numberValue) - 1;
+                number.text(`${numberMinus}`)
             }
         });
-        $( ".js-counter-plus" ).on('click',function (){
-            let number = $( ".js-counter-number" ).text();
-            let numberPlus = parseInt(number) + 1;
+        $( ".js-counter-plus" ).on('click',function (e){
+            const number = $(e.target).prev();
+            const numberValue = number.text();
+            const numberPlus = parseInt(numberValue) + 1;
             
-            $( ".js-counter-number" ).text(`${numberPlus}`)
-            console.log(parseInt(number));
+            number.text(`${numberPlus}`)
         });
 
     } else if ($('.basket-order-options-page').length > 0){
@@ -2919,8 +2918,7 @@ $(document).ready(function (){
         });
         
         $('.ui-selectmenu-menu').addClass('basket-order-options-page__select-menu');
-
-    } else {
+    
         //остальные страницы
         $('body').addClass('active');
 
