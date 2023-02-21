@@ -1,0 +1,132 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	include ../../blocks/modules/header/header
+	.project-page
+		.pp-intro
+			h1.pp-intro__title.active Административно-деловой центр
+			.pp-intro__text.active
+				p Описание что за обьект, чей он, какой компании и прочее. Важные играет финансовых задания показывает. Иинтересный от рост сфера заданий существенных условий практика реализации прогрессивного показывает.
+				p Описание что за обьект, чей он, какой компании и прочее. Важные играет финансовых задания показывает. Иинтересный от рост сфера заданий существенных условий практика реализации прогрессивного показывает.
+
+		.pp-image
+			img(src="img/project-photo.jpg" alt="")
+			.pp-image__label
+				.pp-image__label-item Местоположение: <span>г. Москва</span>
+				.pp-image__label-item Площадь: <span>2000 кв.м.</span>
+				.pp-image__label-item Сроки: <span>3 месяца</span>
+
+		.pp-task
+			.pp-task__img
+				img(src="img/project-task.webp" alt="")
+			.pp-task__content
+				.pp-task__title Описание задачи
+				.pp-task__text
+					p Можно описать про сам обьект, какиё были пожелания по реализации проекта, возможно технические особенности (например склоны или спуски). Что было проделано. Важно — это нужно рассказать как историю. Дальнейших реализация активности что направлений таким рост позволяет условий форм значение в образом намеченных постоянный активности от повседневная собой занимаемых представляет повседневная поставленных идейные активизации.
+
+		.pp-green
+			.pp-green__inner
+				.pp-green__title Решение задачи
+				.pp-green__text
+					p Можно описать про сам обьект, какиё были пожелания по реализации проекта, возможно технические особенности (например склоны или спуски). Что было проделано. Важно — это нужно рассказать как историю.
+					p Дальнейших реализация активности что направлений таким рост позволяет условий форм значение в образом намеченных постоянный активности от повседневная собой занимаемых представляет повседневная поставленных идейные активизации.
+				.pp-green__blocks
+					.pp-green__block
+						.pp-green__block-title Выровняли участок
+						.pp-green__block-text Можно описать про сам обьект, какиё были пожелания по реализации проекта, возможно технические особенности (например склоны или спуски).
+					.pp-green__block
+						.pp-green__block-title закупили укрывной материал
+						.pp-green__block-text Можно описать про сам обьект, какиё были пожелания по реализации проекта, возможно технические особенности (например склоны или спуски). Что было проделано. Важно — это нужно рассказать как историю.
+					.pp-green__block
+						.pp-green__block-title оформили участок кустарниками
+						.pp-green__block-text Можно описать про сам обьект, какиё были пожелания по реализации проекта, возможно технические особенности (например склоны или спуски). Что было проделано. Важно — это нужно рассказать как историю.
+
+
+	.project-static
+		.ps-sliders
+			.ps-sliders__title Над проектом работали
+			.ps-sliders__team.ps-team.swiper
+				.ps-team__wrapper.swiper-wrapper
+					- var n = 0;
+					while n < 6
+						- n++
+						.ps-team__item.swiper-slide
+							.ps-team__item-photo
+								img(src="img/partner-4.webp" alt="")
+							.ps-team__item-info
+								.ps-team__item-name Иван Иванов
+								.ps-team__item-who Ведущий дизайнер
+
+			.ps-sliders__photos.ps-photos.swiper
+				.ps-photos__wrapper.swiper-wrapper
+					.ps-photos__item.swiper-slide
+						.ps-photos__item-inner
+							img(src="img/s5-1.webp")
+					.ps-photos__item.swiper-slide
+						.ps-photos__item-inner
+							img(src="img/s5-2.webp")
+					.ps-photos__item.swiper-slide
+						.ps-photos__item-inner
+							img(src="img/grow-2.webp")
+					.ps-photos__item.swiper-slide
+						.ps-photos__item-inner
+							img(src="img/grow-2.webp")
+					.ps-photos__item.swiper-slide
+						.ps-photos__item-inner
+							img(src="img/grow-2.webp")
+				.ps-photos__scrollbar
+					.ps-photos__scrollbar-inner.swiper-scrollbar
+
+		.ps-contacts
+			.ps-contacts__container
+				.ps-contacts__text В следующем году планируется продолжить работы по благоустройству и озеленению святого источника в г. Жуков.
+				.ps-contacts__table
+					.ps-contacts__row
+						.ps-contacts__left Под руководством:
+						.ps-contacts__right о. Александра
+					.ps-contacts__row
+						.ps-contacts__left Месторасположение:
+						.ps-contacts__right Святой источник Тихвинской иконы Божией Матери, Калужская область, Жуков
+				.ps-contacts__map
+					| <iframe src="https://yandex.kz/map-widget/v1/?from=navi&lang=ru&ll=36.747518%2C55.016130&mode=whatshere&whatshere%5Bpoint%5D=36.732038%2C55.041329&whatshere%5Bzoom%5D=18&z=13" allowfullscreen="true"></iframe>
+		.ps-other
+			.ps-other__title Другие проекты
+			.ps-other__flex
+				.ps-other__item
+					.ps-other__item-inner
+						a.ps-other__item-img(href="#")
+							img(src="img/s4-4.webp" alt="")
+						.ps-other__item-title Административно-деловой центр в Москве
+						.ps-other__item-text Благоустройство зоны отдыха вокруг торгового центра «Аллея». Адресная инвестиционная программа г. Москвы.
+						a.ps-other__item-link(href="#") Посмотреть проект
+				.ps-other__item
+					.ps-other__item-inner
+						a.ps-other__item-img(href="#")
+							img(src="img/s4-4.webp" alt="")
+						.ps-other__item-title Административно-деловой центр в Москве
+						.ps-other__item-text Благоустройство зоны отдыха вокруг торгового центра «Аллея». Адресная инвестиционная программа г. Москвы.
+						a.ps-other__item-link(href="#") Посмотреть проект
+				.ps-other__item
+					.ps-other__item-inner
+						a.ps-other__item-img(href="#")
+							img(src="img/s4-4.webp" alt="")
+						.ps-other__item-title Административно-деловой центр в Москве
+						.ps-other__item-text Благоустройство зоны отдыха вокруг торгового центра «Аллея». Адресная инвестиционная программа г. Москвы.
+						a.ps-other__item-link(href="#") Посмотреть проект
+
+
+
+
+
+	include ../../blocks/modules/footer/footer
+
+
+
+
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

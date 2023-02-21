@@ -857,7 +857,6 @@
 		top: 0;
 		will-change: transform;
 		transform-style: preserve-3d;
-		overflow: hidden;
 		@include max(md){
 			position: relative;
 			left: 0;

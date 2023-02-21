@@ -1,0 +1,44 @@
+extends ../layouts/default
+
+block variables
+    - const title = "New Page";
+
+block content
+    include ../../blocks/modules/header/header
+
+    .portfolio-page
+        .portfolio-page__top
+            .portfolio-page__container
+                h1.portfolio-page__title Проекты питомника
+                .portfolio-page__start
+                    .portfolio-page__start-inner
+                        img(src="img/s2-2.webp" alt="")
+
+                - var n = 0;
+                while n < 4
+                    - n++
+                    .portfolio-page__item
+                        .portfolio-page__content
+                            .portfolio-page__content-inner
+                                .portfolio-page__content-title Административно-деловой центр в Москве
+                                .portfolio-page__content-text Благоустройство зоны отдыха вокруг торгового центра «Аллея». Адресная инвестиционная программа г. Москвы.
+                                a.portfolio-page__content-link(href="#") Посмотреть проект
+                        .portfolio-page__img
+                            .portfolio-page__img-inner
+                                img(src="img/s4-4.webp" alt="")
+
+        .portfolio-page__last
+            a.portfolio-page__link(href="") показать больше
+
+
+
+
+    include ../../blocks/modules/footer/footer
+
+
+
+
+
+block scripts
+    script(src="js/vendor.js")
+    script(src="js/main.js")

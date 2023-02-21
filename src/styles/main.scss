@@ -6,6 +6,8 @@
 
 // CSS-файлы библиотек
 @import "vendor/libs";
+@import '../../node_modules/swiper/swiper-bundle';
+
 
 // Основное
 @import "base/fonts";
@@ -26,3 +28,7 @@
 @import "pages/register-lk";
 @import "pages/change-password-lk";
 @import "pages/new-password-lk";
+@import "pages/growing";
+@import "pages/faq";
+@import "pages/portfolio";
+@import "pages/project";
