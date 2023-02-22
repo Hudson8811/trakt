@@ -5,195 +5,70 @@ block variables
 	- const title = "Project title"
 
 block content
-	include ../blocks/modules/loader/loader
+	div.list-links
+		ul
+			li
+				a(href="./home-page.html") Главная
+			li
+				a(href="./about.html") О компании
+			li
+				a(href="./portfolio.html") Проекты питомника
+			li
+				a(href="./project.html") Проект
+			li
+				a(href="./growing.html") Выращивание
+			li
+				a(href="./faq.html") Faq
+			li
+				a(href="./contacts.html") Контакты
+			li
+				a(href="./basket.html") Корзина
+			li
+				a(href="./basket-order-options.html") Оформление заказа
+			li
+				a(href="./basket-order-reg.html") Оформление заказа 2
+			li
+				a(href="./basket-order-formed.html") Заказ сформирован
+			li
+				a(href="./catalog-lk.html") Каталог ЛК
+			li
+				a(href="./catalog-inside-lk.html") Каталог ЛК (внутренняя)
+			li
+				a(href="./cart-product-basket-filled.html") Страница продукта (Корзина заполнена)
+			li
+				a(href="./cart-product-basket-null.html") Страница продукта (Корзина пустая)
+			li
+				a(href="./main-lk.html") Личный кабинет
+			li
+				a(href="./change-password.html") Смена пароля ЛК
+			li
+				a(href="./new-password-lk.html") Новый пароль ЛК
+			li
+				a(href="./order.html") Информация о заказе
+			li
+				a(href="./order-list.html") Заказы
+			li
+				a(href="./order-null.html") Заказы (пусто)
+			li
+				a(href="./profile-order.html") Профиль заказа
+			li
+				a(href="./profile-order-list.html") Профили заказов
+			li
+				a(href="./profile-order-null.html") Профили заказов (пусто)
 
+			li
+				a(href="./login-lk.html") Вход в личный кабинет
+			li
+				a(href="./register-lk.html") Регистрация
+			li
+				a(href="./change-password-lk.html") Смена пароля
+			li
+				a(href="./ui-kit.html") ui-kit
 
-
-
-	include ../blocks/modules/header/header
-
-	.home-page
-		.first
-			.s1
-				.s1__container
-					h1.s1__title оптовая продажа хвойных растений садовым центрам
-					.s1__left
-						.s1__left-inner
-							img(src="img/s1-1.webp" alt="")
-					.s1__text
-						.s1__text-inner
-							| Выращивание, доращивание и&nbsp;оптовая продажа хвойных растений напрямую от&nbsp;производителя.
-					.s1__right
-						.s1__right-inner
-							video(src="video/video1.mp4" autoplay loop muted)
-							a.s1__link(href="") 3D-прогулка <br>по питомнику
-
-				.about
-					.about__title О питомнике
-					.about__info
-						.about__block
-							.about__block-title 2015
-							.about__block-text работаем с 2015 года
-						.about__block
-							.about__block-title 250
-							.about__block-text выращиваем более 250 тысяч растений в год
-						.about__block
-							.about__block-title 50
-							.about__block-text площадь 50 Га с возможностью расширения
-
-		.second
-			.s2
-				.s2__img
-					.s2__img-inner
-						img(src="img/s2-1.webp" alt="")
-					.s2__img-inner
-						img(src="img/s2-2.webp" alt="")
-			.s3
-				.s3__left
-					.s3__title Мы выращиваем хвойные растения
-					.s3__text Питомник «Калужский тракт» находится вблизи одноименной дороги, соединяющей Москву с Калугой, и специализируется на выращивании хвойных растений и кустарников.
-					.s3__link
-						a(href="")
-							span Познакомиться
-				.s3__right
-					img(src="img/s3-1.webp" alt="")
-
-			.s4
-				.s4__video
-					video(src="video/video2.mp4" autoplay loop muted)
-
-		.assorti
-			.assorti__intro
-				.assorti__intro-title.active Ассортимент питомника
-				.assorti__intro-text.active Выращиваем более 200 тыс. растений в контейнерах и более 50 тыс. — на открытом грунте в год. Закупаем саженцы из ведущих питомников Европы (Бельгия, Нидерланды, Польша) и России.
-			.assorti__items
-				.assorti-item
-					.assorti-item__img
-						img(src="img/s4-1.webp" alt="")
-					.assorti-item__content
-						.assorti-item__title ель
-						.assorti-item__text Ель — устойчива к неблагоприятным факторам внешней среды, поэтому отлично подходит для ландшафтного дизайна, создания живых изгородей и озеленения территорий.
-				.assorti-item
-					.assorti-item__img
-						img(src="img/s4-2.webp" alt="")
-					.assorti-item__content
-						.assorti-item__title кедр
-						.assorti-item__text Кедр — прост в посадке, неприхотлив. Широко используется для озеленения дач, парков, площадей.
-				.assorti-item
-					.assorti-item__img
-						img(src="img/s4-3.webp" alt="")
-					.assorti-item__content
-						.assorti-item__title Можжевельник
-						.assorti-item__text Можжевельник — представлен множеством видов и сортов, устойчив к засухе и холоду, прост в выращивании и универсален для озеленения различных участков.
-				.assorti-item
-					.assorti-item__img
-						img(src="img/s4-4.webp" alt="")
-					.assorti-item__content
-						.assorti-item__title Пихта
-						.assorti-item__text Пихта — отлично подходит для обустройства загородных участков или территорий вокруг городских объектов. Славится неприхотливостью и многообразием сортов.
-
-				.assorti-item
-					.assorti-item__img
-						img(src="img/s4-5.webp" alt="")
-					.assorti-item__content
-						.assorti-item__title Сосна
-						.assorti-item__text Сосна — не требует особого ухода, но положительно влияет на здоровье и украшает территорию вокруг зданий или приусадебных участков.
-				.assorti-item
-					.assorti-item__img
-						img(src="img/s4-6.webp" alt="")
-					.assorti-item__content
-						.assorti-item__title Туя
-						.assorti-item__text Туя — легка в уходе, морозоустойчива. Хорошо приживается в городских условиях, отличается простотой стрижки. Туя украсит ландшафтную композицию на территории парка, промышленного объекта или торгового центра.
-				.assorti-item
-					.assorti-item__img
-						img(src="img/s4-7.webp" alt="")
-					.assorti-item__content
-						.assorti-item__title Лиственница
-						.assorti-item__text Лиственница — красива, устойчива к суровым погодным условиям, хорошо приживается практически в любой почве и быстро растет. Используется для озеленения приусадебных, садовых, парковых зон.
-
-
-		.portfolio
-			.portfolio__anotation
-				.portfolio__title
-					span.st3 П
-					span.st1 о
-					span.st1 р
-					span.st4 т
-					span.st3 ф
-					span.st2 о
-					span.st1 л
-					span.st2 и
-					span.st4 о
-			.portfolio__items
-				- for (var i=0; i<3; i++)
-					.portfolio-item
-						.portfolio-item__first
-							.portfolio-item__first-img
-								img(src="img/s5-1.webp" alt="")
-							.portfolio-item__first-content
-								.portfolio-item__first-title ХРАМ ТИХВИНСКОЙ ИКОНЫ БОЖИЕЙ МАТЕРИ
-								.portfolio-item__first-text
-									p Открыл двери для прихожан в 2013 году. Наш питомник поставлял растения для озеленения территории при храме и Воскресной школе.
-									p Благоустройство ведется в сотрудничестве с ландшафтным дизайнером, выбранные растения неприхотливы и хорошо переносят затенения и неблагоприятные погодные условия.
-									p Проект еще не завершен и работы продолжаются.
-						.portfolio-item__second
-							.portfolio-item__second-img
-								img(src="img/s5-2.webp" alt="")
-							.portfolio-item__second-content
-								.portfolio-item__second-block
-									.portfolio-item__second-title Местоположение
-									.portfolio-item__second-text Калужская область, г. Жуков
-								.portfolio-item__second-block
-									.portfolio-item__second-title Площадь
-									.portfolio-item__second-text около 2 гектар<sup>2</sup>
-								.portfolio-item__second-block
-									.portfolio-item__second-title Сроки
-									.portfolio-item__second-text с 2020  по настоящее время
-								.portfolio-item__second-block
-									.portfolio-item__second-title Обьем
-									.portfolio-item__second-text 50 деревьев, 30 туи, 10 можжевельников
-								.portfolio-item__second-block
-									.portfolio-item__second-title Состав
-									.portfolio-item__second-text Ель колючая Супер блю сидлинг, туя западная Смарагд, Брабант, Колумна, Туя западная литл джаянт, Скальные Можжевельники
-
-
-		.partners
-			.partners__intro
-				.partners__intro-title.active С кем мы работаем
-				.partners__intro-text.active Сотрудничаем с садовыми центрами, другими питомниками, предоставляя высококачественный посадочный материал, выращенный профессиональными агрономами.
-			.partners__items
-				.partners__item
-					img.partner-img-1(src="img/partner-1.webp")
-				.partners__item
-					img.partner-img-2(src="img/partner-2.webp")
-				.partners__item
-					img.partner-img-3(src="img/partner-3.webp")
-				.partners__item
-					img.partner-img-4(src="img/partner-4.webp")
-
-		.connect
-			.connect__first Регистрируйтесь и получайте бонусы от сотрудничества с нами!
-			.connect__second
-				.connect__images
-					.connect__img
-						img(src='img/s6-1.webp')
-					.connect__img
-						video(src="video/video3.mp4" autoplay loop muted)
-				.connect__content
-					.connect__content-title Покупка растений и посадочного материала на выгодных условиях.
-					.connect__content-blocks
-						.connect__content-block оптовые цены
-						.connect__content-block предзаказ продукции
-						.connect__content-block персональный менеджер
-						.connect__content-block персональный менеджер
-			.connect__link
-				a(href="") присоединиться
-
-
-
-	include ../blocks/modules/footer/footer
-
-
+	style
+		| .list-links{padding: 100px 150px; background: #fff}
+		| .list-links ul li{margin-bottom: 10px; font-size: 18px}
+		| .list-links ul li a{text-decoration:none; color: #000}
 block scripts
 	script(src="js/vendor.js")
 	script(src="js/main.js")
