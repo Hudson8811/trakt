@@ -41,22 +41,21 @@ $(document).ready(function (){
     {
         //остальные страницы
         $('body').addClass('active');
-
         setMaskHeader(100);
     }
 
-	$('.js-hide-menu,.menu__overlay').on('click',function (){
+	$('.js-hide-menu,.menu__overlay').on('click',function (event){
 		event.preventDefault();
 		$('.menu').removeClass('active');
 		$('body').addClass('active');
 	});
-	$('.js-show-menu').on('click',function (){
+	$('.js-show-menu').on('click',function (event){
 		event.preventDefault();
 		$('body').removeClass('active');
 		$('.menu').addClass('active');
 	});
 
-    $(document).on('click', '.to-top', function (){
+    $(document).on('click', '.to-top', function (event){
         event.preventDefault();
         $('html,body').animate({ scrollTop: 0 }, 'fast');
     });
@@ -69,6 +68,9 @@ $(document).ready(function (){
             $('.to-top').removeClass('active');
         }
     });
+
+
+
 
     // табы на странице регистрации
 

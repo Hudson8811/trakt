@@ -29,14 +29,6 @@
     will-change: auto;
     transform-style: initial;
   }
-  @include max(md){
-    position: relative;
-    height: auto;
-    width: 100%;
-    top: 0;
-    will-change: auto;
-    transform-style: initial;
-  }
   &__title{
     font-weight: 600;
     font-size: vw(60);
@@ -56,13 +48,13 @@
       padding-bottom: vw2(24);
     }
     @include max(sm){
-      font-size: vw3(60);
+      font-size: vw3(54);
       width: vw3(516);
       left: vw3(12);
       padding-bottom: vw3(24);
     }
     @include max(xs){
-      font-size: vw4(40);
+      font-size: vw4(30);
       width: vw4(296);
       left: vw4(12);
       padding-bottom: vw4(16);
@@ -290,15 +282,15 @@
     width: 100%;
     box-sizing: border-box;
     height: auto;
-    padding: vw2(130) vw2(124) 0;
+    padding: vw2(130) vw2(124) vw2(120);
     display: flex;
     flex-direction: column-reverse;
   }
   @include max(sm){
-    padding: vw3(120) vw3(12) 0;
+    padding: vw3(120) vw3(12) vw3(120);
   }
   @include max(xs){
-    padding: vw4(80) vw4(12) 0;
+    padding: vw4(80) vw4(12) vw4(80);
   }
   &__img{
     overflow: hidden;
@@ -319,15 +311,15 @@
       will-change: auto;
       transform-style: initial;
       transform: none;
-      margin-top: vw2(64);
+      margin-top: vw2(54);
     }
     @include max(sm){
       height: vw3(618);
-      margin-top: vw3(64);
+      margin-top: vw3(54);
     }
     @include max(xs){
       height: vw4(400);
-      margin-top: vw4(40);
+      margin-top: vw4(54);
     }
     img{
       display: block;
@@ -411,8 +403,26 @@
   opacity: 0;
   color: #FDFDFD;
   overflow: hidden;
+  @include max(md){
+    position: static;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   &__inner{
     padding: vw(230) vw(344) vw(130) vw(136);
+    @include max(md){
+      padding: vw2(130) vw2(124);
+    }
+    @include max(sm){
+      padding: vw3(130) vw3(12);
+    }
+    @include max(xs){
+      padding: vw4(80) vw4(12);
+    }
   }
   &__title{
     font-style: normal;
@@ -518,6 +528,18 @@
   }
 }
 
+.project-scroll{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  @include max(md){
+    position: static;
+    height: auto;
+  }
+}
+
 .project-static{
   width: 100vw;
   background: #FDFDFD;
@@ -525,12 +547,15 @@
 
   @include max(md){
     font-size: vw2(16);
+    padding: vw2(120) 0;
   }
   @include max(sm){
     font-size: vw3(16);
+    padding: vw3(120) 0;
   }
   @include max(xs){
     font-size: vw4(16);
+    padding: vw4(80) 0;
   }
 }
 
@@ -546,20 +571,65 @@
     color: #041C13;
     padding: 0 vw(136);
     margin-bottom: vw(64);
+    @include max(md){
+      font-size: vw2(42);
+      padding: 0 vw2(124);
+      margin-bottom: vw2(64);
+    }
+    @include max(sm){
+      font-size: vw3(42);
+      padding: 0 vw3(12);
+      margin-bottom: vw3(64);
+    }
+    @include max(xs){
+      font-size: vw4(28);
+      padding: 0 vw4(12);
+      margin-bottom: vw4(40);
+    }
   }
   &__team{
     margin-bottom: vw(80);
+    @include max(md){
+      margin-bottom: vw2(80);
+    }
+    @include max(sm){
+      margin-bottom: vw3(80);
+    }
+    @include max(xs){
+      margin-bottom: vw4(64);
+    }
   }
   &__photos{}
 }
 
 .ps-team{
   padding: 0 vw(136);
+  @include max(md){
+    padding: 0 vw2(124);
+  }
+  @include max(sm){
+    padding: 0 vw3(12);
+  }
+  @include max(xs){
+    padding: 0 vw4(12);
+  }
   &__item{
     box-sizing: border-box;
     width: vw(312);
     padding-right: vw(32);
     display: flex;
+    @include max(md){
+      width: vw2(312);
+      padding-right: vw2(32);
+    }
+    @include max(sm){
+      width: vw3(312);
+      padding-right: vw3(32);
+    }
+    @include max(xs){
+      width: vw4(232);
+      padding-right: vw4(32);
+    }
     &-photo{
       flex-shrink: 0;
       background: #D9D9D9;
@@ -568,6 +638,21 @@
       height: vw(60);
       margin-right: vw(24);
       overflow: hidden;
+      @include max(md){
+        width: vw2(60);
+        height: vw2(60);
+        margin-right: vw2(24);
+      }
+      @include max(sm){
+        width: vw3(60);
+        height: vw3(60);
+        margin-right: vw3(24);
+      }
+      @include max(xs){
+        width: vw4(60);
+        height: vw4(60);
+        margin-right: vw4(16);
+      }
       img{
         width: 100%;
         height: 100%;
@@ -582,6 +667,15 @@
       font-size: vw(18);
       line-height: 145%;
       color: #3D3D3D;
+      @include max(md){
+        font-size: vw2(18);
+      }
+      @include max(sm){
+        font-size: vw3(18);
+      }
+      @include max(xs){
+        font-size: vw4(18);
+      }
     }
     &-who{
       font-family: $textFont;
@@ -591,15 +685,48 @@
       line-height: 130%;
       color: #6F6F6F;
       margin-top: vw(8);
+      @include max(md){
+        font-size: vw2(14);
+        margin-top: vw2(8);
+      }
+      @include max(sm){
+        font-size: vw3(14);
+        margin-top: vw3(8);
+      }
+      @include max(xs){
+        font-size: vw4(12);
+        margin-top: vw4(8);
+      }
     }
   }
 }
 
 .ps-photos{
   padding: 0 vw(136) vw(40);
+  @include max(md){
+    padding: 0 vw2(124) vw2(40);
+  }
+  @include max(sm){
+    padding: 0 vw3(12) vw3(40);
+  }
+  @include max(xs){
+    padding: 0 vw4(12) vw4(24);
+  }
   &__item{
     width: vw(626);
     padding-right: vw(34);
+    @include max(md){
+      width: vw2(505);
+      padding-right: vw2(32);
+    }
+    @include max(sm){
+      width: vw3(497);
+      padding-right: vw3(24);
+    }
+    @include max(xs){
+      width: vw4(240);
+      padding-right: vw4(24);
+    }
     &-inner{
       width: 100%;
       position: relative;
@@ -621,6 +748,15 @@
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    @include max(md){
+      padding: 0 vw2(124);
+    }
+    @include max(sm){
+      padding: 0 vw3(12);
+    }
+    @include max(xs){
+      padding: 0 vw4(12);
+    }
     &-inner{
       width: 100% !important;
       position: relative !important;
@@ -644,8 +780,26 @@
 
 .ps-contacts{
   margin-top: vw(130);
+  @include max(md){
+    margin-top: vw2(120);
+  }
+  @include max(sm){
+    margin-top: vw3(120);
+  }
+  @include max(xs){
+    margin-top: vw4(80);
+  }
   &__container{
     padding: 0 vw(136);
+    @include max(md){
+      padding: 0 vw2(32);
+    }
+    @include max(sm){
+      padding: 0 vw3(12);
+    }
+    @include max(xs){
+      padding: 0 vw4(12);
+    }
   }
   &__text{
     max-width: vw(802);
@@ -656,12 +810,35 @@
     line-height: 145%;
     color: #041C13;
     margin-bottom: vw(64);
+    @include max(md){
+      max-width: 100%;
+      font-size: vw2(24);
+      margin-bottom: vw2(64);
+    }
+    @include max(sm){
+      font-size: vw3(24);
+      margin-bottom: vw3(32);
+    }
+    @include max(xs){
+      font-size: vw4(24);
+      margin-bottom: vw4(40);
+    }
   }
   &__table{
     &__row{
       display: flex;
       &:not(:first-child){
         margin-top: vw(16);
+        @include max(md){
+          margin-top: vw2(16);
+        }
+        @include max(sm){
+          margin-top: vw3(32);
+          display: block;
+        }
+        @include max(xs){
+          margin-top: vw4(24);
+        }
       }
     }
     &__left{
@@ -673,6 +850,20 @@
       font-size: vw(18);
       line-height: 145%;
       color: #041C13;
+      width: vw(244);
+      @include max(md){
+        margin-right: vw2(32);
+        font-size: vw2(18);
+        width: vw2(244);
+      }
+      @include max(sm){
+        margin-right: 0;
+        font-size: vw3(18);
+        width: 100%;
+      }
+      @include max(xs){
+        font-size: vw4(18);
+      }
     }
     &__right{
       font-family: $textFont;
@@ -681,12 +872,33 @@
       font-size: vw(18);
       line-height: 145%;
       color: #000000;
+      @include max(md){
+        font-size: vw2(18);
+      }
+      @include max(sm){
+        font-size: vw3(18);
+      }
+      @include max(xs){
+        font-size: vw4(18);
+      }
     }
   }
   &__map{
     width: 100%;
     height: vw(400);
     margin-top: vw(40);
+    @include max(md){
+      height: vw2(400);
+      margin-top: vw2(40);
+    }
+    @include max(sm){
+      height: vw3(280);
+      margin-top: vw3(40);
+    }
+    @include max(xs){
+      height: vw4(220);
+      margin-top: vw4(32);
+    }
     iframe{
       width: 100% !important;
       height: 100% !important;
@@ -697,6 +909,15 @@
 
 .ps-other{
   margin-top: vw(200);
+  @include max(md){
+    margin-top: vw2(120);
+  }
+  @include max(sm){
+    margin-top: vw3(120);
+  }
+  @include max(xs){
+    margin-top: vw4(80);
+  }
   &__title{
     font-style: normal;
     font-weight: 600;
@@ -706,15 +927,51 @@
     color: #041C13;
     padding: 0 vw(136);
     margin-bottom: vw(64);
+    @include max(md){
+      padding: 0 vw2(124);
+      font-size: vw2(42);
+      margin-bottom: vw2(64);
+    }
+    @include max(sm){
+      padding: 0 vw3(12);
+      font-size: vw3(42);
+      margin-bottom: vw3(64);
+    }
+    @include max(xs){
+      padding: 0 vw4(12);
+      font-size: vw4(28);
+      margin-bottom: vw4(40);
+    }
   }
   &__flex{
     display: flex;
     padding: 0 vw(16);
+    @include max(md){
+      padding: 0 vw2(124);
+      display: block;
+    }
+    @include max(sm){
+      padding: 0 vw3(12);
+    }
+    @include max(xs){
+      padding: 0 vw4(12);
+    }
   }
   &__item{
     width: calc(100% / 3);
     box-sizing: border-box;
     padding: 0 vw(16);
+    @include max(md){
+      width: 100%;
+      padding: 0;
+      margin-bottom: vw2(40);
+    }
+    @include max(sm){
+      margin-bottom: vw3(40);
+    }
+    @include max(xs){
+      margin-bottom: vw4(32);
+    }
     &-img{
       width: 100%;
       padding-bottom: 67.7%;
@@ -739,6 +996,21 @@
       text-transform: uppercase;
       color: #3D3D3D;
       margin-bottom: vw(24);
+      @include max(md){
+        margin-top: vw2(40);
+        font-size: vw2(24);
+        margin-bottom: vw2(24);
+      }
+      @include max(sm){
+        margin-top: vw3(40);
+        font-size: vw3(24);
+        margin-bottom: vw3(24);
+      }
+      @include max(xs){
+        margin-top: vw4(24);
+        font-size: vw4(18);
+        margin-bottom: vw4(24);
+      }
     }
     &-text{
       font-family: $textFont;
@@ -747,6 +1019,15 @@
       font-size: vw(16);
       line-height: 130%;
       color: #6F6F6F;
+      @include max(md){
+        font-size: vw2(16);
+      }
+      @include max(sm){
+        font-size: vw3(16);
+      }
+      @include max(xs){
+        font-size: vw4(16);
+      }
     }
     &-link{
       margin-top: vw(28);

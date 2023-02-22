@@ -44,78 +44,78 @@ block content
 						.pp-green__block-title оформили участок кустарниками
 						.pp-green__block-text Можно описать про сам обьект, какиё были пожелания по реализации проекта, возможно технические особенности (например склоны или спуски). Что было проделано. Важно — это нужно рассказать как историю.
 
+		.project-scroll
+			.project-static
+				.ps-sliders
+					.ps-sliders__title Над проектом работали
+					.ps-sliders__team.ps-team.swiper
+						.ps-team__wrapper.swiper-wrapper
+							- var n = 0;
+							while n < 6
+								- n++
+								.ps-team__item.swiper-slide
+									.ps-team__item-photo
+										img(src="img/partner-4.webp" alt="")
+									.ps-team__item-info
+										.ps-team__item-name Иван Иванов
+										.ps-team__item-who Ведущий дизайнер
 
-	.project-static
-		.ps-sliders
-			.ps-sliders__title Над проектом работали
-			.ps-sliders__team.ps-team.swiper
-				.ps-team__wrapper.swiper-wrapper
-					- var n = 0;
-					while n < 6
-						- n++
-						.ps-team__item.swiper-slide
-							.ps-team__item-photo
-								img(src="img/partner-4.webp" alt="")
-							.ps-team__item-info
-								.ps-team__item-name Иван Иванов
-								.ps-team__item-who Ведущий дизайнер
+					.ps-sliders__photos.ps-photos.swiper
+						.ps-photos__wrapper.swiper-wrapper
+							.ps-photos__item.swiper-slide
+								.ps-photos__item-inner
+									img(src="img/s5-1.webp")
+							.ps-photos__item.swiper-slide
+								.ps-photos__item-inner
+									img(src="img/s5-2.webp")
+							.ps-photos__item.swiper-slide
+								.ps-photos__item-inner
+									img(src="img/grow-2.webp")
+							.ps-photos__item.swiper-slide
+								.ps-photos__item-inner
+									img(src="img/grow-2.webp")
+							.ps-photos__item.swiper-slide
+								.ps-photos__item-inner
+									img(src="img/grow-2.webp")
+						.ps-photos__scrollbar
+							.ps-photos__scrollbar-inner.swiper-scrollbar
 
-			.ps-sliders__photos.ps-photos.swiper
-				.ps-photos__wrapper.swiper-wrapper
-					.ps-photos__item.swiper-slide
-						.ps-photos__item-inner
-							img(src="img/s5-1.webp")
-					.ps-photos__item.swiper-slide
-						.ps-photos__item-inner
-							img(src="img/s5-2.webp")
-					.ps-photos__item.swiper-slide
-						.ps-photos__item-inner
-							img(src="img/grow-2.webp")
-					.ps-photos__item.swiper-slide
-						.ps-photos__item-inner
-							img(src="img/grow-2.webp")
-					.ps-photos__item.swiper-slide
-						.ps-photos__item-inner
-							img(src="img/grow-2.webp")
-				.ps-photos__scrollbar
-					.ps-photos__scrollbar-inner.swiper-scrollbar
-
-		.ps-contacts
-			.ps-contacts__container
-				.ps-contacts__text В следующем году планируется продолжить работы по благоустройству и озеленению святого источника в г. Жуков.
-				.ps-contacts__table
-					.ps-contacts__row
-						.ps-contacts__left Под руководством:
-						.ps-contacts__right о. Александра
-					.ps-contacts__row
-						.ps-contacts__left Месторасположение:
-						.ps-contacts__right Святой источник Тихвинской иконы Божией Матери, Калужская область, Жуков
-				.ps-contacts__map
-					| <iframe src="https://yandex.kz/map-widget/v1/?from=navi&lang=ru&ll=36.747518%2C55.016130&mode=whatshere&whatshere%5Bpoint%5D=36.732038%2C55.041329&whatshere%5Bzoom%5D=18&z=13" allowfullscreen="true"></iframe>
-		.ps-other
-			.ps-other__title Другие проекты
-			.ps-other__flex
-				.ps-other__item
-					.ps-other__item-inner
-						a.ps-other__item-img(href="#")
-							img(src="img/s4-4.webp" alt="")
-						.ps-other__item-title Административно-деловой центр в Москве
-						.ps-other__item-text Благоустройство зоны отдыха вокруг торгового центра «Аллея». Адресная инвестиционная программа г. Москвы.
-						a.ps-other__item-link(href="#") Посмотреть проект
-				.ps-other__item
-					.ps-other__item-inner
-						a.ps-other__item-img(href="#")
-							img(src="img/s4-4.webp" alt="")
-						.ps-other__item-title Административно-деловой центр в Москве
-						.ps-other__item-text Благоустройство зоны отдыха вокруг торгового центра «Аллея». Адресная инвестиционная программа г. Москвы.
-						a.ps-other__item-link(href="#") Посмотреть проект
-				.ps-other__item
-					.ps-other__item-inner
-						a.ps-other__item-img(href="#")
-							img(src="img/s4-4.webp" alt="")
-						.ps-other__item-title Административно-деловой центр в Москве
-						.ps-other__item-text Благоустройство зоны отдыха вокруг торгового центра «Аллея». Адресная инвестиционная программа г. Москвы.
-						a.ps-other__item-link(href="#") Посмотреть проект
+				.ps-contacts
+					.ps-contacts__container
+						.ps-contacts__text В следующем году планируется продолжить работы по благоустройству и озеленению святого источника в г. Жуков.
+						.ps-contacts__table
+							.ps-contacts__row
+								.ps-contacts__left Под руководством:
+								.ps-contacts__right о. Александра
+							.ps-contacts__row
+								.ps-contacts__left Месторасположение:
+								.ps-contacts__right Святой источник Тихвинской иконы Божией Матери, Калужская область, Жуков
+						.ps-contacts__map
+							| <iframe src="https://yandex.kz/map-widget/v1/?from=navi&lang=ru&ll=36.747518%2C55.016130&mode=whatshere&whatshere%5Bpoint%5D=36.732038%2C55.041329&whatshere%5Bzoom%5D=18&z=13" allowfullscreen="true"></iframe>
+				.ps-other
+					.ps-other__title Другие проекты
+					.ps-other__flex
+						.ps-other__item
+							.ps-other__item-inner
+								a.ps-other__item-img(href="#")
+									img(src="img/s4-4.webp" alt="")
+								.ps-other__item-title Административно-деловой центр в Москве
+								.ps-other__item-text Благоустройство зоны отдыха вокруг торгового центра «Аллея». Адресная инвестиционная программа г. Москвы.
+								a.ps-other__item-link(href="#") Посмотреть проект
+						.ps-other__item
+							.ps-other__item-inner
+								a.ps-other__item-img(href="#")
+									img(src="img/s4-4.webp" alt="")
+								.ps-other__item-title Административно-деловой центр в Москве
+								.ps-other__item-text Благоустройство зоны отдыха вокруг торгового центра «Аллея». Адресная инвестиционная программа г. Москвы.
+								a.ps-other__item-link(href="#") Посмотреть проект
+						.ps-other__item
+							.ps-other__item-inner
+								a.ps-other__item-img(href="#")
+									img(src="img/s4-4.webp" alt="")
+								.ps-other__item-title Административно-деловой центр в Москве
+								.ps-other__item-text Благоустройство зоны отдыха вокруг торгового центра «Аллея». Адресная инвестиционная программа г. Москвы.
+								a.ps-other__item-link(href="#") Посмотреть проект
 
 
 
