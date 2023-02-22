@@ -1,0 +1,677 @@
+.basket {
+    &-page,
+    &-order-reg-page,
+    &-order-options-page {
+        background-color: $white-f6;
+        
+        .container-menu__content {
+            padding-right: 32px;
+            padding-bottom: 130px;
+            
+            @include max(md) {
+                padding-bottom: 120px;
+            }
+            @include max(sm) {
+                padding-right: 12px;
+            }
+            @include max(xs) {
+                padding-bottom: 80px;
+            }
+        }
+
+        &__title {
+            color: $black-3d;
+            margin-top: 80px;
+
+            @include max(md) {
+                margin-top: 64px;
+            }
+            @include max(xs) {
+                margin-top: 40px;
+            }
+        }
+
+        &__back {
+            text-decoration: none;
+            color: $grey-6f;
+            border-bottom: 1px solid $grey-6f;
+            padding-bottom: 3px;
+            margin-top: 16px;
+
+            @include max(xs) {
+                margin-top: 7px;
+            }
+            
+            &:last-child {
+                margin-top: 23px;
+                
+                @include max(xs) {
+                    margin-top: 14px;
+                }
+            }
+        }
+    }
+
+    &-page {
+
+        &__products {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-title {
+                color: $black-3d;
+                width: 100%;
+                padding-right: 24px;
+            }
+
+            &-btn {
+                display: flex;
+                align-items: center;
+                background-color: transparent;
+                border: none;
+                color: $grey-a4;
+                padding: 0;
+
+                & svg {
+                    width: 16px;
+                    height: 16px;
+                    margin-left: 4px;
+                }
+            }
+        }
+
+        .container-menu__content-wrap {
+            padding-top: 40px;
+        }
+
+        &__list {
+            list-style: none;
+            padding-top: 24px;
+        }
+
+        .item {
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            background-color: $white-fd;
+            box-shadow: 0px 4px 12px rgba(30, 113, 63, 0.15);
+            padding: 16px;
+            
+            @include max(md) {
+                flex-wrap: wrap;
+                padding: 16px 16px 0;
+            }
+            @include max(xs) {
+                flex-direction: column;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+            
+            &__img {
+                flex-shrink: 0;
+                width: 160px;
+                height: 160px;
+                margin-right: 16px;
+                
+                @include max(md) {
+                    margin-bottom: 16px;
+                }
+                @include max(xs) {
+                    width: 200px;
+                    height: 200px;
+                    margin-right: 0;
+                    margin-bottom: 16px;
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__block {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: space-between;
+                
+                @include min(lg) {
+                    width: 100%;
+                }
+                @include max(md) {
+                    flex-direction: column;
+                    margin-bottom: 16px;
+                }
+                
+                &-row {
+                    display: flex;
+                    margin-bottom: 8px;
+                }
+            }
+            
+            &__block-info {
+                margin-right: 35px;
+                
+                @include max(xs) {
+                    margin-right: 0;
+                }
+            }
+
+            &__block-counter {
+                display: flex;
+                flex-shrink: 0;
+                align-items: center;
+
+                @include max(sm) {
+                    margin-top: 1px;
+                }
+            }
+
+            &__title {
+                color: $black-3d;
+                text-transform: uppercase;
+                padding-top: 7px;
+                margin-bottom: 8px;
+
+                @include max(md) {
+                    padding-top: 0px;
+                    margin-bottom: 7px;
+                }
+                @include max(sm) {
+                    line-height: 130%;
+                }
+            }
+            
+            &__feature {
+                color: $grey-6f;
+                margin-bottom: 8px;
+            }
+
+            &__height {
+
+                &-title {
+                    color: $grey-6f;
+                }
+                &-number {
+                    color: $black-3d;
+                    margin-left: 8px;
+                }
+            }
+
+            &__counter {
+                &-minus,
+                &-plus,
+                &-number {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    color: $black-3d;
+                    background-color: transparent;
+                }
+
+                &-minus,
+                &-plus {
+                    outline: none;
+                    border: none;
+                    padding: 0;
+                    cursor: pointer;
+                }
+
+                &-number {
+                    width: 38px;
+                    height: 38px;
+                    border: 1px solid $green-1e;
+                    border-radius: 50%;
+                }
+            }
+            
+            &__price {
+                color: $black-3d;
+                margin-left: 8px;
+                margin-right: 32px;
+            }
+
+            &__del {
+                outline: none;
+                position: absolute;
+                top: 24px;
+                right: 16px;
+                width: 24px;
+                height: 24px;
+                background-color: transparent;
+                border: none;
+                padding: 0;
+            
+                @include max(md) {
+                    top: 16px;
+                }
+            }
+        }
+
+        .total {
+            margin-top: 58px;
+            
+            @include max(md) {
+                margin-top: 24px;
+            }
+        }
+    }
+
+    &-order-reg-page,
+    &-order-options-page {
+
+        &__list {
+            max-width: 100%;
+            width: 100%;
+            list-style: none;
+            padding-top: 40px;
+
+            @include max(xs) {
+                padding-top: 24px;
+            }
+        }
+
+        .item {
+            background-color: $white-fd;
+            box-shadow: 0px 4px 12px rgba(30, 113, 63, 0.15);
+            padding: 40px;
+
+            @include max(xs) {
+                padding: 20px 12px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+
+                @include max(xs) {
+                    margin-bottom: 24px;
+                }
+            }
+
+            &__block {
+                max-width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: space-between;
+                border-bottom: 1px solid $green-1e;
+                padding-bottom: 6px;
+        
+                @include max(xs) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                @include max(xxs) {
+                    padding-bottom: 9px;
+                }
+        
+                &-title {
+                    color: $black-3d;
+                }
+                &-tabs {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    
+                    @include max(xxs) {
+                        flex-direction: column;
+                        align-items: baseline;
+                        margin-top: 8px;
+                    }
+                }
+            }
+    
+            &__btn,
+            &__tab {
+                text-decoration: none;
+                background-color: transparent;
+                border: none;
+                color: $grey-6f;
+                border-bottom: 1px solid $grey-6f;
+                padding: 0;
+                padding-bottom: 2px;
+                cursor: pointer;
+            }
+
+            &__tab {
+                margin-top: 8px;
+                &:not(:last-child) {
+                    margin-right: 16px;
+
+                    @include max(xxs) {
+                        margin-right: 0;
+                    }
+                }
+
+                &:not(.active) {
+                    border-bottom: none;
+                    padding-bottom: 3px;
+                }
+            }
+        }
+
+        .form-lk {
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+
+            @include max(xxs) {
+                padding-top: 32px;
+            }
+    
+            &__wrap {
+                max-width: 100%;
+            }
+    
+            .input-text {
+                margin-bottom: 0;
+            }
+
+            .small-text-2,
+            .small-text-3 {
+                &:not(:last-child) {
+                    margin-bottom: 4px;
+                }
+            }
+        }
+
+        &__form {
+            display: none;
+            padding-top: 80px;
+            padding-left: 32px;
+            padding-right: 32px;
+            max-width: 864px;
+            margin: 0 auto;
+            @include max(sm) {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            @include max(xs) {
+                padding-top: 40px;
+            }
+    
+            &.active {
+                display: block;
+            }
+        }
+    
+        &__label {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+    
+            &-name {
+                color: $grey-6f;
+                margin-bottom: 4px;
+            }
+        }
+
+        &__save {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 36px;
+            margin-bottom: -4px;
+        
+            @include max(xs) {
+                margin-top: 20px;
+                flex-direction: column;
+            }
+            
+            &-btn {
+                margin-top: 4px;
+                margin-bottom: 4px;
+
+                &:not(:last-child) {
+                    margin-right: 24px;
+        
+                    @include max(xs) {
+                        margin-right: 0;
+                    }
+                }
+
+                p {
+                    font-family: $textFont;
+                }
+            }
+        }
+
+        .total {
+            margin-top: 40px;
+
+            &__block {
+                margin-bottom: 24px;
+                
+                @include max(sm) {
+                    margin-bottom: 16px;
+                }
+            }
+            
+            @include max(md) {
+                margin-top: 24px;
+                margin-bottom: -24px;
+            }
+            @include max(sm) {
+                margin-bottom: 0;
+            }
+            
+            @include max(xs) {
+                margin-top: 16px;
+
+                &__block {
+                    padding: 16px 12px 24px;
+                }
+
+                &__btn {
+                    margin-top: 24px;
+                }
+            }
+
+            &__btn {
+                margin-top: 41px;
+            }
+        }
+
+        .inside {
+            @include max(xs) {
+                padding-top: 40px;
+            }
+        }
+    }
+
+    &-order-reg-page {
+        &__list {
+            @include max(md) {
+                padding-top: 64px;
+            }
+            @include max(sm) {
+                padding-top: 40px;
+            }
+        }
+
+        &__save {
+            @include max(xs) {
+                margin-top: 26px;
+                align-items: baseline;
+            }
+            
+            &-btn {
+                @include max(xs) {
+                    width: fit-content;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-order-options-page {
+        &__subtitle {
+            max-width: 523px;
+            color: $black-3d;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            
+            @include max(md) {
+                max-width: 100%;
+            }
+            @include max(xs) {
+                padding-top: 24px;
+                padding-bottom: 32px;
+            }
+        }
+
+        &__list {
+            @include max(md) {
+                padding-top: 64px;
+            }
+            @include max(sm) {
+                padding-top: 40px;
+            }
+        }
+
+        &__input {
+            background: url('../img/svg/pencil.svg') right 16px center no-repeat;
+            padding-right: 48px;
+        }
+
+        &__save {
+            align-items: center;
+            
+            &-btn {
+                @include max(xs) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .selector {
+            &__title {
+                color: $black-3d;
+            }
+        }
+
+        .ui-selectmenu-button {
+
+            &.ui-button {
+                box-sizing: border-box;
+                outline: none;
+                max-width: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                background-color: $white;
+                border: 1px solid $green-1e;
+                border-radius: 0;
+                padding: 7px 8px;
+                margin-top: 16px;
+                margin-right: 0;
+                transition: .3s;
+    
+                &.ui-selectmenu-button-open .ui-icon {
+                    transform: rotateX(180deg);
+                }
+            }
+    
+            .ui-selectmenu-text {
+                font-family: 'Manrope', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 145%;
+                color: $black-3d;
+                margin-right: 0;
+    
+                .ui-state-active {
+                    font-size: 18px;
+                    background-color: transparent;
+                    border: none;
+                    color: $black-3d;
+                }
+            }
+    
+            .ui-icon {
+                background-image: url('../img/svg/arrow-down.svg');
+                background-position: 100% 100%;
+                transform: rotateX(0);
+                transition: $animation;
+            }
+        }
+
+        &__select-menu {
+            height: 0;
+
+            &.ui-selectmenu-open {
+                height: auto;
+            }
+
+            .ui-selectmenu-menu {
+                position: relative;
+            }
+
+            .ui-widget.ui-widget-content .ui-menu-item-wrapper {
+                font-size: 14px;
+                line-height: 130%;
+                transition: .1s ease-out;
+            }
+
+            .ui-widget.ui-widget-content .ui-menu-item-wrapper.ui-state-active,
+            .ui-widget.ui-widget-content .ui-menu-item-wrapper.ui-state-active {
+                font-size: 16px;
+                line-height: 130%;
+                color: $black-3d;
+            }
+        }
+        
+
+        .total {
+            margin-top: 16px;
+        }
+    }
+
+    &-order-formed-page {
+        background-color: $white-f6;
+
+        &__wrap {
+            max-width: 695px;
+            padding-top: 84px;
+            padding-bottom: 130px;
+            
+            @include max(md) {
+                padding-top: 64px;
+                padding-bottom: 120px;
+            }
+            @include max(xs) {
+                padding-top: 40px;
+                padding-bottom: 80px;
+            }
+        }
+
+        &__title,
+        &__subtitle {
+            color: $black-3d;
+        }
+
+        &__title {
+            margin-bottom: 36px;
+            
+            @include max(xs) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

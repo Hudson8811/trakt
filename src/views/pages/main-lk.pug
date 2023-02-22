@@ -1,0 +1,122 @@
+extends ../layouts/default-page
+
+block variables
+	- const title = "Main-lk";
+
+block content
+	.main-lk-page.container-menu
+		.container-menu__menu-lk.menu-lk
+			include ../../blocks/components/menu-lk
+
+		.container-menu__content
+
+			include ../../blocks/components/breadcrumbs
+
+			.main-lk-page__top
+				img(src="./img/svg/avatar.svg", alt="аватарка")
+				.main-lk-page__top-block 
+					h1.main-lk-page__top-title.title-2 Название компании
+					button(type="button").main-lk-page__top-subtitle.main-lk-page__btn.small-text-2.js-popup-avatar Редактировать
+
+			.main-lk-page__block
+				h2.main-lk-page__block-title.title-3 личные данные
+				button(type="button").main-lk-page__block-link.main-lk-page__btn.small-text-2.js-data-editing Редактировать
+
+			form.form-lk(action="")
+				.form-lk__wrap
+					label.main-lk-page__label
+						p.main-lk-page__label-name.small-text-2 Фамилия*
+						input.main-lk-page__input.input-text(type="text" placeholder="Иванов" disabled)
+						span.text-error Данное поле должно быть заполнено
+
+					label.main-lk-page__label
+						p.main-lk-page__label-name.small-text-2 Имя*
+						input.main-lk-page__input.input-text(type="text" placeholder="Иван" disabled)
+						span.text-error Данное поле должно быть заполнено
+
+					label.main-lk-page__label
+						p.main-lk-page__label-name.small-text-2 Отчество*
+						input.main-lk-page__input.input-text(type="text" placeholder="Иванович" disabled)
+						span.text-error Данное поле должно быть заполнено
+
+					label.main-lk-page__label
+						p.main-lk-page__label-name.small-text-2 ИНН*
+						input.main-lk-page__input.input-text(type="text" placeholder="101111010011" disabled)
+						span.text-error Данное поле должно быть заполнено
+
+					label.main-lk-page__label
+						p.main-lk-page__label-name.small-text-2 Название компании (ООО, ИП, физическое лицо)*
+						input.main-lk-page__input.input-text(type="text" placeholder="ООО «Ландшафт»" disabled)
+						span.text-error Данное поле должно быть заполнено
+
+					label.main-lk-page__label
+						p.main-lk-page__label-name.small-text-2 Телефон*
+						input.main-lk-page__input.input-text.input-tel(type="tel" placeholder="+7 (------) ------ - ---- - ----" disabled)
+						span.text-error Данное поле должно быть заполнено
+
+					label.main-lk-page__label
+						p.main-lk-page__label-name.small-text-2 Почта*
+						input.main-lk-page__input.input-text(type="text" placeholder="ivanov@ya.ru" disabled)
+						span.text-error Данное поле должно быть заполнено
+			
+			.main-lk-page__order.active
+				.main-lk-page__block
+					h2.main-lk-page__block-title.title-3 последний заказ
+					a(href="").main-lk-page__block-link.main-lk-page__btn.small-text-2 Все заказы
+
+				.order
+					ul.order__list
+						li.order__item
+							p.order__name.small-text Сумма
+							p.order__meaning.small-text 33 800 ₽
+						li.order__item
+							p.order__name.small-text Статус
+							p.order__meaning.small-text сформирован
+						li.order__item
+							p.order__name.small-text Адрес доставки
+							p.order__meaning.small-text г. Москва, ул. Набережная, д.200, оф. 50
+			
+			.main-lk-page__save
+				button(type="button").main-lk-page__save-btn.colored-button-small 
+					p Сохранить
+				button(type="button").main-lk-page__save-btn.transparent-button 
+					p Отменить
+			
+			include ../../blocks/components/catalog
+
+		.main-lk-page__popup.popup.js-popup
+			.popup__wrap
+				button.popup__btn-close.js-popup-close
+					| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+
+				h6.title-6 Загрузка файла
+
+				form.popup__form
+					fieldset.popup__form-wrap
+						label.popup__form-label(for="img-avatar")
+							input.popup__form-input(type="file" id="img-avatar" name="img-avatar")
+							span.popup__form-clue.popup__form-clue.small-text Загрузить с компьютера...
+							span.popup__form-clue.popup__form-clue--mob.small-text Загрузить файл
+						
+						<svg width="51" height="23" viewBox="0 0 51 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M50.5607 12.5607C51.1464 11.9749 51.1464 11.0251 50.5607 10.4393L41.0147 0.893398C40.4289 0.307611 39.4792 0.307611 38.8934 0.893398C38.3076 1.47919 38.3076 2.42893 38.8934 3.01472L47.3787 11.5L38.8934 19.9853C38.3076 20.5711 38.3076 21.5208 38.8934 22.1066C39.4792 22.6924 40.4289 22.6924 41.0147 22.1066L50.5607 12.5607ZM0.5 13H49.5V10H0.5V13Z" fill="#1E713F"/>
+						</svg>
+
+						img(src="./img/svg/avatar.svg", alt="аватарка")
+					
+					.popup__form-btns
+						button(type="button").popup__form-btn.colored-button-small 
+							p Сохранить
+						button(type="button").popup__form-btn.transparent-button 
+							p Отменить
+
+
+
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

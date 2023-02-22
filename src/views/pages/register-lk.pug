@@ -9,14 +9,14 @@ block content
 		.register-lk-page__top
 			.register-lk-page__top-wrap
 
-				h1.register-lk-page__title.title-3 регистрация
+				h1.register-lk-page__title.title-1 регистрация
 				p.register-lk-page__subtitle.text-2 Если вы уже зарегистрированы на сайте, воспользуйтесь своими логином и паролем, чтобы войти в личный кабинет
 
 		
 		.register-lk-page__wrap
 			include ../../blocks/components/breadcrumbs
 			
-			ul.register-lk-page__tabs
+			ul.register-lk-page__tabs.active
 				li.register-lk-page__tab
 					button.register-lk-page__tab-btn.title-3.js-register-lk-tab-entity.active юридическое лицо
 				li.register-lk-page__tab
@@ -57,7 +57,6 @@ block content
 					p.register-lk-page__label-name.small-text-2 Почта*
 					input.register-lk-page__input.input-text(type="text" placeholder="ivanov@ya.ru")
 					span.text-error Данное поле должно быть заполнено
-
 
 				input.register-lk-page__checkbox-input.checkbox-input.small-text-2(type="checkbox" id="checkbox-entity" name="checkbox-entity")
 				label.register-lk-page__checkbox-label.checkbox-label.small-text-2(for="checkbox-entity") Согласен с политикой конфиденциальности*
@@ -102,6 +101,10 @@ block content
 				button.register-lk-page__submit.colored-button-small(type="submit")
 					p Зарегистрироваться
 
+			.register-lk-page__response
+				h3.register-lk-page__response-title.title-3 Спасибо, данные отправлены
+				p.register-lk-page__response-text.text-2 После проверки на вашу почту будет направлено уведомление о результатах регистрации и данными для входа в личный кабинет.
+	
 	include ../../blocks/modules/footer/footer
 
 block scripts

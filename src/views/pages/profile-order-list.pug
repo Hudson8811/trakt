@@ -1,0 +1,68 @@
+extends ../layouts/default-page
+
+block variables
+	- const title = "Profile-order-list";
+
+block content
+
+	.profile-order-list-page.container-menu
+		.container-menu__menu-lk.menu-lk
+			include ../../blocks/components/menu-lk
+
+		.container-menu__content
+
+			include ../../blocks/components/breadcrumbs
+			
+			.profile-order-list-page__wrap
+				h1.profile-order-list-page__title.title-2 Профили заказов
+
+				ul.profile-order-list-page__list
+					li.profile-order-list-page__item.item
+						.item__number.small-text-2 2143
+
+						.item__block.small-text-2 
+							time.item__block-item.item__time.small-text-2 11.04.2022 18:45:42
+							.item__block-item.item__company.small-text-2 ООО «Ландшафт»
+							.item__block-item.item__client.small-text-2 Юридическое лицо
+						.item__func
+							button(type='button').item__change.small-text-2 Изменить
+							button(type='button').item__del
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+					li.profile-order-list-page__item.item
+						.item__number.small-text-2 2143
+
+						.item__block.small-text-2 
+							time.item__block-item.item__time.small-text-2 11.04.2022 18:45:42
+							.item__block-item.item__company.small-text-2 ООО «Ландшафт»
+							.item__block-item.item__client.small-text-2 Юридическое лицо
+						.item__func
+							button(type='button').item__change.small-text-2 Изменить
+							button(type='button').item__del
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+					li.profile-order-list-page__item.item
+						.item__number.small-text-2 2143
+
+						.item__block.small-text-2 
+							time.item__block-item.item__time.small-text-2 11.04.2022 18:45:42
+							.item__block-item.item__company.small-text-2 ООО «Ландшафт»
+							.item__block-item.item__client.small-text-2 Юридическое лицо
+						.item__func
+							button(type='button').item__change.small-text-2 Изменить
+							button(type='button').item__del
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+
+
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

@@ -1,0 +1,73 @@
+.catalog-lk-page {
+    background-color: $white-f6;
+
+    .container-menu__content {
+        padding-bottom: 130px;
+        
+        @include max(md) {
+            padding-bottom: 120px;
+        }
+        @include max(sm) {
+            padding-bottom: 80px;
+        }
+    }
+
+    .breadcrumbs {
+        padding-top: 40px;
+    }
+    
+    .advantages {
+        box-sizing: border-box;
+        max-width: 1040px;
+        padding-right: 32px;
+
+        @include max(md) {
+            padding-right: 0;
+        }
+
+        &__title {
+            color: $black-3d;
+            margin-bottom: 24px;
+
+            @include max(xxs) {
+                margin-bottom: 16px;
+            }
+        }
+
+        &__subtitle,
+        &__text {
+            color: $grey-6f;
+        }
+
+        &__list {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        &__item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            border-top: 1px solid $green-1e;
+            padding: 16px 0 24px;
+
+            @include max(sm) {
+                flex-direction: column;
+            }
+        }
+
+        &__name {
+            color: $black-3d;
+            margin-right: 32px;
+
+            @include max(sm) {
+                margin-right: 0;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__text {
+            max-width: 696px;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+extends ../layouts/default-page
+
+block variables
+	- const title = "Cart-product";
+
+block content
+
+	.cart-product-page.container-menu
+		.container-menu__menu-lk.menu-lk
+			include ../../blocks/components/menu-lk
+
+		.container-menu__content
+
+			include ../../blocks/components/breadcrumbs
+
+			.cart-product-page__wrap
+				.cart-product-page__slider.slider
+					.slider-big
+						.slider-big__item
+							img(data-lazy="../img/s4-1.jpg", alt="Ель")
+						.slider-big__item
+							img(data-lazy="../img/s4-2.jpg", alt="Ель")
+						.slider-big__item
+							img(data-lazy="../img/s4-3.jpg", alt="Ель")
+					.slider-small
+						.slider-small__item
+							img(data-lazy="../img/s4-1.jpg", alt="Ель")
+						.slider-small__item
+							img(data-lazy="../img/s4-2.jpg", alt="Ель")
+						.slider-small__item
+							img(data-lazy="../img/s4-3.jpg", alt="Ель")
+				.cart-product-page__info.info
+					h1.info__title.title-3 Ель сербская «Karel»
+					p.info__price.title-2 3 800 ₽
+
+					span.title-5 высота растения:
+					select.selector
+						option(value="40-60 см") 40-60 см
+						option(value="80-90 см") 80-90 см
+						option(value="100-110 см") 100-110 см
+					
+					span.title-5 количество:
+					
+					.info__block
+						.info__counter
+							button(type='button').info__counter-minus.js-counter-minus.title-6 -
+							span.info__counter-number.js-counter-number.title-6 1
+							button(type='button').info__counter-plus.js-counter-plus.title-6 +
+						button(type='button').info__order.colored-button-small.js-popup-active
+							p Заказать
+					
+					button(type='button').info__design.transparent-button
+						p Оформить сразу
+
+				.cart-product-page__text.text
+					.text__block 
+						h2.title-3 ОПИСАНИЕ
+						p.text-2 Новый карликовый сорт сербской ели. Компактное дерево 80 см высотой и 120 см шириной с шаровидной или подушковидной формой кроны. Хвоя плоская, блестящая, густая, сверху темно-зеленая, снизу две заметные белые полоски. Растет очень медленно.
+					.text__block 
+						h2.title-3 Особенности выращивания
+						p.text-2 Нуждается в слабокислых умеренно влажных почвах. Может расти как на солнце так и в полутени. Из-за своего невысокого роста зимует под снегом, поэтому не страдает от солнечных ожогов. Зимостойко.
+
+			.cart-product-page__popup.popup.js-popup.active
+				.popup__wrap
+					button.popup__btn-close.js-popup-close
+						| <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18 6L6 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M6 6L18 18" stroke="#1E713F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+
+					h3.title-3 Ваша корзина пуста
+					p.text-2 Выберите в каталоге интересующий товар и нажмите кнопку «Заказать».
+					a(href="").colored-button-small
+						p Перейти в каталог
+
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

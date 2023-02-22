@@ -74,12 +74,16 @@
         "yargs": "^17.3.1"
     },
     "dependencies": {
+        "babel": "^6.23.0",
+        "babel-upgrade": "^1.0.1",
         "gsap": "^3.11.3",
         "jquery": "^3.6.1",
         "swiper": "^9.0.5",
+        "slick-carousel": "^1.8.1",
         "vivus": "^0.4.6",
         "webpack": "^5.70.0",
-        "webpack-stream": "^7.0.0"
+        "webpack-stream": "^7.0.0",
+        "yarn": "^1.22.19"
     },
     "husky": {
         "hooks": {
@@ -93,5 +97,6 @@
         "*.js": [
             "eslint --fix"
         ]
-    }
+    },
+    "packageManager": "yarn@3.4.1"
 }

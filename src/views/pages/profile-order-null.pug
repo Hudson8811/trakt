@@ -1,0 +1,30 @@
+extends ../layouts/default-page
+
+block variables
+	- const title = "Profile-order-null";
+
+block content
+
+	.profile-order-null-page.container-menu
+		.container-menu__menu-lk.menu-lk
+			include ../../blocks/components/menu-lk
+
+		.container-menu__content
+
+			include ../../blocks/components/breadcrumbs
+
+			.profile-order-null-page__wrap
+				h1.profile-order-null-page__title.title-2 Профили заказов
+				p.profile-order-null-page__subtitle.text-2 Список профилей пуст. Вы ещё не сделали ни одного заказа. Перейдите в каталог для выбора товара.
+
+				a(href="").profile-order-null-page__link.colored-button-small
+					p В каталог
+
+
+
+
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

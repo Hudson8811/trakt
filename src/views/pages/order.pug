@@ -1,0 +1,114 @@
+extends ../layouts/default-page
+
+block variables
+	- const title = "Order";
+
+block content
+
+	.order-page.container-menu
+		.container-menu__menu-lk.menu-lk
+			include ../../blocks/components/menu-lk
+
+		.container-menu__content
+
+			include ../../blocks/components/breadcrumbs
+			
+			.order-page__wrap
+				h1.order-page__title.title-2 заказ №52, создан 27.04.2022
+				a(href='').order-page__back.small-text-2 ← Вернуться в список заказов
+
+				.order-page__block
+					h3.order-page__block-title.title-5 Заказ № 132-000-876 от 27.04.2022, 3 товара на сумму 114 000 ₽
+
+				.order-page__info.info
+					h2.info__title.title-3 информация о заказе
+
+					.info__container
+						.info__container-content.content
+							.content__table
+								.content__table-column
+									p.content__table-type.small-text-2 ФИО
+									p.content__table-value.small-text-2 Иванов Иван Иванович
+								.content__table-column
+									p.content__table-type.small-text-2 Текущий статус, от 11.05.2022
+									p.content__table-value.small-text-2 Принят, ожидается оплата
+								.content__table-column
+									p.content__table-type.small-text-2 Сумма
+									p.content__table-value.small-text-2 114 000 ₽
+							
+							button(type="button").content__btn.small-text-2
+								span.small-text-2 Подробнее
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M13 6L8 11L3 6" stroke="#1E713F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+
+							.content__personal.personal
+								h2.personal__title.title-3 информация о пользователе
+
+								ul.personal__list
+									li.personal__item 
+										p.personal__type.small-text-2 Логин:
+										p.personal__value.small-text-2 Ivanov@ya.ru
+									li.personal__item 
+										p.personal__type.small-text-2 E-mail адрес:
+										p.personal__value.small-text-2 Ivanov@ya.ru
+									li.personal__item 
+										p.personal__type.small-text-2 Тип плательщика:
+										p.personal__value.small-text-2 Юридическое лицо
+									li.personal__item 
+										p.personal__type.small-text-2 Название компании:
+										p.personal__value.small-text-2 ООО «Ландшафт»
+									li.personal__item 
+										p.personal__type.small-text-2 Телефон:
+										p.personal__value.small-text-2 +7 (999) 999-99-99
+									li.personal__item 
+										p.personal__type.small-text-2 Адрес доставки:
+										p.personal__value.small-text-2 г. Москва, ул. Набережная, д.200, оф.50
+									
+
+						.info__container-btns
+							button(type="button").info__container-btn.colored-button-small 
+								p Повторить заказ
+							button(type="button").info__container-btn.transparent-button 
+								p Отменить
+
+				.order-page__inside.inside
+					h2.inside__title.title-3 содержимое заказа
+
+					ul.inside__list
+						li.inside__item.inside__item-sample
+							.inside__item-img 
+							.inside__item-block
+								.inside__item-name.small-text-2 Наименование
+								.inside__item-price.small-text-2 Цена
+								.inside__item-quantity.small-text-2 Количество
+								.inside__item-sum.small-text-2 Сумма
+
+						li.inside__item
+							.inside__item-img 
+								img(src="./img/s4-1.jpg", alt="Ель сербская сизая «KAREL»")
+							.inside__item-block
+								.inside__item-name.small-text-2 Ель сербская сизая «KAREL»
+								.inside__item-price.small-text-2 38 000 ₽
+								.inside__item-quantity.small-text-2 3 шт
+								.inside__item-sum.small-text-2 114 000 ₽
+						li.inside__item
+							.inside__item-img 
+								img(src="./img/s4-1.jpg", alt="Ель сербская сизая «KAREL»")
+							.inside__item-block
+								.inside__item-name.small-text-2 Ель сербская сизая «KAREL»
+								.inside__item-price.small-text-2 38 000 ₽
+								.inside__item-quantity.small-text-2 3 шт
+								.inside__item-sum.small-text-2 114 000 ₽
+
+						li.inside__item.inside__item-total
+							.inside__item-name.small-text-2 ИТОГО:
+							.inside__item-sum.small-text-2 228 000 ₽
+
+				a(href='').order-page__back.small-text-2 ← Вернуться в список заказов
+
+	include ../../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

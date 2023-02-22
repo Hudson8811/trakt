@@ -28,10 +28,11 @@
 
     &__subtitle{
         color: $grey-6f;
+        max-width: 592px;
     }
 
     &__wrap {
-        background-color: $white-f7;
+        background-color: $white-f6;
         padding-top: 40px;
         padding-bottom: 120px;
         @include max(xs) {
@@ -40,11 +41,11 @@
     }
 
     &__tabs {
+        display: none;
         list-style: none;
         max-width: 1216px;
         padding: 0 32px;
         margin: 0 auto;
-        display: flex;
         align-items: center;
         padding-top: 80px;
         @include max(sm) {
@@ -52,6 +53,10 @@
         }
         @include max(xs) {
             flex-direction: column;
+        }
+
+        &.active {
+            display: flex;
         }
     }
 
@@ -70,7 +75,9 @@
             padding: 8px;
             color: $grey-3d;
             cursor: pointer;
+            
             @include max(sm) {
+                font-size: 18px;
                 text-align: left;
             }
         }
@@ -141,5 +148,33 @@
 
     &__submit {
         margin: 0 auto;
+    }
+
+    &__response {
+        display: none;
+        max-width: 1216px;
+        padding: 80px 32px 0;
+        margin: 0 auto;
+        
+        @include max(sm) {
+            padding: 80px 12px 0;
+        }
+        @include max(xxs) {
+            padding: 40px 12px 0;
+        }
+
+        &.active {
+            display: block;
+        }
+
+        &-title {
+            color: $black-3d;
+            margin-bottom: 24px;
+        }
+
+        &-text {
+            max-width: 488px;
+            color: $grey-6f;
+        }
     }
 }

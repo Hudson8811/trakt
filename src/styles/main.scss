@@ -19,16 +19,29 @@
 
 // Компоненты
 @import "../blocks/components/components";
+@import "../blocks/components/catalog";
+@import "../blocks/components/jquery-ui";
+@import "../blocks/components/slick";
 
 // Стили целых страниц без разбития на модули
 @import "pages/home_page";
 @import "pages/about";
 @import "pages/contacts";
-@import "pages/login-lk";
-@import "pages/register-lk";
-@import "pages/change-password-lk";
-@import "pages/new-password-lk";
 @import "pages/growing";
 @import "pages/faq";
 @import "pages/portfolio";
 @import "pages/project";
+
+@import "pages/login-lk";
+@import "pages/register-lk";
+@import "pages/change-password-lk";
+@import "pages/new-password-lk";
+@import "pages/main-lk";
+@import "pages/catalog-lk";
+@import "pages/profile";
+@import "pages/order";
+@import "pages/change-password";
+@import "pages/catalog-inside-lk";
+@import "pages/cart-product";
+@import "pages/basket";
+
