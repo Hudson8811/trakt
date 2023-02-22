@@ -182,6 +182,18 @@
 			}
 		}
 	}
+	&--static{
+		display: none;
+		+.header{
+			position: relative;
+			pointer-events: auto;
+			background: #F7F7F7;
+			&--white{
+				background: #ffffff;
+			}
+		}
+	}
+
 }
 
 

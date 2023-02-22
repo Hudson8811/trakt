@@ -1,4 +1,4 @@
-header.header.header--main
+header.header.header--main(class= notFixedHeader ? 'header--static':'')
     .header__container
         .header__left
             .header__logo
@@ -9,7 +9,7 @@ header.header.header--main
                 a.header__link.header__link--burger.js-show-menu(href="javascript:;")
                 //- a.header__link.header__link--profile(href="")
 
-.header.header--dark
+.header.header--dark(class= notFixedHeader2 ? 'header--white':'')
     .header__container
         .header__left
             .header__logo

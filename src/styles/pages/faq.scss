@@ -1,6 +1,9 @@
 .faq-page{
   background: #ffffff;
   padding-top: vw(100);
+  @include min(xl){
+    padding-top: 120px;
+  }
   @include max(md){
     padding-top: vw2(100);
   }
