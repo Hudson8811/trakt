@@ -187,23 +187,6 @@ $(document).ready(function (){
 
         $( ".selector" ).selectmenu();
 
-        $( ".js-counter-minus" ).on('click',function (e){
-            const number = $(e.target).next();
-            const numberValue = number.text();
-
-            if (parseInt(numberValue) > 0) {
-                const numberMinus = parseInt(numberValue) - 1;
-                number.text(`${numberMinus}`)
-            }
-        });
-        $( ".js-counter-plus" ).on('click',function (e){
-            const number = $(e.target).prev();
-            const numberValue = number.text();
-            const numberPlus = parseInt(numberValue) + 1;
-
-            number.text(`${numberPlus}`)
-        });
-
     } else if ($('.basket-order-options-page').length > 0) {
 
         $(".selector").selectmenu({
@@ -219,6 +202,22 @@ $(document).ready(function (){
 
         $('.ui-selectmenu-menu').addClass('basket-order-options-page__select-menu');
     }
+
+    $( ".js-counter-minus" ).on('click',function (e){
+        const number = $(e.target).next();
+        const numberValue = number.text();
+
+        if (parseInt(numberValue) > 0) {
+            const numberMinus = parseInt(numberValue) - 1;
+            number.text(`${numberMinus}`)
+        }
+    });
+    $( ".js-counter-plus" ).on('click',function (e){
+        const number = $(e.target).prev();
+        const numberValue = number.text();
+        const numberPlus = parseInt(numberValue) + 1;
+        number.text(`${numberPlus}`)
+    });
 
 
     // табы на странице регистрации
@@ -308,4 +307,9 @@ $(document).ready(function (){
             $(e.target).addClass('active');
         });
     }
+
+
+
+
+
 });

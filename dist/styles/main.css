@@ -9091,6 +9091,7 @@ a.ui-button:active,
   justify-content: center;
   padding: 0;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .profile-order-list-page .item__del::after {
@@ -10067,6 +10068,7 @@ a.ui-button:active,
   background-color: transparent;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 .cart-product-page .popup .basket .item__del svg {
@@ -10292,6 +10294,7 @@ a.ui-button:active,
   background-color: transparent;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 .basket-page .total {

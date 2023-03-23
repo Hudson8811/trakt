@@ -3575,20 +3575,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       centerPadding: '0'
     });
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(".selector").selectmenu();
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-minus").on('click', function (e) {
-      var number = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).next();
-      var numberValue = number.text();
-      if (parseInt(numberValue) > 0) {
-        var numberMinus = parseInt(numberValue) - 1;
-        number.text("".concat(numberMinus));
-      }
-    });
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-plus").on('click', function (e) {
-      var number = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).prev();
-      var numberValue = number.text();
-      var numberPlus = parseInt(numberValue) + 1;
-      number.text("".concat(numberPlus));
-    });
   } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.basket-order-options-page').length > 0) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(".selector").selectmenu({
       open: function open(event, ui) {
@@ -3602,6 +3588,20 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     });
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ui-selectmenu-menu').addClass('basket-order-options-page__select-menu');
   }
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-minus").on('click', function (e) {
+    var number = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).next();
+    var numberValue = number.text();
+    if (parseInt(numberValue) > 0) {
+      var numberMinus = parseInt(numberValue) - 1;
+      number.text("".concat(numberMinus));
+    }
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-counter-plus").on('click', function (e) {
+    var number = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).prev();
+    var numberValue = number.text();
+    var numberPlus = parseInt(numberValue) + 1;
+    number.text("".concat(numberPlus));
+  });
 
   // табы на странице регистрации
 

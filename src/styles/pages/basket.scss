@@ -248,6 +248,7 @@
                 background-color: transparent;
                 border: none;
                 padding: 0;
+                cursor: pointer;
             
                 @include max(md) {
                     top: 16px;
