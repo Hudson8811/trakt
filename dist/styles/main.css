@@ -2193,12 +2193,12 @@ textarea.error + .text-error {
 .to-top {
   position: fixed;
   right: 2.5vw;
-  bottom: 4.21875vw;
+  bottom: 1.953125vw;
   z-index: 15;
-  width: 6.25vw;
-  height: 6.25vw;
+  width: 4.6875vw;
+  height: 4.6875vw;
   background: #1E713F url(../img/svg/to-top.svg) center center no-repeat;
-  background-size: 6.25vw auto;
+  background-size: 4.6875vw auto;
   cursor: pointer;
   border-radius: 50%;
   transition: 0.2s;
@@ -2336,7 +2336,7 @@ textarea.error + .text-error {
   display: inline-block;
   width: 15px;
   height: 8px;
-  background: url("../../img/svg/arrow-long-gray.svg") center center no-repeat;
+  background: url("../img/svg/arrow-long-gray.svg") center center no-repeat;
   margin: 0 11px;
 }
 
@@ -2345,7 +2345,7 @@ textarea.error + .text-error {
 }
 
 .breadcrumbs__item span::after {
-  background: url("../../img/svg/arrow-long-black.svg") center center no-repeat;
+  background: url("../img/svg/arrow-long-black.svg") center center no-repeat;
 }
 
 .form-lk {
@@ -2568,7 +2568,7 @@ textarea.error + .text-error {
   left: -2px;
   width: 24px;
   height: 24px;
-  background: url("../../img/svg/arrow-circle-right.svg") center center no-repeat;
+  background: url("../img/svg/arrow-circle-right.svg") center center no-repeat;
   transform: rotateY(180deg);
   transition: all 0.5s ease;
 }
@@ -6580,21 +6580,16 @@ a.ui-button:active,
   line-height: 140%;
   text-align: center;
   text-transform: uppercase;
-  color: #FDFDFD;
   transition: opacity 0.75s ease;
   opacity: 0;
   pointer-events: none;
-  font-family: "Ruda";
-  font-weight: 700;
-  line-height: 140%;
-  text-transform: uppercase;
+  font-family: "Ruda", sans-serif;
   color: #041C13;
   left: 15.625vw;
   top: 100vh;
 }
 
 .contacts-page .c1__contacts {
-  position: relative;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -6616,7 +6611,7 @@ a.ui-button:active,
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.40625vw;
@@ -6626,7 +6621,7 @@ a.ui-button:active,
 }
 
 .contacts-page .c1__contacts--title {
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.25vw;
@@ -6637,7 +6632,7 @@ a.ui-button:active,
 
 .contacts-page .c1__contacts--link {
   flex-flow: column nowrap;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.40625vw;
@@ -6692,7 +6687,7 @@ a.ui-button:active,
 }
 
 .contacts-page__walk--title {
-  font-family: "Ruda";
+  font-family: "Ruda", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 2.8125vw;
@@ -6704,7 +6699,7 @@ a.ui-button:active,
 }
 
 .contacts-page__walk--text {
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.40625vw;
@@ -6716,7 +6711,7 @@ a.ui-button:active,
 .contacts-page__startWalk {
   position: absolute;
   left: 100vw;
-  top: 0vh;
+  top: 0;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -6801,6 +6796,7 @@ a.ui-button:active,
   left: 18.75vw;
   top: 50%;
   transform: translateY(-50%);
+  padding-bottom: 1.25vw;
 }
 
 .gp-how__intro-title i {
@@ -6830,7 +6826,6 @@ a.ui-button:active,
   transform-style: preserve-3d;
   width: 38.125vw;
   font-style: normal;
-  text-transform: uppercase;
   color: #041C13;
   position: absolute;
   left: 18.75vw;
@@ -6839,6 +6834,7 @@ a.ui-button:active,
   font-weight: 400;
   font-size: 1.40625vw;
   line-height: 145%;
+  padding-bottom: 2.5vw;
 }
 
 .gp-how__intro-text::after {
@@ -7054,7 +7050,8 @@ a.ui-button:active,
   transform-style: preserve-3d;
   position: absolute;
   left: 2.5vw;
-  top: 18.375vh;
+  top: 50%;
+  transform: translateY(-51%);
 }
 
 .gp-mineral__img img {
@@ -7394,6 +7391,7 @@ a.ui-button:active,
   text-transform: uppercase;
   color: #3D3D3D;
   padding-bottom: 8px;
+  cursor: pointer;
 }
 
 .fp-tabs__item::after {
@@ -7786,6 +7784,7 @@ a.ui-button:active,
   width: 100vw;
   height: 100vh;
   pointer-events: none;
+  box-sizing: border-box;
 }
 
 .portfolio-page__item:nth-child(even) .portfolio-page__content {
@@ -10910,10 +10909,10 @@ a.ui-button:active,
   }
 
   .to-top {
-    bottom: 54px;
-    width: 80px;
-    height: 80px;
-    background-size: 80px auto;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    background-size: 60px auto;
   }
 
   .about__info {
@@ -12022,6 +12021,98 @@ a.ui-button:active,
     transform-style: initial;
   }
 
+  .contacts-page {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+  }
+
+  .contacts-page .c1__container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 15.625vw 16.2760416667vw 4.1666666667vw;
+  }
+
+  .contacts-page .c1__title {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 5.46875vw;
+    opacity: 1;
+    text-align: left;
+    margin-bottom: 5.2083333333vw;
+  }
+
+  .contacts-page .c1__contacts {
+    top: 0;
+    opacity: 1;
+    position: relative;
+    left: 0;
+    font-size: 2.34375vw;
+    max-width: 31.640625vw;
+  }
+
+  .contacts-page .c1__contacts--item {
+    font-size: 2.34375vw;
+    margin-bottom: 4.1666666667vw;
+  }
+
+  .contacts-page .footer {
+    position: relative;
+    display: block;
+  }
+
+  .contacts-page__map {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 95vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contacts-page__map__container {
+    width: 100%;
+    height: 52.0833333333vw;
+  }
+
+  .contacts-page__walk {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 95vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10.4166666667vw;
+    padding-bottom: 10.4166666667vw;
+  }
+
+  .contacts-page__walk--title {
+    font-size: 4.6875vw;
+    width: 100%;
+  }
+
+  .contacts-page__walk--text {
+    font-size: 2.34375vw;
+    width: 100%;
+  }
+
+  .contacts-page__startWalk {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .grow-page {
     height: auto;
   }
@@ -12055,6 +12146,7 @@ a.ui-button:active,
     font-size: 7.8125vw;
     width: 63.5416666667vw;
     left: 16.1458333333vw;
+    padding-bottom: 2.0833333333vw;
   }
 
   .gp-how__intro-title.active::after {
@@ -12065,6 +12157,7 @@ a.ui-button:active,
     width: 67.7083333333vw;
     font-size: 2.34375vw;
     left: 16.1458333333vw;
+    padding-bottom: 4.1666666667vw;
   }
 
   .gp-how__intro-text.active::after {
@@ -13317,10 +13410,12 @@ a.ui-button:active,
     flex-direction: row;
     justify-content: space-between;
     padding-top: 0;
+    background: #F7F7F7;
   }
 
   .menu-lk__item {
     background-color: #FFFFFF;
+    width: calc(20% - 3px);
   }
 
   .menu-lk__item--exit {
@@ -13328,12 +13423,13 @@ a.ui-button:active,
   }
 
   .menu-lk__link {
-    padding: 8px 16px;
+    padding: 2.5vw 5vw;
+    justify-content: center;
   }
 
   .menu-lk__link-svg {
-    width: 24px;
-    height: 24px;
+    width: 7.5vw;
+    height: 7.5vw;
   }
 
   .inside__item {
@@ -13870,99 +13966,56 @@ a.ui-button:active,
     width: 28.8888888889vw;
   }
 
-  .contacts-page {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: auto;
-  }
-
   .contacts-page .c1__container {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 564px;
+    padding: 22.2222222222vw 17.5925925926vw 5.9259259259vw;
   }
 
   .contacts-page .c1__title {
-    font-size: 42px;
+    font-size: 7.7777777778vw;
+    margin-bottom: 7.4074074074vw;
   }
 
   .contacts-page .c1__contacts {
-    font-size: 18px;
-    max-width: 243px;
+    font-size: 3.3333333333vw;
+    max-width: 45vw;
   }
 
   .contacts-page .c1__contacts--item {
-    font-size: 18px;
-    margin-bottom: 32px;
+    font-size: 3.3333333333vw;
+    margin-bottom: 5.9259259259vw;
   }
 
   .contacts-page .c1__contacts--title {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 2.962962963vw;
+    margin-bottom: 1.8518518519vw;
   }
 
   .contacts-page .c1__contacts--link {
-    font-size: 16px;
-  }
-
-  .contacts-page .footer {
-    position: relative;
-    display: block;
-  }
-
-  .contacts-page__map {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 95vw;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 2.962962963vw;
   }
 
   .contacts-page__map__container {
-    width: 100%;
-    height: 400px;
+    height: 74.0740740741vw;
   }
 
   .contacts-page__walk {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 95vw;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 14.8148148148vw;
+    padding-bottom: 14.8148148148vw;
   }
 
   .contacts-page__walk--title {
-    font-size: 36px;
-    width: 100%;
+    font-size: 6.6666666667vw;
   }
 
   .contacts-page__walk--text {
-    font-size: 18px;
-    width: 100%;
-  }
-
-  .contacts-page__startWalk {
-    position: relative;
-    left: 0;
-    top: 0;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 3.3333333333vw;
   }
 
   .gp-how__intro-title {
     font-size: 11.1111111111vw;
     width: 95.5555555556vw;
     left: 2.2222222222vw;
+    padding-bottom: 2.962962963vw;
   }
 
   .gp-how__intro-title.active::after {
@@ -13973,6 +14026,7 @@ a.ui-button:active,
     width: 95.5555555556vw;
     font-size: 3.3333333333vw;
     left: 2.2222222222vw;
+    padding-bottom: 5.9259259259vw;
   }
 
   .gp-how__intro-text.active::after {
@@ -15356,10 +15410,57 @@ a.ui-button:active,
     width: 42.5vw;
   }
 
+  .contacts-page .c1__container {
+    padding: 25vw 3.75vw 2.5vw;
+  }
+
+  .contacts-page .c1__title {
+    font-size: 8.75vw;
+    margin-bottom: 7.5vw;
+  }
+
+  .contacts-page .c1__contacts {
+    font-size: 5.625vw;
+    max-width: 75.9375vw;
+  }
+
+  .contacts-page .c1__contacts--item {
+    font-size: 5.625vw;
+    margin-bottom: 10vw;
+  }
+
+  .contacts-page .c1__contacts--title {
+    font-size: 5vw;
+    margin-bottom: 3.125vw;
+  }
+
+  .contacts-page .c1__contacts--link {
+    font-size: 5vw;
+  }
+
+  .contacts-page__map__container {
+    height: 74.0740740741vw;
+  }
+
+  .contacts-page__walk {
+    position: relative;
+    padding-top: 25vw;
+    padding-bottom: 25vw;
+  }
+
+  .contacts-page__walk--title {
+    font-size: 7.5vw;
+  }
+
+  .contacts-page__walk--text {
+    font-size: 3.3333333333vw;
+  }
+
   .gp-how__intro-title {
     font-size: 12.5vw;
     width: 92.5vw;
     left: 3.75vw;
+    padding-bottom: 5vw;
   }
 
   .gp-how__intro-title.active::after {
@@ -15370,6 +15471,7 @@ a.ui-button:active,
     width: 92.5vw;
     font-size: 5.625vw;
     left: 3.75vw;
+    padding-bottom: 10vw;
   }
 
   .gp-how__intro-text.active::after {
@@ -16353,14 +16455,6 @@ a.ui-button:active,
 
   .catalog .item__info-text {
     margin-bottom: 16px;
-  }
-
-  .contacts-page .c1__title {
-    font-size: 28px;
-  }
-
-  .contacts-page__walk--title {
-    font-size: 24px;
   }
 
   .register-lk-page__response {

@@ -137,6 +137,7 @@
     text-transform: uppercase;
     color: #3D3D3D;
     padding-bottom: 8px;
+    cursor: pointer;
     @include max(md){
       font-size: 14px;
     }

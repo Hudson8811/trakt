@@ -88,20 +88,24 @@
 			left: vw(240);
 			top: 50%;
 			transform: translateY(-50%);
+			padding-bottom: vw(16);
 			@include max(md){
 				font-size: vw2(60);
 				width: vw2(488);
 				left: vw2(124);
+				padding-bottom: vw2(16);
 			}
 			@include max(sm){
 				font-size: vw3(60);
 				width: vw3(516);
 				left: vw3(12);
+				padding-bottom: vw3(16);
 			}
 			@include max(xs){
 				font-size: vw4(40);
 				width: vw4(296);
 				left: vw4(12);
+				padding-bottom: vw4(16);
 			}
 			i{
 				font-style: inherit;
@@ -152,7 +156,6 @@
 			transform-style: preserve-3d;
 			width: vw(488);
 			font-style: normal;
-			text-transform: uppercase;
 			color: #041C13;
 			position: absolute;
 			left: vw(240);
@@ -161,6 +164,7 @@
 			font-weight: 400;
 			font-size: vw(18);
 			line-height: 145%;
+			padding-bottom: vw(32);
 			&::after{
 				content: "";
 				display: block;
@@ -176,16 +180,19 @@
 				width: vw2(520);
 				font-size: vw2(18);
 				left: vw2(124);
+				padding-bottom: vw2(32);
 			}
 			@include max(sm){
 				width: vw3(516);
 				font-size: vw3(18);
 				left: vw3(12);
+				padding-bottom: vw3(32);
 			}
 			@include max(xs){
 				width: vw4(296);
 				font-size: vw4(18);
 				left: vw4(12);
+				padding-bottom: vw4(32);
 			}
 			i{
 				font-style: inherit;
@@ -593,7 +600,8 @@
 		transform-style: preserve-3d;
 		position: absolute;
 		left: vw(32);
-		top: vh(147);
+		top: 50%;
+		transform: translateY(-51%);
 		@include max(md){
 
 		}

@@ -70,14 +70,14 @@
     display: inline-block;
     width: 15px;
     height: 8px;
-    background: url("../../img/svg/arrow-long-gray.svg") center center no-repeat;
+    background: url("../img/svg/arrow-long-gray.svg") center center no-repeat;
     margin: 0 11px;
   }
   &__item span {
     color: $grey-3d;
 
     &::after {
-      background: url("../../img/svg/arrow-long-black.svg") center center no-repeat;
+      background: url("../img/svg/arrow-long-black.svg") center center no-repeat;
     }
   }
 }
@@ -363,7 +363,7 @@
       left: -2px;
       width: 24px;
       height: 24px;
-      background: url("../../img/svg/arrow-circle-right.svg") center center no-repeat;
+      background: url("../img/svg/arrow-circle-right.svg") center center no-repeat;
       transform: rotateY(180deg);
       transition: $animation;
     }
@@ -482,12 +482,14 @@
       flex-direction: row;
       justify-content: space-between;
       padding-top: 0;
+      background: #F7F7F7;
     }
   }
 
   &__item {
     @include max(sm) {
       background-color: $white;
+      width: calc(20% - 3px);
     }
 
     &--exit {
@@ -520,7 +522,8 @@
     padding: 12px 24px;
 
     @include max(sm) {
-      padding: 8px 16px;
+      padding: vw4(8) vw4(16);
+      justify-content: center;
     }
 
     &-svg {
@@ -529,8 +532,8 @@
       fill: $green-1e;
 
       @include max(sm) {
-        width: 24px;
-        height: 24px;
+        width: vw4(24);
+        height: vw4(24);
       }
     }
 

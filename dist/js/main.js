@@ -683,11 +683,9 @@ var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
   }
 });
-var st1, st2, st3, st4;
+var st1, st2;
 var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
 var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
-var tl3 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
-var tl4 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
 var resizeFunction;
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('scroll', function () {
   resizeFunction();
@@ -697,7 +695,7 @@ function initAnimation() {
     initScrollAnimationDesktop();
     initMode = 'desk';
   } else if (window.innerWidth > 699) {
-    initScrollAnimationTablet();
+    initScrollAnimationMobile();
     initMode = 'tablet';
   } else {
     initScrollAnimationMobile();
@@ -707,21 +705,16 @@ function initAnimation() {
 initAnimation();
 var dwidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
-  /*if ( (window.innerWidth > 999 && initMode != 'desk') ||
-      (window.innerWidth > 699 && window.innerWidth <= 999 && initMode != 'tablet') ||
-      (window.innerWidth <= 699 && initMode != 'mobile') ){*/
   var wwidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
   if (dwidth !== wwidth) {
     (0,_functions__WEBPACK_IMPORTED_MODULE_4__.setMaskHeader)(100);
     lightHead = true;
     if (typeof st1 !== "undefined") st1.kill();
     if (typeof st2 !== "undefined") st2.kill();
-    if (typeof st3 !== "undefined") st3.kill();
     tl.clear();
     tl1.clear();
     tl2.clear();
-    tl3.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__logo, .loader__title, .loader .l1, .loader .l2, .loader .l3, .loader .l4,.loader," + ".c1__title,.c1__contacts,.first,.contacts-page__walk,.contacts-page__startWalk" + ".contacts-page__map" + ".contacts-page", {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__logo, .loader__title, .loader .l1, .loader .l2, .loader .l3, .loader .l4,.loader," + ".c1__title,.c1__contacts,.first,.contacts-page__walk,.contacts-page__startWalk," + ".contacts-page__map" + ".contacts-page", {
       clearProps: "all"
     });
     window.scrollTo({
@@ -733,167 +726,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
   }
 });
 function initScrollAnimationDesktop() {
-  resizeFunction = function resizeFunction() {};
-  tl.to(".loader__center", {
-    autoAlpha: 1,
-    duration: 1.5,
-    delay: 1,
-    ease: "none",
-    onComplete: function onComplete() {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('active');
-    }
-  });
-  tl.to(".loader__logo", {
-    width: 0,
-    margin: 0,
-    autoAlpha: 0,
-    duration: 0.5,
-    ease: "power1.out"
-  }, ">");
-  tl.to(".loader__title", {
-    width: "74.6875vw",
-    ease: "power1.out",
-    duration: 1.5
-  }, "<");
-  tl.to(".loader .l1", {
-    autoAlpha: 0,
-    duration: 0.4,
-    ease: "none"
-  }, ">0.2");
-  tl.to(".loader .l2", {
-    autoAlpha: 0,
-    duration: 0.4,
-    ease: "none"
-  }, ">-0.1");
-  tl.to(".loader .l3", {
-    autoAlpha: 0,
-    duration: 0.4,
-    ease: "none"
-  }, ">-0.1");
-  tl.to(".loader .l4", {
-    autoAlpha: 0,
-    duration: 0.3,
-    ease: "none"
-  }, ">-0.1");
-  tl.to(".loader", {
-    autoAlpha: 0,
-    duration: 0.5,
-    ease: "none",
-    onStart: function onStart() {
-      (0,_functions__WEBPACK_IMPORTED_MODULE_4__.setMaskHeader)(100);
-      lightHead = false;
-    },
-    onReverseComplete: function onReverseComplete() {
-      (0,_functions__WEBPACK_IMPORTED_MODULE_4__.setMaskHeader)(0);
-      lightHead = true;
-    }
-  }, ">0.2");
-  tl1.to(".c1__title", {
-    top: "32vh",
-    opacity: 1,
-    delay: 4,
-    duration: 3
-  }, ">");
-  tl1.to(".c1__contacts", {
-    top: "50vh",
-    opacity: 1,
-    duration: 2,
-    onComplete: function onComplete() {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
-    }
-  }, ">-2");
-  tl2.to(".first", {
-    left: '-100vw',
-    top: '-100vh',
-    ease: "none",
-    duration: 0.12
-  }, ">-1");
-  tl2.to(".contacts-page__map ", {
-    motionPath: {
-      path: [{
-        left: '82vw',
-        top: '80vh'
-      }, {
-        left: '00vw',
-        top: '5vh'
-      }],
-      curviness: 1
-      //type: "cubic"
-    },
-
-    duration: 0.16,
-    ease: "none"
-  }, "<-0.1"), tl2.to(".contacts-page__map ", {
-    motionPath: {
-      path: [{
-        left: '0vw',
-        top: '5vh'
-      }, {
-        left: '-100vw',
-        top: '5vh'
-      }],
-      curviness: 1
-      //type: "cubic"
-    },
-
-    duration: 0.1,
-    delay: 0.005,
-    ease: "none"
-  }, ">"), tl2.to(".contacts-page__walk", {
-    motionPath: {
-      path: [{
-        left: '100vw',
-        top: '100vh'
-      }, {
-        left: '75vw',
-        top: '90vh'
-      }, {
-        left: '50vw',
-        top: '40vh'
-      }],
-      curviness: 1
-      //type: "cubic"
-    },
-
-    duration: 0.1,
-    ease: "none"
-  }, ">-0.1"), tl2.to(".contacts-page__walk", {
-    motionPath: {
-      path: [{
-        left: '50vw',
-        top: '40vh'
-      }, {
-        left: '-100vw',
-        top: '40vh'
-      }],
-      curviness: 1
-      //type: "cubic"
-    },
-
-    delay: 0.005,
-    duration: 0.1,
-    ease: "none"
-  }, ">"), tl2.to(".contacts-page__startWalk", {
-    left: 0,
-    top: 0,
-    duration: 0.1,
-    ease: "none"
-  }, ">-0.1"), tl2.to(".contacts-page__startWalk", {
-    duration: 0.01,
-    delay: 0.005,
-    ease: "none"
-  }, ">"), st2 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
-    trigger: ".contacts-page",
-    pin: true,
-    start: "top top",
-    end: function end() {
-      return "+=" + addTime + "%";
-    },
-    scrub: 1.5,
-    animation: tl2
-  });
-}
-function initScrollAnimationTablet() {
   resizeFunction = function resizeFunction() {};
   tl.to(".loader__center", {
     autoAlpha: 1,
@@ -1110,16 +942,14 @@ function initScrollAnimationMobile() {
       lightHead = true;
     }
   }, ">0.2");
-  tl1.to(".c1__title", {
-    top: "120px",
-    opacity: 1,
-    delay: 4,
+  tl.from(".c1__title", {
+    top: "100vh",
     duration: 3
-  }, ">");
-  tl1.to(".c1__contacts", {
-    top: "219px",
-    opacity: 1,
-    duration: 2,
+  }, 4);
+  tl.from(".c1__contacts", {
+    y: "100%",
+    autoAlpha: 0,
+    duration: 1.5,
     onComplete: function onComplete() {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
     }
@@ -1218,7 +1048,7 @@ gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_MotionPathPlugi
 (0,_functions__WEBPACK_IMPORTED_MODULE_4__.splitLetterSpan)('.gp-how__intro-title', 'at');
 (0,_functions__WEBPACK_IMPORTED_MODULE_4__.splitLetterSpan)('.gp-how__intro-text', 'as');
 var initMode;
-var addTime = 1300;
+var addTime = 1400;
 var addTimeHow = 200;
 var lightHead = true,
   lastProgress,
@@ -1394,7 +1224,7 @@ function initScrollAnimationDesktop() {
           //type: "cubic"
         },
 
-        duration: 3.5,
+        duration: 7,
         ease: "none"
       }, ">0.5");
     }
@@ -1418,36 +1248,36 @@ function initScrollAnimationDesktop() {
       //type: "cubic"
     },
 
-    duration: 2.3,
+    duration: 4.6,
     ease: "none"
   }, "<0.1");
   tl1.from(".gp-doble__img img", {
     width: '200%',
     height: '200%',
-    duration: 2.3,
+    duration: 4.6,
     ease: "none"
   }, "<");
   tl1.to(".gp-doble", {
     left: "-100vw",
-    duration: 3,
+    duration: 6,
     ease: "none"
   }, ">");
   tl1.fromTo(".gp-poliv", {
     left: "100vw"
   }, {
     left: "0vw",
-    duration: 2.5,
+    duration: 3,
     ease: "none"
   }, ">-3");
   tl1.from(".gp-poliv__right", {
     y: '-100%',
-    duration: 2.3,
+    duration: 2.7,
     ease: "none"
   }, "<");
   tl1.from(".gp-poliv__right img", {
     width: '200%',
     height: '200%',
-    duration: 2.3,
+    duration: 2.7,
     ease: "none"
   }, "<");
   tl1.to('.gp-poliv', {

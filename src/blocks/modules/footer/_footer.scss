@@ -218,22 +218,22 @@
 .to-top{
 	position: fixed;
 	right: vw(32);
-	bottom: vw(54);
+	bottom: vw(25);
 	z-index: 15;
-	width: vw(80);
-	height: vw(80);
+	width: vw(60);
+	height: vw(60);
 	background: #1E713F url(../img/svg/to-top.svg) center center no-repeat;
-	background-size: vw(80) auto;
+	background-size: vw(60) auto;
 	cursor: pointer;
 	border-radius: 50%;
 	transition: 0.2s;
 	border: 1px solid #1E713F;
 	box-sizing: border-box;
 	@include min(xl){
-		bottom: 54px;
-		width: 80px;
-		height: 80px;
-		background-size: 80px auto;
+		bottom: 25px;
+		width: 60px;
+		height: 60px;
+		background-size: 60px auto;
 	}
 	@include max(sm){
 		right: vw3(12);

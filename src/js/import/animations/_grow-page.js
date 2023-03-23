@@ -13,7 +13,7 @@ splitLetterSpan('.gp-how__intro-title','at');
 splitLetterSpan('.gp-how__intro-text','as');
 
 var initMode;
-let addTime = 1300;
+let addTime = 1400;
 let addTimeHow = 200;
 let lightHead = true, lastProgress, targetProgress;
 let i = 0;
@@ -203,7 +203,7 @@ function initScrollAnimationDesktop() {
                     curviness: 1
                     //type: "cubic"
                 },
-                duration: 3.5,
+                duration: 7,
                 ease: "none",
             }, ">0.5");
         }
@@ -221,20 +221,20 @@ function initScrollAnimationDesktop() {
             curviness: 1
             //type: "cubic"
         },
-        duration: 2.3,
+        duration: 4.6,
         ease: "none",
     }, "<0.1");
 
     tl1.from(".gp-doble__img img", {
         width: '200%',
         height: '200%',
-        duration: 2.3,
+        duration: 4.6,
         ease: "none",
     }, "<");
 
     tl1.to(".gp-doble", {
         left: "-100vw",
-        duration: 3,
+        duration: 6,
         ease: "none",
     }, ">");
 
@@ -244,21 +244,21 @@ function initScrollAnimationDesktop() {
         left: "100vw"
     }, {
         left: "0vw",
-        duration: 2.5,
+        duration: 3,
         ease: "none",
     }, ">-3");
 
 
     tl1.from(".gp-poliv__right", {
         y: '-100%',
-        duration: 2.3,
+        duration: 2.7,
         ease: "none",
     }, "<");
 
     tl1.from(".gp-poliv__right img", {
         width: '200%',
         height: '200%',
-        duration: 2.3,
+        duration: 2.7,
         ease: "none",
     }, "<");
 
