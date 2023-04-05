@@ -11255,6 +11255,7 @@ a.ui-button:active,
   .catalog__list {
     margin: -12px 0;
     padding-bottom: 64px;
+    max-width: 100%;
   }
 
   .catalog .item {

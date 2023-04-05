@@ -172,6 +172,7 @@ function initScrollAnimationDesktop() {
             duration: 5,
             ease: "power1.out",
         } , ">-2");
+        if  (img2.length > 0)
         tl1.from(img2, {
             width: "200%",
             height: "200%",

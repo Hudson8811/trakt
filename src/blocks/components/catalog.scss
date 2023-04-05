@@ -45,6 +45,7 @@
         @include max(md) {
             margin: -12px 0;
             padding-bottom: 64px;
+            max-width: 100%;
         }
         @include max(sm) {
             padding-right: 0;
