@@ -2429,24 +2429,45 @@ textarea.error + .text-error {
   right: 0;
   bottom: 0;
   background-color: rgba(30, 113, 63, 0.5);
+  align-items: center;
+  justify-content: center;
+  padding-top: calc(84px + 2.5vh);
 }
 
 .popup.active {
-  display: block;
+  display: flex;
 }
 
 .popup__wrap {
   box-sizing: border-box;
   max-width: 384px;
   width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   background-color: #FDFDFD;
   border: 1px solid #1E713F;
   border-radius: 8px;
   padding: 68px 40px 80px;
+  max-height: 100%;
+  overflow: auto;
+  -ms-overflow-style: auto;
+  scrollbar-width: auto;
+}
+
+.popup__wrap::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  display: initial;
+}
+
+.popup__wrap::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 0 8px 8px 0;
+}
+
+.popup__wrap::-webkit-scrollbar-thumb {
+  background: #1E713F;
+  border-radius: 0;
+  border-radius: 8px;
 }
 
 .popup__btn-close {
@@ -9920,10 +9941,6 @@ a.ui-button:active,
   max-width: 544px;
   max-height: 900px;
   height: 100%;
-  top: 0;
-  left: auto;
-  right: 0;
-  transform: translate(0, 0);
   padding: 68px 40px 40px;
 }
 
@@ -10584,6 +10601,13 @@ a.ui-button:active,
   margin-bottom: 36px;
 }
 
+@media only screen and (min-width: 500px) {
+  .cart-product-page .popup {
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
   .assorti__intro-title i {
     transition: color 3s;
@@ -10965,6 +10989,12 @@ a.ui-button:active,
   }
 }
 
+@media only screen and (max-width: 1300px) {
+  .popup {
+    padding-top: 9.140625vw;
+  }
+}
+
 @media only screen and (max-width: 999px) {
   .title-1 {
     color: #1E713F;
@@ -11152,6 +11182,10 @@ a.ui-button:active,
     max-width: 336px;
     padding-left: 12px;
     padding-right: 12px;
+  }
+
+  .popup {
+    padding-top: 13.4114583333vw;
   }
 
   .container-menu__content-wrap {
@@ -13361,6 +13395,10 @@ a.ui-button:active,
     padding: 0 12px;
   }
 
+  .popup {
+    padding-top: 19.2592592593vw;
+  }
+
   .container-menu__content {
     padding-left: 12px;
     padding-right: 12px;
@@ -14952,6 +14990,10 @@ a.ui-button:active,
     margin-top: 16px;
   }
 
+  .popup {
+    padding-top: 21.875vw;
+  }
+
   .popup__wrap {
     max-width: 296px;
   }
@@ -16265,10 +16307,6 @@ a.ui-button:active,
     max-width: 100%;
     max-height: 100%;
     height: auto;
-    top: 50%;
-    right: auto;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 
   .cart-product-page .popup .colored-button-small {

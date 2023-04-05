@@ -3676,6 +3676,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-popup').removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('no-scroll');
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.popup').on('click', function (e) {
+    if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.popup__wrap').length) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-popup').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('no-scroll');
+    }
+  });
 
   // menu lk
 

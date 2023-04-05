@@ -292,6 +292,13 @@ $(document).ready(function (){
         $('body').removeClass('no-scroll');
     });
 
+    $('.popup').on('click', function(e) {
+        if (!$(e.target).closest('.popup__wrap').length) {
+            $('.js-popup').removeClass('active');
+            $('body').removeClass('no-scroll');
+        }
+    });
+
     // menu lk
 
     $('.menu-lk__btn').on('click', function() {

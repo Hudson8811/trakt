@@ -170,26 +170,61 @@
   bottom: 0;
   background-color: rgba(30, 113, 63, .5);
 
+  align-items: center;
+  justify-content: center;
+
+  padding-top: calc(84px + 2.5vh);
+  @include max(xl){
+    padding-top: vw(117);
+  }
+  @include max(md){
+    padding-top: vw2(103);
+  }
+  @include max(sm){
+    padding-top: vw3(104);
+  }
+  @include max(xs){
+    padding-top: vw4(70);
+  }
   &.active {
-    display: block;
+    display: flex;
   }
 
   &__wrap {
     box-sizing: border-box;
     max-width: 384px;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     background-color: $white-fd;
     border: 1px solid $green-1e;
     border-radius: 8px;
     padding: 68px 40px 80px;
+    max-height: 100%;
+    overflow: auto;
+    -ms-overflow-style: auto;
+    scrollbar-width: auto;
 
     @include max(xs) {
       max-width: 296px;
     }
+
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      display: initial;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 0 8px 8px 0;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $green-1e;
+      border-radius: 0;
+      border-radius: 8px;
+    }
+
   }
 
   &__btn-close {
