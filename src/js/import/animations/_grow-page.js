@@ -18,6 +18,7 @@ let addTimeHow = 200;
 let lightHead = true, lastProgress, targetProgress;
 let i = 0;
 let howCount = $('.gp-how-item').length;
+let howCount2 = $('.gp-step').length;
 
 let st1, st2;
 let tl1 = gsap.timeline({});
@@ -438,7 +439,7 @@ function initScrollAnimationDesktop() {
             } , ">-3");
         }
 
-        if (i < howCount){
+        if (i < howCount2){
             tl1.to(elem, {
                 top: "-100%",
                 duration: 4,

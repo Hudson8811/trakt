@@ -1055,6 +1055,7 @@ var lightHead = true,
   targetProgress;
 var i = 0;
 var howCount = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.gp-how-item').length;
+var howCount2 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.gp-step').length;
 var st1, st2;
 var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
 var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
@@ -1426,7 +1427,7 @@ function initScrollAnimationDesktop() {
         ease: "power1.out"
       }, ">-3");
     }
-    if (i < howCount) {
+    if (i < howCount2) {
       tl1.to(elem, {
         top: "-100%",
         duration: 4,
