@@ -1739,6 +1739,7 @@ textarea.error + .text-error {
 }
 
 .header__logo {
+  display: block;
   width: 20vw;
 }
 
@@ -6624,7 +6625,6 @@ a.ui-button:active,
   top: 100vh;
   left: 15.625vw;
   opacity: 0;
-  pointer-events: none;
 }
 
 .contacts-page .c1__contacts--item {

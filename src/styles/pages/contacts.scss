@@ -81,7 +81,7 @@
 			top: 100vh;
 			left: vw(200);
 			opacity: 0;
-			pointer-events: none;
+
 			@include max(md){
 				top: 0;
 				opacity: 1;

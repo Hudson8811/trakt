@@ -24,6 +24,7 @@
 	}
 	&__left{}
 	&__logo{
+		display: block;
 		width: vw(256);
 		@include min(xl){
 			width: 256px;
